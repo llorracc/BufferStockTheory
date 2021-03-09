@@ -3,10 +3,10 @@
 We have just shown that if the {\RIC} holds but the {\FHWC} does not, then the {\GICNrm} may not hold.  An illustration of such a case is provided in figure \ref{fig:FVACnotGIC}.
 
 Consider again the \{\RIC,\cncl{\FHWC}\} case considered above under a configuration of parameters where the {\GICAbs} is satisfied but the {\GICNrm} is on the border between being satisfied and not being satisfied
-\begin{align}
+\begin{equation}\begin{gathered}\begin{aligned}
   \PGro \InvEpShkInv & = \Pat < \PGro
 \\ \InvEpShkInv & = \Pat/\PGro < 1                       
-\end{align}
+\end{aligned}\end{gathered}\end{equation}
 
 
 If both the \GICNrm~and the \RIC~hold, the arguments above establish that as $\mRat \uparrow \infty$ the limiting consumption function asymptotes to the consumption function for the perfect foresight unconstrained function.
@@ -19,21 +19,21 @@ The more interesting case is where the \GICNrm~fails.
     but when the \RIC~$\Rfree/\PGro > 1$ holds this condition is much more
     easily satisfied.}
   If the \FVAC~holds but the \GICNrm~does not, the parameters must satisfy:
-  \begin{align}
+  \begin{equation}\begin{gathered}\begin{aligned}
     \DiscFac \PGro^{1-\CRRA}\Ex[\pshk^{1-\CRRA}] & < 1 < (\Rfree\DiscFac)^{1/\CRRA}(\PGro\Ex[\pshk^{-1}])^{-1}. \label{eq:FVACnotGIC}
-  \end{align}
+  \end{aligned}\end{gathered}\end{equation}
 
   Note first that by Jensens's inequality $\Ex[\pshk^{1-\CRRA}] > 1$ and $(\Ex[\pshk^{-1}])^{-1} < 1$,
   so \eqref{eq:FVACnotGIC} is stronger than
-  \begin{align}
+  \begin{equation}\begin{gathered}\begin{aligned}
     \DiscFac \PGro^{1-\CRRA} & < 1 < (\Rfree\DiscFac)^{1/\CRRA}/\PGro. \label{eq:PFFVACnotGICAbs}
-  \end{align}
+  \end{aligned}\end{gathered}\end{equation}
 
 
   Suppose $\PGro=1$, $\CRRA=2$ and $\pshk$ is lognormally distributed with $\sigma^{2}_{\pshk}=0.01$ (that is, $\log \pshk \sim \mathcal{N}(-\sigma_{\pShk}^{2}/2,\sigma_{\pShk}^{2})$) so that $\Ex_{t}[\pshk_{t+1}^{1-\CRRA}] =\Ex_{t}[\pshk_{t+1}^{-1}] =\exp(\sigma^{2}_{\pShk})=e^{0.01}.$  Then the condition becomes
-  \begin{align}
+  \begin{equation}\begin{gathered}\begin{aligned}
     \DiscFac e^{0.01} & < 1 < (\Rfree \DiscFac)^{1/2}e^{-0.01}
-  \end{align}
+  \end{aligned}\end{gathered}\end{equation}
   which can be satisfied, for example, by $\DiscFac = 0.96$ and $\Rfree=1.08$.
 \end{comment}
 A solution that satisfies the combination \FVAC~and
