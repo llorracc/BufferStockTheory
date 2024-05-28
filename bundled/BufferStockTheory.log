@@ -1,0 +1,1745 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.6)  28 MAY 2024 15:31
+entering extended mode
+ \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**BufferStockTheory.tex
+(./BufferStockTheory.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-02-20>
+(./.econtexRoot.tex (./Resources/econtexPaths.tex))
+(./Resources/texmf-local/tex/latex/econtex.cls
+
+LaTeX Warning: You have requested document class `./Resources/texmf-local/tex/l
+atex/econtex',
+               but the document class provides `econtex'.
+
+Document Class: econtex 2017/08/01 LaTeX class for economics papers, handouts, 
+and exam questions written by Christopher Carroll
+(./snapshot.sty
+Package: snapshot 2002/03/05 v1.14
+) (./ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+) (./changepage.sty
+Package: changepage 2009/10/20 v1.0c check page and change page layout
+\c@cp@cntr=\count188
+\cp@tempcnt=\count189
+) (./currfile.sty
+Package: currfile 2022/10/10 v0.8 Provides the file path elements of the curren
+t input file
+
+(./kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+ (./keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+) (./ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+) (./kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+))
+(./filehook.sty
+Package: filehook 2022/10/25 v0.8b Hooks for input files
+ (./filehook-2020.sty
+Package: filehook-2020 2022/10/25 v0.8b Hooks for input files
+))
+\c@currfiledepth=\count190
+) (./setspace.sty
+Package: setspace 2022/12/04 v6.7b set line spacing
+)
+\c@IncludeTitlePage=\count191
+ (./scrartcl.cls
+Document Class: scrartcl 2023/07/07 v3.41 KOMA-Script document class (article)
+(./scrkbase.sty
+Package: scrkbase 2023/07/07 v3.41 KOMA-Script package (KOMA-Script-dependent b
+asics and keyval usage)
+ (./scrbase.sty
+Package: scrbase 2023/07/07 v3.41 KOMA-Script package (KOMA-Script-independent 
+basics and keyval usage)
+ (./scrlfile.sty
+Package: scrlfile 2023/07/07 v3.41 KOMA-Script package (file load hooks)
+ (./scrlfile-hook.sty
+Package: scrlfile-hook 2023/07/07 v3.41 KOMA-Script package (using LaTeX hooks)
+
+
+(./scrlogo.sty
+Package: scrlogo 2023/07/07 v3.41 KOMA-Script package (logo)
+)))
+Applying: [2021/05/01] Usage of raw or classic option list on input line 252.
+Already applied: [0000/00/00] Usage of raw or classic option list on input line
+ 368.
+)) (./tocbasic.sty
+Package: tocbasic 2023/07/07 v3.41 KOMA-Script package (handling toc-files)
+\scr@dte@tocline@numberwidth=\skip48
+\scr@dte@tocline@numbox=\box51
+)
+Package tocbasic Info: omitting babel extension for `toc'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `toc' on input line 133.
+Class scrartcl Info: File `scrsize12pt.clo' used to setup font sizes on input l
+ine 2441.
+ (./scrsize12pt.clo
+File: scrsize12pt.clo 2023/07/07 v3.41 KOMA-Script font size class option (12pt
+)
+) (./typearea.sty
+Package: typearea 2023/07/07 v3.41 KOMA-Script package (type area)
+\ta@bcor=\skip49
+\ta@div=\count192
+\ta@hblk=\skip50
+\ta@vblk=\skip51
+\ta@temp=\skip52
+\footheight=\skip53
+Package typearea Info: These are the values describing the layout:
+(typearea)             DIV  = 12
+(typearea)             BCOR = 0.0pt
+(typearea)             \paperwidth      = 597.50793pt
+(typearea)              \textwidth      = 448.13095pt
+(typearea)              DIV departure   = -6%
+(typearea)              \evensidemargin = 2.4185pt
+(typearea)              \oddsidemargin  = 2.4185pt
+(typearea)             \paperheight     = 845.04694pt
+(typearea)              \textheight     = 635.5pt
+(typearea)              \topmargin      = -41.72441pt
+(typearea)              \headheight     = 18.125pt
+(typearea)              \headsep        = 21.75pt
+(typearea)              \topskip        = 12.0pt
+(typearea)              \footskip       = 50.75pt
+(typearea)              \baselineskip   = 14.5pt
+(typearea)              on input line 1799.
+)
+\c@part=\count193
+\c@section=\count194
+\c@subsection=\count195
+\c@subsubsection=\count196
+\c@paragraph=\count197
+\c@subparagraph=\count198
+\scr@dte@section@maxnumwidth=\skip54
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\section on input line 5082.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\section on input line 5082.
+\scr@dte@part@maxnumwidth=\skip55
+Class scrartcl Info: using compatibility default `afterindent=false'
+(scrartcl)           for `\part on input line 5090.
+\scr@dte@subsection@maxnumwidth=\skip56
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\subsection on input line 5100.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\subsection on input line 5100.
+\scr@dte@subsubsection@maxnumwidth=\skip57
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\subsubsection on input line 5110.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\subsubsection on input line 5110.
+\scr@dte@paragraph@maxnumwidth=\skip58
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\paragraph on input line 5121.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\paragraph on input line 5121.
+\scr@dte@subparagraph@maxnumwidth=\skip59
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\subparagraph on input line 5131.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\subparagraph on input line 5131.
+\abovecaptionskip=\skip60
+\belowcaptionskip=\skip61
+\c@pti@nb@sid@b@x=\box52
+Package tocbasic Info: omitting babel extension for `lof'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `lof' on input line 6309.
+\scr@dte@figure@maxnumwidth=\skip62
+\c@figure=\count199
+Package tocbasic Info: omitting babel extension for `lot'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `lot' on input line 6325.
+\scr@dte@table@maxnumwidth=\skip63
+\c@table=\count266
+Class scrartcl Info: Redefining `\numberline' on input line 6495.
+\bibindent=\dimen140
+)
+(./fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+) (./babel.sty
+Package: babel 2024/02/07 v24.2 The Babel package
+\babel@savecnt=\count267
+\U@D=\dimen141
+\l@unhyphenated=\language87
+ (./txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count268
+ (./english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+Package babel Info: Hyphen rules for 'canadian' set to \l@english
+(babel)             (\language0). Reported on input line 102.
+Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
+(babel)             (\language21). Reported on input line 105.
+Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
+(babel)             (\language21). Reported on input line 108.
+))
+(/usr/local/texlive/texmf-dist/tex/generic/babel/locale/en/babel-english.tex
+Package babel Info: Importing font and identification data for english
+(babel)             from babel-en.ini. Reported on input line 11.
+)
+(./calc.sty
+Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count269
+\calc@Bcount=\count270
+\calc@Adimen=\dimen142
+\calc@Bdimen=\dimen143
+\calc@Askip=\skip64
+\calc@Bskip=\skip65
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count271
+\calc@Cskip=\skip66
+) (./cancel.sty
+Package: cancel 2013/04/12 v2.2 Cancel math terms
+) (./verbatim.sty
+Package: verbatim 2023-11-06 v1.5v LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks18
+\verbatim@line=\toks19
+\verbatim@in@stream=\read3
+) (./amsmath.sty
+Package: amsmath 2023/05/13 v2.17o AMS math features
+\@mathmargin=\skip67
+
+For additional information on amsmath, use the `?' option.
+(./amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+ (./amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks20
+\ex@=\dimen144
+)) (./amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen145
+) (./amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count272
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count273
+\leftroot@=\count274
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count275
+\DOTSCASE@=\count276
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box53
+\strutbox@=\box54
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen146
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count277
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count278
+\dotsspace@=\muskip16
+\c@parentequation=\count279
+\dspbrk@lvl=\count280
+\tag@help=\toks21
+\row@=\count281
+\column@=\count282
+\maxfields@=\count283
+\andhelp@=\toks22
+\eqnshift@=\dimen147
+\alignsep@=\dimen148
+\tagshift@=\dimen149
+\tagwidth@=\dimen150
+\totwidth@=\dimen151
+\lineht@=\dimen152
+\@envbody=\toks23
+\multlinegap=\skip68
+\multlinetaggap=\skip69
+\mathdisplay@stack=\toks24
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+) (./amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(./amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (./amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks25
+\thm@bodyfont=\toks26
+\thm@headfont=\toks27
+\thm@notefont=\toks28
+\thm@headpunct=\toks29
+\thm@preskip=\skip70
+\thm@postskip=\skip71
+\thm@headsep=\skip72
+\dth@everypar=\toks30
+) (./xpatch.sty (./expl3.sty
+Package: expl3 2024-02-20 L3 programming layer (loader) 
+
+(./l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count284
+\l__pdf_internal_box=\box55
+))
+Package: xpatch 2020/03/25 v0.3a Extending etoolbox patching commands
+ (./xparse.sty
+Package: xparse 2024-02-18 L3 Experimental document command parser
+) (./etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count285
+))
+Class scrartcl Info: amsthm's \deferred@thm@head patched.
+
+(./threeparttable.sty
+Package: threeparttable 2003/06/13  v 3.0
+\@tempboxb=\box56
+) (./dcolumn.sty
+Package: dcolumn 2023/07/08 v1.06 decimal alignment package (DPC)
+ (./array.sty
+Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
+\col@sep=\dimen153
+\ar@mcellbox=\box57
+\extrarowheight=\dimen154
+\NC@list=\toks31
+\extratabsurround=\skip73
+\backup@length=\skip74
+\ar@cellbox=\box58
+)) (./multicol.sty
+Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
+\c@tracingmulticols=\count286
+\mult@box=\box59
+\multicol@leftmargin=\dimen155
+\c@unbalance=\count287
+\c@collectmore=\count288
+\doublecol@number=\count289
+\multicoltolerance=\count290
+\multicolpretolerance=\count291
+\full@width=\dimen156
+\page@free=\dimen157
+\premulticols=\dimen158
+\postmulticols=\dimen159
+\multicolsep=\skip75
+\multicolbaselineskip=\skip76
+\partial@page=\box60
+\last@line=\box61
+\mc@boxedresult=\box62
+\maxbalancingoverflow=\dimen160
+\mult@rightbox=\box63
+\mult@grightbox=\box64
+\mult@firstbox=\box65
+\mult@gfirstbox=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\@tempa=\box99
+\@tempa=\box100
+\@tempa=\box101
+\@tempa=\box102
+\c@minrows=\count292
+\c@columnbadness=\count293
+\c@finalcolumnbadness=\count294
+\last@try=\dimen161
+\multicolovershoot=\dimen162
+\multicolundershoot=\dimen163
+\mult@nat@firstbox=\box103
+\colbreak@box=\box104
+\mc@col@check@num=\count295
+)
+(./multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip77
+\multirow@cntb=\count296
+\multirow@dima=\skip78
+\bigstrutjot=\dimen164
+) (./booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen165
+\lightrulewidth=\dimen166
+\cmidrulewidth=\dimen167
+\belowrulesep=\dimen168
+\belowbottomsep=\dimen169
+\aboverulesep=\dimen170
+\abovetopsep=\dimen171
+\cmidrulesep=\dimen172
+\cmidrulekern=\dimen173
+\defaultaddspace=\dimen174
+\@cmidla=\count297
+\@cmidlb=\count298
+\@aboverulesep=\dimen175
+\@belowrulesep=\dimen176
+\@thisruleclass=\count299
+\@lastruleclass=\count300
+\@thisrulewidth=\dimen177
+) (./latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
+) (./afterpage.sty
+Package: afterpage 2023/07/04 v1.08 After-Page Package (DPC)
+\AP@output=\toks32
+\AP@partial=\box105
+\AP@footins=\box106
+)
+(./enotez.sty (./l3keys2e.sty
+Package: l3keys2e 2024-02-18 LaTeX2e option processing using LaTeX3 keys
+) (./xtemplate.sty (./xtemplate-2023-10-10.sty
+Package: xtemplate 2023-10-10 L3 Experimental prototype document functions
+\l__xtemplate_tmp_dim=\dimen178
+\l__xtemplate_tmp_int=\count301
+\l__xtemplate_tmp_muskip=\muskip17
+\l__xtemplate_tmp_skip=\skip79
+))
+Package: enotez 2022/01/04 v0.10d Endnotes for LaTeX2e
+\l__enotez_list_preamble_skip=\skip80
+\l__enotez_list_postamble_skip=\skip81
+\g__enotez_endnote_id_int=\count302
+\g__enotez_endnote_mark_int=\count303
+\c@endnote=\count304
+\g__enotez_list_printed_int=\count305
+\l__enotez_tmpa_int=\count306
+
+Package xtemplate Info: Declaring object type 'enotez-list' taking 1
+(xtemplate)             argument(s) on line 473.
+
+\l__enotez_list_notes_sep_dim=\dimen179
+
+(./translations.sty
+Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages
+ (CN)
+ (./pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+ (./infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+) (./iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)))
+(./moreverb.sty
+Package: moreverb 2008/06/03 v2.3a `more' verbatim facilities
+\tab@position=\count307
+\tab@size=\count308
+\listing@line=\count309
+) (./hhline.sty
+Package: hhline 2020/01/04 v2.04 Table rule package (DPC)
+) (./tipa.sty
+Package: tipa 2002/08/08 TIPA version 1.1
+ (./fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+ (./t3enc.def
+File: t3enc.def 2001/12/31 T3 encoding
+Now handling font encoding T3 ...
+... no UTF-8 mapping file for font encoding T3
+LaTeX Font Info:    Trying to load font information for T1+cmss on input line 3
+57.
+
+(./t1cmss.fd
+File: t1cmss.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)))) (./xcolor.sty
+Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
+ (./color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+ (./pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+) (./mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1354.
+Package xcolor Info: Model `RGB' extended on input line 1366.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1368.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
+)
+(./accents.sty
+Package: accents 2006/05/12 v1.4 Math Accent Tools
+\cc@skew=\dimen180
+\cc@wd=\dimen181
+\cc@code=\count310
+\cc@group=\count311
+\cc@skewchar=\count312
+) (./appendix.sty
+Package: appendix 2020/02/08 v1.2c extra appendix facilities
+\c@@pps=\count313
+\c@@ppsavesec=\count314
+\c@@ppsaveapp=\count315
+) (./eucal.sty
+Package: eucal 2009/06/22 v3.00 Euler Script fonts
+LaTeX Font Info:    Overwriting math alphabet `\EuScript' in version `bold'
+(Font)                  U/eus/m/n --> U/eus/b/n on input line 33.
+) (./ulem.sty
+\UL@box=\box107
+\UL@hyphenbox=\box108
+\UL@skip=\skip82
+\UL@hook=\toks33
+\UL@height=\dimen182
+\UL@pe=\count316
+\UL@pixel=\dimen183
+\ULC@box=\box109
+Package: ulem 2019/11/18
+\ULdepth=\dimen184
+) (./bm.sty
+Package: bm 2023/07/08 v1.2f Bold Symbol Support (DPC/FMi)
+Package bm Info: No bold for \OMX/cmex/m/n, using \pmb.
+Package bm Info: No bold for \U/msa/m/n, using \pmb.
+Package bm Info: No bold for \U/msb/m/n, using \pmb.
+)
+(./bbm.sty
+Package: bbm 1999/03/15 V 1.2 provides fonts for set symbols - TH
+LaTeX Font Info:    Overwriting math alphabet `\mathbbm' in version `bold'
+(Font)                  U/bbm/m/n --> U/bbm/bx/n on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
+(Font)                  U/bbmss/m/n --> U/bbmss/bx/n on input line 35.
+) (./url.sty
+\Urlmuskip=\muskip18
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+) (./optional.sty
+Package: optional 2005/01/26 ver 2.2b;  Optional inclusion/omission
+)
+Using optional text marked with econtex. 
+(./natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip83
+\bibsep=\skip84
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count317
+) (./footmisc.sty
+Package: footmisc 2023/07/05 v6.0f a miscellany of footnote facilities
+\FN@temptoken=\toks34
+\footnotemargin=\dimen185
+\@outputbox@depth=\dimen186
+Package footmisc Info: Declaring symbol style bringhurst on input line 696.
+Package footmisc Info: Declaring symbol style chicago on input line 704.
+Package footmisc Info: Declaring symbol style wiley on input line 713.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 724.
+
+Package footmisc Info: Declaring symbol style lamport* on input line 744.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 765
+.
+) (./manyfoot.sty
+Package: manyfoot 2019/08/03 v1.11 Many Footnote Levels Package (NCC)
+ (./nccfoots.sty
+Package: nccfoots 2005/02/03 v1.2 NCC Footnotes Package (NCC)
+)
+\MFL@columnwidth=\dimen187
+)
+(./perpage.sty
+Package: perpage 2014/10/25 2.0 Reset/sort counters per page
+\c@abspage=\count318
+)
+Package footmisc Info: Declaring symbol style blank on input line 350.
+\footinsB=\insert252
+\c@footnoteB=\count319
+\c@pp@a@footnoteB=\count320
+\c@authornum=\count321
+\c@bottomauthor=\count322
+) (./subfiles.sty
+Package: subfiles 2020/11/14 v2.2 Multi-file projects (package)
+ (./import.sty
+Package: import 2020/04/01  v 6.2
+))
+(./Resources/texmf-local/tex/latex/econark.sty
+(/usr/local/texlive/texmf-dist/tex/latex/xmpincl/xmpincl.sty
+Package: xmpincl 2021/09/22 v2.4 Include XMP data in pdflatex
+
+(/usr/local/texlive/texmf-dist/tex/generic/iftex/ifpdf.sty
+Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
+)))
+(./Resources/texmf-local/tex/latex/econtexSetup.sty (./wasysym.sty
+Package: wasysym 2020/01/19 v2.4 Wasy-2 symbol support package
+\symwasy=\mathgroup7
+LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
+(Font)                  U/wasy/m/n --> U/wasy/b/n on input line 93.
+)
+(./psibycus.sty
+Package: psibycus 2004/10/18 v4.5 Ibycus4 using Type1 fonts (P.A.MacKay/WaS)
+\digraphs=\toks35
+ (./ibycus4.map (./tlgsqq.tex)) (./Uibycus.fd
+File: Uibycus.fd 2004/10/18 v4.5 font definitions for Ibycus/Type1 (WaS)
+) (./iby4extr.tex
+(./version4.tex Ibycus Greek. Version 4. 15 July 1997))) (./ushort.sty
+ushort.sty by M. Vaeth: Release: 2.2 
+Package: ushort 2001/06/13 v2.2
+) (./graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (./graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+ (./trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (./graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+)
+\Gin@req@height=\dimen188
+\Gin@req@width=\dimen189
+)
+(./hyperref.sty
+Package: hyperref 2024-01-20 v7.01h Hypertext links for LaTeX
+ (./kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (./pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (./hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(./auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+) (./nameref.sty
+Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
+ (./refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (./gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count323
+)
+\@linkdim=\dimen190
+\Hy@linkcounter=\count324
+\Hy@pagecounter=\count325
+
+(./pd1enc.def
+File: pd1enc.def 2024-01-20 v7.01h Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+) (./intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count326
+ (./puenc.def
+File: puenc.def 2024-01-20 v7.01h Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4179.
+Package hyperref Info: Link nesting OFF on input line 4184.
+Package hyperref Info: Hyper index ON on input line 4187.
+Package hyperref Info: Plain pages OFF on input line 4194.
+Package hyperref Info: Backreferencing OFF on input line 4199.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4446.
+\c@Hy@tempcnt=\count327
+LaTeX Info: Redefining \url on input line 4784.
+\XeTeXLinkMargin=\dimen191
+ (./bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+ (./bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count328
+\Field@Width=\dimen192
+\Fld@charsize=\dimen193
+Package hyperref Info: Hyper figures OFF on input line 6063.
+Package hyperref Info: Link nesting OFF on input line 6068.
+Package hyperref Info: Hyper index ON on input line 6071.
+Package hyperref Info: backreferencing OFF on input line 6078.
+Package hyperref Info: Link coloring OFF on input line 6083.
+Package hyperref Info: Link coloring with OCG OFF on input line 6088.
+Package hyperref Info: PDF/A mode OFF on input line 6093.
+
+(./atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count329
+\c@Item=\count330
+\c@Hfootnote=\count331
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+ (./hpdftex.def
+File: hpdftex.def 2024-01-20 v7.01h Hyperref driver for pdfTeX
+ (./atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+\Fld@listcount=\count332
+\c@bookmark@seq@number=\count333
+
+(./rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+ (./uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+85.
+)
+\Hy@SectionHShift=\skip85
+)
+Package hyperref Info: Option `pdffitwindow' set `false' on input line 133.
+Package hyperref Info: Option `pdfnewwindow' set `true' on input line 133.
+Package hyperref Info: Option `colorlinks' set `true' on input line 153.
+ Including MathFactsList.defs)
+(./Resources/texmf-local/tex/latex/pdfsuppressruntime.sty (./ifxetex.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+))
+(./Resources/LaTeXInputs/BufferStockTheory.sty (./Resources/owner.tex)
+\TblBox=\box110
+\TblShrunk=\skip86
+\TblShrunkBox=\box111
+
+(./datetime2.sty
+Package: datetime2 2021/03/21 v1.5.7 (NLCT) date and time formats
+ (./tracklang.sty
+Package: tracklang 2022/12/13 v1.6.1 (NLCT) Track Languages
+ (./tracklang.tex)) (./xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+
+(./xkeyval.tex (./xkvutils.tex
+\XKV@toks=\toks36
+\XKV@tempa@toks=\toks37
+)
+\XKV@depth=\count334
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)) (./datetime2-english.ldf
+File: datetime2-english.ldf 2019/10/21 v1.05 (NLCT)
+
+(./datetime2-english-base.ldf
+File: datetime2-english-base.ldf 2019/10/21 v1.05 (NLCT)
+))) (./xr-hyper.sty
+Package: xr-hyper 2024-01-20 v7.01h eXternal References (DPC)
+) (./rotating.sty
+Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
+\c@r@tfl@t=\count335
+\rotFPtop=\skip87
+\rotFPbot=\skip88
+\rot@float@box=\box112
+\rot@mess@toks=\toks38
+)
+(./subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip89
+\subfigcapskip=\skip90
+\subfigcaptopadj=\dimen194
+\subfigbottomskip=\skip91
+\subfigcapmargin=\dimen195
+\subfiglabelskip=\skip92
+\c@subfigure=\count336
+\c@lofdepth=\count337
+\c@subtable=\count338
+\c@lotdepth=\count339
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(./subfigure.cfg)
+\subfig@top=\skip93
+\subfig@bottom=\skip94
+) (./makecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+\rotheadsize=\dimen196
+\c@nlinenum=\count340
+\TeXr@lab=\toks39
+)
+\c@definition=\count341
+\c@theorem=\count342
+\c@lemma=\count343
+) (./scrlayer-scrpage.sty
+Package: scrlayer-scrpage 2023/07/07 v3.41 KOMA-Script package (end user interf
+ace for scrlayer)
+ (./scrlayer.sty
+Package: scrlayer 2023/07/07 v3.41 KOMA-Script package (defining layers and pag
+e styles)
+Package scrlayer Info: patching LaTeX kernel macro \pagestyle on input line 218
+3.
+)
+Package scrlayer-scrpage Info: Makeing stand-alone element `pagehead' from
+(scrlayer-scrpage)             alias to `pageheadfoot' on input line 1106.
+)
+(./caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+ (./caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen197
+\captionmargin=\dimen198
+\caption@leftmargin=\dimen199
+\caption@rightmargin=\dimen256
+\caption@width=\dimen257
+\caption@indent=\dimen258
+\caption@parindent=\dimen259
+\caption@hangindent=\dimen260
+Package caption Info: KOMA-Script document class detected.
+ (./caption-koma.sto
+File: caption-koma.sto 2023/09/08 v2.0e Adaption of the caption package to the 
+KOMA-Script document classes (AR)
+))
+\c@caption@flags=\count344
+\c@continuedfloat=\count345
+Package caption Info: changepage package is loaded.
+\caption@adjustwidth@hsize=\dimen261
+\caption@adjustwidth@linewidth=\dimen262
+Package caption Info: hyperref package is loaded.
+Package caption Info: rotating package is loaded.
+Package caption Info: KOMA-Script scrextend package detected.
+\caption@addmargin@hsize=\dimen263
+\caption@addmargin@linewidth=\dimen264
+Package caption Info: subfigure package is loaded.
+Package caption Info: threeparttable package is loaded.
+) (./enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip95
+\enit@outerparindent=\dimen265
+\enit@toks=\toks40
+\enit@inbox=\box113
+\enit@count@id=\count346
+\enitdp@description=\count347
+)
+\c@assumption=\count348
+\c@claim=\count349
+\c@proposition=\count350
+\c@corollary=\count351
+\c@fact=\count352
+\c@remark=\count353
+\c@assumptionL=\count354
+\c@assumptionS=\count355
+\c@assumptionI=\count356
+
+
+LaTeX Warning: Unused global option(s):
+    [headings].
+
+(./BufferStockTheory.aux
+
+LaTeX Warning: Label `eq:MPCminInv' multiply defined.
+
+
+LaTeX Warning: Label `lemm:MPC' multiply defined.
+
+
+LaTeX Warning: Label `subsec:PFBdiscussion' multiply defined.
+
+
+LaTeX Warning: Label `thm:target' multiply defined.
+
+
+LaTeX Warning: Label `eq:mTarget' multiply defined.
+
+
+LaTeX Warning: Label `eq:stability' multiply defined.
+
+
+LaTeX Warning: Label `thm:MSSBalExists' multiply defined.
+
+
+LaTeX Warning: Label `eq:mBalLvl' multiply defined.
+
+
+LaTeX Warning: Label `eq:stabilityStE' multiply defined.
+
+
+LaTeX Warning: Label `eq:HDef' multiply defined.
+
+
+LaTeX Warning: Label `eq:cFuncPFUnc' multiply defined.
+
+
+LaTeX Warning: Label `fact:compactnt' multiply defined.
+
+)
+\openout1 = `BufferStockTheory.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 151.
+LaTeX Font Info:    ... okay on input line 151.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 151.
+LaTeX Font Info:    ... okay on input line 151.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 151.
+LaTeX Font Info:    ... okay on input line 151.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 151.
+LaTeX Font Info:    ... okay on input line 151.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 151.
+LaTeX Font Info:    ... okay on input line 151.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 151.
+LaTeX Font Info:    ... okay on input line 151.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 151.
+LaTeX Font Info:    ... okay on input line 151.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 151.
+LaTeX Font Info:    Trying to load font information for T3+cmr on input line 15
+1.
+ (./t3cmr.fd
+File: t3cmr.fd 2001/12/31 TIPA font definitions
+)
+LaTeX Font Info:    ... okay on input line 151.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 151.
+LaTeX Font Info:    ... okay on input line 151.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 151.
+LaTeX Font Info:    ... okay on input line 151.
+Package scrbase Info: activating english \abstractname on input line 151.
+Package scrbase Info: activating english \partname on input line 151.
+Package scrbase Info: activating english \figurename on input line 151.
+Package scrbase Info: activating english \tablename on input line 151.
+Package scrbase Info: activating english \contentsname on input line 151.
+Package scrbase Info: activating english \listfigurename on input line 151.
+Package scrbase Info: activating english \listtablename on input line 151.
+Package scrbase Info: activating english \refname on input line 151.
+Package scrbase Info: activating english \indexname on input line 151.
+ (./translations-basic-dictionary-english.trsl
+File: translations-basic-dictionary-english.trsl (english translation file `tra
+nslations-basic-dictionary')
+)
+Package translations Info: loading dictionary `translations-basic-dictionary' f
+or `english'. on input line 151.
+ (./supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count357
+\scratchdimen=\dimen266
+\scratchbox=\box114
+\nofMPsegments=\count358
+\nofMParguments=\count359
+\everyMPshowfont=\toks41
+\MPscratchCnt=\count360
+\MPscratchDim=\dimen267
+\MPnumerator=\count361
+\makeMPintoPDFobject=\count362
+\everyMPtoPDFconversion=\toks42
+) (./epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+ (./epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package hyperref Info: Link coloring ON on input line 151.
+ (./BufferStockTheory.out)
+(./BufferStockTheory.out)
+\@outlinefile=\write3
+\openout3 = `BufferStockTheory.out'.
+
+Class scrartcl Info: loading recommended package `bookmark'.
+(scrartcl)           Using `bookmark' together with `hyperref' is recommended,
+(scrartcl)           because of handling of possible bookmark level gaps.
+(scrartcl)           You can avoid loading `bookmark' with KOMA-Script option
+(scrartcl)           `bookmarkpackage=false' before \begin{document} and
+(scrartcl)           you can avoid this message adding:
+(scrartcl)             \usepackage{bookmark}
+(scrartcl)           before \begin{document} on input line 151.
+ (./bookmark.sty
+Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
+ (./bkm-pdftex.def
+File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO
+)
+\BKM@id=\count363
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+
+(./Introduction.tex (./.econtexRoot.tex (./Resources/econtexPaths.tex))
+(./Resources/.git-source-commit) (./Resources/.git-public-commit)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 59.
+
+ (./umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 59.
+
+
+(./umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 59
+.
+ (./ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    Trying to load font information for U+wasy on input line 59
+.
+ (./uwasy.fd
+File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
+)
+<./Resources/PoweredByEconARK.pdf, id=7, 105.39375pt x 15.05624pt>
+File: ./Resources/PoweredByEconARK.pdf Graphic file (type pdf)
+<use ./Resources/PoweredByEconARK.pdf>
+Package pdftex.def Info: ./Resources/PoweredByEconARK.pdf  used on input line 6
+2.
+(pdftex.def)             Requested size: 105.39348pt x 15.0562pt.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 8
+2.
+ (./t1cmtt.fd
+File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+) [1
+
+{pdftex.map}{/usr/local/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1
+.enc} <./Resources/PoweredByEconARK.pdf>] (./BufferStockTheory.toc
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.47 ...x _t [{m}_{t+1}/m_t]$}{56}{subsection.B.2}
+                                                  % [2]
+LaTeX Font Info:    Trying to load font information for U+euf on input line 65.
+
+ (./ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+))
+\tf@toc=\write4
+\openout4 = `BufferStockTheory.toc'.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.112 }
+        % {Web} [3] (./BufferStockTheory.lof)
+\tf@lof=\write5
+\openout5 = `BufferStockTheory.lof'.
+
+ (./BufferStockTheory.lot)
+\tf@lot=\write6
+\openout6 = `BufferStockTheory.lot'.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.116 \hypertarget
+                  {Introduction}{} [4]
+
+Package natbib Warning: Citation `carroll:death' on page 1 undefined on input l
+ine 135.
+
+[1] [2] [3] [4] [5]) (./BufferStockTheory-NoAppendix.tex (./.econtexRoot.tex
+(./Resources/econtexPaths.tex))
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 34.
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 34.
+
+
+LaTeX Font Warning: Font shape `U/wasy/b/n' in size <8> not available
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 34.
+
+
+LaTeX Font Warning: Font shape `U/wasy/b/n' in size <6> not available
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 34.
+
+\verbatim@out=\write7
+\openout7 = `Equations/supfn.tex'.
+
+(./LaTeX/Equations/supfn.tex
+LaTeX Font Info:    Trying to load font information for U+eus on input line 3.
+ (./ueus.fd
+File: ueus.fd 2013/01/14 v3.01 Euler Script
+))
+\openout7 = `Equations/DBCparts.tex'.
+
+ (./LaTeX/Equations/DBCParts.tex
+[6])
+\openout7 = `Equations/TranShkDef.tex'.
+
+ (./LaTeX/Equations/TranShkDef.tex) [7
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.2}
+) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.93 
+     ] [8
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.3}
+) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.166 H
+       aving defined the limiting solution, we now explain why the standard ...
+] [9]
+
+LaTeX Font Warning: Font shape `U/wasy/m/it' in size <12> not available
+(Font)              Font shape `U/wasy/m/sl' tried instead on input line 214.
+
+[10] [11]
+pdfTeX warning (ext4): destination with the same identifier (name{APFacDefn}) h
+as been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.338 ...t+1})$ we have: \hypertarget{APFacDefn}{}
+                                                   [12] [13] [14]
+pdfTeX warning (ext4): destination with the same identifier (name{MPCminDefn}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.458 ...t{MPCmaxDefn}{}\hypertarget{MPCminDefn}{}
+                                                   [15] [16] [17] [18] [19]
+(./Figures/cNrmTargetFig.tex
+<./Figures/cNrmTargetFig.pdf, id=962, 867.24pt x 578.16pt>
+File: ./Figures/cNrmTargetFig.pdf Graphic file (type pdf)
+<use ./Figures/cNrmTargetFig.pdf>
+Package pdftex.def Info: ./Figures/cNrmTargetFig.pdf  used on input line 14.
+(pdftex.def)             Requested size: 433.62pt x 289.07928pt.
+)
+\openout7 = `Equations/TheoremMTargetIsStable.tex'.
+
+ (./LaTeX/Equations/TheoremMTargetIsStable.tex
+[20 <./Figures/cNrmTargetFig.pdf>])
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 744.
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 744.
+
+
+LaTeX Font Warning: Font shape `U/wasy/b/n' in size <7> not available
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 744.
+
+
+LaTeX Font Warning: Font shape `U/wasy/b/n' in size <5> not available
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 744.
+
+\openout7 = `Equations/TheoremMSSBalExists.tex'.
+
+(./LaTeX/Equations/TheoremMSSBalExists.tex [21])
+(./Figures/GICModFailsButGICRawHolds.tex
+<./Figures/GICModFailsButGICRawHolds.pdf, id=1055, 867.24pt x 578.16pt>
+File: ./Figures/GICModFailsButGICRawHolds.pdf Graphic file (type pdf)
+<use ./Figures/GICModFailsButGICRawHolds.pdf>
+Package pdftex.def Info: ./Figures/GICModFailsButGICRawHolds.pdf  used on input
+ line 3.
+(pdftex.def)             Requested size: 433.62pt x 289.07928pt.
+) [22] [23 <./Figures/GICModFailsButGICRawHolds.pdf>]
+Underfull \hbox (badness 6173) in paragraph at lines 916--916
+[][][]\T1/cmr/m/n/10 The Har-men-berg method is im-ple-mented in the [][]Econ-A
+RK[][]; see the last part of
+ []
+
+[24] [25] [26] [27] [28] (./Figures/cFuncsConverge.tex
+<./Figures/cFuncsConverge.pdf, id=1242, 867.24pt x 650.43pt>
+File: ./Figures/cFuncsConverge.pdf Graphic file (type pdf)
+<use ./Figures/cFuncsConverge.pdf>
+Package pdftex.def Info: ./Figures/cFuncsConverge.pdf  used on input line 3.
+(pdftex.def)             Requested size: 379.4175pt x 284.56242pt.
+) [29 <./Figures/cFuncsConverge.pdf>] (./Figures/MPCLimits.tex
+<./Figures/MPCLimits.pdf, id=1277, 867.24pt x 578.16pt>
+File: ./Figures/MPCLimits.pdf Graphic file (type pdf)
+<use ./Figures/MPCLimits.pdf>
+Package pdftex.def Info: ./Figures/MPCLimits.pdf  used on input line 3.
+(pdftex.def)             Requested size: 433.62pt x 289.07928pt.
+)
+pdfTeX warning (ext4): destination with the same identifier (name{cFuncBounds})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1145 \hypertarget{\figFile}{}
+                                (./Figures/cFuncBounds.tex
+<./Figures/cFuncBounds.pdf, id=1278, 867.24pt x 578.16pt>
+File: ./Figures/cFuncBounds.pdf Graphic file (type pdf)
+<use ./Figures/cFuncBounds.pdf>
+Package pdftex.def Info: ./Figures/cFuncBounds.pdf  used on input line 3.
+(pdftex.def)             Requested size: 433.62pt x 289.07928pt.
+) [30 <./Figures/MPCLimits.pdf>]
+pdfTeX warning (ext4): destination with the same identifier (name{PFFVAC}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1161 ...rtarget{PFFVAC}{finite value of autarky}
+                                                   (under perfect foresight)...
+
+pdfTeX warning (ext4): destination with the same identifier (name{PFFVAC}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1161 ...rtarget{PFFVAC}{finite value of autarky}
+                                                   is captured by the diagon...
+
+pdfTeX warning (ext4): destination with the same identifier (name{FHWC}) has be
+en already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1161 ... \hypertarget{FHWC}{finite human wealth}
+                                                  , and the consequent arriv...
+
+pdfTeX warning (ext4): destination with the same identifier (name{PFFVAC}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1161 ...rfect foresight finite value of autarky}
+                                                  .  Reversal of a condition...
+
+pdfTeX warning (ext4): destination with the same identifier (name{FHWC}) has be
+en already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1161 ... \hypertarget{FHWC}{finite human wealth}
+                                                   fails; but we can cancel ...
+
+pdfTeX warning (ext4): destination with the same identifier (name{FHWC}) has be
+en already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1161 ... \hypertarget{FHWC}{finite human wealth}
+                                                   (and, redundantly, \hyper...
+
+pdfTeX warning (ext4): destination with the same identifier (name{FHWC}) has be
+en already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1161 ... \hypertarget{FHWC}{finite human wealth}
+                                                   again) let us conclude th...
+[31 <./Figures/cFuncBounds.pdf>] (./Figures/RelatePFGICFHWCRICPFFVAC.tex
+<./Figures/RelatePFGICFHWCRICPFFVAC.pdf, id=1357, 219.23004pt x 204.54518pt>
+File: ./Figures/RelatePFGICFHWCRICPFFVAC.pdf Graphic file (type pdf)
+<use ./Figures/RelatePFGICFHWCRICPFFVAC.pdf>
+Package pdftex.def Info: ./Figures/RelatePFGICFHWCRICPFFVAC.pdf  used on input 
+line 4.
+(pdftex.def)             Requested size: 252.94499pt x 236.01164pt.
+)
+[32 <./Figures/RelatePFGICFHWCRICPFFVAC.pdf>] [33]
+pdfTeX warning (ext4): destination with the same identifier (name{PFFVAC}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1198 ...rtarget{PFFVAC}{finite value of autarky}
+                                                   says yields finite value)...
+
+pdfTeX warning (ext4): destination with the same identifier (name{PFFVAC}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1198 ...m is also finite: \hypertarget{PFFVAC}{}
+                                                   \hypertarget{PFVAFacDefn}{}
+pdfTeX warning (ext4): destination with the same identifier (name{PFFVAC}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1218 ...rtarget{PFFVAC}{finite value of autarky}
+                                                   no longer holds. Even whe...
+(./Tables/Parameters.tex
+\TableWidth=\skip96
+\Parameters=\box115
+) (./Tables/Calibration.tex) [34] [35]
+(./Figures/Inequalities.tex
+<./Figures/Inequalities.pdf, id=1520, 512.65729pt x 300.56392pt>
+File: ./Figures/Inequalities.pdf Graphic file (type pdf)
+<use ./Figures/Inequalities.pdf>
+Package pdftex.def Info: ./Figures/Inequalities.pdf  used on input line 4.
+(pdftex.def)             Requested size: 433.62pt x 254.23766pt.
+) [36 <./Figures/Inequalities.pdf>] [37]
+
+LaTeX Warning: Reference `sec: cFuncBounds' on page 38 undefined on input line 
+1286.
+
+(./Tables/Comparison.tex
+Overfull \vbox (10.50005pt too high) detected at line 56
+ []
+
+
+Overfull \vbox (10.50005pt too high) detected at line 56
+ []
+
+
+Overfull \vbox (18.04013pt too high) detected at line 56
+ []
+
+[38]) (./Tables/Required.tex
+
+LaTeX Warning: Reference `subsec:LimitsAsmtToZero' on page 39 undefined on inpu
+t line 49.
+
+
+LaTeX Warning: Reference `subsec:eventuallyCauchy' on page 39 undefined on inpu
+t line 49.
+
+
+LaTeX Warning: Reference `sec:discussConvergence' on page 39 undefined on input
+ line 49.
+
+
+LaTeX Warning: Reference `sec:discussConvergence' on page 39 undefined on input
+ line 49.
+
+
+LaTeX Warning: Reference `sec:discussConvergence' on page 39 undefined on input
+ line 49.
+
+
+Overfull \hbox (11.74442pt too wide) in paragraph at lines 59--60
+[][] 
+ []
+
+) [39] [40] [41]) [42] (./Appendices/ApndxConcaveCFunc.tex
+(./Appendices/./.econtexRoot.tex (./Appendices/../Resources/econtexPaths.tex))
+
+LaTeX Warning: Reference `sec:infiniteSDPappx' on page 43 undefined on input li
+ne 44.
+
+[43]
+
+Package hyperref Warning: Ignoring empty anchor on input line 62.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{equation.A.46
+}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.73 \begin{equation}
+                     \label{eq:GICandFHWCimplyPFFVAC}
+pdfTeX warning (ext4): destination with the same identifier (name{equation.A.46
+}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.73 \begin{equation}
+                     \label{eq:GICandFHWCimplyPFFVAC}
+pdfTeX warning (ext4): destination with the same identifier (name{equation.A.46
+}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.73 \begin{equation}
+                     \label{eq:GICandFHWCimplyPFFVAC}
+pdfTeX warning (ext4): destination with the same identifier (name{equation.A.46
+}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.73 \begin{equation}
+                     \label{eq:GICandFHWCimplyPFFVAC} [44]
+Overfull \hbox (4.3161pt too wide) in paragraph at lines 168--176
+[]\T1/cmr/m/n/12 Finally, $\OT1/cmr/m/n/12 c[](\OML/cmm/m/it/12 m\OT1/cmr/m/n/1
+2 )$ \T1/cmr/m/n/12 is dif-fer-en-tiable be-cause $\U/euf/m/n/12 v[]$ \T1/cmr/m
+/n/12 is $\OT1/cmr/bx/n/12 C[]$\T1/cmr/m/n/12 , $\OT1/cmr/m/n/12 c[](\OML/cmm/m
+/it/12 m\OT1/cmr/m/n/12 )$ \T1/cmr/m/n/12 is $\OT1/cmr/bx/n/12 C[]$ \T1/cmr/m/n
+/12 and $\OT1/cmr/m/n/12 u[](c[](\OML/cmm/m/it/12 m\OT1/cmr/m/n/12 )) + \U/euf/
+m/n/12 v[] [] \OML/cmm/m/it/12 <
+ []
+
+[45] [46] [47]
+
+LaTeX Warning: Reference `eq:WRIC' on page 48 undefined on input line 330.
+
+[48
+pdfTeX warning (ext4): destination with the same identifier (name{equation.A.63
+}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.373 \end{equation}
+                    
+pdfTeX warning (ext4): destination with the same identifier (name{equation.A.64
+}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.373 \end{equation}
+                    ] (./Appendices/../Equations/boundFunc.tex)
+
+LaTeX Warning: Reference `sec:cExists' on page 49 undefined on input line 446.
+
+[49] [50] [51] [52] [53
+pdfTeX warning (ext4): destination with the same identifier (name{equation.A.81
+}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.634 ...\end{aligned}\end{gathered}\end{equation}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{equation.A.82
+}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.634 ...\end{aligned}\end{gathered}\end{equation}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{equation.A.82
+}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.634 ...\end{aligned}\end{gathered}\end{equation}
+                                                  ])
+(./Appendices/ApndxMTargetIsStable.tex (./Appendices/./.econtexRoot.tex
+(./Appendices/../Resources/econtexPaths.tex)) [54]
+(./Appendices/../Equations/TheoremMTargetIsStable.tex [55])
+
+LaTeX Warning: Reference `thm:contmap' on page 56 undefined on input line 100.
+
+
+LaTeX Warning: Reference `sec:cExists' on page 56 undefined on input line 102.
+
+
+LaTeX Warning: Reference `subsec:LimitsAsmtToInfty' on page 56 undefined on inp
+ut line 118.
+
+
+LaTeX Warning: Reference `eq:GICMod' on page 56 undefined on input line 129.
+
+[56{/usr/local/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+
+LaTeX Warning: Reference `subsec:LimitsAsmtToZero' on page 57 undefined on inpu
+t line 139.
+
+
+LaTeX Warning: Reference `eq:MPCminDef' on page 57 undefined on input line 170.
+
+
+
+LaTeX Warning: Reference `sec:WRIC' on page 57 undefined on input line 170.
+
+[57] (./Appendices/../Equations/TheoremMSSBalExists.tex [58])
+
+LaTeX Warning: Reference `eq:GICRaw' on page 59 undefined on input line 236.
+
+[59]
+
+LaTeX Warning: Reference `eq:MPCminDef' on page 60 undefined on input line 263.
+
+
+
+LaTeX Warning: Reference `sec:WRIC' on page 60 undefined on input line 263.
+
+) (./Appendices/ApndxLiqConstr.tex (./Appendices/./.econtexRoot.tex
+(./Appendices/../Resources/econtexPaths.tex))
+\TableWidth=\skip97
+ [60]
+pdfTeX warning (ext4): destination with the same identifier (name{equation.C.96
+}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.43 \end{align}
+                 \hypertarget{FHWFacDefn}{}\hypertarget{PFRNrmDefn}{}
+pdfTeX warning (ext4): destination with the same identifier (name{FHWC}) has be
+en already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.50 \end{align}\hypertarget{FHWC}{}
+                                    
+pdfTeX warning (ext4): destination with the same identifier (name{MPCminDefn}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.64 ...mption function:\hypertarget{MPCminDefn}{}
+                                                  
+
+LaTeX Warning: Reference `eq:FHWC' on page 61 undefined on input line 86.
+
+[61] (./Appendices/../Tables/LiqConstrScenarios.tex
+\LiqConstrScenarios=\box116
+)
+\TableWidth=\skip98
+ [62
+pdfTeX warning (ext4): destination with the same identifier (name{equation.C.10
+0}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.154 \end{aligned}\end{gathered}\end{equation}
+                                               ] [63] [64
+pdfTeX warning (ext4): destination with the same identifier (name{equation.C.10
+3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.236 \end{eqnarray*}
+                     ] [65] [66
+pdfTeX warning (ext4): destination with the same identifier (name{equation.C.10
+7}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.324 \begin{equation}
+                      \begin{gathered}\begin{aligned}]
+(./Appendices/../Figures/PFGICHoldsFHWCFailsRICFails.tex
+<./Appendices/../Figures/PFGICHoldsFHWCFailsRICFails.pdf, id=2236, 578.16pt x 2
+89.08pt>
+File: ./Appendices/../Figures/PFGICHoldsFHWCFailsRICFails.pdf Graphic file (typ
+e pdf)
+<use ./Appendices/../Figures/PFGICHoldsFHWCFailsRICFails.pdf>
+Package pdftex.def Info: ./Appendices/../Figures/PFGICHoldsFHWCFailsRICFails.pd
+f  used on input line 3.
+(pdftex.def)             Requested size: 433.62pt x 216.80946pt.
+))
+(./Appendices/ApndxSupportingAnalysis.tex (./Appendices/./.econtexRoot.tex
+(./Appendices/../Resources/econtexPaths.tex)) [67 <./Appendices/../Figures/PFGI
+CHoldsFHWCFailsRICFails.pdf>] [68]) (./Appendices/ApndxConditionDiagrams.tex
+(./Appendices/./.econtexRoot.tex (./Appendices/../Resources/econtexPaths.tex))
+<./Appendices/../Figures/InequalityPFGICFHWCRIC.pdf, id=2271, 283.28032pt x 143
+.1729pt>
+File: ./Appendices/../Figures/InequalityPFGICFHWCRIC.pdf Graphic file (type pdf
+)
+<use ./Appendices/../Figures/InequalityPFGICFHWCRIC.pdf>
+Package pdftex.def Info: ./Appendices/../Figures/InequalityPFGICFHWCRIC.pdf  us
+ed on input line 18.
+(pdftex.def)             Requested size: 289.07999pt x 146.11742pt.
+
+[69] [70 <./Appendices/../Figures/InequalityPFGICFHWCRIC.pdf>]
+<./Appendices/../Figures/RelatePFGICFHWCRICPFFVAC.pdf, id=2365, 219.23004pt x 2
+04.54518pt>
+File: ./Appendices/../Figures/RelatePFGICFHWCRICPFFVAC.pdf Graphic file (type p
+df)
+<use ./Appendices/../Figures/RelatePFGICFHWCRICPFFVAC.pdf>
+Package pdftex.def Info: ./Appendices/../Figures/RelatePFGICFHWCRICPFFVAC.pdf  
+used on input line 49.
+(pdftex.def)             Requested size: 252.94499pt x 236.01164pt.
+ [71
+pdfTeX warning (ext4): destination with the same identifier (name{equation.E.11
+8}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.65 \begin{equation}
+                     \begin{gathered}\begin{aligned} <./Appendices/../Figures/R
+elatePFGICFHWCRICPFFVAC.pdf>]
+<./Appendices/../Figures/Inequalities.pdf, id=2440, 512.65729pt x 300.56392pt>
+File: ./Appendices/../Figures/Inequalities.pdf Graphic file (type pdf)
+<use ./Appendices/../Figures/Inequalities.pdf>
+Package pdftex.def Info: ./Appendices/../Figures/Inequalities.pdf  used on inpu
+t line 79.
+(pdftex.def)             Requested size: 433.62pt x 254.23766pt.
+<./Appendices/../Figures/Inequalities-numer.pdf, id=2441, 518.83136pt x 297.452
+29pt>
+File: ./Appendices/../Figures/Inequalities-numer.pdf Graphic file (type pdf)
+<use ./Appendices/../Figures/Inequalities-numer.pdf>
+Package pdftex.def Info: ./Appendices/../Figures/Inequalities-numer.pdf  used o
+n input line 87.
+(pdftex.def)             Requested size: 433.62pt x 248.60551pt.
+) (./Appendices/ApndxBalancedGrowthcNrmAndCov.tex
+(./Appendices/./.econtexRoot.tex (./Appendices/../Resources/econtexPaths.tex))
+[72 <./Appendices/../Figures/Inequalities.pdf>] [73 <./Appendices/../Figures/In
+equalities-numer.pdf>]
+<./Appendices/../Figures/logcNrm.pdf, id=2502, 433.62pt x 289.08pt>
+File: ./Appendices/../Figures/logcNrm.pdf Graphic file (type pdf)
+<use ./Appendices/../Figures/logcNrm.pdf>
+Package pdftex.def Info: ./Appendices/../Figures/logcNrm.pdf  used on input lin
+e 26.
+(pdftex.def)             Requested size: 289.07999pt x 192.72981pt.
+<./Appendices/../Figures/logcov.pdf, id=2503, 433.62pt x 289.08pt>
+File: ./Appendices/../Figures/logcov.pdf Graphic file (type pdf)
+<use ./Appendices/../Figures/logcov.pdf>
+Package pdftex.def Info: ./Appendices/../Figures/logcov.pdf  used on input line
+ 32.
+(pdftex.def)             Requested size: 289.07999pt x 192.72981pt.
+) [74 <./Appendices/../Figures/logcNrm.pdf> <./Appendices/../Figures/logcov.pdf
+
+
+pdfTeX warning: pdflatex (file ./Appendices/../Figures/logcov.pdf): PDF inclusi
+on: multiple pdfs with page group included in a single page
+>] (./Resources/LaTeXInputs/bibliography_blend.tex
+Found no global database file
+bibliography{BufferStockTheory}
+(./BufferStockTheory.bbl
+Underfull \hbox (badness 4120) in paragraph at lines 72--76
+[]\T1/cmr/m/sc/12 Carroll, Christo-pher D., and Miles S. Kim-ball \T1/cmr/m/n/1
+2 (1996): ``On the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--83
+[]\T1/cmr/m/sc/12 Carroll, Christo-pher D., and Miles S. Kim-ball \T1/cmr/m/n/1
+2 (2007):
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--83
+\T1/cmr/m/n/12 ``Pre-cau-tion-ary Sav-ing and Pre-cau-tion-ary Wealth,'' \T1/cm
+r/m/it/12 Pal-grave
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--83
+\T1/cmr/m/it/12 Dic-tio-nary of Eco-nomics and Fi-nance, 2nd Ed.\T1/cmr/m/n/12 
+, [][]$\T1/cmtt/m/n/12 https :
+ []
+
+[75]
+Underfull \hbox (badness 3323) in paragraph at lines 92--96
+\T1/cmr/m/sc/12 hew N. White \T1/cmr/m/n/12 (2017): ``The Dis-tri-bu-tion of We
+alth and the Mar-gi-nal
+ []
+
+
+Underfull \hbox (badness 3849) in paragraph at lines 155--158
+[]\T1/cmr/m/sc/12 Harmenberg, Karl \T1/cmr/m/n/12 (2021): ``Agg-re-gat-ing hete
+ro-gen-eous-agent mod-els with
+ []
+
+[76] [77] [78]))
+
+Package natbib Warning: There were undefined citations.
+
+[79] [80] (./BufferStockTheory.aux)
+ ***********
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2020/03/25>
+ ***********
+\snap@out=\write8
+\openout8 = `BufferStockTheory.dep'.
+
+
+Dependency list written on BufferStockTheory.dep.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package rerunfilecheck Info: File `BufferStockTheory.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+ ) 
+Here is how much of TeX's memory you used:
+ 28619 strings out of 474122
+ 542121 string characters out of 5746462
+ 1972187 words of memory out of 5000000
+ 49759 multiletter control sequences out of 15000+600000
+ 610909 words of font info for 187 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 122i,28n,121p,10989b,1042s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{Uncertainty-Modified-Conditions} has been reference
+d but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{RPFacDefn} has been referenced but does not exist, 
+replaced by a fixed one
+
+
+pdfTeX warning (dest): name{uInvEuPermShk} has been referenced but does not exi
+st, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{PermGroFacAdj} has been referenced but does not exi
+st, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{InvEPermShkEInv} has been referenced but does not e
+xist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{VAFacDefn} has been referenced but does not exist, 
+replaced by a fixed one
+
+
+pdfTeX warning (dest): name{PF-FVAC} has been referenced but does not exist, re
+placed by a fixed one
+
+
+pdfTeX warning (dest): name{return\040impatience} has been referenced but does 
+not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Definition-of-a-Nondegenerate-Solution} has been re
+ferenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{GRICRaw} has been referenced but does not exist, re
+placed by a fixed one
+
+
+pdfTeX warning (dest): name{GIC-Raw} has been referenced but does not exist, re
+placed by a fixed one
+
+
+pdfTeX warning (dest): name{APF} has been referenced but does not exist, replac
+ed by a fixed one
+
+
+pdfTeX warning (dest): name{GIC} has been referenced but does not exist, replac
+ed by a fixed one
+
+
+pdfTeX warning (dest): name{GIC-Mod} has been referenced but does not exist, re
+placed by a fixed one
+
+
+pdfTeX warning (dest): name{APFAC} has been referenced but does not exist, repl
+aced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
+, replaced by a fixed one
+
+</usr/local/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/
+local/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi6.pfb></usr/local/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmmi7.pfb></usr/local/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmmi8.pfb></usr/local/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.p
+fb></usr/local/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
+r/local/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmss17.pfb></usr/local/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmsy10.pfb></usr/local/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy6.pfb></usr/local/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+7.pfb></usr/local/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
+/usr/local/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/l
+ocal/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/loca
+l/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/local/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/local/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/te
+xlive/texmf-dist/fonts/type1/public/cm-super/sfbi1200.pfb></usr/local/texlive/t
+exmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/texmf-di
+st/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/texmf-dist/font
+s/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/texmf-dist/fonts/type1
+/public/cm-super/sfbx1728.pfb></usr/local/texlive/texmf-dist/fonts/type1/public
+/cm-super/sfbx2074.pfb></usr/local/texlive/texmf-dist/fonts/type1/public/cm-sup
+er/sfbx2488.pfb></usr/local/texlive/texmf-dist/fonts/type1/public/cm-super/sfcc
+1200.pfb></usr/local/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pf
+b></usr/local/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr
+/local/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/
+texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive
+/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/texmf-
+dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/texmf-dist/fo
+nts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/texmf-dist/fonts/typ
+e1/public/cm-super/sfrm2488.pfb></usr/local/texlive/texmf-dist/fonts/type1/publ
+ic/cm-super/sfsl1200.pfb></usr/local/texlive/texmf-dist/fonts/type1/public/cm-s
+uper/sfsx1200.pfb></usr/local/texlive/texmf-dist/fonts/type1/public/cm-super/sf
+ti0600.pfb></usr/local/texlive/texmf-dist/fonts/type1/public/cm-super/sfti0800.
+pfb></usr/local/texlive/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></u
+sr/local/texlive/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/loca
+l/texlive/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb></usr/local/texli
+ve/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/texm
+f-dist/fonts/type1/public/cm-super/sftt1200.pfb></usr/local/texlive/texmf-dist/
+fonts/type1/public/wasy-type1/wasy10.pfb></usr/local/texlive/texmf-dist/fonts/t
+ype1/public/wasy-type1/wasy6.pfb></usr/local/texlive/texmf-dist/fonts/type1/pub
+lic/wasy-type1/wasy7.pfb></usr/local/texlive/texmf-dist/fonts/type1/public/wasy
+-type1/wasy8.pfb></usr/local/texlive/texmf-dist/fonts/type1/public/wasy-type1/w
+asyb10.pfb></usr/local/texlive/texmf-dist/fonts/type1/public/wasy-type1/wasysl1
+0.pfb>
+Output written on BufferStockTheory.pdf (84 pages, 1711948 bytes).
+PDF statistics:
+ 3132 PDF objects out of 3580 (max. 8388607)
+ 2714 compressed objects within 28 object streams
+ 593 named destinations out of 1000 (max. 500000)
+ 540 words of extra memory for PDF output out of 10000 (max. 10000000)
+

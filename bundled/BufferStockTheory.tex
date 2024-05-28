@@ -1,0 +1,206 @@
+% -*- mode: LaTeX; TeX-PDF-mode: t; -*- # Tell emacs the file type (for syntax coloring)
+
+\input{./.econtexRoot} % Set paths (like, \LaTeXInputs) to find resources
+\newcommand{\texname}{BufferStockTheory}% Keyname for the paper
+\providecommand{\versn}{pdf} % version -- pdf or Web 
+
+% Declare document with title page and table of contents (toc):
+\documentclass[titlepage, headings=optiontocandhead]{\econtex}
+\usepackage{subfiles} % Allow appendices, tables, etc as standalone subfiles
+
+% Extra custom packages
+\usepackage{\econark}      % Mostly shortcuts defining variables (LaTeX macros)
+\usepackage{\econtexSetup} % Gets, configures often-used packages
+\usepackage{\pdfsuppressruntime}
+
+\usepackage{\LaTeXInputs/\texname}% LaTeX shortcuts for whole paper
+
+% \econtexSetup sets boolean variable 'Web' to true if making html not pdf
+\ifthenelse{\boolean{Web}}{ % then
+  \setboolean{showPageHead}{false} % no pages, so no page head, on web
+}{ % else not for web
+  \usepackage{scrlayer-scrpage} % Package for page headers if PDF
+  \usepackage{caption} % allow suppression of appendix figures in NoAppendix PDF
+}
+
+\bibliographystyle{\econtexBibStyle} % Custom author (year) bib style
+
+% Akshay renew and new commands for notation 
+
+
+% -------------- Packages --------------
+\usepackage{enumitem}    % roman lists in theorems  
+
+% --------------- Parameters ---------------
+% Principle: conventional notation, Italic or Greek non-script 
+\renewcommand{\CRRA}{\gamma}                      % CRRA is usually gamma in the literature.
+\renewcommand{\pZero}{q}                          % lower bound for trans shock prob. (q to avoid confusion with permanent income p)
+\renewcommand{\pNotZero}{(1-\pZero)}              % upper bound for trans shock prob. 
+\renewcommand{\PermGroFac}{G}                     % growth factor constant.
+\renewcommand{\Rfree}{R}                          % risk free rate.
+
+\newcommand{\RNrmFac}{\bar{R}}                    % RoR normalized by growth
+\renewcommand{\DiscAlt}{\DiscFac\PermGroFac^{1-\CRRA}}
+\renewcommand{\GPFacNrm}{\GPFacRaw\Ex[\permShk^{-1}]} % Modified growth impatience factor
+
+% ---------------- Variables ---------------- 
+% Principle: 1) non-script non-bold (normalized) and bold (level) Italic (or Greek). 
+%            2) derived random variables: tilde. 
+% 			 3) for endogenous variabls: upper-case is aggregate, lower case is idiosyncratic
+
+% Idiosyncratic endogenous level
+\renewcommand{\cLvl}{\boldsymbol{\mathit{c}}}     % consumption level
+\renewcommand{\vLvl}{\boldsymbol{\mathit{v}}}     % value level
+\renewcommand{\mLvl}{\boldsymbol{\mathit{m}}}     % market resources (bank balances plus current income)
+\renewcommand{\aLvl}{\boldsymbol{\mathit{a}}}     % assets level
+\renewcommand{\kLvl}{\boldsymbol{\mathit{k}}}     % capital level
+\renewcommand{\yLvl}{\boldsymbol{\mathit{y}}}     % realized income
+\renewcommand{\bLvl}{\boldsymbol{\mathit{b}}}     % bank balances before being bolstered by income
+
+% Aggregate endogenous level
+\newcommand{\cLvlAgg}{\boldsymbol{\mathit{C}}}    
+\renewcommand{\permLvlAgg}{\boldsymbol{\mathit{P}}} 
+\newcommand{\mLvlAgg}{\boldsymbol{\mathit{M}}}    
+
+% Exog. random varibales (all italic or greek, non-bold)
+% providecommands create it if it does not exist (so renew will work)
+\providecommand{\tranShkEmp}{}
+\renewcommand{\tranShkEmp}{\theta}                     % unemployment prob
+\providecommand{\tranShkEmpMin}{}
+\renewcommand{\tranShkEmpMin}{\underline{\theta}}
+\providecommand{\tranShkAll}{}                   % transitory shock  
+\renewcommand{\tranShkAll}{\xi}                   % transitory shock  
+\providecommand{\permShk}{}
+\renewcommand{\permShk}{\psi}                     % permanent shock  
+\providecommand{\permShkIndMin}{}
+\providecommand{\permShkIndMin}{\underline{\psi}}                     
+\providecommand{\permShkIndMax}{\overline{\psi}}                     
+\renewcommand{\permShkIndMin}{\underline{\psi}}                     
+\renewcommand{\permShkIndMax}{\overline{\psi}}                     
+\renewcommand{\RNrm}{\tilde{R}}                   % normalized RoR
+\providecommand{\permLvl}{}
+\renewcommand{\permLvl}{\boldsymbol{\mathit{p}}}  % permanent income level
+\newcommand{\PermGroFacRnd}{\tilde{G}}            % normalized permanent income shock
+
+% endogenous sequence random variables 
+\newcommand{\cNrmRnd}{\tilde{\mathit{c}}}         % consumption level stochastic sequence 
+\newcommand{\mNrmRnd}{\tilde{\mathit{m}}}         % wealth level stochastic sequence 
+
+% ---------------- Functions in the usual sense ---------------- 
+% Map real numbers to real numbers
+% Principle: Roman or Greek
+
+\renewcommand{\boundFunc}{\varphi}                % bounding function
+
+% level idiosyncratic
+\newcommand{\cFuncLvl}{\boldsymbol{\mathrm{c}}}   % consumption function 
+\newcommand{\vFuncLvl}{\boldsymbol{\mathrm{v}}}   % value function 
+
+% Normalized idiosyncratic
+\renewcommand{\cFunc}{\mathrm{c}}                 % normalized consumption function 
+\newcommand{\vFuncRnd}{\tilde{\mathrm{v}}}        % stochastic sequence normalised value function
+
+% Other functions
+\newcommand{\gFunc}{\mathrm{g}} 
+\renewcommand{\MPCFunc}{{\kappa}}                 % MPC function. Not bold is fine. 
+
+% ------------------ Operators ------------------ 
+% Map between function spaces, blackboard boldface
+
+\renewcommand{\TMap}{\mathbb{T}}                  % Bellman operator for normalized problem
+
+% ------------------ Theorems ------------------ 
+\newtheorem{assumption}{Assumption}
+\newtheorem{claim}{Claim}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{fact}{Fact}
+
+\newtheorem{remark}{Remark}
+
+% Define custom counters for assumptions 
+\newcounter{assumptionL}  % assumptions for limiting proofs 
+\newcounter{assumptionS}  % assumptions for stability proofs 
+\newcounter{assumptionI}  % assumptions for income process
+
+% Define custom theorem environments for assumptions
+\newtheorem{assumL}[assumptionL]{Assumption}
+\newtheorem{assumS}[assumptionS]{Assumption}
+\newtheorem{assumI}[assumptionI]{Assumption}
+
+% Adjust the representation of the counter for each assumption type
+\renewcommand{\theassumptionL}{L.\arabic{assumptionL}}
+\renewcommand{\theassumptionS}{S.\arabic{assumptionS}}
+\renewcommand{\theassumptionI}{I.\arabic{assumptionI}}
+
+% -------------- Growth and Impatience Factors --------------
+
+\renewcommand{\RPFac}{\frac{\APFac}{\Rfree}}
+\renewcommand{\GPFacRaw}{\frac{\APFac}{\PermGroFac}}
+
+
+
+% ------------------ Misc. Notation ------------------
+\newcommand{\nxt}{\text{next}}
+\renewcommand{\Harm}{\bar} % tilde is now random variable. 
+
+% Temp. to remove margin notes. from pdf. 
+\renewcommand{\marginpar}[2][]{}
+
+
+\begin{document}
+
+% Redefine \onlyinsubfile command defined in \LaTeXInputs/\texname.sty:
+% This lets any subfile called from here know that it is not standalone
+% (So: if it is NOT called from here and IS standalone, knows it can make bib)
+\renewcommand{\onlyinsubfile}[1]{}\renewcommand{\notinsubfile}[1]{#1}
+
+\subfile{Introduction} % Abstract, contents title and introduction
+\subfile{BufferStockTheory-NoAppendix} % Main body of paper
+
+\pagebreak
+\hypertarget{Appendices}{} % Creates link to [url-of-paper]#Appendices
+\ifthenelse{\boolean{Web}}{}{% Web version has no page headers
+  \chead[Appendices]{Appendices}      % but PDF version does
+  \appendixpage % Reset formatting for appendices
+} 
+
+\appendix % Declare beginning
+\addcontentsline{toc}{section}{Appendices} % print label "Appendices"
+
+\subfile{\ApndxDir/ApndxConcaveCFunc}
+\subfile{\ApndxDir/ApndxMTargetIsStable}
+\subfile{\ApndxDir/ApndxLiqConstr}
+\subfile{\ApndxDir/ApndxSupportingAnalysis}
+\subfile{\ApndxDir/ApndxConditionDiagrams}
+\subfile{\ApndxDir/ApndxBalancedGrowthcNrmAndCov}
+
+
+\pagebreak\input{\LaTeXInputs/bibliography_blend}\end{document}
+
+\sloppy
+
+\endinput
+
+\end{document}
+
+% Local Variables:
+% TeX-master-file: t
+% eval: (setq TeX-command-list  (assq-delete-all (car (assoc "BibTeX" TeX-command-list)) TeX-command-list))
+% eval: (setq TeX-command-list  (assq-delete-all (car (assoc "Biber"  TeX-command-list)) TeX-command-list))
+% eval: (setq TeX-command-list  (remove '("BibTeX" "%(bibtex) ../LaTeX/%s"    TeX-run-BibTeX nil t :help "Run BibTeX") TeX-command-list))
+% eval: (setq TeX-command-list  (remove '("BibTeX"    "bibtex ../LaTeX/%s"    TeX-run-BibTeX nil (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode context-mode)  :help "Run BibTeX") TeX-command-list))
+% eval: (setq TeX-command-list  (remove '("BibTeX" "bibtex ../LaTeX/%s"    TeX-run-BibTeX nil t :help "Run BibTeX") TeX-command-list))
+% eval: (add-to-list 'TeX-command-list '("BibTeX" "bibtex LaTeX/%s" TeX-run-BibTeX nil t                                                                              :help "Run BibTeX") t)
+% eval:  (add-to-list 'TeX-command-list '("BibTeX" "bibtex LaTeX/%s" TeX-run-BibTeX nil (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode context-mode) :help "Run BibTeX") t)
+% TeX-PDF-mode: t
+% TeX-file-line-error: t
+% TeX-debug-warnings: t
+% LaTeX-command-style: (("" "%(PDF)%(latex) %(file-line-error) %(extraopts) -output-directory=./LaTeX %S%(PDFout)"))
+% TeX-source-correlate-mode: t
+% TeX-parse-self: t
+% TeX-parse-all-errors: t
+% eval: (cond ((string-equal system-type "darwin") (progn (setq TeX-view-program-list '(("Skim" "/Applications/Skim.app/Contents/SharedSupport/displayline -b %n LaTeX/%o %b"))))))
+% eval: (cond ((string-equal system-type "gnu/linux") (progn (setq TeX-view-program-list '(("Evince" "evince --page-index=%(outpage) LaTeX/%o"))))))
+% eval: (cond ((string-equal system-type "gnu/linux") (progn (setq TeX-view-program-selection '((output-pdf "Evince"))))))
+% End:

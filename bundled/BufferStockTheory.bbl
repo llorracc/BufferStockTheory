@@ -1,0 +1,359 @@
+\providecommand{\noopsort}[1]{} \providecommand{\singleletter}[1]{#1}
+\ifx\undefined\BySame
+\newcommand{\BySame}{\leavevmode\rule[.5ex]{3em}{.5pt}\ }
+\fi
+\begin{thebibliography}{}
+
+\harvarditem[Abowd and Card]{Abowd and Card}{1989}{acCovariance}
+\textsc{Abowd, John~M.,  {and} David Card}  (1989): ``On the Covariance
+  Structure of Earnings and Hours Changes,'' \emph{Econometrica}, 57, 411--445.
+
+\harvarditem[Aiyagari]{Aiyagari}{1994}{aiyagari:ge}
+\textsc{Aiyagari, S.~Rao}  (1994): ``Uninsured Idiosyncratic Risk and Aggregate
+  Saving,'' \emph{Quarterly Journal of Economics}, 109, 659--684.
+
+\harvarditem[Alvarez and Stokey]{Alvarez and Stokey}{1998}{asHomogeneous}
+\textsc{Alvarez, Fernando,  {and} Nancy~L Stokey}  (1998): ``Dynamic
+  programming with homogeneous functions,'' \emph{Journal of economic theory},
+  82(1), 167--189.
+
+\harvarditem[Benhabib, Bisin, and Zhu]{Benhabib, Bisin, and
+  Zhu}{2015}{benhabibWealth}
+\textsc{Benhabib, Jess, Alberto Bisin,  {and} Shenghao Zhu}  (2015): ``The
+  wealth distribution in Bewley economies with capital income risk,''
+  \emph{Journal of Economic Theory}, 159, 489--515, Available at
+  \url{https://www.nber.org/papers/w20157.pdf}.
+
+\harvarditem[Bewley]{Bewley}{1977}{bewleyPIH}
+\textsc{Bewley, Truman}  (1977): ``The Permanent Income Hypothesis: A
+  Theoretical Formulation,'' \emph{Journal of Economic Theory}, 16, 252--292.
+
+\harvarditem[Blanchard]{Blanchard}{1985}{blanchardFinite}
+\textsc{Blanchard, Olivier~J.}  (1985): ``Debt, Deficits, and Finite
+  Horizons,'' \emph{Journal of Political Economy}, 93(2), 223--247.
+
+\harvarditem[Boyd]{Boyd}{1990}{jboydWeighted}
+\textsc{Boyd, John~H.}  (1990): ``Recursive Utility and the Ramsey Problem,''
+  \emph{Journal of Economic Theory}, 50(2), 326--345.
+
+\harvarditem[Cagetti]{Cagetti}{2003}{Cagetti}
+\textsc{Cagetti, Marco}  (2003): ``Wealth Ac{\-}cumulation Over the Life Cycle
+  and Pre{\-}cau{\-}tion{\-}ary Savings,'' \emph{Journal of Business and
+  Economic Statistics}, 21(3), 339--353.
+
+\harvarditem[Cao]{Cao}{2020}{Cao2020}
+\textsc{Cao, Dan}  (2020): ``Recursive equilibrium in Krusell and Smith
+  (1998),'' \emph{Journal of Economic Theory}, 186, 104978.
+
+\harvarditem[Carroll]{Carroll}{1992}{carrollBrookings}
+\textsc{Carroll, Christopher~D.}  (1992): ``The Buffer-Stock Theory of Saving:
+  Some Macroeconomic Evidence,'' \emph{Brookings Papers on Economic Activity},
+  1992(2), 61--156,
+  \url{https://www.econ2.jhu.edu/people/ccarroll/BufferStockBPEA.pdf}.
+
+\harvarditem[Carroll]{Carroll}{1997}{carrollBSLCPIH}
+\textsc{\BySame{}}  (1997): ``Buffer Stock Saving and the Life Cycle/Permanent
+  Income Hypothesis,'' \emph{Quarterly Journal of Economics}, CXII(1), 1--56.
+
+\harvarditem[Carroll]{Carroll}{2019, Submitted}{BufferStockTheoryQESubmit}
+\textsc{\BySame{}}  (2019, Submitted): ``Theoretical Foundations of Buffer
+  Stock Saving,'' \emph{Quantitative Economics}.
+
+\harvarditem[Carroll, Holm, and Kimball]{Carroll, Holm, and
+  Kimball}{2019}{chkLiqConstr}
+\textsc{Carroll, Christopher~D., Martin Holm,  {and} Miles~S. Kimball}  (2019):
+  ``Liquidity Constraints and Precautionary Saving,''
+  \emph{\href{https://www.econ2.jhu.edu/people/ccarroll/papers/LiqConstr}{Manuscript,
+  Johns Hopkins University}},
+  \url{https://www.econ2.jhu.edu/people/ccarroll/papers/LiqConstr}.
+
+\harvarditem[Carroll and Kim{\-}ball]{Carroll and
+  Kim{\-}ball}{1996}{ckConcavity}
+\textsc{Carroll, Christo{\-}pher~D.,  {and} Miles~S. Kim{\-}ball}  (1996): ``On
+  the {C}on{\-}cav{\-}ity of the {C}onsumption {F}unction,''
+  \emph{Econometrica}, 64(4), 981--992,
+  \url{https://www.econ2.jhu.edu/people/ccarroll/concavity.pdf}.
+
+\harvarditem[Carroll and Kimball]{Carroll and
+  Kimball}{2007}{CarrollKimballPSPW}
+\textsc{Carroll, Christopher~D.,  {and} Miles~S. Kimball}  (2007):
+  ``Precautionary Saving and Precautionary Wealth,'' \emph{Palgrave Dictionary
+  of Economics and Finance, 2nd Ed.},
+  \url{https://www.econ2.jhu.edu/people/ccarroll/papers/PalgravePrecautionary.pdf}.
+
+\harvarditem[Carroll and Samwick]{Carroll and Samwick}{1997}{csNature}
+\textsc{Carroll, Christopher~D.,  {and} Andrew~A. Samwick}  (1997): ``The
+  {N}ature of {P}recautionary {W}ealth,'' \emph{Journal of Monetary Economics},
+  40(1), 41--71.
+
+\harvarditem[Carroll, Sla{\-}calek, To{\-}ku{\-}o{\-}ka, and White]{Carroll,
+  Sla{\-}calek, To{\-}ku{\-}o{\-}ka, and White}{2017}{cstwMPC}
+\textsc{Carroll, Christopher~D., Jiri Sla{\-}calek, Kiichi To{\-}ku{\-}o{\-}ka,
+   {and} Matt{\-}hew~N. White}  (2017): ``The Dis{\-}tri{\-}bu{\-}tion of
+  Wealth and the Mar{\-}gi{\-}nal Pro{\-}pen{\-}si{\-}ty to Con{\-}sume,''
+  \emph{Quantitative Economics}, 8, 977--1020, At
+  \url{https://www.econ2.jhu.edu/people/ccarroll/papers/cstwMPC}.
+
+\harvarditem[Chamberlain and Wilson]{Chamberlain and
+  Wilson}{2000}{cwcUnderUncert}
+\textsc{Chamberlain, Gary,  {and} Charles~A. Wilson}  (2000): ``Optimal
+  Intertemporal Consumption Under Uncertainty,'' \emph{Review of Economic
+  Dynamics}, 3(3), 365--395.
+
+\harvarditem[{C}hristopher {D}.~{C}arroll, {A}lexander {M}.~{K}aufman,
+  {J}acqueline {L}.~{K}azil, {N}athan {M}.~{P}almer, and {M}atthew
+  {N}.~{W}hite]{{C}hristopher {D}.~{C}arroll, {A}lexander {M}.~{K}aufman,
+  {J}acqueline {L}.~{K}azil, {N}athan {M}.~{P}almer, and {M}atthew
+  {N}.~{W}hite}{2018}{carroll_et_al-proc-scipy-2018}
+\textsc{{C}hristopher {D}.~{C}arroll, {A}lexander {M}.~{K}aufman, {J}acqueline
+  {L}.~{K}azil, {N}athan {M}.~{P}almer,  {and} {M}atthew {N}.~{W}hite}  (2018):
+  ``{T}he {E}con-{A}{R}{K} and {H}{A}{R}{K}: {O}pen {S}ource {T}ools for
+  {C}omputational {E}conomics,'' in \emph{{P}roceedings of the 17th {P}ython in
+  {S}cience {C}onference}, ed. by {F}atih {A}kici, {D}avid {L}ippa, {D}illon
+  {N}iederhut,  {and} {M} {P}acer, pp. 25 -- 30.
+
+\harvarditem[Clarida]{Clarida}{1987}{claridaErgodic}
+\textsc{Clarida, Richard~H.}  (1987): ``Consumption, Liquidity Constraints, and
+  Asset Accumulation in the Face of Random Fluctuations in Income,''
+  \emph{International Economic Review}, XXVIII, 339--351.
+
+\harvarditem[Daly, Hryshko, and Manovskii]{Daly, Hryshko, and
+  Manovskii}{2016}{dhmImproving}
+\textsc{Daly, Moira, Dmytro Hryshko,  {and} Iourii Manovskii}  (2016):
+  ``Improving the measurement of earnings dynamics,'' Discussion paper,
+  National Bureau of Economic Research.
+
+\harvarditem[Deaton]{Deaton}{1991}{deatonLiqConstr}
+\textsc{Deaton, Angus~S.}  (1991): ``Saving and Liquidity Constraints,''
+  \emph{Econometrica}, 59, 1221--1248,
+  \url{https://www.jstor.org/stable/2938366}.
+
+\harvarditem[Dur{\'a}n]{Dur{\'a}n}{2003}{duranDiscounting}
+\textsc{Dur{\'a}n, Jorge}  (2003): ``Discounting long run average growth in
+  stochastic dynamic programs,'' \emph{Economic Theory}, 22(2), 395--413.
+
+\harvarditem[Feinberg, Kasyanov, and Zadoianchuk]{Feinberg, Kasyanov, and
+  Zadoianchuk}{2012}{Feinberg2012}
+\textsc{Feinberg, Eugene~A, Pavlo~O Kasyanov,  {and} Nina~V Zadoianchuk}
+  (2012): ``{Average Cost Markov Decision Processes with Weakly Continuous
+  Transition Probabilities},'' \emph{Mathematics of Operations Research}, 37,
+  591--607.
+
+\harvarditem[Fisher]{Fisher}{1930}{fisherInterestTheory}
+\textsc{Fisher, Irving}  (1930): \emph{The Theory of Interest}. MacMillan, New
+  York.
+
+\harvarditem[Friedman]{Friedman}{1957}{friedmanATheory}
+\textsc{Friedman, Milton~A.}  (1957): \emph{A Theory of the Consumption
+  Function}. Princeton University Press.
+
+\harvarditem[Gourinchas and Parker]{Gourinchas and Parker}{2002}{gpLifeCycle}
+\textsc{Gourinchas, Pierre-Olivier,  {and} Jonathan Parker}  (2002):
+  ``Consumption Over the Life Cycle,'' \emph{Econometrica}, 70(1), 47--89.
+
+\harvarditem[Harmenberg]{Harmenberg}{2021}{harmenbergInvariant}
+\textsc{Harmenberg, Karl}  (2021): ``Agg{\-}re{\-}gat{\-}ing
+  hetero{\-}gen{\-}eous-agent mod{\-}els with per{\-}manent in{\-}come
+  shocks,'' \emph{Journal of Economic Dynamics and Control}, 129, 104185.
+
+\harvarditem[Hendricks]{Hendricks}{2001}{hendricksBequests}
+\textsc{Hendricks, Lutz}  (2001): \emph{Bequests and Retirement Wealth in the
+  United States}. University of Arizona.
+
+\harvarditem[Hendricks]{Hendricks}{2016}{hendricksSmallBequests}
+\textsc{\BySame{}}  (2016): ``Wealth Distribution and Bequests,'' \emph{Lecture
+  Notes, Economics 821, University of North Carolina}.
+
+\harvarditem[Hern\'andez-Lerma and Lasserre]{Hern\'andez-Lerma and
+  Lasserre}{1995}{hlermaSDS1995}
+\textsc{Hern\'andez-Lerma, Onésimo,  {and} Jean~Bernard Lasserre}  (1995):
+  \emph{Discrete-Time Markov Control Processes: Basic Optimality Criteria}.
+  Springer, New York, NY.
+
+\harvarditem[Hiraguchi]{Hiraguchi}{2003}{hiraguchiBSProofs}
+\textsc{Hiraguchi, Ryoji}  (2003): ``On the Convergence of Consumption Rules,''
+  \emph{Manuscript, Johns Hopkins University}.
+
+\harvarditem[Hryshko and Manovskii]{Hryshko and Manovskii}{2020}{dmHowMuch}
+\textsc{Hryshko, Dmytro,  {and} Iourii Manovskii}  (2020): ``How much
+  consumption insurance in the US?,'' \emph{Manuscript, University of Alerta}.
+
+\harvarditem[Huggett]{Huggett}{1993}{huggettRiskFreeRate}
+\textsc{Huggett, Mark}  (1993): ``The risk-free rate in heterogeneous-agent
+  incomplete-insurance economies,'' \emph{Journal of Economic Dynamics and
+  Control}, 17, 953--969.
+
+\harvarditem[Imrohoro\u{g}lu]{Imrohoro\u{g}lu}{1989}{imrohorogluBusinessCycles}
+\textsc{Imrohoro\u{g}lu, Ayşe}  (1989): ``Cost of Business Cycles with
+  Indivisibilities and Liquidity Constraints,'' \emph{Journal of Political
+  Economy}, 97, 1364--1383.
+
+\harvarditem[Jappelli and Pistaferri]{Jappelli and Pistaferri}{2000}{jpCins}
+\textsc{Jappelli, Tullio,  {and} Luigi Pistaferri}  (2000): ``Intertemporal
+  Choice and Consumption Mobility,'' \emph{Econometric Society World Congress
+  2000 Contributed Paper Number 0118}.
+
+\harvarditem[Kimball]{Kimball}{1990}{kimballPrecautionarySaving}
+\textsc{Kimball, Miles~S.}  (1990): ``Precautionary Saving in the Small and in
+  the Large,'' \emph{Econometrica}, 58, 53--73.
+
+\harvarditem[Kimball]{Kimball}{1993}{kimball:standardra}
+\textsc{\BySame{}}  (1993): ``Standard Risk Aversion,'' \emph{Econometrica},
+  61(3), 589--611.
+
+\harvarditem[Krueger, Mitman, and Perri]{Krueger, Mitman, and
+  Perri}{2016}{kmpHandbook}
+\textsc{Krueger, Dirk, Kurt Mitman,  {and} Fabrizio Perri}  (2016):
+  ``Macroeconomics and Household Heterogeneity,'' \emph{Handbook of
+  Macroeconomics}, 2, 843--921.
+
+\harvarditem[Li and Stachurski]{Li and Stachurski}{2014}{lsIncFluct}
+\textsc{Li, Huiyu,  {and} John Stachurski}  (2014): ``Solving the income
+  fluctuation problem with unbounded rewards,'' \emph{Journal of Economic
+  Dynamics and Control}, 45, 353--365.
+
+\harvarditem[Light]{Light}{2018}{lightPrecautionarySaving}
+\textsc{Light, Bar}  (2018): ``Precautionary Saving in a Markovian Earnings
+  Environment,'' \emph{Review of Economic Dynamics}, 29, 138--147.
+
+\harvarditem[Ma, Stachurski, and Toda]{Ma, Stachurski, and
+  Toda}{2020}{mstIncFluct}
+\textsc{Ma, Qingyin, John Stachurski,  {and} Alexis~Akira Toda}  (2020): ``The
+  income fluctuation problem and the evolution of wealth,'' \emph{Journal of
+  Economic Theory}, 187.
+
+\harvarditem[Ma, Stachurski, and Toda]{Ma, Stachurski, and
+  Toda}{2022}{maUnboundedDP}
+\textsc{\BySame{}}  (2022): ``Unbounded dynamic programming via the
+  Q-transform,'' \emph{Journal of Mathematical Economics}, 100, 102652.
+
+\harvarditem[Ma and Toda]{Ma and Toda}{2020}{maTodaRich}
+\textsc{Ma, Qingyin,  {and} Alexis~Akira Toda}  (2020): ``A Theory of the
+  Saving Rate of the Rich,'' .
+
+\harvarditem[Ma and Toda]{Ma and Toda}{2021}{maSavingRateRich}
+\textsc{\BySame{}}  (2021): ``A Theory of the Saving Rate of the Rich,''
+  \emph{Journal of Economic Theory}, 192, 105193.
+
+\harvarditem[MaCurdy]{MaCurdy}{1982}{macurdyTimeseries}
+\textsc{MaCurdy, Thomas}  (1982): ``The Use of Time Series Processes to Model
+  the Error Structure of Earnings in a Longitudinal Data Analysis,''
+  \emph{Journal of Econometrics}, 18(1), 83--114.
+
+\harvarditem[Martins-da Rocha and Vailakis]{Martins-da Rocha and
+  Vailakis}{2010}{mvExistence}
+\textsc{Martins-da Rocha, V~Filipe,  {and} Yiannis Vailakis}  (2010):
+  ``Existence and uniqueness of a fixed point for local contractions,''
+  \emph{Econometrica}, 78(3), 1127--1141.
+
+\harvarditem[Matkowski and Nowak]{Matkowski and Nowak}{2011}{mnUnique}
+\textsc{Matkowski, Janusz,  {and} Andrzej~S. Nowak}  (2011): ``On Discounted
+  Dynamic Programming With Unbounded Returns,'' \emph{Economic Theory}, 46,
+  455--474.
+
+\harvarditem[Modigliani]{Modigliani}{1966}{modiglianiWealth}
+\textsc{Modigliani, Franco}  (1966): ``The Life Cycle Hypothesis, the Demand
+  for Wealth, and the Supply of Capital,'' \emph{Social Research}, 33,
+  160--217.
+
+\harvarditem[Muth]{Muth}{1960}{muthOptimal}
+\textsc{Muth, John~F.}  (1960): ``Optimal Properties of Exponentially Weighted
+  Forecasts,'' \emph{Journal of the American Statistical Association}, 55(290),
+  299--306.
+
+\harvarditem[Puterman]{Puterman}{1994}{puterman1994}
+\textsc{Puterman, Martin~L.}  (1994): \emph{Markov Decision Processes: Discrete
+  Stochastic Dynamic Programming}, Wiley Series in Probability and Statistics.
+  John Wiley \& Sons, Inc.
+
+\harvarditem[Riehl]{Riehl}{2017}{riehl2017category}
+\textsc{Riehl, Emily}  (2017): \emph{Category theory in context}. Courier Dover
+  Publications.
+
+\harvarditem[Rinc{\'o}n-Zapatero and
+  Rodr{\'\i}guez-Palmero]{Rinc{\'o}n-Zapatero and
+  Rodr{\'\i}guez-Palmero}{2003}{rrExistence}
+\textsc{Rinc{\'o}n-Zapatero, Juan~Pablo,  {and} Carlos Rodr{\'\i}guez-Palmero}
+  (2003): ``Existence and uniqueness of solutions to the Bellman equation in
+  the unbounded case,'' \emph{Econometrica}, 71(5), 1519--1555.
+
+\harvarditem[Sargent and Stachurski]{Sargent and
+  Stachurski}{2023}{sargstach2023}
+\textsc{Sargent, Thomas~J,  {and} John Stachurski}  (2023): ``Completely
+  Abstract Dynamic Programming,'' \emph{arXiv:2308.02148 [math.OC]},
+  Optimization and Control (math.OC).
+
+\harvarditem[Schechtman and Escudero]{Schechtman and
+  Escudero}{1977}{seIncFluct}
+\textsc{Schechtman, Jack,  {and} Vera Escudero}  (1977): ``Some results on `An
+  Income Fluctuation Problem','' \emph{Journal of Economic Theory}, 16,
+  151--166.
+
+\harvarditem[Scheinkman and Weiss]{Scheinkman and
+  Weiss}{1986}{scheinkman&weiss:borrowing}
+\textsc{Scheinkman, Jos\'e,  {and} Laurence Weiss}  (1986): ``Borrowing
+  Constraints and Aggregate Economic Activity,'' \emph{Econometrica}, 54(1),
+  23--46.
+
+\harvarditem[Schmitt-Groh{\'e} and Uribe]{Schmitt-Groh{\'e} and
+  Uribe}{2003}{schmitt2003closing}
+\textsc{Schmitt-Groh{\'e}, Stephanie,  {and} Mart{\i}n Uribe}  (2003):
+  ``Closing small open economy models,'' \emph{Journal of international
+  Economics}, 61(1), 163--185.
+
+\harvarditem[Shanker]{Shanker}{2017}{Shanker2017a}
+\textsc{Shanker, Akshay}  (2017): ``{Existence of Recursive Constrained Optima
+  in the Heterogenous Agent Neoclassical Growth Model},'' \emph{SSRN Working
+  Paper 3011662}.
+
+\harvarditem[Stachurski]{Stachurski}{2022}{stachurski2022}
+\textsc{Stachurski, J.}  (2022): \emph{Economic Dynamics, second edition:
+  Theory and Computation}. MIT Press.
+
+\harvarditem[Stachurski and Toda]{Stachurski and
+  Toda}{2019}{StachurskiToda2019JET}
+\textsc{Stachurski, John,  {and} Alexis~Akira Toda}  (2019): ``An Impossibility
+  Theorem for Wealth in Heterogeneous-Agent Models with Limited
+  Heterogeneity,'' \emph{Journal of Economic Theory}, 182, 1--24.
+
+\harvarditem[Stokey, Lucas, and Prescott]{Stokey, Lucas, and
+  Prescott}{1989}{slpMethods}
+\textsc{Stokey, Nancy~L., Robert~E. Lucas,  {and} Edward~C. Prescott}  (1989):
+  \emph{Recursive Methods in Economic Dynamics}. Harvard University Press.
+
+\harvarditem[Sun and Zhang]{Sun and Zhang}{2009}{Sun2009}
+\textsc{Sun, Yeneng,  {and} Yongchao Zhang}  (2009): ``{Individual Risk and
+  Lebesgue Extension Without Aggregate Uncertainty},'' \emph{Journal of
+  Economic Theory}, 144, 432--443.
+
+\harvarditem[Szeidl]{Szeidl}{2013}{szeidlInvariant}
+\textsc{Szeidl, Adam}  (2013): ``Sta{\-}ble In{\-}vari{\-}ant Distribution in
+  Buffer-Stock Sav{\-}ing and Sto{\-}chastic Growth Models,'' \emph{Manuscript,
+  Central European University}, Available at
+  \url{http://www.personal.ceu.hu/staff/Adam_Szeidl/papers/invariant_revision.pdf}.
+
+\harvarditem[Toche]{Toche}{2005}{tocheUrisk}
+\textsc{Toche, Patrick}  (2005): ``A Tractable Model of
+  Pre{\-}cau{\-}tion{\-}ary Sav{\-}ing in Con{\-}tin{\-}uous Time,''
+  \emph{Economics Letters}, 87(2), 267--272.
+
+\harvarditem[Wolf and Shanker]{Wolf and Shanker}{2021}{wolf2021play}
+\textsc{Wolf, Martin,  {and} Akshay Shanker}  (2021): ``Play for the Rich and
+  Work for the Poor? The Optimal Distribution of Saving and Work in the
+  Heterogeneous Agents Neoclassical G,'' \emph{CEPR Discussion Papers}, 16479.
+
+\harvarditem[Yaari]{Yaari}{1965}{yaari1965uncertain}
+\textsc{Yaari, Menahem~E}  (1965): ``Uncertain lifetime, life insurance, and
+  the theory of the consumer,'' \emph{The Review of Economic Studies}, 32(2),
+  137--150.
+
+\harvarditem[Yao]{Yao}{2012}{yaoNote}
+\textsc{Yao, Jiaxiong}  (2012): ``The Theoretical Foundations of Buffer Stock
+  Saving: A Note,'' \emph{Manuscript, Johns Hopkins University}.
+
+\harvarditem[Zeldes]{Zeldes}{1989}{zeldesStochastic}
+\textsc{Zeldes, Stephen~P.}  (1989): ``Optimal Consumption with Stochastic
+  Income: {D}eviations from Certainty Equivalence,'' \emph{Quarterly Journal of
+  Economics}, 104(2), 275--298.
+
+\end{thebibliography}

@@ -1,0 +1,53 @@
+This is BibTeX, Version 0.99d (TeX Live 2023)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: BufferStockTheory.aux
+The style file: ./Resources/texmf-local/bibtex/bst/econtex.bst
+Illegal, another \bibstyle command---line 86 of file BufferStockTheory.aux
+ : \bibstyle
+ :          {./Resources/texmf-local/bibtex/bst/econtex}
+I'm skipping whatever remains of this command
+Database file #1: BufferStockTheory.bib
+Warning--I didn't find a database entry for "carroll:death"
+Done.
+You've used 68 entries,
+            2309 wiz_defined-function locations,
+            958 strings with 14135 characters,
+and the built_in function-call counts, 31402 in all, are:
+= -- 3171
+> -- 1570
+< -- 1
++ -- 528
+- -- 457
+* -- 2741
+:= -- 6114
+add.period$ -- 76
+call.type$ -- 68
+change.case$ -- 387
+chr.to.int$ -- 68
+cite$ -- 68
+duplicate$ -- 1149
+empty$ -- 2011
+format.name$ -- 535
+if$ -- 6044
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 74
+newline$ -- 211
+num.names$ -- 409
+pop$ -- 307
+preamble$ -- 2
+purify$ -- 386
+quote$ -- 0
+skip$ -- 1060
+stack$ -- 0
+substring$ -- 1839
+swap$ -- 203
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 1
+type$ -- 724
+warning$ -- 0
+while$ -- 383
+width$ -- 0
+write$ -- 813
+(There was 1 error message)
