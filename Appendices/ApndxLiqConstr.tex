@@ -10,6 +10,83 @@
 \hypertarget{ApndxLiqConstr}{}
 \section{Perfect Foresight Liquidity Constrained Solution}\label{sec:ApndxLiqConstr}
 
+\hypertarget{Autarky-Value}{}
+%\subsubsection{The Finite Value of Autarky Condition (FVAC)}
+We briefly interpret {\FVAC} before turning to how all the conditions relate under uncertainty. Analogously to~\eqref{eq:ValuePFAnalyticalAutarky}, the value for a consumer who spent exactly their permanent income every period would reflect the product of the expectation of the (independent) future shocks to permanent income:\hypertarget{uInvEuPermShkDefn}{}
+\begin{align*}
+%  \vFuncLvl_{t}  & = \Ex_{t}\ltableeft[\uFunc(\permLvl_{t}) + \DiscFac \uFunc(\permLvl_{t}\PermGroFacRnd_{t+1}) + \cdots + \DiscFac^{T-t}\uFunc(\permLvl_{t}\PermGroFacRnd_{t+1}\ldots\PermGroFacRnd_{T})\right] \\
+  % & = \uFunc(\permLvl_{t})\left(1+ \DiscFac \Ex_{t}[\PermGroFac_{t+1}^{1-\CRRA}] +  \ldots + \DiscFac^{T-t}\Ex_{t}[\PermGroFac_{t+1}^{1-\CRRA}]\ldots\Ex_{t}[\PermGroFac_{T}^{1-\CRRA}]\right) \\
+             & = \uFunc(\permLvl_{t})\left(\frac{1-{(\DiscFac \PermGroFac^{1-\CRRA}\Ex[\permShk^{1-\CRRA}])}^{T-t+1}}{1-\DiscFac \PermGroFac^{1-\CRRA} \Ex[\permShk^{1-\CRRA}]}\right),
+\end{align*}
+%
+The function $\vFuncLvl_{t}$ will be finite as $T$ approaches $\infty$ if the {\FVAC} holds. In the case without uncertainty, Because $\uFunc(xy) = x^{1-\CRRA}\uFunc(y)$, the value the consumer would achieve is: 
+%
+%
+%
+\begin{equation}\label{eq:ValuePFAnalyticalAutarky}\begin{gathered}\begin{aligned}  
+      \vFuncLvl_{t}^{\text{autarky}}  & = \uFunc(\permLvl_{t})+\DiscFac \uFunc(\permLvl_{t}\PermGroFac)+\DiscFac^{2} \uFunc(\permLvl_{t} \PermGroFac^{2})+\ldots
+      \\  & = \uFunc(\permLvl_{t})\left(\frac{1-{(\DiscFac \PermGroFac^{1-\CRRA})}^{T-t+1}}{1-\DiscFac \PermGroFac^{1-\CRRA}}\right) \notag
+    \end{aligned}\end{gathered}\end{equation}
+which (for $\PermGroFac>0$) asymptotes to a finite number as $n$, with $n=T-t$, approaches $+\infty$. 
+
+
+\subsection{Perfect Foresight Unconstrained Solution}\label{subsec:ApndxUCPF}
+
+The first result relates to the perfect foresight case without liquidity constraints. 
+
+\begin{proof}(Proof of Proposition \ref{prop:pfUCFHWC})
+Consider a sequence of consumption $\{\cLvl_{T-n}\}_{n= t}^{T}$ and a sequence of income $\{\permLvl_{T-n}\}_{n= t}^{T}$  and let $\mathrm{PDV}_{t}^{T}(\cLvl)$  and $\mathrm{PDV}_{t}^{T}(\permLvl)$ denote the present discounted value of the consumption sequence and permanent income sequence respectively. The dynamic budget constraint, strictly positive marginal utility, and the can't-die-in-debt condition, Equation \eqref{eq:NoDebtAtDeath}, imply an exactly-holding intertemporal budget constraint (IBC):
+%
+%
+\begin{align}
+  \mathrm{PDV}_{t}^{T}(\cLvl)  & = \overbrace{\mLvl_{t}-\permLvl_{t}}^{\bLvl_{t}}+\overbrace{\mathrm{PDV}_{t}^{T}(\permLvl)}^{\hLvl_{t}}, \label{eq:IBCFinite}
+\end{align} \hypertarget{FHWFacDefn}{}\hypertarget{PFRNrmDefn}{}
+where $\bLvl$ is beginning-of-period `market' balances; with $\RNrmFac \colon = \Rfree/\PermGroFac$ `human wealth' can be written as:
+%
+% 
+\begin{align}
+  \hLvl_{t}  & = \permLvl_{t}+\RNrmFac^{-1} \permLvl_{t} + \RNrmFac^{-2} \permLvl_{t} + \cdots + \RNrmFac^{t-T} \permLvl_{t} \notag
+  \\  & = \underbrace{\left(\frac{1-\RNrmFac^{-(T-t+1)}}{1-\RNrmFac^{-1}}\right)}_{\equiv \hNrm_{t}}\permLvl_{t} \label{eq:HDef}.
+\end{align}\hypertarget{FHWC}{}
+%
+%
+Let $\hNrm$ denote the limiting value of normalized human wealth as the planning horizon recedes, we have  $\hNrm \colon = \lim\limits_{n \rightarrow \infty} \hNrm_{t_{n}}$.  
+
+Next, since consumption is growing by $\APFac$ but discounted by $\Rfree$:
+\begin{align*}
+  \mathrm{PDV}_{t}^{T}(\cLvl)  & = \left(\frac{1-\RPFac^{T-t+1}}{1-\RPFac}\right)\cLvl_{t}
+\end{align*}
+from which the IBC~\eqref{eq:IBCFinite} implies
+\begin{align}
+  \cLvl_{t}  & = \overbrace{\left(\frac{1-\RPFac}{1-\RPFac^{T-t+1}}\right)}^{\equiv \MPCmin_{t}}
+               (\bLvl_{t}+\hLvl_{t})   \label{eq:WDef}
+\end{align}
+defining a normalized finite-horizon perfect foresight consumption function:\hypertarget{MPCminDefn}{}
+%
+%
+\begin{align*}
+  \bar{\cFunc}_{T-n}(\mNrm_{T-n})  & = (\overbrace{\mNrm_{T-n}-1}^{
+                                     \equiv\bNrm_{T-n}}+\hNrm_{T-n})\MPCmin_{t-n}
+\end{align*}
+%
+%
+where $\MPCmin_{t}$ is the marginal propensity to consume (MPC). (The overbar signifies that $\bar{\cFunc}$ will be an upper bound as we modify the problem to incorporate constraints and uncertainty; analogously, $\MPCmin$ is the MPC's lower bound). 
+
+The horizon-exponentiated term in the denominator of~\eqref{eq:WDef} is why, for $\underline{\MPC}$ to be strictly positive as $n$ goes to infinity, we must impose the {\RIC}. The {\RIC} thus implies that the consumer cannot be so pathologically patient as to wish, in the limit as the horizon approaches infinity, to spend nothing today out of an increase in current wealth (the {\RIC} rules out the degenerate limiting solution $\bar{\cFunc}(\mNrm)=0$).  
+
+%We call a consumer who satisfies the {\RIC} `return impatient.'
+
+\hypertarget{Unconstrained-Solution}{}\hypertarget{PF-Unconstrained-Solution}{}
+%\subsubsection{Nondegenerate PF Unconstrained Solution Requires FHWC}\label{subsec:PFUncon}
+
+Given that the {\RIC}~holds, and (as before) defining limiting objects by the absence of a time subscript, the limiting upper bound consumption function will be
+\begin{align}\label{eq:cFuncPFUnc}
+  \bar{\cFunc}(\mNrm)  & = (\mNrm+\hNrm-1)\MPCmin,
+\end{align}
+and so in order to rule out the degenerate limiting solution $\bar{\cFunc}(\mNrm) = \infty$ we need $\hNrm$ to be finite; that is, we must impose the Finite Human Wealth Condition ({\FHWC}), eq. \eqref{eq:FHWC}.
+
+\end{proof}
+
 Under perfect foresight in the presence of a liquidity constraint requiring $\bNrm \geq 0$, this appendix taxonomizes the varieties of the limiting consumption function $\cnstr{\cFunc}(\mNrm)$ that arise under various parametric conditions.
 
 \input{\TableDir/LiqConstrScenarios}

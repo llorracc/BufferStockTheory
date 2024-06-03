@@ -10,14 +10,14 @@
 \subsection{Appendix for Problem Formulation}
 
 \subsubsection{Recovering the Non-Normalized Problem}\label{sec:recoverLevels}
-Letting nonbold variables be the boldface counterpart normalized by $\PermLvl_{t}$ (as with $\mNrm=\mLvl/\PermLvl$), consider the problem in the second-to-last period:
+Letting nonbold variables be the boldface counterpart normalized by $\permLvl_{t}$ (as with $\mNrm=\mLvl/\permLvl$), consider the problem in the second-to-last period:
 \begin{equation}\label{eq:vBold}
   \begin{split}
-    \vFuncLvl_{T-1}(\mLvl_{T-1},\PermLvl_{T-1})
+    \vFuncLvl_{T-1}(\mLvl_{T-1},\permLvl_{T-1})
     & =  \max_{0< \cNrm_{T-1}\leq \mNrm_{T-1}}~
-    \uFunc(\PermLvl_{T-1}\cNrm_{T-1}) + \DiscFac  \Ex_{T-1} [\uFunc(\PermLvl_{T}{\mNrm}
+    \uFunc(\permLvl_{T-1}\cNrm_{T-1}) + \DiscFac  \Ex_{T-1} [\uFunc(\permLvl_{T}{\mNrm}
     _{T})]  \\
-    & = \PermLvl_{T-1}^{1-\CRRA}
+    & = \permLvl_{T-1}^{1-\CRRA}
     \left\{\max_{0<\cNrm_{T-1}\leq \mNrm_{T-1}}~ \uFunc(\cNrm_{T-1}) + \DiscFac \Ex_{T-1} [ \uFunc( {\PermGroFacRnd}_{T}
       {\mNrm}_{T}) ] \right\}.
   \end{split}
@@ -27,13 +27,13 @@ Letting nonbold variables be the boldface counterpart normalized by $\PermLvl_{t
 
 Since $\vFunc_{T}(\mNrm_{T}) = \uFunc(\mNrm_{T})$, defining $\vFunc_{T-1}(\mNrm_{T-1})$ from Problem ~\eqref{eq:veqnNrmRecBellman}, we obtain:
 \begin{align*}
-  \vFuncLvl_{T-1}(\mLvl_{T-1},\PermLvl_{T-1})  & = \PermLvl_{T-1}^{1-\CRRA} \vFunc_{T-1}(\underbrace{\mLvl_{T-1}/\PermLvl_{T-1}}_{=\mNrm_{T-1}}).
+  \vFuncLvl_{T-1}(\mLvl_{T-1},\permLvl_{T-1})  & = \permLvl_{T-1}^{1-\CRRA} \vFunc_{T-1}(\underbrace{\mLvl_{T-1}/\permLvl_{T-1}}_{=\mNrm_{T-1}}).
 \end{align*}
 
 This logic induces to earlier periods; if we solve the normalized one-state-variable problem~\eqref{eq:veqnNrmRecBellman}, we will have solutions to the original problem for any $t<T$ from:
 \begin{align*}
-  \vFuncLvl_{t}(\mLvl_{t},\PermLvl_{t})  & = \PermLvl_{t}^{1-\CRRA}\vFunc_{t}(\mNrm_{t}),
-  \\ \cLvl_{t}(\mLvl_{t},\PermLvl_{t})  & = \PermLvl_{t}\cFunc_{t}(\mNrm_{t}).
+  \vFuncLvl_{t}(\mLvl_{t},\permLvl_{t})  & = \permLvl_{t}^{1-\CRRA}\vFunc_{t}(\mNrm_{t}),
+  \\ \cLvl_{t}(\mLvl_{t},\permLvl_{t})  & = \permLvl_{t}\cFunc_{t}(\mNrm_{t}).
 \end{align*}
 
 

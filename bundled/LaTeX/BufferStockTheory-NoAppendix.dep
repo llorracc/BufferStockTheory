@@ -90,7 +90,9 @@
   *{package}{nccfoots}    {2005/02/03 v1.2}
   *{package}{perpage}     {2014/10/25 v2.0}
   *{package}{subfiles}    {2020/11/14 v2.2}
-  *{package}{./Resources/texmf-local/tex/latex/econark}{0000/00/00 v0.0}
+  *{package}{/Volumes/Sync/GitHub/llorracc/SolvingMicroDSOPs/SolvingMicroDSOPs-Latest/.resources/texmf-local/tex/latex/econark}{0000/00/00 v0.0}
+  *{package}{xmpincl}     {2021/09/22 v2.4}
+  *{package}{ifpdf}       {2019/10/25 v3.4}
   *{package}{./Resources/texmf-local/tex/latex/econtexSetup}{0000/00/00 v0.0}
   *{package}{wasysym}     {2020/01/19 v2.4}
   *{package}{psibycus}    {2004/10/18 v4.5}

@@ -10,7 +10,7 @@ Figure~\ref{fig:cNrmTargetFig} depicts the expected consumption growth factor as
 declining function of the cash-on-hand ratio. To investigate this,
 define
 \begin{align*}
-  \pmb{\Upsilon}(\mNrm_{t})  & \equiv  \PermGroFac_{t+1} \usual{\cFunc}(\RNrm_{t+1}\aFunc(\mNrm_{t})+\TranShkAll_{t+1})/\usual{\cFunc}(\mNrm_{t})  = \cLvl_{t+1}/\cLvl_{t}
+  \pmb{\Upsilon}(\mNrm_{t})  & \equiv  \PermGroFac_{t+1} \usual{\cFunc}(\RNrm_{t+1}\aFunc(\mNrm_{t})+\tranShkAll_{t+1})/\usual{\cFunc}(\mNrm_{t})  = \cLvl_{t+1}/\cLvl_{t}
 \end{align*}
 and the proposition in which we are interested is
 \begin{align*}
@@ -56,10 +56,10 @@ and
 
 The latter proposition is obviously true under our assumption $\CRRA > 1$.  The former will be true if
 \begin{align*}
-  \mbox{cov}_{t}\left({(\PermGroFac \PermShk_{t+1} \cFunc(\mNrm_{t+1}))}^{-\CRRA-1},\cFunc^{\prime}(\mNrm_{t+1}) \right)  & > 0 \nonumber.
+  \mbox{cov}_{t}\left({(\PermGroFac \permShk_{t+1} \cFunc(\mNrm_{t+1}))}^{-\CRRA-1},\cFunc^{\prime}(\mNrm_{t+1}) \right)  & > 0 \nonumber.
 \end{align*}
 
-The two shocks cause two kinds of variation in $\mNrm_{t+1}$.  Variations due to $\TranShkAll_{t+1}$ satisfy the proposition, since a higher draw of $\TranShkAll$ both reduces $c_{t+1}^{-\CRRA-1}$ and reduces the marginal propensity to consume.  However, permanent shocks have conflicting effects.  On the one hand, a higher draw of $\PermShk_{t+1}$ will reduce $\mNrm_{t+1}$, thus increasing both $c_{t+1}^{-\CRRA-1}$ and $c_{t+1}^{\prime}$.  On the other hand, the $c_{t+1}^{-\CRRA-1}$ term is multiplied by $\PermGroFac \PermShk_{t+1}$, so the effect of a higher $\PermShk_{t+1}$ could be to decrease the first term in the covariance, leading to a negative covariance with the second term.  (Analogously, a lower permanent shock $\PermShk_{t+1}$ can also lead a negative correlation.)
+The two shocks cause two kinds of variation in $\mNrm_{t+1}$.  Variations due to $\tranShkAll_{t+1}$ satisfy the proposition, since a higher draw of $\tranShkAll$ both reduces $c_{t+1}^{-\CRRA-1}$ and reduces the marginal propensity to consume.  However, permanent shocks have conflicting effects.  On the one hand, a higher draw of $\permShk_{t+1}$ will reduce $\mNrm_{t+1}$, thus increasing both $c_{t+1}^{-\CRRA-1}$ and $c_{t+1}^{\prime}$.  On the other hand, the $c_{t+1}^{-\CRRA-1}$ term is multiplied by $\PermGroFac \permShk_{t+1}$, so the effect of a higher $\permShk_{t+1}$ could be to decrease the first term in the covariance, leading to a negative covariance with the second term.  (Analogously, a lower permanent shock $\permShk_{t+1}$ can also lead a negative correlation.)
 
 \end{document}
 \endinput

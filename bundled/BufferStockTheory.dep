@@ -63,7 +63,6 @@
   *{package}{moreverb}    {2008/06/03 v2.3a}
   *{package}{hhline}      {2020/01/04 v2.04}
   *{package}{tipa}        {2002/08/08 v1.1}
-  *{package}{fontenc}     {0000/00/00 v0.0}
   *{file}   {t3enc.def}   {2001/12/31 v3}
   *{file}   {t1cmss.fd}   {2023/04/13 v2.5m}
   *{package}{xcolor}      {2023/11/15 v3.01}
@@ -85,7 +84,7 @@
   *{package}{perpage}     {2014/10/25 v2.0}
   *{package}{subfiles}    {2020/11/14 v2.2}
   *{package}{import}      {2020/04/01 v6.2}
-  *{package}{./Resources/texmf-local/tex/latex/econark}{0000/00/00 v0.0}
+  *{package}{/Volumes/Sync/GitHub/llorracc/SolvingMicroDSOPs/SolvingMicroDSOPs-Latest/.resources/texmf-local/tex/latex/econark}{0000/00/00 v0.0}
   *{package}{xmpincl}     {2021/09/22 v2.4}
   *{package}{ifpdf}       {2019/10/25 v3.4}
   *{package}{./Resources/texmf-local/tex/latex/econtexSetup}{0000/00/00 v0.0}
@@ -144,13 +143,9 @@
   *{file}   {supp-pdf.mkii}{0000/00/00 v0.0}
   *{package}{epstopdf-base}{2020-01-24 v2.11}
   *{file}   {epstopdf-sys.cfg}{2010/07/13 v1.3}
-  *{file}   {BufferStockTheory.out}{0000/00/00 v0.0}
-  *{file}   {BufferStockTheory.out}{0000/00/00 v0.0}
   *{package}{bookmark}    {2023-12-10 v1.31}
   *{file}   {bkm-pdftex.def}{2023-12-10 v1.31}
   *{file}   {Introduction.tex}{0000/00/00 v0.0}
-  *{file}   {./.econtexRoot}{0000/00/00 v0.0}
-  *{file}   {./Resources/econtexPaths.tex}{0000/00/00 v0.0}
   *{file}   {./Resources/.git-source-commit}{0000/00/00 v0.0}
   *{file}   {./Resources/.git-public-commit}{0000/00/00 v0.0}
   *{file}   {umsa.fd}     {2013/01/14 v3.01}
@@ -161,8 +156,6 @@
   *{file}   {t1cmtt.fd}   {2023/04/13 v2.5m}
   *{file}   {ueuf.fd}     {2013/01/14 v3.01}
   *{file}   {BufferStockTheory-NoAppendix.tex}{0000/00/00 v0.0}
-  *{file}   {./.econtexRoot}{0000/00/00 v0.0}
-  *{file}   {./Resources/econtexPaths.tex}{0000/00/00 v0.0}
   *{file}   {LaTeX/Equations/supfn.tex}{0000/00/00 v0.0}
   *{file}   {ueus.fd}     {2013/01/14 v3.01}
   *{file}   {LaTeX/Equations/DBCParts.tex}{0000/00/00 v0.0}
@@ -189,34 +182,10 @@
   *{file}   {./Tables/Required.tex}{0000/00/00 v0.0}
   *{file}   {./Appendices/ApndxConcaveCFunc.tex}{0000/00/00 v0.0}
   *{file}   {./Appendices/./.econtexRoot}{0000/00/00 v0.0}
-  *{file}   {./Appendices/../Resources/econtexPaths.tex}{0000/00/00 v0.0}
-  *{file}   {./Appendices/../Equations/boundFunc.tex}{0000/00/00 v0.0}
   *{file}   {./Appendices/ApndxMTargetIsStable.tex}{0000/00/00 v0.0}
-  *{file}   {./Appendices/./.econtexRoot}{0000/00/00 v0.0}
-  *{file}   {./Appendices/../Resources/econtexPaths.tex}{0000/00/00 v0.0}
-  *{file}   {./Appendices/../Equations/TheoremMTargetIsStable.tex}{0000/00/00 v0.0}
-  *{file}   {./Appendices/../Equations/TheoremMSSBalExists.tex}{0000/00/00 v0.0}
   *{file}   {./Appendices/ApndxLiqConstr.tex}{0000/00/00 v0.0}
-  *{file}   {./Appendices/./.econtexRoot}{0000/00/00 v0.0}
-  *{file}   {./Appendices/../Resources/econtexPaths.tex}{0000/00/00 v0.0}
-  *{file}   {./Appendices/../Tables/LiqConstrScenarios.tex}{0000/00/00 v0.0}
-  *{file}   {./Appendices/../Figures/PFGICHoldsFHWCFailsRICFails.tex}{0000/00/00 v0.0}
-  *{file}   {./Appendices/../Figures/PFGICHoldsFHWCFailsRICFails.pdf}{0000/00/00 v0.0}
   *{file}   {./Appendices/ApndxSupportingAnalysis.tex}{0000/00/00 v0.0}
-  *{file}   {./Appendices/./.econtexRoot}{0000/00/00 v0.0}
-  *{file}   {./Appendices/../Resources/econtexPaths.tex}{0000/00/00 v0.0}
   *{file}   {./Appendices/ApndxConditionDiagrams.tex}{0000/00/00 v0.0}
-  *{file}   {./Appendices/./.econtexRoot}{0000/00/00 v0.0}
-  *{file}   {./Appendices/../Resources/econtexPaths.tex}{0000/00/00 v0.0}
-  *{file}   {./Appendices/../Figures/InequalityPFGICFHWCRIC.pdf}{0000/00/00 v0.0}
-  *{file}   {./Appendices/../Figures/RelatePFGICFHWCRICPFFVAC.pdf}{0000/00/00 v0.0}
-  *{file}   {./Appendices/../Figures/Inequalities.pdf}{0000/00/00 v0.0}
-  *{file}   {./Appendices/../Figures/Inequalities-numer.pdf}{0000/00/00 v0.0}
   *{file}   {./Appendices/ApndxBalancedGrowthcNrmAndCov.tex}{0000/00/00 v0.0}
-  *{file}   {./Appendices/./.econtexRoot}{0000/00/00 v0.0}
-  *{file}   {./Appendices/../Resources/econtexPaths.tex}{0000/00/00 v0.0}
-  *{file}   {./Appendices/../Figures/logcNrm.pdf}{0000/00/00 v0.0}
-  *{file}   {./Appendices/../Figures/logcov.pdf}{0000/00/00 v0.0}
   *{file}   {./Resources/LaTeXInputs/bibliography_blend.tex}{0000/00/00 v0.0}
-  *{file}   {BufferStockTheory.bbl}{0000/00/00 v0.0}
 }

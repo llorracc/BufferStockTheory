@@ -14,9 +14,9 @@
 %\subsubsection{The Finite Value of Autarky Condition (FVAC)}
 We briefly interpret {\FVAC} before turning to how all the conditions relate under uncertainty. Analogously to~\eqref{eq:ValuePFAnalyticalAutarky}, the value for a consumer who spent exactly their permanent income every period would reflect the product of the expectation of the (independent) future shocks to permanent income:\hypertarget{uInvEuPermShkDefn}{}
 \begin{align*}
-%  \vFuncLvl_{t}  & = \Ex_{t}\ltableeft[\uFunc(\PermLvl_{t}) + \DiscFac \uFunc(\PermLvl_{t}\PermGroFacRnd_{t+1}) + \cdots + \DiscFac^{T-t}\uFunc(\PermLvl_{t}\PermGroFacRnd_{t+1}\ldots\PermGroFacRnd_{T})\right] \\
-  % & = \uFunc(\PermLvl_{t})\left(1+ \DiscFac \Ex_{t}[\PermGroFac_{t+1}^{1-\CRRA}] +  \ldots + \DiscFac^{T-t}\Ex_{t}[\PermGroFac_{t+1}^{1-\CRRA}]\ldots\Ex_{t}[\PermGroFac_{T}^{1-\CRRA}]\right) \\
-             & = \uFunc(\PermLvl_{t})\left(\frac{1-{(\DiscFac \PermGroFac^{1-\CRRA}\Ex[\permShk^{1-\CRRA}])}^{T-t+1}}{1-\DiscFac \PermGroFac^{1-\CRRA} \Ex[\permShk^{1-\CRRA}]}\right),
+%  \vFuncLvl_{t}  & = \Ex_{t}\ltableeft[\uFunc(\permLvl_{t}) + \DiscFac \uFunc(\permLvl_{t}\PermGroFacRnd_{t+1}) + \cdots + \DiscFac^{T-t}\uFunc(\permLvl_{t}\PermGroFacRnd_{t+1}\ldots\PermGroFacRnd_{T})\right] \\
+  % & = \uFunc(\permLvl_{t})\left(1+ \DiscFac \Ex_{t}[\PermGroFac_{t+1}^{1-\CRRA}] +  \ldots + \DiscFac^{T-t}\Ex_{t}[\PermGroFac_{t+1}^{1-\CRRA}]\ldots\Ex_{t}[\PermGroFac_{T}^{1-\CRRA}]\right) \\
+             & = \uFunc(\permLvl_{t})\left(\frac{1-{(\DiscFac \PermGroFac^{1-\CRRA}\Ex[\permShk^{1-\CRRA}])}^{T-t+1}}{1-\DiscFac \PermGroFac^{1-\CRRA} \Ex[\permShk^{1-\CRRA}]}\right),
 \end{align*}
 %
 The function $\vFuncLvl_{t}$ will be finite as $T$ approaches $\infty$ if the {\FVAC} holds. In the case without uncertainty, Because $\uFunc(xy) = x^{1-\CRRA}\uFunc(y)$, the value the consumer would achieve is: 
@@ -24,8 +24,8 @@ The function $\vFuncLvl_{t}$ will be finite as $T$ approaches $\infty$ if the {\
 %
 %
 \begin{equation}\label{eq:ValuePFAnalyticalAutarky}\begin{gathered}\begin{aligned}  
-      \vFuncLvl_{t}^{\text{autarky}}  & = \uFunc(\PermLvl_{t})+\DiscFac \uFunc(\PermLvl_{t}\PermGroFac)+\DiscFac^{2} \uFunc(\PermLvl_{t} \PermGroFac^{2})+\ldots
-      \\  & = \uFunc(\PermLvl_{t})\left(\frac{1-{(\DiscFac \PermGroFac^{1-\CRRA})}^{T-t+1}}{1-\DiscFac \PermGroFac^{1-\CRRA}}\right) \notag
+      \vFuncLvl_{t}^{\text{autarky}}  & = \uFunc(\permLvl_{t})+\DiscFac \uFunc(\permLvl_{t}\PermGroFac)+\DiscFac^{2} \uFunc(\permLvl_{t} \PermGroFac^{2})+\ldots
+      \\  & = \uFunc(\permLvl_{t})\left(\frac{1-{(\DiscFac \PermGroFac^{1-\CRRA})}^{T-t+1}}{1-\DiscFac \PermGroFac^{1-\CRRA}}\right) \notag
     \end{aligned}\end{gathered}\end{equation}
 which (for $\PermGroFac>0$) asymptotes to a finite number as $n$, with $n=T-t$, approaches $+\infty$. 
 
@@ -35,18 +35,18 @@ which (for $\PermGroFac>0$) asymptotes to a finite number as $n$, with $n=T-t$, 
 The first result relates to the perfect foresight case without liquidity constraints. 
 
 \begin{proof}(Proof of Proposition \ref{prop:pfUCFHWC})
-Consider a sequence of consumption $\{\cLvl_{T-n}\}_{n= t}^{T}$ and a sequence of income $\{\PermLvl_{T-n}\}_{n= t}^{T}$  and let $\mathrm{PDV}_{t}^{T}(\cLvl)$  and $\mathrm{PDV}_{t}^{T}(\PermLvl)$ denote the present discounted value of the consumption sequence and permanent income sequence respectively. The dynamic budget constraint, strictly positive marginal utility, and the can't-die-in-debt condition, Equation \eqref{eq:NoDebtAtDeath}, imply an exactly-holding intertemporal budget constraint (IBC):
+Consider a sequence of consumption $\{\cLvl_{T-n}\}_{n= t}^{T}$ and a sequence of income $\{\permLvl_{T-n}\}_{n= t}^{T}$  and let $\mathrm{PDV}_{t}^{T}(\cLvl)$  and $\mathrm{PDV}_{t}^{T}(\permLvl)$ denote the present discounted value of the consumption sequence and permanent income sequence respectively. The dynamic budget constraint, strictly positive marginal utility, and the can't-die-in-debt condition, Equation \eqref{eq:NoDebtAtDeath}, imply an exactly-holding intertemporal budget constraint (IBC):
 %
 %
 \begin{align}
-  \mathrm{PDV}_{t}^{T}(\cLvl)  & = \overbrace{\mLvl_{t}-\PermLvl_{t}}^{\bLvl_{t}}+\overbrace{\mathrm{PDV}_{t}^{T}(\PermLvl)}^{\hLvl_{t}}, \label{eq:IBCFinite}
+  \mathrm{PDV}_{t}^{T}(\cLvl)  & = \overbrace{\mLvl_{t}-\permLvl_{t}}^{\bLvl_{t}}+\overbrace{\mathrm{PDV}_{t}^{T}(\permLvl)}^{\hLvl_{t}}, \label{eq:IBCFinite}
 \end{align} \hypertarget{FHWFacDefn}{}\hypertarget{PFRNrmDefn}{}
 where $\bLvl$ is beginning-of-period `market' balances; with $\RNrmFac \colon = \Rfree/\PermGroFac$ `human wealth' can be written as:
 %
 % 
 \begin{align}
-  \hLvl_{t}  & = \PermLvl_{t}+\RNrmFac^{-1} \PermLvl_{t} + \RNrmFac^{-2} \PermLvl_{t} + \cdots + \RNrmFac^{t-T} \PermLvl_{t} \notag
-  \\  & = \underbrace{\left(\frac{1-\RNrmFac^{-(T-t+1)}}{1-\RNrmFac^{-1}}\right)}_{\equiv \hNrm_{t}}\PermLvl_{t} \label{eq:HDef}.
+  \hLvl_{t}  & = \permLvl_{t}+\RNrmFac^{-1} \permLvl_{t} + \RNrmFac^{-2} \permLvl_{t} + \cdots + \RNrmFac^{t-T} \permLvl_{t} \notag
+  \\  & = \underbrace{\left(\frac{1-\RNrmFac^{-(T-t+1)}}{1-\RNrmFac^{-1}}\right)}_{\equiv \hNrm_{t}}\permLvl_{t} \label{eq:HDef}.
 \end{align}\hypertarget{FHWC}{}
 %
 %

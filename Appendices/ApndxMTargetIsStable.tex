@@ -12,7 +12,60 @@
 %{\linenumbers}
 
 \hypertarget{ApndxMTargetIsStable}{}
-\section{Unique and Stable Target and Steady State Points}\label{sec:ApndxMTargetIsStable}
+\section{Proofs for Individual Stability (Section \ref{sec:individStability})}\label{sec:ApndxMTargetIsStable}
+
+\begin{proof}[\textbf{Proof for Proposition \ref{prop:convgGrowth}}]
+
+\begin{proof}
+For consumption growth, as $\mNrm \downarrow 0$ we have
+\begin{align*}
+  \lim_{\mNrm_{t} \downarrow 0} \Ex_{t}\left[\left(\frac{\cFunc({\mNrm}_{t+1})}{\cFunc(\mNrm_t)}\right){\PermGroFac}_{t+1}\right]
+  & > \lim_{\mNrm_{t} \downarrow 0} \Ex_{t}\left[\left(\frac{\ushort{\cFunc}({\mathcal{\mathcal{R}}}_{t+1}\aFunc(\mNrm_{t})+{%
+    \tranShkAll}_{t+1})}{\MPCmax \mNrm_{t}}\right){\PermGroFac}_{t+1}\right]  \notag \\
+  & = \pZero \lim_{\mNrm_{t} \downarrow 0} \Ex_{t}\left[\left(\frac{\ushort{\cFunc}({\mathcal{\mathcal{R}}}_{t+1}\aFunc(\mNrm_{t}))}{\MPCmax \mNrm_{t}}\right){\PermGroFac}_{t+1}\right] \\
+  & ~~~~~~ + \pNotZero \lim_{\mNrm_{t} \downarrow 0}  \Ex_{t}\left[\left(\frac{\ushort{\cFunc}({\mathcal{\mathcal{R}}}_{t+1}\aFunc(\mNrm_{t})+
+    \tranShkEmp_{t+1}/\pNotZero)}{\MPCmax \mNrm_{t}}\right){\PermGroFac}_{t+1}\right]  \\\notag
+  & > \pNotZero \lim_{\mNrm_{t} \downarrow 0} \Ex_{t}\left[\left(\frac{\ushort{\cFunc}(
+    \tranShkEmp_{t+1}/\pNotZero)}{\MPCmax \mNrm_{t}}\right){\PermGroFac}_{t+1}\right] \\
+  & = \infty \nonumber
+\end{align*}
+where the second-to-last line follows because  $\lim_{\mNrm_{t} \downarrow 0} \Ex_{t}\left[\left(\frac{\ushort{\cFunc}({\mathcal{\mathcal{R}}}_{t+1}\aFunc(\mNrm_{t}))}{\MPCmax \mNrm_{t}}\right){\PermGroFac}_{t+1}\right]$ is positive, and the last line follows because the minimum possible realization of $\tranShkEmp_{t+1}$ is $\ushort{\tranShkEmp}>0$ so the minimum possible value of expected next-period consumption is positive.\footnote{None of the arguments in either of the two prior sections depended on the assumption that the consumption functions had converged.  With more cumbersome notation, each derivation could have been replaced by the corresponding finite-horizon versions.  This strongly suggests that it should be possible to extend the circumstances under which the problem can be shown to define a contraction mapping to the union of the parameter values under which \{\RIC,\FHWC\} hold and \{\FVAC,\WRIC\} hold.  That extension is not necessary for our purposes here, so we leave it for future work.}
+
+%\end{document}\endinput
+
+
+Next we establish the limit of the expected consumption growth factor as $\mNrm_{t} \uparrow \infty$:
+\begin{align*}
+  \lim_{\mNrm_{t} \uparrow \infty} \Ex_{t}[
+  \cLvl_{t+1}/\cLvl_{t}]  & = \lim_{\mNrm_{t} \uparrow \infty} \Ex_{t}[
+                            {\PermGroFac}_{t+1} {\cNrm}_{t+1}/c_{t}].
+\end{align*}
+
+But
+\begin{align*}
+  \Ex_{t}[{\PermGroFac}_{t+1} {\ushort{\cNrm}}_{t+1}/\bar{\cNrm}_{t}] \leq \Ex_{t}[{\PermGroFac}_{t+1} {\cNrm}_{t+1}/\cNrm_{t}] \leq \Ex_{t}[{\PermGroFac}_{t+1} {\bar{\cNrm}}_{t+1}/\ushort{\cNrm}_{t}]
+\end{align*}
+and
+\begin{equation*}  \label{eq:xttoinfty}
+  \lim_{\mNrm_t \uparrow \infty} \PermGroFac_{t+1}\ushort{\cFunc}(\mNrm_{t+1})/\bar{\cFunc}(\mNrm_t) =
+  \lim_{\mNrm_{t} \uparrow \infty} \PermGroFac_{t+1}\bar{\cFunc}(\mNrm_{t+1})/\ushort{\cFunc}(\mNrm_t) =
+  \lim_{\mNrm_{t} \uparrow \infty}\PermGroFac_{t+1} \mNrm_{t+1}/\mNrm_t,
+\end{equation*}
+while (for convenience defining $\aFunc(\mNrm_{t})=\mNrm_{t}-\usual{\cFunc}(\mNrm_{t})$), \hypertarget{xtp1toinfty}{}
+\begin{align}  \label{eq:xtp1toinfty}
+  \lim_{\mNrm_{t} \uparrow \infty} \PermGroFac_{t+1} \mNrm_{t+1}/\mNrm_t  & = \lim_{\mNrm_{t} \uparrow \infty}
+                                                                            \left(\frac{\Rfree \aFunc(\mNrm_t)+{\PermGroFac}_{t+1}\tranShkAll_{t+1}}{\mNrm_t}\right)
+  \\  & = {(\Rfree \DiscFac)}^{1/\CRRA} = \APFac \notag
+\end{align}
+because $\lim_{\mNrm_{t}\uparrow \infty} \aFunc^{\prime}(\mNrm)=\RPFac$\footnote{$\displaystyle \lim_{\mNrm_{t}\uparrow \infty} \aFunc(\mNrm_{t})/\mNrm_{t}=1-\lim_{\mNrm_{t}\uparrow \infty} \usual{\cFunc}(\mNrm_{t})/\mNrm_{t}=1-\lim_{\mNrm_{t}\uparrow \infty}\usual{\cFunc}^{\prime}(\mNrm_{t})=\RPFac$.} and $\PermGroFac_{t+1}\tranShkAll_{t+1}/\mNrm_{t} \leq (\PermGroFac \bar{\permShk} \bar{\tranShkEmp}/\pNotZero )/\mNrm_{t}$ which goes to zero as $\mNrm_{t}$ goes to infinity.
+
+Hence we have
+\begin{equation*}
+  {\APFac}  \leq \lim_{\mNrm_{t} \uparrow \infty} \Ex_{t}[\cLvl_{t+1}/\cLvl_{t}] \leq {\APFac}
+\end{equation*}
+so as cash goes to infinity, consumption growth approaches its value $\APFac$ in the perfect foresight model.
+\end{proof}
+\end{proof}
 
 %\subsection{To Prove}
 
@@ -30,7 +83,7 @@ This appendix proves Theorems~\ref{thm:target}-\ref{thm:MSSBalExists} and:
   \end{lemma}
 \end{comment}
 
-  \subsection{Proof of Theorem~\ref{thm:target}}
+ \subsection{Proof of Theorem~\ref{thm:target}}
 \input{\econtexRoot/\EqDir/TheoremMTargetIsStable}
   
   The elements of the proof of Theorem~\ref{thm:target} are:
@@ -46,7 +99,7 @@ This appendix proves Theorems~\ref{thm:target}-\ref{thm:MSSBalExists} and:
   \texorpdfstring{$\Ex_t [{\mNrm}_{t+1}/\mNrm_t]$}{Ex-{t}[mNrm-{t+1}/mNrm-{t}]}}\label{subsubsec:RatExitsCont}
 The consumption function exists because we have imposed sufficient conditions (the $\WRIC$ and $\FVAC$; Theorem~\ref{thm:contmap}). % (Indeed, Appendix~\ref{sec:CIsTwiceDifferentiable} shows that $\cFunc(\mNrm)$ is not just continuous, but twice continuously differentiable.)
 
-Section~\ref{sec:cExists} shows that for all $t$, $\aNrm_{t-1} = {\mNrm}_{t-1} -  \cNrm_{t-1} > 0$.  Since ${\mNrm}_{t}= {\aNrm}_{t-1} \RNrm_{t} + \TranShkAll_{t}$, even if $\TranShkAll_{t}$ takes on its minimum value of 0, $\aNrm_{t-1} \RNrm_{t} > 0$, since both $\aNrm_{t-1}$ and $\RNrm_{t}$ are strictly positive.  With $\mNrm_{t}$ and $\mNrm_{t+1}$ both strictly positive, the ratio $\Ex_t [{\mNrm}_{t+1}/\mNrm_t]$ inherits continuity (and, for that matter, continuous differentiability) from the consumption function.
+Section~\ref{sec:cExists} shows that for all $t$, $\aNrm_{t-1} = {\mNrm}_{t-1} -  \cNrm_{t-1} > 0$.  Since ${\mNrm}_{t}= {\aNrm}_{t-1} \RNrm_{t} + \tranShkAll_{t}$, even if $\tranShkAll_{t}$ takes on its minimum value of 0, $\aNrm_{t-1} \RNrm_{t} > 0$, since both $\aNrm_{t-1}$ and $\RNrm_{t}$ are strictly positive.  With $\mNrm_{t}$ and $\mNrm_{t+1}$ both strictly positive, the ratio $\Ex_t [{\mNrm}_{t+1}/\mNrm_t]$ inherits continuity (and, for that matter, continuous differentiability) from the consumption function.
 
 \subsection{Existence of a point where
   \texorpdfstring{$\Ex_t [{\mNrm}_{t+1}/\mNrm_t]=1$}
@@ -67,7 +120,7 @@ This follows from:
 \begin{align}
   \lim_{\mNrm_{t} \uparrow \infty} \Ex_{t}[{\mNrm}_{t+1}/\mNrm_{t}]  & =   
                                                                        \lim_{\mNrm_{t} \uparrow \infty} 
-                                                                       \Ex_{t}\left[\frac{{\mathcal{\mathcal{R}}}_{t+1}(\mNrm_{t}-\cFunc(\mNrm_{t}))+{\TranShkAll}_{t+1}}{\mNrm_{t}}\right] \notag 
+                                                                       \Ex_{t}\left[\frac{{\mathcal{\mathcal{R}}}_{t+1}(\mNrm_{t}-\cFunc(\mNrm_{t}))+{\tranShkAll}_{t+1}}{\mNrm_{t}}\right] \notag 
   \\  & = \Ex_{t}[(\Rfree/{\PermGroFac}_{t+1})\RPFac]  \notag
   \\  & = \Ex_{t}[{\APFac}/{\PermGroFac}_{t+1}]  \label{eq:emgro}
   \\  & < 1 \notag
@@ -106,7 +159,7 @@ decreasing on $(0,\infty)$ using the fact that
   \difFunc^{\prime}(\mNrm_{t}) \equiv  \left( \frac{d}{d\mNrm_{t}}\right) \difFunc(\mNrm_t)  & = \Ex_{t}\left[
                                                                                                \left( \frac{d}{d\mNrm_{t}}\right) \left( 
                                                                                                {\RNrm}_{t+1}(\mNrm_{t}-\cFunc(\mNrm_{t}))+%
-                                                                                               {\TranShkAll}_{t+1} - {\mNrm}_t\right) \right] \label{eq:difFuncmNrmDecreases} \\
+                                                                                               {\tranShkAll}_{t+1} - {\mNrm}_t\right) \right] \label{eq:difFuncmNrmDecreases} \\
                                                                                              & = \bar{\RNrm}\left(1-\cFunc^{\prime}({\mNrm}_t)\right) - 1.  \notag
 \end{align}
 %\end{document}\endinput
@@ -118,8 +171,8 @@ Now, we show that (given our other assumptions) $\difFunc^{\prime}(\mNrm)$ is de
 \begin{align*}
   \bar{\RNrm}\left(1-\cFunc^{\prime}({\mNrm}_t)\right) - 1 & <  \bar{\RNrm}(1-\underbrace{(1-\RPFac)}_{\MPCmin}) - 1  \\
                                                             & = \bar{\RNrm}\RPFac - 1 \\
-                                                            & = \Ex_{t}\left[\frac{\Rfree}{\PermGroFac \PermShk}\frac{\APFac}{\Rfree}\right] - 1 \\
-                                                            & = \underbrace{\Ex_{t}\left[\frac{\APFac}{\PermGroFac \PermShk}\right]}_{= \GPFacNrm} - 1 
+                                                            & = \Ex_{t}\left[\frac{\Rfree}{\PermGroFac \permShk}\frac{\APFac}{\Rfree}\right] - 1 \\
+                                                            & = \underbrace{\Ex_{t}\left[\frac{\APFac}{\PermGroFac \permShk}\right]}_{= \GPFacNrm} - 1 
 \end{align*}
 which is negative because the {\GICMod} says $\GPFacNrm < 1$.  
 %\end{document}\endinput
@@ -131,15 +184,15 @@ Under \cncl{\RIC}, recall that $\lim_{\mNrm \uparrow \infty} \cFunc^{\prime}(\mN
 \end{align*}
 which means that $\difFunc^{\prime}(\mNrm_{t})$ from~\eqref{eq:difFuncmNrmDecreases} is guaranteed to be negative if
 \begin{align}
-  \bar{\RNrm} \equiv \Ex_{t}\left[\frac{\Rfree}{\PermGroFac \PermShk}\right] & < 1  \label{eq:RbarBelowOne}.
+  \bar{\RNrm} \equiv \Ex_{t}\left[\frac{\Rfree}{\PermGroFac \permShk}\right] & < 1  \label{eq:RbarBelowOne}.
 \end{align}
 But the combination of the {\GICMod} holding and the {\RIC} failing can be written:
 \begin{align*}
-  \overbrace{\Ex_{t}\left[\frac{\APFac}{\PermGroFac \PermShk}\right]}^{\GPFacNrm} & < 1 < \overbrace{\frac{\APFac}{\Rfree}}^{{\RPFac}},
+  \overbrace{\Ex_{t}\left[\frac{\APFac}{\PermGroFac \permShk}\right]}^{\GPFacNrm} & < 1 < \overbrace{\frac{\APFac}{\Rfree}}^{{\RPFac}},
 \end{align*}
 and multiplying all three elements by $\Rfree/\APFac$ gives 
 \begin{align*}
-  \Ex_{t}\left[\frac{\Rfree}{\PermGroFac \PermShk}\right] & < \Rfree/\APFac < 1
+  \Ex_{t}\left[\frac{\Rfree}{\PermGroFac \permShk}\right] & < \Rfree/\APFac < 1
 \end{align*}
 which satisfies our requirement in~\eqref{eq:RbarBelowOne}.
 
@@ -150,28 +203,28 @@ which satisfies our requirement in~\eqref{eq:RbarBelowOne}.
 
 The elements of the proof are:
 \begin{itemize}
-\item Existence and continuity of $\Ex_{t}[\PermShk_{t+1}\mNrm_{t+1}/\mNrm_t]$
-\item Existence of a point where $\Ex_{t}[\PermShk_{t+1}\mNrm_{t+1}/\mNrm_t] = 1$
-\item $\Ex_{t}[\PermShk_{t+1}\mNrm_{t+1}-\mNrm_{t}]$ is monotonically decreasing
+\item Existence and continuity of $\Ex_{t}[\permShk_{t+1}\mNrm_{t+1}/\mNrm_t]$
+\item Existence of a point where $\Ex_{t}[\permShk_{t+1}\mNrm_{t+1}/\mNrm_t] = 1$
+\item $\Ex_{t}[\permShk_{t+1}\mNrm_{t+1}-\mNrm_{t}]$ is monotonically decreasing
 \end{itemize}
 
 \subsubsection{Existence and Continuity of the Ratio}% of $\TargetNrm{\mNrm}_{t+1}/\mNrm_{t}$.}
 
-Since by assumption $ 0 < \ushort{\PermShk} \leq \PermShk_{t+1} \leq \bar{\PermShk} < \infty$, our proof in~\ref{subsubsec:RatExitsCont} that demonstrated existence and continuity of $\Ex_{t}[\mNrm_{t+1}/\mNrm_{t}]$ implies existence and continuity of $\Ex_{t}[\PermShk_{t+1}\mNrm_{t+1}/\mNrm_{t}]$.
+Since by assumption $ 0 < \ushort{\permShk} \leq \permShk_{t+1} \leq \bar{\permShk} < \infty$, our proof in~\ref{subsubsec:RatExitsCont} that demonstrated existence and continuity of $\Ex_{t}[\mNrm_{t+1}/\mNrm_{t}]$ implies existence and continuity of $\Ex_{t}[\permShk_{t+1}\mNrm_{t+1}/\mNrm_{t}]$.
 
 \subsubsection{Existence of a stable point}
 
-Since by assumption $ 0 < \ushort{\PermShk} \leq \PermShk_{t+1} \leq \bar{\PermShk} < \infty$, our proof in Subsection~\ref{subsubsec:RatExitsCont} that the ratio of $\Ex_{t}[\mNrm_{t+1}]$ to $\mNrm_{t}$ is unbounded as $\mNrm_{t} \downarrow 0$ implies that the ratio $\Ex_{t}[\PermShk_{t+1}\mNrm_{t+1}]$ to $\mNrm_{t}$ is unbounded as $\mNrm_{t} \downarrow 0$.
+Since by assumption $ 0 < \ushort{\permShk} \leq \permShk_{t+1} \leq \bar{\permShk} < \infty$, our proof in Subsection~\ref{subsubsec:RatExitsCont} that the ratio of $\Ex_{t}[\mNrm_{t+1}]$ to $\mNrm_{t}$ is unbounded as $\mNrm_{t} \downarrow 0$ implies that the ratio $\Ex_{t}[\permShk_{t+1}\mNrm_{t+1}]$ to $\mNrm_{t}$ is unbounded as $\mNrm_{t} \downarrow 0$.
 
 %\end{document}\endinput
   
 The limit of the expected ratio as $\mNrm_{t}$ goes to infinity is most easily calculated by modifying the steps for the prior theorem explicitly:
 \begin{align}
-  \lim_{\mNrm_{t} \uparrow \infty} \Ex_{t}[\PermShk_{t+1}\mNrm_{t+1}/\mNrm_{t}]  & =   
+  \lim_{\mNrm_{t} \uparrow \infty} \Ex_{t}[\permShk_{t+1}\mNrm_{t+1}/\mNrm_{t}]  & =   
                                                                   \lim_{\mNrm_{t} \uparrow \infty} 
-                                                                  \Ex_{t}\left[\frac{\PermGroFac_{t+1}\left((\Rfree/\PermGroFac_{t+1})\aFunc(\mNrm_{t})+{\TranShkAll}_{t+1}\right)/\PermGroFac}{\mNrm_{t}}\right] \notag 
+                                                                  \Ex_{t}\left[\frac{\PermGroFac_{t+1}\left((\Rfree/\PermGroFac_{t+1})\aFunc(\mNrm_{t})+{\tranShkAll}_{t+1}\right)/\PermGroFac}{\mNrm_{t}}\right] \notag 
   \\   & =   \lim_{\mNrm_{t} \uparrow \infty} \Ex_{t}\left[
-         \frac{(\Rfree/\PermGroFac)\aFunc(\mNrm_{t})+\PermShk_{t+1}{\TranShkAll}_{t+1}}{\mNrm_{t}}
+         \frac{(\Rfree/\PermGroFac)\aFunc(\mNrm_{t})+\permShk_{t+1}{\tranShkAll}_{t+1}}{\mNrm_{t}}
          \right] \notag 
   \\   & =   \lim_{\mNrm_{t} \uparrow \infty} \left[
          \frac{(\Rfree/\PermGroFac)\aFunc(\mNrm_{t})+1}{\mNrm_{t}}
@@ -182,17 +235,17 @@ The limit of the expected ratio as $\mNrm_{t}$ goes to infinity is most easily c
 \end{align}
 where the last two lines are merely a restatement of the \GICRaw~\eqref{eq:GICRaw}.
 
-The Intermediate Value Theorem says that if $\Ex_{t}[\PermShk_{t+1}\mNrm_{t+1}/\mNrm_t]$ is continuous, and takes on values above and below 1, there must be at least one point at which it is equal to one.
+The Intermediate Value Theorem says that if $\Ex_{t}[\permShk_{t+1}\mNrm_{t+1}/\mNrm_t]$ is continuous, and takes on values above and below 1, there must be at least one point at which it is equal to one.
 
-\subsubsection{\texorpdfstring{$\Ex_{t}[\PermShk_{t+1}\mNrm_{t+1}] -\mNrm_t$}{PermShk m{t+1} --- m{t}} is monotonically decreasing.}
+\subsubsection{\texorpdfstring{$\Ex_{t}[\permShk_{t+1}\mNrm_{t+1}] -\mNrm_t$}{PermShk m{t+1} --- m{t}} is monotonically decreasing.}
 
 Define \providecommand{\difFunc}{\pmb{\zeta}} $\difFunc(\mNrm_t) \equiv 
-\Ex_t[\PermShk_{t+1}\mNrm_{t+1}] - \mNrm_t$ and note that
+\Ex_t[\permShk_{t+1}\mNrm_{t+1}] - \mNrm_t$ and note that
 \begin{align}\label{eq:difLvlEquiv}
-  \difFunc(\mNrm_t) < 0 &\leftrightarrow \Ex_t[\PermShk_{t+1}\mNrm_{t+1}/\mNrm_{t}] < 1 
+  \difFunc(\mNrm_t) < 0 &\leftrightarrow \Ex_t[\permShk_{t+1}\mNrm_{t+1}/\mNrm_{t}] < 1 
                           \nonumber\\
-  \difFunc(\mNrm_t) = 0 &\leftrightarrow \Ex_t[\PermShk_{t+1}\mNrm_{t+1}/\mNrm_{t}] = 1\\
-  \difFunc(\mNrm_t) > 0 &\leftrightarrow \Ex_t[\PermShk_{t+1}\mNrm_{t+1}/\mNrm_{t}] > 
+  \difFunc(\mNrm_t) = 0 &\leftrightarrow \Ex_t[\permShk_{t+1}\mNrm_{t+1}/\mNrm_{t}] = 1\\
+  \difFunc(\mNrm_t) > 0 &\leftrightarrow \Ex_t[\permShk_{t+1}\mNrm_{t+1}/\mNrm_{t}] > 
                           1,\nonumber
 \end{align}
 so that $\difFunc(\mTrgNrm)=0$. Our goal is to prove that $\difFunc(\bullet)$ is strictly 
@@ -201,7 +254,7 @@ decreasing on $(0,\infty)$ using the fact that
   \difFunc^{\prime}(\mNrm_{t}) \equiv  \left( \frac{d}{d\mNrm_{t}}\right) \difFunc(\mNrm_t)  & = \Ex_{t}\left[
                                                                                                \left( \frac{d}{d\mNrm_{t}}\right) \left( 
                                                                                                {\RNrm}(\mNrm_{t}-\cFunc(\mNrm_{t}))+%
-                                                                                               {\PermShk}_{t+1}{\TranShkAll}_{t+1} - {\mNrm}_t\right) \right] \label{eq:difFuncDecreases} \\
+                                                                                               {\permShk}_{t+1}{\tranShkAll}_{t+1} - {\mNrm}_t\right) \right] \label{eq:difFuncDecreases} \\
                                                                                              & = (\Rfree/\PermGroFac)\left(1-\cFunc^{\prime}({\mNrm}_t)\right) - 1.  \notag
 \end{align}
 
@@ -230,27 +283,27 @@ But we showed in Section~\ref{subsec:UncertaintyModifiedConditions} that the onl
 
 A footnote in~Section~\ref{sec:convergedcfunc} mentions reasons why it may be useful to calculate $\Ex_{t}[\log (\mLvl_{t+1}/\log \mLvl_{t})]$.  Here we show that one way of doing that is to calculate a nonlinear adjustment factor for the expectation of the growth factor.
 \begin{align*}
-\log \left(\mLvl_{t+1}/\mLvl_{t}\right) & = \log (\PermGroFac \PermShk_{t+1} \mNrm_{t+1})- \log \mNrm_{t} 
-\\ & = \log \PermGroFac (\aNrm_{t}\RNrm+\PermShk_{t+1}\TranShk_{t+1})- \log \mNrm_{t} 
-\\ & = \log \PermGroFac (\aNrm_{t}\RNrm+1+(\PermShk_{t+1}\TranShk_{t+1}-1))- \log \mNrm_{t}
+\log \left(\mLvl_{t+1}/\mLvl_{t}\right) & = \log (\PermGroFac \permShk_{t+1} \mNrm_{t+1})- \log \mNrm_{t} 
+\\ & = \log \PermGroFac (\aNrm_{t}\RNrm+\permShk_{t+1}\tranShk_{t+1})- \log \mNrm_{t} 
+\\ & = \log \PermGroFac (\aNrm_{t}\RNrm+1+(\permShk_{t+1}\tranShk_{t+1}-1))- \log \mNrm_{t}
 \end{align*}
 
 Now define $\breve{\mNrm}_{t+1}=\aNrm_{t}\RNrm+1$, and compute the expectation:
 \begin{align*}
   \Ex_{t}[\log \left(\mLvl_{t+1}/\mLvl_{t}\right)]
-   & = \Ex_{t}\left[\log \PermGroFac (\breve{\mNrm}_{t+1}+(\PermShk_{t+1}\TranShk_{t+1}-1))\right]- \log \mNrm_{t} 
-\\ & = \log \PermGroFac + \Ex_{t}\left[\log \breve{\mNrm}_{t+1}\left(1+(\PermShk_{t+1}\TranShk_{t+1}-1)\breve{\mNrm}_{t+1}^{-1}\right)\right]- \log \mNrm_{t} 
-\\ & = \underbrace{\log \PermGroFac + \log \breve{\mNrm}_{t+1} - \log \mNrm_{t}}_{\equiv \log \Ex_{t}[\mLvl_{t+1}/\mLvl_{t}]} + \Ex_{t}\left[ \log (1+(\PermShk_{t+1}\TranShk_{t+1}-1)\breve{\mNrm}_{t+1}^{-1})\right]
+   & = \Ex_{t}\left[\log \PermGroFac (\breve{\mNrm}_{t+1}+(\permShk_{t+1}\tranShk_{t+1}-1))\right]- \log \mNrm_{t} 
+\\ & = \log \PermGroFac + \Ex_{t}\left[\log \breve{\mNrm}_{t+1}\left(1+(\permShk_{t+1}\tranShk_{t+1}-1)\breve{\mNrm}_{t+1}^{-1}\right)\right]- \log \mNrm_{t} 
+\\ & = \underbrace{\log \PermGroFac + \log \breve{\mNrm}_{t+1} - \log \mNrm_{t}}_{\equiv \log \Ex_{t}[\mLvl_{t+1}/\mLvl_{t}]} + \Ex_{t}\left[ \log (1+(\permShk_{t+1}\tranShk_{t+1}-1)\breve{\mNrm}_{t+1}^{-1})\right]
 \end{align*}
 and exponentiating tells us that
 \begin{align}\label{eq:mBalLogVSmBalLvl}
-  \exp(\Ex_{t}[\log \mLvl_{t+1}/\mLvl_{t}]) & = \Ex_{t}[\mLvl_{t+1}/\mLvl_{t}]\exp( \Ex_{t}\left[ \log (1+(\PermShk_{t+1}\TranShk_{t+1}-1)\breve{\mNrm}_{t+1}^{-1})\right])
+  \exp(\Ex_{t}[\log \mLvl_{t+1}/\mLvl_{t}]) & = \Ex_{t}[\mLvl_{t+1}/\mLvl_{t}]\exp( \Ex_{t}\left[ \log (1+(\permShk_{t+1}\tranShk_{t+1}-1)\breve{\mNrm}_{t+1}^{-1})\right])
 \end{align}
 and this latter factor is a number that approaches 1 from below as $\mNrm_{t}$ rises.  Thus the expected growth rate of the log is smaller than the log of the growth rate of the expected growth factor.  This implies that the $\mNrm$ at which `balanced growth' can be expected in the log, $\mBalLog$, exceeds the corresponding point for the ratio, $\mBalLvl$.
 
 Furthermore, in the limit as $\mLvl_{t}$ gets arbitrarily large, if the {\RIC} holds and thus $\MPCmin > 0$, $\aNrm_{t+1}$ rises without bound, as does $\breve{\mNrm}_{t+1}=\aNrm_{t+1}\RNrm+1$, so the approximation $\log (1+\epsilon) \approx \epsilon$ becomes arbitrarily good.  Consequently, the last term on the RHS of \eqref{eq:mBalLogVSmBalLvl} can be approximated as
 \begin{align*}
-  \Ex_{t}\left[ \log (1+(\PermShk_{t+1}\TranShk_{t+1}-1)\breve{\mNrm}_{t+1}^{-1})\right]) & \approx \Ex_{t}\left[ (\PermShk_{t+1}\TranShk_{t+1}-1)\breve{\mNrm}_{t+1}^{-1})\right])
+  \Ex_{t}\left[ \log (1+(\permShk_{t+1}\tranShk_{t+1}-1)\breve{\mNrm}_{t+1}^{-1})\right]) & \approx \Ex_{t}\left[ (\permShk_{t+1}\tranShk_{t+1}-1)\breve{\mNrm}_{t+1}^{-1})\right])
                                                                                             \\ & = 0
 \end{align*}
 
@@ -265,9 +318,9 @@ This demonstrates that
 \subsubsection{Pseudo-Steady-State \texorpdfstring{$\mNrm$}{m} Is Smaller than Target \texorpdfstring{$\mNrm$}{m}}
 Designate
 \begin{equation}\begin{split}
-  \BalGroFac{\mFunc}_{t+1}(\aNrm) % = \Ex_{t}[\BalGroFac{\aNrm}\RNrm+\TranShk_{t+1}\PermShk_{t+1} ] \\
+  \BalGroFac{\mFunc}_{t+1}(\aNrm) % = \Ex_{t}[\BalGroFac{\aNrm}\RNrm+\tranShk_{t+1}\permShk_{t+1} ] \\
    & = 1+\aNrm\RNrm
-\\  \TargetNrm{\mFunc}_{t+1}(\aNrm)% & = \Ex_{t}[\TargetNrm{\aNrm}(\RNrm/\PermShk_{t+1})+\TranShk_{t+1}\PermShk_{t+1} ] \\
+\\  \TargetNrm{\mFunc}_{t+1}(\aNrm)% & = \Ex_{t}[\TargetNrm{\aNrm}(\RNrm/\permShk_{t+1})+\tranShk_{t+1}\permShk_{t+1} ] \\
  & = 1+\aNrm\underbrace{\RNrm/\InvEPermShkInv}_{\bar{\RNrm} > \RNrm}
 \end{split}\end{equation}
 so that we can implicitly define the target and pseudo-steady-state points as
@@ -296,22 +349,22 @@ The RHS of this equation is strictly positive because $\InvEPermShkInv^{-1}>1$ a
 Expected log balanced growth occurs when
 \begin{equation}\begin{split}
     \Ex_{t}[\log \mLvl_{t+1}] & = \log \PermGroFac \mLvl_{t}
-\\      \Ex_{t}[\log \PermLvl_{t+1}\mNrm_{t+1}] & = \log \PermGroFac \PermLvl_{t} \mNrm_{t}
-\\      \Ex_{t}[\log \PermShk_{t+1}\mNrm_{t+1}] & = \log \PermGroFac \mNrm_{t}
-\\      \Ex_{t}[\log \left(\aNrm(\mNrm_{t})\Rfree+\PermShk_{t+1}\TranShk_{t+1}\PermGroFac\right)] & = \log \PermGroFac \mNrm_{t}
-\\      \Ex_{t}[\log \left(\aNrm(\mNrm_{t})\RNrm+\PermShk_{t+1}\TranShk_{t+1}\right)] & = \log \mNrm_{t}
+\\      \Ex_{t}[\log \permLvl_{t+1}\mNrm_{t+1}] & = \log \PermGroFac \permLvl_{t} \mNrm_{t}
+\\      \Ex_{t}[\log \permShk_{t+1}\mNrm_{t+1}] & = \log \PermGroFac \mNrm_{t}
+\\      \Ex_{t}[\log \left(\aNrm(\mNrm_{t})\Rfree+\permShk_{t+1}\tranShk_{t+1}\PermGroFac\right)] & = \log \PermGroFac \mNrm_{t}
+\\      \Ex_{t}[\log \left(\aNrm(\mNrm_{t})\RNrm+\permShk_{t+1}\tranShk_{t+1}\right)] & = \log \mNrm_{t}
 \end{split}\end{equation}
 and we call the $\mNrm$ that satisfies this equation $\BalGroRte{\mNrm}$.
 
 Subtract the definition of $\BalGroFac{\mNrm}$ from that of $\BalGroRte{\mNrm}$:
 \begin{equation}\begin{split}
-    \exp(\Ex_{t}[\log \left(\aNrm(\BalGroRte{\mNrm})\RNrm+\PermShk_{t+1}\TranShk_{t+1}\right)]) - (\aNrm(\BalGroFac{\mNrm})\RNrm+1 ) = \BalGroRte{\mNrm} - \BalGroFac{\mNrm}
+    \exp(\Ex_{t}[\log \left(\aNrm(\BalGroRte{\mNrm})\RNrm+\permShk_{t+1}\tranShk_{t+1}\right)]) - (\aNrm(\BalGroFac{\mNrm})\RNrm+1 ) = \BalGroRte{\mNrm} - \BalGroFac{\mNrm}
 \end{split}\end{equation}
 
 Now we use the fact that the expectation of the log is less than the log of the expectation, 
 \begin{equation}\begin{split}
-%    \log \Ex_{t}[\aNrm(\BalGroRte{\mNrm}_{t})\RNrm+\PermShk_{t+1}\TranShk_{t+1}] & <     \log \left(\aNrm(\BalGroRte{\mNrm}_{t})\RNrm+1\right) \\
- \exp(\Ex_{t}[\log \left(\aNrm(\BalGroRte{\mNrm})\RNrm+\PermShk_{t+1}\TranShk_{t+1}\right)]) & < \left(\aNrm(\BalGroRte{\mNrm})\RNrm+1    \right)
+%    \log \Ex_{t}[\aNrm(\BalGroRte{\mNrm}_{t})\RNrm+\permShk_{t+1}\tranShk_{t+1}] & <     \log \left(\aNrm(\BalGroRte{\mNrm}_{t})\RNrm+1\right) \\
+ \exp(\Ex_{t}[\log \left(\aNrm(\BalGroRte{\mNrm})\RNrm+\permShk_{t+1}\tranShk_{t+1}\right)]) & < \left(\aNrm(\BalGroRte{\mNrm})\RNrm+1    \right)
 \end{split}\end{equation}
 so
 \begin{equation}\begin{split}
@@ -328,10 +381,10 @@ where we are interpreting $\bar{\aFunc}^{\prime}$ as the mean of the value of $\
 
 Due to the model's nonlinearities the values of $\mNrm$ at which the expected growth rate of $\cLvl$ matches $\PermGroFac$ is very slightly different from the $\mNrm$ at which the growth rate at which expected growth of $\mLvl$ is $\PermGroFac$.  Defining $\grave{\mNrm}$ as the $\mNrm$ at which $\Ex_{t}[\cLvl_{t+1}/\cLvl_{t}]=\PermGroFac$, we can show that to first order $\grave{\mNrm} \approx \BalGroFac{\mNrm}.$
 \begin{align*}
-  \Ex_{t}[\cFunc(\mNrm_{t+1})\PermShk_{t+1}] & = \cFunc(\mNrm_{t}) \label{eq:balgrostableC}.
-%  \\ \Ex_{t}[\cFunc(\mNrm_{t+1})\PermShk_{t+1}] & = \cFunc(\mNrm_{t}) 
-  \\ \Ex_{t}[\left(\cFunc(\grave{\mNrm})+\cFunc^{\prime}(\grave{\mNrm})(\mNrm_{t+1}-\grave{\mNrm})\right)\PermShk_{t+1}] & \approx \cFunc(\grave{\mNrm})
-  \\ \Ex_{t}[\left(\cFunc^{\prime}(\grave{\mNrm})(\mNrm_{t+1}-\grave{\mNrm})\right)\PermShk_{t+1}] & \approx 0
+  \Ex_{t}[\cFunc(\mNrm_{t+1})\permShk_{t+1}] & = \cFunc(\mNrm_{t}) \label{eq:balgrostableC}.
+%  \\ \Ex_{t}[\cFunc(\mNrm_{t+1})\permShk_{t+1}] & = \cFunc(\mNrm_{t}) 
+  \\ \Ex_{t}[\left(\cFunc(\grave{\mNrm})+\cFunc^{\prime}(\grave{\mNrm})(\mNrm_{t+1}-\grave{\mNrm})\right)\permShk_{t+1}] & \approx \cFunc(\grave{\mNrm})
+  \\ \Ex_{t}[\left(\cFunc^{\prime}(\grave{\mNrm})(\mNrm_{t+1}-\grave{\mNrm})\right)\permShk_{t+1}] & \approx 0
   \\ \Ex_{t}[\mNrm_{t+1}] & \approx \grave{\mNrm} 
 \end{align*}
 but at $\mNrm=\BalGroFac{\mNrm}$, $\Ex_{t}[\mNrm_{t+1}]=\TargetNrm{\mNrm}\approx\grave{\mNrm}$.

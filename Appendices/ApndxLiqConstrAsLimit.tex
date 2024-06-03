@@ -5,7 +5,7 @@
 \onlyinsubfile{\externaldocument{BufferStockTheory}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
 \begin{document}
 
-\section{The Perfect Foresight Liquidity Constrained Solution as a Limit}\label{sec:LiqConstrAsLimit}
+\section{The Liquidity Constrained Solution as a Limit}\label{sec:LiqConstrAsLimit}
 
 Formally, suppose we change the description of the problem by making
 the following two assumptions:
@@ -20,16 +20,16 @@ Redesignate the consumption function that emerges from our original problem for 
       \lim_{\pZero \downarrow 0} \cFunc_{t}(\mNrm;\pZero)  & = \cnstr{\cFunc}_{t}(\mNrm). \label{eq:RestrEqUnrestr} 
     \end{aligned}\end{gathered}\end{equation}
 
-We will first examine the problem in period $T-1$, then argue that the desired result propagates to earlier periods.  For simplicity, suppose that the interest, growth, and time-preference factors are $\DiscFac = \Rfree = \PermGroFac = 1$, and there are no permanent shocks, $\PermShk=1$; the results below are easily generalized to the full-fledged version of the problem.
+We will first examine the problem in period $T-1$, then argue that the desired result propagates to earlier periods.  For simplicity, suppose that the interest, growth, and time-preference factors are $\DiscFac = \Rfree = \PermGroFac = 1$, and there are no permanent shocks, $\permShk=1$; the results below are easily generalized to the full-fledged version of the problem.
 
 The solution to the restrained consumer's optimization problem can be obtained as follows.  Assuming that the consumer's behavior in period $T$ is given by $\cFunc_{T}(\mNrm)$ (in practice, this will be $\cFunc_{T}(\mNrm)=m$), consider the unrestrained optimization problem
 \begin{equation}\begin{gathered}\begin{aligned}
-      \cnstr{\aFunc}^{*}_{T-1}(\mNrm)  & = \underset{\aNrm}{\arg \max} \left\{\uFunc(\mNrm-\aNrm) +  \int_{\underline{\TranShkEmp}}^{\bar{\TranShkEmp}} \vFunc_{T}(a+\TranShkEmp) d\CDF_{\TranShkEmp} \right\}. \label{eq:vUnconstr}
+      \cnstr{\aFunc}^{*}_{T-1}(\mNrm)  & = \underset{\aNrm}{\arg \max} \left\{\uFunc(\mNrm-\aNrm) +  \int_{\underline{\tranShkEmp}}^{\bar{\tranShkEmp}} \vFunc_{T}(a+\tranShkEmp) d\CDF_{\tranShkEmp} \right\}. \label{eq:vUnconstr}
     \end{aligned}\end{gathered}\end{equation}
 
 As usual, the envelope theorem tells us that $\vFunc_{T}^{\prime}(\mNrm)=\uP(\cFunc_{T}(\mNrm))$ so the expected marginal value of ending period $T-1$ with assets $\aNrm$ can be defined as
 \begin{equation}\begin{gathered}\begin{aligned}
-      \cnstr{\mathfrak{v}}_{T-1}^{\prime}(a)  & \equiv  \int_{\underline{\TranShkEmp}}^{\bar{\TranShkEmp}} \uP(\cFunc_{T}(a+\TranShkEmp)) d\CDF_{\TranShkEmp}, \notag
+      \cnstr{\mathfrak{v}}_{T-1}^{\prime}(a)  & \equiv  \int_{\underline{\tranShkEmp}}^{\bar{\tranShkEmp}} \uP(\cFunc_{T}(a+\tranShkEmp)) d\CDF_{\tranShkEmp}, \notag
     \end{aligned}\end{gathered}\end{equation}
 and the solution to~\eqref{\localorexternallabel{eq:vUnconstr}} will satisfy
 \begin{equation}\begin{gathered}\begin{aligned}
@@ -50,7 +50,7 @@ transition between binding and non-binding in period $T-1$.
 
 Analogously to~\eqref{\localorexternallabel{eq:uPConstr}}, defining
 \begin{equation}\begin{gathered}\begin{aligned}
-      \mathfrak{v}_{T-1}^{\prime}(a;\pZero)  & \equiv  \left[\pZero \aNrm^{-\CRRA}+\pNotZero\int_{\underline{\TranShkEmp}}^{\bar{\TranShkEmp}} {\left(\cFunc_{T}(a+\TranShkEmp/\pNotZero)\right)}^{-\CRRA} d\CDF_{\TranShkEmp}\right], \label{eq:vFrakPrime}
+      \mathfrak{v}_{T-1}^{\prime}(a;\pZero)  & \equiv  \left[\pZero \aNrm^{-\CRRA}+\pNotZero\int_{\underline{\tranShkEmp}}^{\bar{\tranShkEmp}} {\left(\cFunc_{T}(a+\tranShkEmp/\pNotZero)\right)}^{-\CRRA} d\CDF_{\tranShkEmp}\right], \label{eq:vFrakPrime}
     \end{aligned}\end{gathered}\end{equation}
 the Euler equation for the original consumer's problem implies
 \begin{equation}\begin{gathered}\begin{aligned}
