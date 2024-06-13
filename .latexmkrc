@@ -9,6 +9,7 @@ $bibtex_use=2;
 $pdf_mode = 1;
 $rc_report = 1;
 @default_files = ('BufferStockTheory','BufferStockTheory-NoAppendix');
+$ENV{'BIBINPUTS'} = './@resources/texlive/texmf-local/bibtex/bst:';
 $pdflatex="pdflatex -interaction=nonstopmode %O %S";
 $aux_out_dir_report = 1;
 $silent  = 0;

@@ -10,11 +10,11 @@
 %\onlyinsubfile{\pagebreak\input{\LaTeXInputs/bibliography_blend}}
 
 \begin{proposition}\label{fact:xnconvgf}
-Let $\fFunc: \mathbb{R}_{++} \to \mathbb{R}_{+}$ be a continuous function. Consider sequences $x^{n}$ in $\mathbb{R}_{++}$ and $\fFunc^n(x^{n})$ in $\mathbb{R}_{+}$. If $\fFunc^{n}(x^{n}) \to \fFunc(x)$ as $n \to \infty$, then $x^{n} \to x$ as $n \to \infty$.
+Let $\fFunc: \Reals_{++} \to \Reals_{+}$ be a continuous function. Consider sequences $x^{n}$ in $\Reals_{++}$ and $\fFunc^n(x^{n})$ in $\Reals_{+}$. If $\fFunc^{n}(x^{n}) \to \fFunc(x)$ as $n \to \infty$, then $x^{n} \to x$ as $n \to \infty$.
 \end{proposition}
 
 \begin{proof}
-Given that $\fFunc$ is continuous at $x$ (with $x \in \mathbb{R}_{++}$), for every $\epsilon > 0$, there exists a $\delta > 0$ such that for all $y$ in $\mathbb{R}_{++}$ with $\vert y - x\vert < \delta$, we have $\vert \fFunc(y) - \fFunc(x)\vert  < \epsilon$.
+Given that $\fFunc$ is continuous at $x$ (with $x \in \Reals_{++}$), for every $\epsilon > 0$, there exists a $\delta > 0$ such that for all $y$ in $\Reals_{++}$ with $\vert y - x\vert < \delta$, we have $\vert \fFunc(y) - \fFunc(x)\vert  < \epsilon$.
 
 Given $\fFunc^{n}(x^{n}) \to \fFunc(x)$, for the above $\epsilon$, there exists an $N$ such that for all $n > N$, $\vert \fFunc^{n}(x^{n}) - \fFunc(x)\vert < \epsilon$.
 
@@ -26,7 +26,7 @@ Therefore, our assumption for contradiction is false, and it follows that $x^{n}
 \end{proof}
 
 \begin{fact}
-Let $\gFunc: X \to \mathbb{R}_{+}$ be a continuous function, where $X \subseteq \mathbb{R}^{n}$ is an open convex set. Define the weighted supremum norm $\Vert\cdot \Vert_{\gFunc}$ of a real-valued function $\fFunc: X \to \mathbb{R}$ by
+Let $\gFunc: X \to \Reals_{+}$ be a continuous function, where $X \subseteq \Reals^{n}$ is an open convex set. Define the weighted supremum norm $\Vert\cdot \Vert_{\gFunc}$ of a real-valued function $\fFunc: X \to \Reals$ by
 \begin{equation}
 \Vert \fFunc \Vert_\gFunc := \sup_{x \in X} \frac{\vert \fFunc(x)\vert }{\gFunc(x)}.
 \end{equation}

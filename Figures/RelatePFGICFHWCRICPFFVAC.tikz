@@ -8,6 +8,6 @@
       \node (pffvacFac) [right of = rfree] {$\underbrace{\PermGroFac (\Rfree/\PermGroFac)^{1/\CRRA}}_{\text{FVAF}}$}; % \left(\equiv (\Rfree \PermGroFac)^{1/\CRRA}\PermGroFac \right)
       \draw[->] (thorn) to node {\small Growth Impatience: $\APFac < \PermGroFac$} (gamma);
       \draw[->] (thorn) to node [swap] [rotate=-90,yshift=-0.3cm,xshift=2.0cm]{\footnotesize Return Impatience: $\APFac < \Rfree$} (rfree);
-      \draw[->] (thorn) to node [swap] [rotate=-45,xshift=1.9cm,yshift=+0.5cm] {\small PF-FVAC: $\APFac < \text{FVAF}$} (pffvacFac);
+      \draw[->] (thorn) to node [swap] [rotate=-45,xshift=1.9cm,yshift=+0.5cm] {\small PF-FVAC: $\APFac < \text{PF-FVAF}$} (pffvacFac);
       \draw[->] (gamma) to node [rotate=-90,xshift=-2.7cm,yshift=+0.3cm]{\footnotesize Finite Human Wealth: $\PermGroFac < \PermGroFac (\Rfree/\PermGroFac)^{1/\CRRA}$} (pffvacFac);
       \draw[<-] (pffvacFac) to node{\footnotesize Infinite Human Wealth: $\PermGroFac > \Rfree$} (rfree); 

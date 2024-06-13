@@ -11,7 +11,7 @@
 
 \newcommand{\EOP}{\bar}
 \newcommand{\MOP}{}
-\newcommand{\BOP}{\ushort}
+\newcommand{\BOP}{\underline}
 
 
 \begin{document}
@@ -47,12 +47,12 @@ We start by assuming we are solving a problem exactly like the one in the \href{
     & \mbox{s.t.}
     \\ {\aNrm}_{t}  & = \mNrm_{t}-c_{t}
     \\ {\kNrm}_{t+1} & = \aNrm_{t}/\PermGroFac_{t+1}
-    \\ {\bNrm}_{t+1}  & = {\kNrm}_{t+1}\Rfree = (\Rfree/\PermGroFac_{t+1})\aNrm_{t}  ~ = ~ \RNrm_{t+1}\aNrm_{t}
+    \\ {\bNrm}_{t+1}  & = {\kNrm}_{t+1}\Rfree = (\Rfree/\PermGroFac_{t+1})\aNrm_{t}  ~ = ~ \RNrmByGRnd_{t+1}\aNrm_{t}
     \\ \mNrm_{t+1}  & = \bNrm_{t+1}+\tranShkAll_{t+1}  ,
                       %       \end{align*}
   \end{split}
 \end{equation*}
-where $\RNrm_{t+1}\equiv (\Rfree/\PermGroFac_{t+1})$ is a `permanent-income-growth-normalized' return factor.
+where $\RNrmByGRnd_{t+1}\equiv (\Rfree/\PermGroFac_{t+1})$ is a `permanent-income-growth-normalized' return factor.
 
 
 %debug -- succeeds 
@@ -171,11 +171,11 @@ It would consist of steps like this:
 \\ T-3 & ~~~~ & \text{\texttt{stage\_opt\_cns-solve}}
 \end{alignat}
 
-Now suppose we want to add a portfolio stage to the problem.  Specifically, we will assume that right after the beginning of period $t$, before the shocks are realized, the consumer must make a choice about the proportion $\varsigma$ of capital $k$ to be committed to risky asset that will earn return $\Risky$ and the proportion $(1-\varsigma)$ that will earn $\Rfree$, for a combined portfolio return of $\mathbb{R}=\varsigma \Risky + (1-\varsigma)\Rfree = \Rfree+\varsigma(\Risky-\Rfree)$.
+Now suppose we want to add a portfolio stage to the problem.  Specifically, we will assume that right after the beginning of period $t$, before the shocks are realized, the consumer must make a choice about the proportion $\varsigma$ of capital $k$ to be committed to risky asset that will earn return $\Risky$ and the proportion $(1-\varsigma)$ that will earn $\Rfree$, for a combined portfolio return of $\Reals=\varsigma \Risky + (1-\varsigma)\Rfree = \Rfree+\varsigma(\Risky-\Rfree)$.
 
 The problem now has an extra stage to it:
 \begin{align*}
-  \BOP{v}(k) & = \max_{\varsigma} \Ex[\MOP{v}(\overbrace{(\mathbb{R}/(\PermGroFac \permShk))k+\tranShkAll)}^{\equiv m})]
+  \BOP{v}(k) & = \max_{\varsigma} \Ex[\MOP{v}(\overbrace{(\Reals/(\PermGroFac \permShk))k+\tranShkAll)}^{\equiv m})]
 \end{align*}
 
 The first order condition for this problem is well-known, and this whole portfolio optimization problem can therefore be bundled up into a \texttt{portfolio} stage that takes $k$ as a beginning-of-period input and yields $k$ and $\varsigma$ as outputs.
