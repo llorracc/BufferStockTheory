@@ -9,4 +9,7 @@
 /Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-make/makePDF-Portable.sh /Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-Latest BufferStockTheory private bib LaTeX Resources
 /Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-make/makePDF-Portable.sh /Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-Latest BufferStockTheory private bib LaTeX Resources
 /Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-make/makePDF-Portable.sh /Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-Latest BufferStockTheory private bib LaTeX Resources
+/Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-make/makePDF-Portable.sh /Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-Latest BufferStockTheory private bib LaTeX Resources
+/Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-make/makePDF-Portable.sh /Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-Latest BufferStockTheory private bib LaTeX Resources
+/Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-make/makePDF-Portable.sh /Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-Public BufferStockTheory public bib LaTeX Resources
 /Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-make/makePDF-Portable.sh /Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-Public BufferStockTheory public bib LaTeX Resources
