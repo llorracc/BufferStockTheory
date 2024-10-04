@@ -1,21 +1,21 @@
 % -*- mode: LaTeX; TeX-PDF-mode: t; -*-
-\input{.resources/add-tex-search-paths} % allow latex to find custom stuff
-\input{./.econtexRoot}\input{\ResourcesDir/owner}
+\input{@resources/tex-add-search-paths} % allow latex to find custom stuff
+%\input{./.econtexRoot}\input{@local/owner}
 \documentclass[pdflatex]{beamer}
+\usepackage{econark-shortcuts}
+%\begin{document} hi \end{document} \endinput
 \usepackage{ifthen}
 \newboolean{Web}\setboolean{Web}{false}
-\providecommand{\texname}{BufferStockTheory-Slides}% 
-\usepackage{\texname}
+\providecommand{\texname}{BufferStockTheory-Slides}%
+\usepackage{econark-multibib}
+\usepackage{econark-shortcuts}
+%\usepackage{\texname}
 
 % Can't read in BufferStockTheory.sty because some packages conflict with Beamer
 % So need to redefine everything here
 
-\usepackage{\econark}
-%\usepackage{\econtexShortcuts}
 
-\setboolean{showPageHead}{false}
-
-\usepackage{natbib,amsmath,amssymb,rotating,subfigure}
+%\usepackage{natbib,amsmath,amssymb,rotating,subfigure}
 \usepackage{verbatim,moreverb,graphicx}
 %\renewcommand{\LtxDir\EqDir}{\econtexRoot/Equations}
 \providecommand{\FigsRaw}{\econtexRoot/Code/Python/Figures}
@@ -24,6 +24,7 @@
 \providecommand{\TableDir}{\econtexRoot/Tables}
 \providecommand{\ApndxDir}{\econtexRoot/Appendices}
 \providecommand{\Ex}{\Ex}
+
 
 
 %\usepackage{natbib}\newcommand*{\newblock}{}
@@ -50,14 +51,13 @@
 \title[Buffer Stock Theory]{Theoretical Foundations of Buffer Stock Saving}
 \author[Carroll]{Chris Carroll}
 \institute[JHU]{Johns Hopkins University}
-\date[\today]{September 12, 2019  \\ \medskip \medskip \medskip \href{https://econ-ark.org/}{\small Powered By} \\ \includegraphics[width=0.5in]{\econtexRoot/Resources/econ-ark-logo-small.png}}
+\date[\today]{September 12, 2019  \\ \medskip \medskip \medskip \href{https://econ-ark.org/}{\small Powered By} \\ \includegraphics[width=0.5in]{@resources/econ-ark/econ-ark-logo-small.png}}
 
-\begin{document}\bibliographystyle{\econtexBibStyle}
+\begin{document}\bibliographystyle{econark}
 
 \begin{frame}[plain]
   \titlepage
 \end{frame}
-
 
 %_____________ 1st section  ____________
 \section{Introduction}
@@ -126,10 +126,10 @@ Restrictions On Parameter Values Such That \pause
 \begin{frame}
 
 Limit as horizon $T$ goes to infinity of 
-\input{\econtexRoot/\EqDir/supfn}
+\input{\EqDir/supfn}
 
-\input{\econtexRoot/\EqDir/DBCparts}
-\input{\econtexRoot/\EqDir/TranShkDef}
+\input{\EqDir/DBCparts}
+\input{\EqDir/TranShkDef}
 
 \begin{itemize}
 \item $\util(\bullet)=\bullet^{1-\CRRA}/(1-\CRRA)$; $\Ex_{t}[\permShk_{t+n}]=\Ex_{t}[\tranShk_{t+n}]=1~\forall~n>0$; $\beta < 1, \CRRA > 1$
@@ -234,7 +234,7 @@ Return Impatience Condition:
 \frametitle{Contraction Mapping Requirements}
 
 Finite Value of Autarky Condition: Same As In Liq Constr Problem!
-\input{\econtexRoot/\EqDir/FVAC}
+\input{\EqDir/FVAC}
 
 `Weak Return Impatience Condition' ($\WRIC$)
 
@@ -248,13 +248,13 @@ Finite Value of Autarky Condition: Same As In Liq Constr Problem!
 \frametitle{Requirement For Existence Of A Target}
 
 Definitions: `Uncertainty-Adjusted' Growth:
-\input{\econtexRoot/\EqDir/PermGroFacAdj}
+\input{\EqDir/PermGroFacAdj}
 
 Adjusted Growth Patience Factor:
-\input{\econtexRoot/\EqDir/GPFacMod}
+\input{\EqDir/GPFacMod}
 
 Growth Impatience Condition:
-\input{\econtexRoot/\EqDir/GICMod}
+\input{\EqDir/GICMod}
 
 
 
@@ -393,7 +393,7 @@ Paper Proves:
 \tiny 
 
 
-\pagebreak\input{bibliography_blend}
+\pagebreak\econarkmultibib{\texname}
 
 \end{frame}
 \end{document}\endinput
@@ -402,11 +402,11 @@ Paper Proves:
 % TeX-master-file: t
 % eval: (setq TeX-command-list  (assq-delete-all (car (assoc "BibTeX" TeX-command-list)) TeX-command-list))
 % eval: (setq TeX-command-list  (assq-delete-all (car (assoc "Biber"  TeX-command-list)) TeX-command-list))
-% eval: (setq TeX-command-list  (remove '("BibTeX" "%(bibtex) ./LaTeX/%s"    TeX-run-BibTeX nil t :help "Run BibTeX") TeX-command-list))
-% eval: (setq TeX-command-list  (remove '("BibTeX"    "bibtex ./LaTeX/%s"    TeX-run-BibTeX nil (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode context-mode)  :help "Run BibTeX") TeX-command-list))
-% eval: (setq TeX-command-list  (remove '("BibTeX" "bibtex ./LaTeX/%s"    TeX-run-BibTeX nil t :help "Run BibTeX") TeX-command-list))
-% eval: (add-to-list 'TeX-command-list '("BibTeX" "bibtex ./LaTeX/%s" TeX-run-BibTeX nil t                                                                              :help "Run BibTeX") t)
-% eval:  (add-to-list 'TeX-command-list '("BibTeX" "bibtex ./LaTeX/%s" TeX-run-BibTeX nil (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode context-mode) :help "Run BibTeX") t)
+% eval: (setq TeX-command-list  (remove '("BibTeX" "%(bibtex) %s"    TeX-run-BibTeX nil t :help "Run BibTeX") TeX-command-list))
+% eval: (setq TeX-command-list  (remove '("BibTeX"    "bibtex %s"    TeX-run-BibTeX nil (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode context-mode)  :help "Run BibTeX") TeX-command-list))
+% eval: (setq TeX-command-list  (remove '("BibTeX" "bibtex %s"    TeX-run-BibTeX nil t :help "Run BibTeX") TeX-command-list))
+% eval: (add-to-list 'TeX-command-list '("BibTeX" "bibtex %s" TeX-run-BibTeX nil t                                                                              :help "Run BibTeX") t)
+% eval:  (add-to-list 'TeX-command-list '("BibTeX" "bibtex %s" TeX-run-BibTeX nil (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode context-mode) :help "Run BibTeX") t)
 % TeX-PDF-mode: t
 % TeX-file-line-error: t
 % TeX-debug-warnings: t
@@ -414,6 +414,6 @@ Paper Proves:
 % TeX-source-correlate-mode: t
 % TeX-parse-self: t
 % TeX-parse-all-errors: t
-% eval: (cond ((string-equal system-type "darwin") (progn (setq TeX-view-program-list '(("Skim" "/Applications/Skim.app/Contents/SharedSupport/displayline -b %n LaTeX/%o %b"))))))
-% eval: (cond ((string-equal system-type "gnu/linux") (progn (setq TeX-view-program-list '(("Evince" "evince --page-index=%(outpage) LaTeX/%o"))))))
+% eval: (cond ((string-equal system-type "darwin") (progn (setq TeX-view-program-list '(("Skim" "/Applications/Skim.app/Contents/SharedSupport/displayline -b %n %o %b"))))))
+% eval: (cond ((string-equal system-type "gnu/linux") (progn (setq TeX-view-program-list '(("Evince" "evince --page-index=%(outpage) %o"))))))
 % eval: (cond ((string-equal system-type "gnu/linux") (progn (setq TeX-view-program-selection '((output-pdf "Evince"))))))

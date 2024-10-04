@@ -1,7 +1,16 @@
 % -*- mode: LaTeX; TeX-PDF-mode: t; -*-
+\newcommand{\subname}{ApndxSolnMethTermFunc}
+\input{@resources/tex-add-search-paths}  % allow latex to find custom stuff
 \input{./.econtexRoot}\documentclass[\econtexRoot/BufferStockTheory]{subfiles}
-\input{./.econtexRoot}\input{\LaTeXInputs/econtex_onlyinsubfile}
-\onlyinsubfile{\externaldocument{\LaTeXGenerated/BufferStockTheory}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
+
+\input{\econtexRoot/@local/dir-paths} % get directory macros
+\usepackage{econark-ifsubfile}        % allow conditional execution of code
+\usepackage{econark-xrsetup}          % Xternal crossReferences (from main document)
+
+\compilingasstandalone{
+  \xrsetup{\econtexRoot/\texname}
+}
+
 \begin{document}
 
 %\begin{verbatimwrite}{\LaTeXGenerated/ApndxSolnMethTermFunc.tex}
@@ -60,8 +69,10 @@ implicitly defining $\mNrm = e^{\mu}$ (so that $\mu = \log m$), we can construct
 \begin{equation}\begin{gathered}\begin{aligned}
  \chi_{t}(\mu)  & = \log (1-\cFunc_{t}(e^{\mu})/\cFunc_{T}(e^{\mu}))  \label{eq:ChiDef}
 \end{aligned}\end{gathered}\end{equation}
-which must be a number between $-\infty$ and $+\infty$ (since $0 < \cFunc_{t}(\mNrm) < \breve{\cFunc}(\mNrm)$ for $\mNrm > 0$).  This function turns out to be much better behaved (as
-a numerical observation; no formal proof is offered) than the level of the optimal consumption rule $\cFunc_{t}(m)$.  In particular, $\chi_{t}(\mu)$ is well approximated by linear functions both as $\mNrm \downarrow 0$ and as $\mNrm \uparrow \infty$.
+which must be a number between $-\infty$ and $+\infty$ (since $0 < \cFunc_{t}(\mNrm) < \breve{\cFunc}(\mNrm)$ for $\mNrm > 0$).
+This function turns out to be much better behaved (as
+a numerical observation; no formal proof is offered) than the level of the optimal consumption rule $\cFunc_{t}(m)$.
+In particular, $\chi_{t}(\mu)$ is well approximated by linear functions both as $\mNrm \downarrow 0$ and as $\mNrm \uparrow \infty$.
 
 Differentiating with respect to $\mu$ and dropping consumption function arguments
 yields
@@ -83,7 +94,7 @@ which can be solved for
 \end{aligned}\end{gathered}\end{equation}
 \end{comment}
 
-Similarly, we can solve~\eqref{\localorexternallabel{eq:ChiDef}} for
+Similarly, we can solve~\eqref{eq:MPCmaxDefn} for
 \begin{equation}\begin{gathered}\begin{aligned}
     \cFunc_{t}(\mNrm)  & = \left(1-e^{\chi_{t}(\log \mNrm)}\right)\cFunc_{T}(\mNrm) \label{eq:cFuncFromChi}.
 %\\ \cFunc_{t}^{\prime}(e^{\mu})e^{\mu}  & = -e^{\chi(\mu)}\chi^{\prime}\cFunc_{T}(e^{\mu})+\left(1-e^{\chi(\mu)}\right)\cFunc_{T}(e^{\mu})
@@ -96,15 +107,15 @@ Thus, having approximated $\chi_{t}$, we can recover from it the level and deriv
 % Local Variables:
 % eval: (setq TeX-command-list  (remove '("Biber" "biber %s" TeX-run-Biber nil  (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode)  :help "Run Biber") TeX-command-list))
 % eval: (setq TeX-command-list  (remove '("Biber" "biber %s" TeX-run-Biber nil  t  :help "Run Biber") TeX-command-list))
-% tex-bibtex-command: "bibtex ../LaTeX/*"
+% tex-bibtex-command: "bibtex.*"
 % TeX-PDF-mode: t
 % TeX-file-line-error: t
 % TeX-debug-warnings: t
-% LaTeX-command-style: (("" "%(PDF)%(latex) %(file-line-error) %(extraopts) -output-directory=../LaTeX %S%(PDFout)"))
+% LaTeX-command-style: (("" "%(PDF)%(latex) %(file-line-error) %(extraopts) -output-directory=. %S%(PDFout)"))
 % TeX-source-correlate-mode: t
 % TeX-parse-self: t
-% eval: (cond ((string-equal system-type "darwin") (progn (setq TeX-view-program-list '(("Skim" "/Applications/Skim.app/Contents/SharedSupport/displayline -b %n ../LaTeX/%o %b"))))))
-% eval: (cond ((string-equal system-type "gnu/linux") (progn (setq TeX-view-program-list '(("Evince" "evince --page-index=%(outpage) ../LaTeX/%o"))))))
+% eval: (cond ((string-equal system-type "darwin") (progn (setq TeX-view-program-list '(("Skim" "/Applications/Skim.app/Contents/SharedSupport/displayline -b %n.%o %b"))))))
+% eval: (cond ((string-equal system-type "gnu/linux") (progn (setq TeX-view-program-list '(("Evince" "evince --page-index=%(outpage).%o"))))))
 % eval: (cond ((string-equal system-type "gnu/linux") (progn (setq TeX-view-program-selection '((output-pdf "Evince"))))))
 % TeX-parse-all-errors: t
 % End:

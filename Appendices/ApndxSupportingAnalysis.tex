@@ -1,15 +1,22 @@
 % -*- mode: LaTeX; TeX-PDF-mode: t; -*-
+\input{@resources/tex-add-search-paths}  % allow latex to find custom stuff
 \input{./.econtexRoot}\documentclass[\econtexRoot/BufferStockTheory]{subfiles}
-\input{./.econtexRoot}\input{\LaTeXInputs/econtex_onlyinsubfile} 
 
-\onlyinsubfile{\externaldocument{\LaTeXGenerated/BufferStockTheory}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
+\newcommand{\subname}{ApndxSupportingAnalysis}
+\input{\econtexRoot/@local/dir-paths} % get directory macros
+\usepackage{econark-ifsubfile}        % allow conditional execution of code
+\usepackage{econark-xrsetup}          % Xternal crossReferences (from main document)
+
+\compilingasstandalone{
+  \xrsetup{\econtexRoot/\texname}
+}
 \begin{document}
 
 \section{Supporting Standard Results in Real Analysis}\label{sec:realanalysis}
 
-%\onlyinsubfile{\pagebreak\input{\LaTeXInputs/bibliography_blend}}
+%\notinsubfile{\pagebreak\bibliographystyle{plainnat}\econarkmultibib{\texname}}
 
-\begin{proposition}\label{fact:xnconvgf}
+\begin{proposition}\label{prop:xnconvgf}
 Let $\fFunc: \Reals_{++} \to \Reals_{+}$ be a continuous function. Consider sequences $x^{n}$ in $\Reals_{++}$ and $\fFunc^n(x^{n})$ in $\Reals_{+}$. If $\fFunc^{n}(x^{n}) \to \fFunc(x)$ as $n \to \infty$, then $x^{n} \to x$ as $n \to \infty$.
 \end{proposition}
 
@@ -18,7 +25,8 @@ Given that $\fFunc$ is continuous at $x$ (with $x \in \Reals_{++}$), for every $
 
 Given $\fFunc^{n}(x^{n}) \to \fFunc(x)$, for the above $\epsilon$, there exists an $N$ such that for all $n > N$, $\vert \fFunc^{n}(x^{n}) - \fFunc(x)\vert < \epsilon$.
 
-Assume for the sake of contradiction that $x^{n}$ doesn't converge to $x$. This implies that there exists a $\delta > 0$ such that for infinitely many terms of the sequence $x^{n}$, $\vert x^{n} - x\vert  \geq \delta$.
+Assume for the sake of contradiction that $x^{n}$ doesn't converge to $x$.
+This implies that there exists a $\delta > 0$ such that for infinitely many terms of the sequence $x^{n}$, $\vert x^{n} - x\vert  \geq \delta$.
 
 By the continuity of $\fFunc$ at $x$, if $\vert x^{n} - x\vert  \geq \delta$ for infinitely many $n$, then $\vert \fFunc^{n}(x^{n}) - \fFunc(x)\vert  \geq \epsilon$ for those $n$, contradicting our assumption that $\fFunc^{n}(x^{n}) \to \fFunc(x)$.
 
@@ -34,35 +42,23 @@ If $\lim_{n \to \infty} \Vert \fFunc_n - \fFunc^{\star} \Vert_\gFunc = 0$, $\fFu
 \end{fact}
 
 \begin{proof}
-Let $\tilde{X}$ be an arbitrary compact subset of $X$. Since $\tilde{X}$ is compact, there exists a positive lower bound for $\gFunc$ on this subset, denoted as 
+Let $\tilde{X}$ be an arbitrary compact subset of $X$.
+Since $\tilde{X}$ is compact, there exists a positive lower bound for $\gFunc$ on this subset, denoted as 
 \begin{equation}
 \bar{\gFunc} = \min_{x \in \tilde{X}} \gFunc(x) > 0.
 \end{equation}
-Hence, on $\tilde{X}$, if $\lim_{n \to \infty} \Vert \fFunc_n - \fFunc^{\star} \Vert_\gFunc = 0$, then $\lim_{n \to \infty} \Vert \fFunc_n - \fFunc^{\star} \Vert_\infty = 0$ on $\tilde{X}$, where $\Vert \cdot \Vert_\infty$ denotes the supremum norm. 
+Hence, on $\tilde{X}$, if $\lim_{n \to \infty} \Vert \fFunc_n - \fFunc^{\star} \Vert_\gFunc = 0$, then $\lim_{n \to \infty} \Vert \fFunc_n - \fFunc^{\star} \Vert_\infty = 0$ on $\tilde{X}$, where $\Vert \cdot \Vert_\infty$ denotes the supremum norm.
 
-Now, let $K$ be a compact subset of $X$. Given the continuity of $\gFunc$, there exists a positive maximum value for $\gFunc$ on $K$, denoted as $M_K$. Then, we have
+% CDC-to-AS: There are two versions of this proof.  Which should we keep?
+
+Now, let $K$ be a compact subset of $X$.
+Given the continuity of $\gFunc$, there exists a positive maximum value for $\gFunc$ on $K$, denoted as $M_K$.
+Then, we have
 \begin{equation}
 \sup_{x \in K} \vert \fFunc_n(x) - \fFunc(x)\vert  \leq M_K \sup_{x \in K} \frac{\vert \fFunc_n(x) - \fFunc(x)\vert }{\gFunc(x)} \leq M_K \sup_{x \in X} \frac{\vert \fFunc_n(x) - \fFunc(x)\vert }{\gFunc(x)}.
 \end{equation}
-Thus, $\lim_{n \to \infty} \Vert \fFunc_n - \fFunc \Vert_  = 0$ implies that $\fFunc_n$ converges uniformly to $\fFunc$ on the compact set $K$. It's also worth noting that the convexity and openness of $X$ aren't strictly necessary for this argument.
-\end{proof}
-
-\begin{fact}\label{fact:compactnt}
-Let $\{\fFunc_n\}$ be a sequence of continuous functions defined on a subset of the real line and converging uniformly to a function$\fFunc$ on compact sets. If$\{x_n\}$ is a convergent sequence of real numbers with limit $x$, then $\fFunc_n(x_n)$ converges to $\fFunc(x)$.
-\end{fact}
-
-\begin{proof}
-Let $\tilde{X}$ be an arbitrary compact subset of $X$. Since $\tilde{X}$ is compact, there exists a positive lower bound for $\gFunc$ on this subset, denoted as 
-\begin{equation}
-\bar{\gFunc} = \min_{x \in \tilde{X}} \gFunc(x) > 0.
-\end{equation}
-Hence, on $\tilde{X}$, if $\lim_{n \to \infty} \Vert \fFunc_n - \fFunc^{\star} \Vert_\gFunc = 0$, then $\lim_{n \to \infty} \Vert \fFunc_n - \fFunc^{\star} \Vert_\infty = 0$ on $\tilde{X}$, where $\Vert \cdot \Vert_\infty$ denotes the supremum norm. 
-
-Now, let $K$ be a compact subset of $X$. Given the continuity of $\gFunc$, there exists a positive maximum value for $\gFunc$ on $K$, denoted as $M_K$. Then, we have
-\begin{equation}
-\sup_{x \in K} \vert \fFunc_n(x) - \fFunc(x)\vert  \leq M_K \sup_{x \in K} \frac{\vert \fFunc_n(x) - \fFunc(x)\vert }{\gFunc(x)} \leq M_K \sup_{x \in X} \frac{\vert \fFunc_n(x) - \fFunc(x)\vert }{\gFunc(x)}.
-\end{equation}
-Thus, $\lim_{n \to \infty} \Vert \fFunc_n - \fFunc \Vert_  = 0$ implies that $\fFunc_n$ converges uniformly to $\fFunc$ on the compact set $K$. It's also worth noting that the convexity and openness of $X$ aren't strictly necessary for this argument.
+Thus, $\lim_{n \to \infty} \Vert \fFunc_n - \fFunc \Vert_  = 0$ implies that $\fFunc_n$ converges uniformly to $\fFunc$ on the compact set $K$.
+It's also worth noting that the convexity and openness of $X$ aren't strictly necessary for this argument.
 \end{proof}
 
 \begin{fact}\label{fact:compactnt}
@@ -70,17 +66,44 @@ Let $\{\fFunc_n\}$ be a sequence of continuous functions defined on a subset of 
 \end{fact}
 
 \begin{proof}
-Since $x_n$ converges to $x$, the sequence $\{x_n\}$ is bounded. Therefore, there exists a compact set $K$ (specifically, a closed interval in the real line) that contains all the $x_n$ as well as $x$.
+Let $\tilde{X}$ be an arbitrary compact subset of $X$.
+Since $\tilde{X}$ is compact, there exists a positive lower bound for $\gFunc$ on this subset, denoted as 
+\begin{equation}
+\bar{\gFunc} = \min_{x \in \tilde{X}} \gFunc(x) > 0.
+\end{equation}
+Hence, on $\tilde{X}$, if $\lim_{n \to \infty} \Vert \fFunc_n - \fFunc^{\star} \Vert_\gFunc = 0$, then $\lim_{n \to \infty} \Vert \fFunc_n - \fFunc^{\star} \Vert_\infty = 0$ on $\tilde{X}$, where $\Vert \cdot \Vert_\infty$ denotes the supremum norm.
+
+
+Now, let $K$ be a compact subset of $X$.
+Given the continuity of $\gFunc$, there exists a positive maximum value for $\gFunc$ on $K$, denoted as $M_K$.
+Then, we have
+\begin{equation}
+\sup_{x \in K} \vert \fFunc_n(x) - \fFunc(x)\vert  \leq M_K \sup_{x \in K} \frac{\vert \fFunc_n(x) - \fFunc(x)\vert }{\gFunc(x)} \leq M_K \sup_{x \in X} \frac{\vert \fFunc_n(x) - \fFunc(x)\vert }{\gFunc(x)}.
+\end{equation}
+Thus, $\lim_{n \to \infty} \Vert \fFunc_n - \fFunc \Vert_  = 0$ implies that $\fFunc_n$ converges uniformly to $\fFunc$ on the compact set $K$.
+It's also worth noting that the convexity and openness of $X$ aren't strictly necessary for this argument.
+\end{proof}
+
+\begin{fact}\label{fact:compactnts}
+Let $\{\fFunc_n\}$ be a sequence of continuous functions defined on a subset of the real line and converging uniformly to a function $\fFunc$ on compact sets. If $\{x_n\}$ is a convergent sequence of real numbers with limit $x$, then $\fFunc_n(x_n)$ converges to $\fFunc(x)$.
+\end{fact}
+
+\begin{proof}
+Since $x_n$ converges to $x$, the sequence $\{x_n\}$ is bounded.
+Therefore, there exists a compact set $K$ (specifically, a closed interval in the real line) that contains all the $x_n$ as well as $x$.
 
 Given the uniform convergence of $\fFunc_n$ to $\fFunc$ on $K$, for every $\epsilon > 0$, there exists an $N$ such that for all $n \geq N$ and for all $y \in K$, we have
-\[ \vert \fFunc_n(y) - \fFunc(y)\vert  < \epsilon. \]
+\[ \vert \fFunc_n(y) - \fFunc(y)\vert  < \epsilon.
+\]
 In particular, for $y = x_n$, we have
 \[ \vert \fFunc_n(x_n) - \fFunc(x_n)\vert  < \epsilon \]
 for all $n \geq N$.
 
-Now, each $\fFunc_n$ being continuous and $x_n$ converging to $x$ implies that $\fFunc(x_n)$ converges to $\fFunc(x)$. Thus, for sufficiently large $n$, $\fFunc(x_n)$ can be made arbitrarily close to $\fFunc(x)$.
+Now, each $\fFunc_n$ being continuous and $x_n$ converging to $x$ implies that $\fFunc(x_n)$ converges to $\fFunc(x)$.
+Thus, for sufficiently large $n$, $\fFunc(x_n)$ can be made arbitrarily close to $\fFunc(x)$.
 
-Combining the two inequalities and taking $n$ large enough, we deduce that $\vert \fFunc_n(x_n) - \fFunc(x)\vert$ can be made smaller than any given $\epsilon$. Hence, $\fFunc_n(x_n)$ converges to $\fFunc(x)$.
+Combining the two inequalities and taking $n$ large enough, we deduce that $\vert \fFunc_n(x_n) - \fFunc(x)\vert$ can be made smaller than any given $\epsilon$.
+Hence, $\fFunc_n(x_n)$ converges to $\fFunc(x)$.
 \end{proof}
 
 
@@ -91,17 +114,17 @@ Combining the two inequalities and taking $n$ large enough, we deduce that $\ver
 % Local Variables:
 % eval: (setq TeX-command-list  (remove '("Biber" "biber %s" TeX-run-Biber nil  (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode)  :help "Run Biber") TeX-command-list))
 % eval: (setq TeX-command-list  (remove '("Biber" "biber %s" TeX-run-Biber nil  t  :help "Run Biber") TeX-command-list))
-% eval: (setq TeX-command-list  (remove '("BibTeX" "%(bibtex) LaTeX/%s"    TeX-run-BibTeX nil t :help "Run BibTeX") TeX-command-list))
-% eval: (setq TeX-command-list  (remove '("BibTeX" "bibtex LaTeX/%s"    TeX-run-BibTeX nil t :help "Run BibTeX") TeX-command-list))
-% tex-bibtex-command: "bibtex ../LaTeX/*"
+% eval: (setq TeX-command-list  (remove '("BibTeX" "%(bibtex) %s"    TeX-run-BibTeX nil t :help "Run BibTeX") TeX-command-list))
+% eval: (setq TeX-command-list  (remove '("BibTeX" "bibtex %s"    TeX-run-BibTeX nil t :help "Run BibTeX") TeX-command-list))
+% tex-bibtex-command: "bibtex.*"
 % TeX-PDF-mode: t
 % TeX-file-line-error: t
 % TeX-debug-warnings: t
-% LaTeX-command-style: (("" "%(PDF)%(latex) %(file-line-error) %(extraopts) -output-directory=../LaTeX %S%(PDFout)"))
+% LaTeX-command-style: (("" "%(PDF)%(latex) %(file-line-error) %(extraopts) -output-directory=. %S%(PDFout)"))
 % TeX-source-correlate-mode: t
 % TeX-parse-self: t
-% eval: (cond ((string-equal system-type "darwin") (progn (setq TeX-view-program-list '(("Skim" "/Applications/Skim.app/Contents/SharedSupport/displayline -b %n ../LaTeX/%o %b"))))))
-% eval: (cond ((string-equal system-type "gnu/linux") (progn (setq TeX-view-program-list '(("Evince" "evince --page-index=%(outpage) ../LaTeX/%o"))))))
+% eval: (cond ((string-equal system-type "darwin") (progn (setq TeX-view-program-list '(("Skim" "/Applications/Skim.app/Contents/SharedSupport/displayline -b %n.%o %b"))))))
+% eval: (cond ((string-equal system-type "gnu/linux") (progn (setq TeX-view-program-list '(("Evince" "evince --page-index=%(outpage).%o"))))))
 % eval: (cond ((string-equal system-type "gnu/linux") (progn (setq TeX-view-program-selection '((output-pdf "Evince"))))))
 % TeX-parse-all-errors: t
 % End:

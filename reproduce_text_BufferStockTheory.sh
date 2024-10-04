@@ -1,15 +1,16 @@
-/Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-make/makePDF-Portable.sh /Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-Latest BufferStockTheory private bib LaTeX Resources
-/Volumes/Data/Tools/makePDF-Portable-LaTeX-In-SubDir.sh /Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-Latest BufferStockTheory private bib LaTeX Resources
-/Volumes/Data/Tools/makePDF-Portable-LaTeX-In-SubDir.sh /Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-Latest BufferStockTheory private bib LaTeX Resources
-/Volumes/Data/Tools/makePDF-Portable-LaTeX-In-SubDir.sh /Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-Latest BufferStockTheory-NoAppendix private bib LaTeX Resources
-/Volumes/Data/Tools/makePDF-Portable-LaTeX-In-SubDir.sh /Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-Latest BufferStockTheory-Slides private bib LaTeX Resources
-/Volumes/Data/Tools/makePDF-Portable-LaTeX-In-SubDir.sh /Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-Latest/Tables LiqConstrScenarios-subfile private bib ../LaTeX Resources
-/Volumes/Data/Tools/makePDF-Portable-LaTeX-In-SubDir.sh /Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-Latest/Tables All-Tables private bib ../LaTeX Resources
-/Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-make/makePDF-Portable.sh /Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-Latest BufferStockTheory private bib LaTeX Resources
-/Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-make/makePDF-Portable.sh /Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-Latest BufferStockTheory private bib LaTeX Resources
-/Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-make/makePDF-Portable.sh /Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-Latest BufferStockTheory private bib LaTeX Resources
-/Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-make/makePDF-Portable.sh /Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-Latest BufferStockTheory private bib LaTeX Resources
-/Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-make/makePDF-Portable.sh /Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-Latest BufferStockTheory private bib LaTeX Resources
-/Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-make/makePDF-Portable.sh /Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-Latest BufferStockTheory private bib LaTeX Resources
-/Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-make/makePDF-Portable.sh /Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-Public BufferStockTheory public bib LaTeX Resources
-/Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-make/makePDF-Portable.sh /Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-Public BufferStockTheory public bib LaTeX Resources
+#!/bin/bash
+
+for f in BufferStockTheory BufferStockTheory-Slides BufferStockTheory-NoAppendix; do
+    latexmk "$f"
+done
+
+cd Appendices
+
+for f in *.tex; do
+    latexmk "$f"
+done
+
+/Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-make/makePDF-Portable.sh /Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-Latest BufferStockTheory private bib . Resources
+/Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-make/makePDF-Portable.sh /Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-Latest BufferStockTheory private bib . Resources
+/Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-make/makePDF-Portable.sh /Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-Latest BufferStockTheory private bib . Resources
+/Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-make/makePDF-Portable.sh /Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-Latest BufferStockTheory private bib . Resources

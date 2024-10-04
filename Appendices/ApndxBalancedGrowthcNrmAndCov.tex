@@ -1,13 +1,18 @@
 % -*- mode: LaTeX; TeX-PDF-mode: t; -*-
-%\input{./.resources/add-tex-search-paths} % allow latex to find custom stuff
+\input{@resources/tex-add-search-paths}  % allow latex to find custom stuff
 \input{./.econtexRoot}\documentclass[\econtexRoot/BufferStockTheory]{subfiles}
-\input{\econtexRoot/.resources/add-tex-search-paths}
-% \input{./.econtexRoot}\input{\LaTeXInputs/econtex_onlyinsubfile}
-\input{./.econtexRoot}\input{econtex_onlyinsubfile}
-\onlyinsubfile{\externaldocument{\LaTeXGenerated/BufferStockTheory}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
+
+\newcommand{\subname}{ApndxBalancedGrowthcNrmAndCov}
+\input{\econtexRoot/@local/dir-paths} % get directory macros
+\usepackage{econark-ifsubfile}        % allow conditional execution of code
+\usepackage{econark-xrsetup}          % Xternal crossReferences (from main document)
+
+\compilingasstandalone{
+  \xrsetup{\econtexRoot/\texname}
+}
 
 %\renewcommand{\LtxDir}{}
-\onlyinsubfile{\renewcommand{\LtxDir}{../LaTeX/}}
+\notinsubfile{\renewcommand{\LtxDir}{}}
 
 
 \begin{document}
@@ -26,13 +31,15 @@ Figures~\ref{fig:logcNrm} and~\ref{fig:logcov} plot the results of simulations o
   \centerline{
     \includegraphics[width=4in]{\FigDir/logcNrm}
   }
-  \caption{Appendix: $\log ~\mathfrak{c}$ Appears to Grow Linearly}\label{fig:logcNrm}
+  \caption{Appendix: $\log ~\mathfrak{c}$ Appears to Grow Linearly}
+  \label{fig:logcNrm}
 \end{figure}
 \begin{figure}[ht]
   \centerline{
     \includegraphics[width=4in]{\FigDir/logcov}
   }
-  \caption{Appendix: $\log ~(-\cov(\cNrm,\permLvl))$ Appears to Grow Linearly}\label{fig:logcov}
+  \caption{Appendix: $\log ~(-\cov(\cNrm,\permLvl))$ Appears to Grow Linearly}
+  \label{fig:logcov}
 \end{figure}
 
 
@@ -45,16 +52,16 @@ Figures~\ref{fig:logcNrm} and~\ref{fig:logcov} plot the results of simulations o
 % eval: (setq TeX-command-list  (assq-delete-all (car (assoc "BibTeX" TeX-command-list)) TeX-command-list))
 % eval: (setq TeX-command-list  (assq-delete-all (car (assoc "BibTeX" TeX-command-list)) TeX-command-list))
 % eval: (setq TeX-command-list  (assq-delete-all (car (assoc "Biber"  TeX-command-list)) TeX-command-list))
-% eval: (add-to-list 'TeX-command-list '("BibTeX" "bibtex ../LaTeX/%s" TeX-run-BibTeX nil t                                                                              :help "Run BibTeX") t)
-% eval: (add-to-list 'TeX-command-list '("BibTeX" "bibtex ../LaTeX/%s" TeX-run-BibTeX nil (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode context-mode) :help "Run BibTeX") t)
+% eval: (add-to-list 'TeX-command-list '("BibTeX" "bibtex.%s" TeX-run-BibTeX nil t                                                                              :help "Run BibTeX") t)
+% eval: (add-to-list 'TeX-command-list '("BibTeX" "bibtex.%s" TeX-run-BibTeX nil (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode context-mode) :help "Run BibTeX") t)
 % TeX-PDF-mode: t
 % TeX-file-line-error: t
 % TeX-debug-warnings: t
-% LaTeX-command-style: (("" "%(PDF)%(latex) %(file-line-error) %(extraopts) -output-directory=../LaTeX %S%(PDFout)"))
+% LaTeX-command-style: (("" "%(PDF)%(latex) %(file-line-error) %(extraopts) -output-directory=. %S%(PDFout)"))
 % TeX-source-correlate-mode: t
 % TeX-parse-self: t
-% eval: (cond ((string-equal system-type "darwin") (progn (setq TeX-view-program-list '(("Skim" "/Applications/Skim.app/Contents/SharedSupport/displayline -b %n ../LaTeX/%o %b"))))))
-% eval: (cond ((string-equal system-type "gnu/linux") (progn (setq TeX-view-program-list '(("Evince" "evince --page-index=%(outpage) ../LaTeX/%o"))))))
+% eval: (cond ((string-equal system-type "darwin") (progn (setq TeX-view-program-list '(("Skim" "/Applications/Skim.app/Contents/SharedSupport/displayline -b %n.%o %b"))))))
+% eval: (cond ((string-equal system-type "gnu/linux") (progn (setq TeX-view-program-list '(("Evince" "evince --page-index=%(outpage).%o"))))))
 % eval: (cond ((string-equal system-type "gnu/linux") (progn (setq TeX-view-program-selection '((output-pdf "Evince"))))))
 % TeX-parse-all-errors: t
 % End:

@@ -1,24 +1,34 @@
 % -*- mode: LaTeX; TeX-PDF-mode: t; -*-
+\input{@resources/tex-add-search-paths}  % allow latex to find custom stuff
 \input{./.econtexRoot}\documentclass[\econtexRoot/BufferStockTheory]{subfiles}
-\input{./.econtexRoot}\input{\LaTeXInputs/econtex_onlyinsubfile}
-\onlyinsubfile{\externaldocument{\LaTeXGenerated/BufferStockTheory}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
+
+\newcommand{\subname}{ApndxMPCLimits}
+\input{\econtexRoot/@local/dir-paths} % get directory macros
+\usepackage{econark-ifsubfile}        % allow conditional execution of code
+\usepackage{econark-xrsetup}          % Xternal crossReferences (from main document)
+
+\compilingasstandalone{
+  \xrsetup{\econtexRoot/\texname}
+}
+
 \begin{document}
 
 \hypertarget{The-Limiting-MPCs}{}
 \section{The Limiting MPC's}\label{sec:MPCLimits}
 
-For $\mNrm_{t}>0$ we can define $\eFunc_{t}(\mNrm_{t})=\cFunc_{t}(\mNrm_{t})/\mNrm_{t}$ and $\aFunc_{t}(\mNrm_{t})=\mNrm_{t}-\cFunc_{t}(\mNrm_{t})$ and the Euler equation~\eqref{\localorexternallabel{eq:scaledeuler}} can be rewritten
+For $\mNrm_{t}>0$ we can define $\eFunc_{t}(\mNrm_{t})=\cFunc_{t}(\mNrm_{t})/\mNrm_{t}$ and $\aFunc_{t}(\mNrm_{t})=\mNrm_{t}-\cFunc_{t}(\mNrm_{t})$ and the Euler equation~\eqref{eq:scaledeuler} can be rewritten
 \begin{equation}\begin{gathered}\begin{aligned}
- \eFunc_{t}{(\mNrm_{t})}^{-\CRRA}  & = \DiscFac \Rfree \Ex_{t}\left[{\left(\eFunc_{t+1}({\mNrm}_{t+1})\left(\frac{\overbrace{\Rfree \aFunc_{t}(\mNrm_{t})+{\PermGroFac}_{t+1}{\tranShkAll}_{t+1}}^{=\mNrm_{t+1}\PermGroFac_{t+1}}}{\mNrm_{t}}\right)\right)}^{-\CRRA }\right] \label{eq:eFuncEuler}
+ \eFunc_{t}{(\mNrm_{t})}^{-\CRRA}  & = \DiscFac \Rfree \Ex_{t}\left[{\left(\eFunc_{t+1}({\mNrm}_{t+1})\left(\frac{\overbrace{\Rfree \aFunc_{t}(\mNrm_{t})+{\PermGroFac}_{t+1}{\tranShkAll}_{t+1}}^{=\mNrm_{t+1}\PermGroFac_{t+1}}}{\mNrm_{t}}\right)\right)}^{-\CRRA }\right] \labelsafe{eq:eFuncEuler}
 \\  & = \phantom{ + }\pNotZero \DiscFac \Rfree \mNrm_{t}^{\CRRA} \Ex_{t}\left[ {\left(\eFunc_{t+1}(\mNrm_{t+1}) \mNrm_{t+1}\PermGroFac_{t+1}\right)}^{-\CRRA} |~ \tranShkAll_{t+1}>0 \right] \notag
 \\ &  + \pZero  \DiscFac \Rfree^{1-\CRRA} \Ex_{t}\left[{\left(\eFunc_{t+1}(\mathcal{R}_{t+1}\aFunc_{t}(\mNrm_{t}))\frac{\mNrm_t-\cFunc_{t}(\mNrm_{t})}{\mNrm_{t}}\right)}^{-\CRRA} |~ \tranShkAll_{t+1} = 0 \right]   .
 \end{aligned}\end{gathered}\end{equation}
 
 
 
-Consider the first conditional expectation in~\eqref{\localorexternallabel{eq:scaledeuler}},
+Consider the first conditional expectation in~\eqref{eq:scaledeuler},
 recalling that if $\tranShkAll_{t+1}>0$ then $\tranShkAll_{t+1} \equiv
-\tranShkEmp_{t+1}/\pNotZero$.  Since $\lim_{m \downarrow 0}
+\tranShkEmp_{t+1}/\pNotZero$.
+Since $\lim_{m \downarrow 0}
 \aFunc_{t}(\mNrm) = 0$,
 $\Ex_{t}[{(\eFunc_{t+1}(\mNrm_{t+1})\mNrm_{t+1}\PermGroFac_{t+1})}^{-\CRRA}~|~\tranShkAll_{t+1}>0]$
 is contained within bounds defined by
@@ -27,41 +37,46 @@ ${(\eFunc_{t+1}(\underline{\tranShkEmp}/\pNotZero) \PermGroFac\underline{\permSh
 ${(\eFunc_{t+1}(\bar{\tranShkEmp}/\pNotZero) \PermGroFac\bar{\permShk}
 \bar{\tranShkEmp}/\pNotZero)}^{-\CRRA}$ both of which are finite numbers,
 implying that the whole term multiplied by $\pNotZero$ goes to zero as
-$\mNrm_{t}^{\CRRA}$ goes to zero.  As $\mNrm_{t} \downarrow 0$ the
+$\mNrm_{t}^{\CRRA}$ goes to zero.
+As $\mNrm_{t} \downarrow 0$ the
 expectation in the other term goes to $\MPCmax _{t+1}^{-\CRRA
-}{(1-\MPCmax _{t})}^{-\CRRA }$. (This follows from the strict concavity
+}{(1-\MPCmax _{t})}^{-\CRRA }$.
+(This follows from the strict concavity
 and differentiability of the consumption function.) It follows that
 the limiting $\MPCmax_{t}$ satisfies $\MPCmax_{t}^{-\CRRA }=\DiscFac
 \pZero\Rfree^{1-\CRRA }\MPCmax_{t+1}^{-\CRRA }{(1-\MPCmax
-_{t})}^{-\CRRA }$. Exponentiating by $\CRRA$, we can conclude that
+_{t})}^{-\CRRA }$.
+Exponentiating by $\CRRA$, we can conclude that
 \begin{equation}\begin{gathered}\begin{aligned}
 \MPCmax_{t} & = \pZero^{-1/\CRRA} {(\DiscFac
 \Rfree)}^{-1/\CRRA}\Rfree(1-\MPCmax _{t})\MPCmax _{t+1} \notag
 \\ \underbrace{\pZero^{1/\CRRA}\overbrace{{\Rfree}^{-1}{(\DiscFac
     \Rfree)}^{1/\CRRA}}^{\RPFac}}_{\equiv \MPSmin}
-\MPCmax_{t} & = (1-\MPCmax _{t})\MPCmax _{t+1} \label{eq:MPSminDef}
+\MPCmax_{t} & = (1-\MPCmax _{t})\MPCmax _{t+1} \labelsafe{eq:MPSminDef}
 \end{aligned}\end{gathered}\end{equation}
 which yields a useful recursive formula for the maximal marginal propensity to consume:
 \begin{equation}\begin{gathered}\begin{aligned}
   {(\MPSmin \MPCmax_{t})}^{-1}  & = {(1-\MPCmax_{t})}^{-1}\MPCmax_{t+1}^{-1}  \notag
 \\ \MPCmax_{t}^{-1}(1-\MPCmax_{t})  & = \MPSmin \MPCmax_{t+1}^{-1}   \notag
-\\ \MPCmax_{t}^{-1}  & = 1+\MPSmin \MPCmax_{t+1}^{-1} \label{eq:MPCmaxInvApndx}.
+\\ \MPCmax_{t}^{-1}  & = 1+\MPSmin \MPCmax_{t+1}^{-1} \labelsafe{eq:MPCmaxInvApndx}.
 \end{aligned}\end{gathered}\end{equation}
 
-As noted in the main text, we need the \WRIC~\eqref{\localorexternallabel{eq:WRIC}} for this to be a convergent sequence:
+As noted in the main text, we need the \WRIC~\ref{ass:WRIC} for this to be a convergent sequence:
 \begin{equation}\begin{gathered}\begin{aligned}
-  0 \leq & ~\pZero^{1/\CRRA} \RPFac < 1 \label{eq:WRICapndx},
+  0 \leq & ~\pZero^{1/\CRRA} \RPFac < 1 \labelsafe{eq:WRICapndx},
 \end{aligned}\end{gathered}\end{equation}
 
-Since $\MPCmax_{T}=1$, iterating~\eqref{\localorexternallabel{eq:MPCmaxInvApndx}} backward to
+Since $\MPCmax_{T}=1$, iterating~\eqref{eq:MPCmaxInvApndx} backward to
 infinity (because we are interested in the limiting consumption function) we obtain:
 \begin{equation}\begin{gathered}\begin{aligned}
 \lim_{n\rightarrow\infty}\MPCmax_{T-n} 
-& = \MPCmax \equiv 1-\pZero^{1/\CRRA}\RPFac  \label{eq:MPCmaxDef}
+& = \MPCmax \equiv 1-\pZero^{1/\CRRA}\RPFac  \labelsafe{eq:MPCmaxDef}
 \end{aligned}\end{gathered}\end{equation}
 and we will therefore call $\MPCmax$ the `limiting maximal MPC.'
 
-The minimal MPC's are obtained by considering the case where $\mNrm_{t} \uparrow \infty$.  If the \FHWC~holds, then as $\mNrm_{t} \uparrow \infty$ the proportion of current and future consumption that will be financed out of capital approaches 1.  Thus, the terms involving $\tranShkAll_{t+1}$ in~\eqref{\localorexternallabel{eq:eFuncEuler}} can be neglected, leading to a revised limiting Euler equation
+The minimal MPC's are obtained by considering the case where $\mNrm_{t} \uparrow \infty$.
+If the \FHWC~holds, then as $\mNrm_{t} \uparrow \infty$ the proportion of current and future consumption that will be financed out of capital approaches 1.
+Thus, the terms involving $\tranShkAll_{t+1}$ in~\eqref{eq:eFuncEuler} can be neglected, leading to a revised limiting Euler equation
 \begin{eqnarray*}
  {({\mNrm_{t}}\eFunc_{t}(\mNrm_{t}))}^{-\CRRA}  & = \DiscFac \Rfree \Ex_{t}\left[{\left(\eFunc_{t+1}(\aFunc_{t}(\mNrm_{t})\RNrmByGRnd_{t+1})\left({\Rfree \aFunc_{t}(\mNrm_{t})}\right)\right)}^{-\CRRA}\right]
 \end{eqnarray*}
@@ -74,7 +89,7 @@ and the same sequence of derivations used above yields the conclusion
 that if the \RIC~$0 \leq \RPFac < 1$ holds, then a recursive formula for the
 minimal marginal propensity to consume is given by
 \begin{equation}\begin{gathered}\begin{aligned}
- \MPCmin_{t}^{-1}  & = 1+\MPCmin_{t+1}^{-1}\MPSmax  \label{eq:MPCminInvApndx}
+ \MPCmin_{t}^{-1}  & = 1+\MPCmin_{t+1}^{-1}\MPSmax  \labelsafe{eq:MPCminInvApndx}
 \end{aligned}\end{gathered}\end{equation}
 so that ${(\{\MPCmin_{T-n}^{-1}\})}_{n=0}^{\infty}$ is also an increasing
 convergent sequence, and we define
@@ -100,15 +115,15 @@ which, combined with the intertemporal budget constraint, yields the usual formu
 % Local Variables:
 % eval: (setq TeX-command-list  (remove '("Biber" "biber %s" TeX-run-Biber nil  (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode)  :help "Run Biber") TeX-command-list))
 % eval: (setq TeX-command-list  (remove '("Biber" "biber %s" TeX-run-Biber nil  t  :help "Run Biber") TeX-command-list))
-% tex-bibtex-command: "bibtex ../LaTeX/*"
+% tex-bibtex-command: "bibtex.*"
 % TeX-PDF-mode: t
 % TeX-file-line-error: t
 % TeX-debug-warnings: t
-% LaTeX-command-style: (("" "%(PDF)%(latex) %(file-line-error) %(extraopts) -output-directory=../LaTeX %S%(PDFout)"))
+% LaTeX-command-style: (("" "%(PDF)%(latex) %(file-line-error) %(extraopts) -output-directory=. %S%(PDFout)"))
 % TeX-source-correlate-mode: t
 % TeX-parse-self: t
-% eval: (cond ((string-equal system-type "darwin") (progn (setq TeX-view-program-list '(("Skim" "/Applications/Skim.app/Contents/SharedSupport/displayline -b %n ../LaTeX/%o %b"))))))
-% eval: (cond ((string-equal system-type "gnu/linux") (progn (setq TeX-view-program-list '(("Evince" "evince --page-index=%(outpage) ../LaTeX/%o"))))))
+% eval: (cond ((string-equal system-type "darwin") (progn (setq TeX-view-program-list '(("Skim" "/Applications/Skim.app/Contents/SharedSupport/displayline -b %n.%o %b"))))))
+% eval: (cond ((string-equal system-type "gnu/linux") (progn (setq TeX-view-program-list '(("Evince" "evince --page-index=%(outpage).%o"))))))
 % eval: (cond ((string-equal system-type "gnu/linux") (progn (setq TeX-view-program-selection '((output-pdf "Evince"))))))
 % TeX-parse-all-errors: t
 % End:

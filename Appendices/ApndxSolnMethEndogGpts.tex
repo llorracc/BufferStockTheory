@@ -1,13 +1,23 @@
 % -*- mode: LaTeX; TeX-PDF-mode: t; -*-
+\input{@resources/tex-add-search-paths}  % allow latex to find custom stuff
 \input{./.econtexRoot}\documentclass[\econtexRoot/BufferStockTheory]{subfiles}
-\input{./.econtexRoot}\input{\LaTeXInputs/econtex_onlyinsubfile}
 
-\onlyinsubfile{\externaldocument{\LaTeXGenerated/BufferStockTheory}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
+\newcommand{\subname}{ApndxSolnMethEndogGpts}
+\input{\econtexRoot/@local/dir-paths} % get directory macros
+\usepackage{econark-ifsubfile}        % allow conditional execution of code
+\usepackage{econark-xrsetup}          % Xternal crossReferences (from main document)
+
+\compilingasstandalone{
+  \xrsetup{\econtexRoot/\texname}
+}
+
 \begin{document}
 %\begin{verbatimwrite}{\LaTeXGenerated/ApndxSolnMethEndogGpts.tex}
 \section{Endogenous Gridpoints Solution Method}\label{sec:ApndxSolnMethEndogGpts}
 
-The model is solved using an extension of the method of endogenous gridpoints (\cite{carrollEGM}): A grid of possible values of end-of-period assets $\vec{\aNrm}$ is defined, and at these points, marginal end-of-period-$t$ value is computed as the discounted next-period expected marginal utility of consumption (which the Envelope theorem says matches expected marginal value).  The results are then used to identify the corresponding levels of consumption at the beginning of the period:\footnote{The software can also solve a version of the model with explicit liquidity constraints, where the Envelope condition does not hold.}
+The model is solved using an extension of the method of endogenous gridpoints (\cite{carroll_EGM}): A grid of possible values of end-of-period assets $\vec{\aNrm}$ is defined, and at these points, marginal end-of-period-$t$ value is computed as the discounted next-period expected marginal utility of consumption (which the Envelope theorem says matches expected marginal value).  The results are then used to identify the corresponding levels of consumption at the beginning of the period:\footnote{The software can also solve a version of the model with explicit liquidity constraints, where the Envelope condition does not hold.}
+
+\compilingasstandalone{\bibstandalone{ApndxSolnMethEndogGpts}}\end{document}\endinput
 
 \begin{equation}\begin{gathered}\begin{aligned}
   \uP(\cEndFunc_{t}(\vec{\aNrm}))  & = \Rfree \beta \Ex_{t}[ \uP(\PermGroFac_{t+1}
@@ -24,7 +34,9 @@ The dynamic budget constraint can then be used to generate the corresponding $\m
   \vec{\mNrm}_{t}  & = \vec{\aNrm}+\vec{c}_{t}.
 \end{eqnarray*}
 
-An approximation to the consumption function could be constructed by linear interpolation between the $\{\vec{\mNrm},\vec{\cNrm}\}$ points.  But a vastly more accurate approximation can be made (for a given number of gridpoints) if the interpolation is constructed so that it also matches the marginal propensity to consume at the gridpoints. Differentiating~\eqref{\localorexternallabel{eq:cEulerEndog}} with respect to $\aNrm$ (and dropping policy function arguments for simplicity) yields a marginal propensity to \textit{have consumed} $\cEndFunc^{\aNrm}$ at each gridpoint:
+An approximation to the consumption function could be constructed by linear interpolation between the $\{\vec{\mNrm},\vec{\cNrm}\}$ points.
+But a vastly more accurate approximation can be made (for a given number of gridpoints) if the interpolation is constructed so that it also matches the marginal propensity to consume at the gridpoints.
+Differentiating~\eqref{eq:cEulerEndog} with respect to $\aNrm$ (and dropping policy function arguments for simplicity) yields a marginal propensity to \textit{have consumed} $\cEndFunc^{\aNrm}$ at each gridpoint:
 \begin{equation}\begin{gathered}\begin{aligned}
 \uPP(\cEndFunc_{t})\cEndFunc_{t}^{\aNrm}  & = \Rfree \beta \Ex_{t}[\uPP(\PermGroFac_{t+1} \cFunc_{t+1})\PermGroFac_{t+1} \cFunc^{\mNrm}_{t+1}\RNrmByGRnd_{t+1}] \notag
 \\  & = \Rfree \beta \Ex_{t}[\uPP(\PermGroFac_{t+1} \cFunc_{t+1}) \Rfree \cFunc^{\mNrm}_{t+1}] \notag
@@ -53,7 +65,8 @@ interpolation tools of {\it Mathematica} for this purpose.
 
 With the level and derivative of the consumption function defined at a discrete set of gridpoints,
 it is possible to construct an interpolating function that is a highly accurate approximation to
-the true consumption function within the grid.  But if any such interpolation is extended beyond the
+the true consumption function within the grid.
+But if any such interpolation is extended beyond the
 boundaries defined by the minimum and maximum gridpoints, it is sure to go badly astray.
 
 A solution to this problem is given by defining a `precautionary savings function':
@@ -67,7 +80,8 @@ Note further that
   \sFunc_{t}^{\prime}(\mNrm)  & = \MPCmin_{t} - \MPC_{t}(\mNrm).
 \end{aligned}\end{gathered}\end{equation}
 It turns out, conveniently, that the limiting relationship between $\log \sFunc_{t}(\mNrm)$ and
-$\mu \equiv \log \mNrm$ is linear.  Thus we can define
+$\mu \equiv \log \mNrm$ is linear.
+Thus we can define
 \begin{equation}\begin{gathered}\begin{aligned}
   \varsigma_{t}(\mu)  & = \log \sFunc_{t}(\exp(\mu))
 \end{aligned}\end{gathered}\end{equation}
@@ -89,22 +103,23 @@ evaluate the function is $\mNrm=0$ but $\log 0 = -\infty$ which is difficult for
 \end{comment}
 
 
-\onlyinsubfile{\pagebreak\input{\LaTeXInputs/bibliography_blend}}
-
-\end{document}\endinput
+\compilingasstandalone{\bibstandalone{ApndxSolnMethEndogGpts}}\end{document}\endinput
 
 % Local Variables:
 % eval: (setq TeX-command-list  (remove '("Biber" "biber %s" TeX-run-Biber nil  (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode)  :help "Run Biber") TeX-command-list))
 % eval: (setq TeX-command-list  (remove '("Biber" "biber %s" TeX-run-Biber nil  t  :help "Run Biber") TeX-command-list))
-% tex-bibtex-command: "bibtex ../LaTeX/*"
+% eval: (setq TeX-command-list  (remove '("BibTeX" "%(bibtex) %s"    TeX-run-BibTeX nil t :help "Run BibTeX") TeX-command-list))
+% eval: (setq TeX-command-list  (remove '("BibTeX" "bibtex %s"    TeX-run-BibTeX nil t :help "Run BibTeX") TeX-command-list))
+% tex-bibtex-command: "bibtex.*"
 % TeX-PDF-mode: t
 % TeX-file-line-error: t
 % TeX-debug-warnings: t
-% LaTeX-command-style: (("" "%(PDF)%(latex) %(file-line-error) %(extraopts) -output-directory=../LaTeX %S%(PDFout)"))
+% LaTeX-command-style: (("" "%(PDF)%(latex) %(file-line-error) %(extraopts) -output-directory=. %S%(PDFout)"))
 % TeX-source-correlate-mode: t
 % TeX-parse-self: t
-% eval: (cond ((string-equal system-type "darwin") (progn (setq TeX-view-program-list '(("Skim" "/Applications/Skim.app/Contents/SharedSupport/displayline -b %n ../LaTeX/%o %b"))))))
-% eval: (cond ((string-equal system-type "gnu/linux") (progn (setq TeX-view-program-list '(("Evince" "evince --page-index=%(outpage) ../LaTeX/%o"))))))
+% eval: (cond ((string-equal system-type "darwin") (progn (setq TeX-view-program-list '(("Skim" "/Applications/Skim.app/Contents/SharedSupport/displayline -b %n.%o %b"))))))
+% eval: (cond ((string-equal system-type "gnu/linux") (progn (setq TeX-view-program-list '(("Evince" "evince --page-index=%(outpage).%o"))))))
 % eval: (cond ((string-equal system-type "gnu/linux") (progn (setq TeX-view-program-selection '((output-pdf "Evince"))))))
 % TeX-parse-all-errors: t
 % End:
+
