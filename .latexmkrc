@@ -12,7 +12,7 @@ $bibtex_use=2;
 $pdf_mode = 1;
 $rc_report = 1;
 #@default_files = ('BufferStockTheory','BufferStockTheory-NoAppendix','BufferStockTheory-Slides','Introduction','Tables-All');
-@default_files = ('BufferStockTheory','BufferStockTheory-NoAppendix','BufferStockTheory-Slides','Introduction');
+@default_files = ('BufferStockTheory','BufferStockTheory-NoAppendix','Appendices-All-Referenced','BufferStockTheory-Slides','Introduction');
 #@default_files = ('BufferStockTheory');
 $ENV{'BIBINPUTS'} = './@resources/texlive/texmf-local/bibtex/bst:' . ($ENV{'BIBINPUTS'} || '');
 $pdflatex="pdflatex -interaction=nonstopmode %O %S";

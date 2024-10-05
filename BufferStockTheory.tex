@@ -114,7 +114,16 @@
 \subfile{BufferStockTheory-NoAppendix} % Main body of paper
 
 \pagebreak
-\subfile{./Appendices-start}
+\appendix % Declare beginning of appendices
+\addcontentsline{toc}{section}{Appendices} % print label "Appendices"
+
+\hypertarget{Appendices}{}       % Creates link to [url-of-paper]#Appendices 
+
+\ifthenelse{\boolean{Web}}{}{    % Web version has no page headers
+  \chead[Appendices]{Appendices} % unlike {Web} PDF version does
+  \appendixpage                  % Reset formatting for appendices on Web
+} % Web
+
 \subfile{\ApndxDir/ApndxConcaveCFunc}
 \subfile{\ApndxDir/ApndxMTargetIsStable}
 \subfile{\ApndxDir/ApndxBalancedGrowthcNrmAndCov}

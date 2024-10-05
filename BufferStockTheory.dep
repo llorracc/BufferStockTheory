@@ -1,6 +1,7 @@
 \RequireVersions{
   *{application}{pdfTeX}  {0000/00/00 v1.40.25}
   *{format} {LaTeX2e}     {2023-11-01 v2.e}
+  *{file}   {BufferStockTheory.tex}{0000/00/00 v0.0}
   *{file}   {@resources/tex-add-search-paths.tex}{0000/00/00 v0.0}
   *{file}   {./.econtexRoot}{0000/00/00 v0.0}
   *{class}  {@resources/texlive/texmf-local/tex/latex/econark}{2024/06/04 v0.0}
@@ -169,7 +170,6 @@
   *{file}   {./Figures/Inequalities.pdf}{0000/00/00 v0.0}
   *{file}   {./Tables/Comparison}{0000/00/00 v0.0}
   *{file}   {./Tables/Required}{0000/00/00 v0.0}
-  *{file}   {././Appendices-start}{0000/00/00 v0.0}
   *{file}   {./Appendices/ApndxConcaveCFunc}{0000/00/00 v0.0}
   *{file}   {./Appendices/@resources/tex-add-search-paths}{0000/00/00 v0.0}
   *{file}   {./.econtexRoot}{0000/00/00 v0.0}

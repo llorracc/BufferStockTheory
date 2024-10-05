@@ -1,0 +1,31 @@
+\input{@resources/tex-add-search-paths}  % allow latex to find custom stuff
+\input{.econtexRoot}
+\documentclass[BufferStockTheory]{subfiles}
+\usepackage{econark-ifsubfile}
+
+\compilingasstandalone{
+  \xrsetup{\econtexRoot/\texname}
+}
+
+\begin{document}
+\appendix % Declare beginning of appendices
+\addcontentsline{toc}{section}{Appendices} % print label "Appendices"
+
+\hypertarget{Appendices}{}       % Creates link to [url-of-paper]#Appendices
+\ifthenelse{\boolean{Web}}{}{    % Web version has no page headers
+  \chead[Appendices]{Appendices} % unlike {Web} PDF version does
+  \appendixpage                  % Reset formatting for appendices on Web
+} % Web
+
+Below are the paper's appendices referenced in the text.
+\subfile{\ApndxDir/ApndxConcaveCFunc}
+\subfile{\ApndxDir/ApndxMTargetIsStable}
+\subfile{\ApndxDir/ApndxBalancedGrowthcNrmAndCov}
+\subfile{\ApndxDir/ApndxLiqConstr}
+\subfile{\ApndxDir/ApndxConditionDiagrams}
+\subfile{\ApndxDir/ApndxSupportingAnalysis}
+
+\pagebreak
+\econarkmultibib{\texname}\end{document}
+
+\end{document}
