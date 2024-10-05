@@ -1,0 +1,69 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
+\contentsline {paragraph}{\nonumberline Relationship to Literature}{4}{paragraph*.5}%
+\contentsline {section}{\numberline {2}Theoretical Foundations}{5}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Setup}{6}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Normalized Problem}{8}{subsubsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.2}Patience Conditions}{9}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Perfect Foresight Benchmarks}{12}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Perfect Foresight without Liquidity Constraints}{12}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Perfect Foresight with Liquidity Constraints}{14}{subsubsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.4}Main Results for Problem with Uncertainty}{14}{subsection.2.4}%
+\contentsline {subsubsection}{\numberline {2.4.1}Limiting MPCs}{14}{subsubsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.2}Existence of Limiting Nondegenerate Solution}{16}{subsubsection.2.4.2}%
+\contentsline {subsubsection}{\numberline {2.4.3}The Liquidity Constrained Solution as a Limit}{18}{subsubsection.2.4.3}%
+\contentsline {section}{\numberline {3}Individual Buffer Stock Stability}{19}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Limits as m Approaches Zero}{20}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Unique `Stable' Points}{21}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Example With Balanced-Growth $\cc@accent {"7014}{m}$ But No Target~$\cc@accent {"705E}{m}$}{23}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Aggregate Invariant Relationships}{25}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Aggregate Balanced Growth of Income, Consumption, and Wealth}{26}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Aggregate Balanced Growth and Idiosyncratic Covariances}{27}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Implications for Microfoundations}{28}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Mortality Yields Invariance}{29}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Patience and Limiting Consumer Behavior}{30}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Model with Perfect Foresight}{32}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}Perfect Foresight Constrained Solution}{33}{subsubsection.5.1.1}%
+\contentsline {paragraph}{\nonumberline Case 1: Growth impatience fails and return impatience holds.}{34}{paragraph*.16}%
+\contentsline {paragraph}{\nonumberline Case 2: Growth impatience holds and return impatience holds.}{35}{paragraph*.18}%
+\contentsline {paragraph}{\nonumberline Case 3: Growth impatience holds and return impatience fails.}{35}{paragraph*.20}%
+\contentsline {subsection}{\numberline {5.2}Model with Uncertainty}{36}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}Behavior Under Cases of Conditions}{38}{subsubsection.5.2.1}%
+\contentsline {paragraph}{\nonumberline Case 1: Return impatience fails and growth impatience holds}{38}{paragraph*.25}%
+\contentsline {paragraph}{\nonumberline Case 2: Return impatience holds and growth impatience holds with finite human wealth}{39}{paragraph*.27}%
+\contentsline {paragraph}{\nonumberline Case 3: Return impatience holds and growth impatience holds with infinite human wealth}{39}{paragraph*.29}%
+\contentsline {section}{\numberline {6}Conclusions}{43}{section.6}%
+\contentsline {section}{Appendices}{44}{section.6}%
+\contentsline {section}{\numberline {A}$\mathrm {c}$ Functions Exist, are Concave, and Differentible}{44}{appendix.A}%
+\contentsline {subsection}{\numberline {A.1}Appendix for Problem Formulation}{44}{subsection.A.1}%
+\contentsline {subsubsection}{\numberline {A.1.1}Recovering the Non-Normalized Problem}{44}{subsubsection.A.1.1}%
+\contentsline {subsubsection}{\numberline {A.1.2}Challenges with Standard Dynamic Programming Approaches}{44}{subsubsection.A.1.2}%
+\contentsline {subsubsection}{\numberline {A.1.3}Infinite Horizon Stochastic Dynamic Optimization Problem}{44}{subsubsection.A.1.3}%
+\contentsline {subsection}{\numberline {A.2}Perfect Foresight Benchmarks}{45}{subsection.A.2}%
+\contentsline {subsection}{\numberline {A.3}Properties of the Consumption Function and Limiting MPCs}{46}{subsection.A.3}%
+\contentsline {subsection}{\numberline {A.4}Existence of Limiting Solutions}{49}{subsection.A.4}%
+\contentsline {subsection}{\numberline {A.5}$\mathbb {T}$ and $\mathrm {v}$}{52}{subsection.A.5}%
+\contentsline {subsection}{\numberline {A.6}The Liquidity Constrained Solution as a Limit}{54}{subsection.A.6}%
+\contentsline {section}{\numberline {B}Proofs for Individual Stability (Section \ref {sec:individStability})}{57}{appendix.B}%
+\contentsline {subsection}{\numberline {B.1}Proof of Theorem~\ref {thm:target}}{58}{subsection.B.1}%
+\contentsline {subsection}{\numberline {B.2}Existence and Continuity of ${\mathbb {E}}_t [{m}_{t+1}/m_t]$}{58}{subsection.B.2}%
+\contentsline {subsection}{\numberline {B.3}Existence of a point where ${\mathbb {E}}_t [{m}_{t+1}/m_t]=1$.}{58}{subsection.B.3}%
+\contentsline {subsubsection}{\numberline {B.3.1}Existence of $m$ where ${\mathbb {E}}_t [{m}_{t+1}/m_t] < 1$}{59}{subsubsection.B.3.1}%
+\contentsline {subsubsection}{\numberline {B.3.2}Existence of $m$ > 1 where ${\mathbb {E}}_t [{m}_{t+1}/m_t] > 1$}{59}{subsubsection.B.3.2}%
+\contentsline {subsubsection}{\numberline {B.3.3}${\mathbb {E}}_t [{m}_{t+1}] -m_t$ is monotonically decreasing.}{59}{subsubsection.B.3.3}%
+\contentsline {subsection}{\numberline {B.4}Proof of Theorem~\ref {thm:MSSBalExists}}{60}{subsection.B.4}%
+\contentsline {subsubsection}{\numberline {B.4.1}Existence and Continuity of the Ratio}{61}{subsubsection.B.4.1}%
+\contentsline {subsubsection}{\numberline {B.4.2}Existence of a stable point}{61}{subsubsection.B.4.2}%
+\contentsline {subsubsection}{\numberline {B.4.3}${\mathbb {E}}_{t}[\psi _{t+1}m_{t+1}] -m_t$ is monotonically decreasing.}{61}{subsubsection.B.4.3}%
+\contentsline {section}{\numberline {C}Apparent Balanced Growth in $\cc@accent {"7016}{c}$ and $\textup {cov}(c,\boldsymbol {\mathit {p}})$}{62}{appendix.C}%
+\contentsline {subsection}{\numberline {C.1}$\log c$ and $\log \left (\textup {cov}(c,\boldsymbol {\mathit {p}})\right )$ Grow Linearly}{62}{subsection.C.1}%
+\contentsline {section}{\numberline {D}Perfect Foresight Liquidity Constrained Solution}{63}{appendix.D}%
+\contentsline {subsection}{\numberline {D.1}Perfect Foresight Unconstrained Solution}{64}{subsection.D.1}%
+\contentsline {subsection}{\numberline {D.2}If {GIC}~Fails}{65}{subsection.D.2}%
+\contentsline {subsection}{\numberline {D.3}If {GIC}~Holds}{67}{subsection.D.3}%
+\contentsline {subsubsection}{\numberline {D.3.1}If {FHWC}~Holds}{68}{subsubsection.D.3.1}%
+\contentsline {subsubsection}{\numberline {D.3.2}If {FHWC}~Fails}{69}{subsubsection.D.3.2}%
+\contentsline {section}{\numberline {E}Relational Diagrams for the Inequality Conditions}{71}{appendix.E}%
+\contentsline {subsection}{\numberline {E.1}The Unconstrained Perfect Foresight Model}{71}{subsection.E.1}%
+\contentsline {section}{\numberline {F}Supporting Standard Results in Real Analysis}{74}{appendix.F}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

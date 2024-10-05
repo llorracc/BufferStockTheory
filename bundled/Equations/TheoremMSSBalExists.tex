@@ -1,0 +1,17 @@
+  \begin{theorem}(Individual Balanced-Growth `Pseudo Steady State').
+    \labelsafe{thm:MSSBalExists} % Don't define it if already defined
+    Consider the problem defined in Section~\ref{subsec:Setup}.
+If \hyperlink{WRIC}{weak return impatience} (Assumption \ref{ass:WRIC}), \hyperlink{FVAC}{finite value of autarky} (Assumption \ref{ass:FVAC}) and \hyperlink{GIC}{growth impatience} (Assumption \ref{ass:GICRaw}) hold, then there exists a unique pseudo-steady-state market resources to permanent income ratio $\mBalLvl>0$ such that:
+    \begin{equation}
+      \Ex_t [\permShk_{t+1}{\mNrm}_{t+1}/\mNrm_t] = 1 \mbox{~if~} \mNrm_t = \mBalLvl.
+      \label{eq:mBalLvl}
+    \end{equation}
+    Moreover, $\mBalLvl$ is a point of stability in the sense that:
+    \begin{equation}
+      \label{eq:stabilityStE}
+      \begin{split}
+        \forall {\mNrm}_t\in(0,\mBalLvl),      \,\,& \Ex_{t}[\mLvl_{t+1}]/\mLvl_{t} > \PermGroFac \\
+        \forall {\mNrm}_t\in(\mBalLvl,\infty), \,\,& \Ex_{t}[\mLvl_{t+1}]/\mLvl_{t} < \PermGroFac.
+      \end{split}
+    \end{equation}
+  \end{theorem}
