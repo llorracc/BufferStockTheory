@@ -31,7 +31,7 @@ if [[ "$#" -gt 0 ]]; then
 	    echo ''
 	    echo "./reproduce.sh MIN"
 	    echo ''
-	    echo 'Skips execution of the notebook Code/Python/ApndxBalancedGrowthcNrmAndCov.ipynb'
+	    echo 'Skips execution of supplemental materials (appendix figures, etc)'
 	    echo ''
 	    echo "./reproduce.sh MAX"
 	    echo ''
@@ -42,7 +42,9 @@ if [[ "$#" -gt 0 ]]; then
 	    echo ''
 	else
 	    if [[ "$1" == "MAX" ]]; then
-		echo ipython ApndxBalancedGrowthcNrmAndCov.ipynb
+		for nb in *.ipynb; do
+		    ipython "$nb"
+		done
 	    fi
 	fi
     fi

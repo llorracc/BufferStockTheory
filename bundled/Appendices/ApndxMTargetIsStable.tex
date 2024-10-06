@@ -58,7 +58,8 @@ while (for convenience defining $\aFunc(\mNrm_{t})=\mNrm_{t}-\usual{\cFunc}(\mNr
                                                                             \left(\frac{\Rfree \aFunc(\mNrm_t)+{\PermGroFacRnd}_{t+1}\tranShkAll_{t+1}}{\mNrm_t}\right)
   \\  & = {(\Rfree \DiscFac)}^{1/\CRRA} = \APFac \notag
 \end{align}
-because $\lim\limits_{\mNrm_{t}\rightarrow \infty} \aFunc^{\prime}(\mNrm)=\RPFac$\footnote{$\displaystyle \lim\limits_{\mNrm_{t}\rightarrow \infty} \aFunc(\mNrm_{t})/\mNrm_{t}=1-\lim_{\mNrm_{t}\rightarrow \infty} \usual{\cFunc}(\mNrm_{t})/\mNrm_{t}=1-\lim_{\mNrm_{t}\rightarrow \infty}\usual{\cFunc}^{\prime}(\mNrm_{t})=\RPFac$.} and $\PermGroFacRnd_{t+1}\tranShkAll_{t+1}/\mNrm_{t} \leq (\PermGroFac \bar{\permShk} \bar{\tranShkEmp}/\pNotZero )/\mNrm_{t}$ which goes to zero as $\mNrm_{t}$ goes to infinity. Hence we have:
+because $\lim\limits_{\mNrm_{t}\rightarrow \infty} \aFunc^{\prime}(\mNrm)=\RPFac$\footnote{$\displaystyle \lim\limits_{\mNrm_{t}\rightarrow \infty} \aFunc(\mNrm_{t})/\mNrm_{t}=1-\lim_{\mNrm_{t}\rightarrow \infty} \usual{\cFunc}(\mNrm_{t})/\mNrm_{t}=1-\lim_{\mNrm_{t}\rightarrow \infty}\usual{\cFunc}^{\prime}(\mNrm_{t})=\RPFac$.} and $\PermGroFacRnd_{t+1}\tranShkAll_{t+1}/\mNrm_{t} \leq (\PermGroFac \bar{\permShk} \bar{\tranShkEmp}/\pNotZero )/\mNrm_{t}$ which goes to zero as $\mNrm_{t}$ goes to infinity.
+Hence we have:
 %
 \begin{equation*}
   {\APFac}  \leq \lim_{\mNrm_{t} \rightarrow \infty} \Ex_{t}[\cLvl_{t+1}/\cLvl_{t}] \leq {\APFac}
@@ -88,14 +89,21 @@ This appendix proves Theorems~\ref{thm:target}-\ref{thm:MSSBalExists} and:
   
 \begin{proof}[\textbf{Proof of Theorem~\ref{thm:target}}]
 
-First, observe that $\Ex_{t}[{\mNrm}_{t+1}/\mNrm_t] = \frac{\Ex_{t}\left((\mNrm_t - \cFunc(\mNrm_t)) \RNrmByGRnd_{t+1} + \tranShkAll_{t+1}\right)}{\mNrm_t}$. Note that $\cFunc$ is continuous since $\cFunc$ is concave on $\Reals_{++}$ by Lemma \ref{lemma:MPCBoundsConvg}. Thus for any convergent sequence $\left\{\mNrm_t^{j}\right\}_{j=0}^{\infty}$, with $\mNrm_t^{j}\in \Reals_{++}$, $(\mNrm_t^{j} - \cFunc(\mNrm_t^{j})) \RNrmByGRnd_{t+1} + \tranShkAll_{t+1}$ will be bounded above and below. It follows that, using the Dominated Convergence Theorem, $\Ex_{t}[{\mNrm}_{t+1}/\mNrm_t]$ will be continuous in $\mNrm_t$. 
+First, observe that $\Ex_{t}[{\mNrm}_{t+1}/\mNrm_t] = \frac{\Ex_{t}\left((\mNrm_t - \cFunc(\mNrm_t)) \RNrmByGRnd_{t+1} + \tranShkAll_{t+1}\right)}{\mNrm_t}$.
+Note that $\cFunc$ is continuous since $\cFunc$ is concave on $\Reals_{++}$ by Lemma \ref{lemma:MPCBoundsConvg}.
+Thus for any convergent sequence $\left\{\mNrm_t^{j}\right\}_{j=0}^{\infty}$, with $\mNrm_t^{j}\in \Reals_{++}$, $(\mNrm_t^{j} - \cFunc(\mNrm_t^{j})) \RNrmByGRnd_{t+1} + \tranShkAll_{t+1}$ will be bounded above and below.
+It follows that, using the Dominated Convergence Theorem, $\Ex_{t}[{\mNrm}_{t+1}/\mNrm_t]$ will be continuous in $\mNrm_t$.
 
 
-The remainder of the proof proceeds as follows. To establish Equation \eqref{eq:mTarget}, we will show (i) that there exists a point $\breve{\mNrm}_{t}$ where $\Ex_t [\breve{\mNrm}_{t+1}^{\star}/\breve{\mNrm}_{t}^{\star}] < 1$ and (ii) a point $\grave{\mNrm}$ where $\Ex_t [\grave{\mNrm}_{t+1}/\grave{\mNrm}_{t}] > 1$.
+
+The remainder of the proof proceeds as follows.
+To establish Equation \eqref{eq:mTarget}, we will show (i) that there exists a point $\breve{\mNrm}_{t}$ where $\Ex_t [\breve{\mNrm}_{t+1}^{\star}/\breve{\mNrm}_{t}^{\star}] < 1$ and (ii) a point $\grave{\mNrm}$ where $\Ex_t [\grave{\mNrm}_{t+1}/\grave{\mNrm}_{t}] > 1$.
 By continuity of $\Ex[{\mNrm}_{t+1}/\mNrm_t]$ in $\mNrm_t$ and the Intermediate Value Theorem, there will exist $\mTrgNrm$ such that  $\Ex_t [{\mTrgNrm}_{t+1}/\hat{\mNrm}_{t}] = 1$.
-In turn, to establish that $\mTrgNrm$ is a point of stability, Equation \eqref{eq:stability}, we will show that (iii) $\Ex_t [{\mNrm}_{t+1}]-\mNrm_{t}$ is decreasing. 
+In turn, to establish that $\mTrgNrm$ is a point of stability, Equation \eqref{eq:stability}, we will show that (iii) $\Ex_t [{\mNrm}_{t+1}]-\mNrm_{t}$ is decreasing.
 
-\statement{Part (i). Existence of \texorpdfstring{$\breve{\mNrm}_{t}$}{m{t}}  where \texorpdfstring{$\Ex_t [\breve{\mNrm}_{t+1}/\breve{\mNrm}_t] < 1$}{E[m{t+1}/m{t}] < 1}.}
+
+\statement{Part (i).
+Existence of \texorpdfstring{$\breve{\mNrm}_{t}$}{m{t}}  where \texorpdfstring{$\Ex_t [\breve{\mNrm}_{t+1}/\breve{\mNrm}_t] < 1$}{E[m{t+1}/m{t}] < 1}.}
 
 To proceed, first suppose \hyperlink{RIC}{return impatience} holds and take the steps analogous to those leading to Equation~\eqref{eq:xtp1toinfty} in the proof of proof for Proposition \ref{prop:convgGrowth},  but dropping the $\PermGroFac_{t+1}$ from the RHS:
 \begin{samepage}
@@ -110,22 +118,26 @@ To proceed, first suppose \hyperlink{RIC}{return impatience} holds and take the 
 \end{samepage}
 
 where the inequality follows from \hyperlink{GICMod}{strong growth impatience}.
-By continuity of  $\Ex_{t}[{\mNrm}_{t+1}/\mNrm_t]$ in $\mNrm_t$, there exists $\breve{\mNrm}_{t}$ large enough such that $\Ex_t [\breve{\mNrm}_{t+1}/\breve{\mNrm}_t] < 1$. 
+By continuity of  $\Ex_{t}[{\mNrm}_{t+1}/\mNrm_t]$ in $\mNrm_t$, there exists $\breve{\mNrm}_{t}$ large enough such that $\Ex_t [\breve{\mNrm}_{t+1}/\breve{\mNrm}_t] < 1$.
 
 
-Next, suppose \hyperlink{RIC}{return impatience} fails. The fact that $\lim\limits_{\mNrm_{t} \rightarrow \infty} \frac{\cFunc(\mNrm_{t})}{\mNrm_{t}} = 0$ (Lemma \ref{lemma:MPCBoundsConvg}) means the limit of the RHS of~\eqref{eq:emgro} as $\mNrm_{t} \rightarrow \infty$ is $\bar{\RNrmByGRnd}=\Ex_{t}[\RNrmByGRnd_{t+1}]$.
+
+Next, suppose \hyperlink{RIC}{return impatience} fails.
+The fact that $\lim\limits_{\mNrm_{t} \rightarrow \infty} \frac{\cFunc(\mNrm_{t})}{\mNrm_{t}} = 0$ (Lemma \ref{lemma:MPCBoundsConvg}) means the limit of the RHS of~\eqref{eq:emgro} as $\mNrm_{t} \rightarrow \infty$ is $\bar{\RNrmByGRnd}=\Ex_{t}[\RNrmByGRnd_{t+1}]$.
 Equations \eqref{eq:GICStrRICfailst1}-\eqref{eq:GICStrRICfailst2} below show that when \hyperlink{GICMod}{strong growth impatience} holds and \hyperlink{RIC}{return impatience} fails $\bar{\RNrmByGRnd} < 1$.
 
 Thus, we have $\lim\limits_{\mNrm \rightarrow \infty} \Ex[\mNrm_{t+1}/\mNrm_{t}] < 1$ whether the \hyperlink{RIC}{return impatience} holds or fails.
 
 \medskip
 
-\statement{Part (ii). Existence of \texorpdfstring{$\grave{\mNrm}_{t}$}{m} > 1 where \texorpdfstring{$\Ex_t [\grave{\mNrm}_{t+1}/\grave{\mNrm}_t] > 1$}{E[m{t+1}/m{t}] > 1}.}
+\statement{Part (ii).
+Existence of \texorpdfstring{$\grave{\mNrm}_{t}$}{m} > 1 where \texorpdfstring{$\Ex_t [\grave{\mNrm}_{t+1}/\grave{\mNrm}_t] > 1$}{E[m{t+1}/m{t}] > 1}.}
 
 Analogous to Equation \eqref{eq:consGrowth},  the ratio of $\Ex_{t}[\mNrm_{t+1}]$ to $\mNrm_{t}$ is unbounded above as $\mNrm_{t} \rightarrow 0$ because $\lim\limits_{\mNrm_{t}\rightarrow 0} \Ex[\mNrm_{t+1}] > 0$.
 Thus, if $\Ex_t [{\mNrm}_{t+1}/\mNrm_t]$ is continuous in $\mNrm_t$, and takes on values above and below one at $\grave{\mNrm}_{t}$ and $\breve{\mNrm}_{t}$, by the Intermediate Value Theorem, there must be at least one point at which it is equal to one.
 
-\statement{Part (iii). \texorpdfstring{$\Ex_t [{\mNrm}_{t+1}] -\mNrm_t$}{Delta m} is strictly decreasing.}
+\statement{Part (iii).
+\texorpdfstring{$\Ex_t [{\mNrm}_{t+1}] -\mNrm_t$}{Delta m} is strictly decreasing.}
 
 Finally to show $\Ex_t [{\mNrm}_{t+1}] -\mNrm_t$ is strictly decreasing $\mNrm_t$, define \providecommand{\difFunc}{\pmb{\zeta}} $\difFunc(\mNrm_t) \colon = 
 \Ex_t[\mNrm_{t+1}] - \mNrm_t$ and note that:
@@ -139,7 +151,9 @@ Finally to show $\Ex_t [{\mNrm}_{t+1}] -\mNrm_t$ is strictly decreasing $\mNrm_t
 \end{align}
 %
 so that $\difFunc(\mTrgNrm)=0$.
-Our goal is to prove that $\difFunc(\bullet)$ is strictly  decreasing on $(0,\infty)$. Let $\Delta_{\epsilon}$ be the finite forward difference for spacing $\epsilon>0$. Fixing $\epsilon>0$, we will have: 
+Our goal is to prove that $\difFunc(\bullet)$ is strictly  decreasing on $(0,\infty)$.
+Let $\Delta_{\epsilon}$ be the finite forward difference for spacing $\epsilon>0$.
+Fixing $\epsilon>0$, we will have: 
 %
 \begin{align}
   \Delta_{\epsilon}\difFunc(\mNrm_{t}) & 			= \Ex_{t}\left[\Delta_{\epsilon} \left( {\RNrmByGRnd}(\mNrm_{t}-\cFunc(\mNrm_{t}))+%
@@ -149,7 +163,9 @@ Our goal is to prove that $\difFunc(\bullet)$ is strictly  decreasing on $(0,\in
                                                        \frac{\Delta_{\epsilon}\cFunc({\mNrm}_t)}{\epsilon}\right]- 1\right). \labelsafe{eq:finiteDiff2}
 \end{align}
 %
-Notice  that $\frac{\Delta_{\epsilon}\cFunc({\mNrm}_t)}{\epsilon} \leq \frac{\cFunc(\mNrm_{t})}{\mNrm_{t}}<1$ since $\frac{\cFunc(\mNrm_{t})}{\mNrm_{t}}$ is decreasing in $\mNrm_{t}$ by Claim \ref{claim:rationondec} in Appendix \ref{sec:realanalysis}. Consider the case when \hyperlink{RIC}{return impatience} holds. Equation~\eqref{eq:MPCminDef} and Lemma \ref{lemma:MPCBoundsConvg} indicate $0 < \MPCmin \leq \frac{\cFunc(\mNrm_{t})}{\mNrm_{t}} < 1$.
+Notice  that $\frac{\Delta_{\epsilon}\cFunc({\mNrm}_t)}{\epsilon} \leq \frac{\cFunc(\mNrm_{t})}{\mNrm_{t}}<1$ since $\frac{\cFunc(\mNrm_{t})}{\mNrm_{t}}$ is decreasing in $\mNrm_{t}$ by Claim \ref{claim:rationondec} in Appendix \ref{sec:realanalysis}.
+Consider the case when \hyperlink{RIC}{return impatience} holds.
+Equation~\eqref{eq:MPCminDef} and Lemma \ref{lemma:MPCBoundsConvg} indicate $0 < \MPCmin \leq \frac{\cFunc(\mNrm_{t})}{\mNrm_{t}} < 1$.
 %
 It follows that:
 %
@@ -160,7 +176,9 @@ It follows that:
                                                             & = \underbrace{\Ex_{t}\left[\frac{\APFac}{\PermGroFac \permShk_{t+1}}\right]}_{= \GPFacMod} - 1 
 \end{align*}
 %
-which is negative because the \hyperlink{GICMod}{strong growth impatience} says $\GPFacMod < 1$. Conversely, when \hyperlink{RIC}{return impatience} holds fails, recall $\lim\limits_{\mNrm_{t} \rightarrow \infty} \frac{\cFunc(\mNrm_{t})}{\mNrm_{t}} = 0$. This means $ \Delta_{\epsilon}\difFunc(\mNrm_{t})$ from~\eqref{eq:finiteDiff2} is guaranteed to be negative if:
+which is negative because the \hyperlink{GICMod}{strong growth impatience} says $\GPFacMod < 1$.
+Conversely, when \hyperlink{RIC}{return impatience} holds fails, recall $\lim\limits_{\mNrm_{t} \rightarrow \infty} \frac{\cFunc(\mNrm_{t})}{\mNrm_{t}} = 0$.
+This means $ \Delta_{\epsilon}\difFunc(\mNrm_{t})$ from~\eqref{eq:finiteDiff2} is guaranteed to be negative if:
 %
 \begin{align}
   \bar{\RNrmByGRnd} = \Ex_{t}\left[\frac{\Rfree}{\PermGroFac \permShk_{t+1}}\right] & < 1  \labelsafe{eq:RbarBelowOne}.
@@ -178,7 +196,8 @@ and multiplying all three elements by $\Rfree/\APFac$ gives:
   \Ex_{t}\left[\frac{\Rfree}{\PermGroFac \permShk_{t+1}}\right] & < \Rfree/\APFac < 1,
 \end{align}
 %
-which satisfies our requirement in~\eqref{eq:RbarBelowOne}, thus completing the proof. \
+which satisfies our requirement in~\eqref{eq:RbarBelowOne}, thus completing the proof.
+\
 
 
 \end{proof}
@@ -189,10 +208,12 @@ which satisfies our requirement in~\eqref{eq:RbarBelowOne}, thus completing the 
 
 Since by assumption $ 0 < \Min{\permShk} \leq \permShk_{t+1} \leq \bar{\permShk} < \infty$, our proof in~\ref{subsubsec:AppxIndividTarget} that demonstrated existence and continuity of $\Ex[\mNrm_{t+1}/\mNrm_{t}]$ implies existence and continuity of $\Ex[\permShk_{t+1}\mNrm_{t+1}/\mNrm_{t}]$.
 
-\statement{Part (i). Existence of a stable point}
+\statement{Part (i).
+Existence of a stable point}
 
 
-Since by assumption $ 0 < \Min{\permShk} \leq \permShk_{t+1} \leq \bar{\permShk} < \infty$, our proof in Subsection~\ref{subsubsec:AppxIndividTarget} that the ratio of $\Ex[\mNrm_{t+1}]$ to $\mNrm_{t}$ is unbounded as $\mNrm_{t} \rightarrow 0$ implies that the ratio $\Ex[\permShk_{t+1}\mNrm_{t+1}]$ to $\mNrm_{t}$ is unbounded as $\mNrm_{t} \rightarrow 0$. The limit of the expected ratio as $\mNrm_{t}\rightarrow \infty$ goes to infinity is can be found as follows:
+Since by assumption $ 0 < \Min{\permShk} \leq \permShk_{t+1} \leq \bar{\permShk} < \infty$, our proof in Subsection~\ref{subsubsec:AppxIndividTarget} that the ratio of $\Ex[\mNrm_{t+1}]$ to $\mNrm_{t}$ is unbounded as $\mNrm_{t} \rightarrow 0$ implies that the ratio $\Ex[\permShk_{t+1}\mNrm_{t+1}]$ to $\mNrm_{t}$ is unbounded as $\mNrm_{t} \rightarrow 0$.
+The limit of the expected ratio as $\mNrm_{t}\rightarrow \infty$ goes to infinity is can be found as follows:
 %
 \begin{align}
   \lim_{\mNrm_{t} \rightarrow \infty} \Ex_{t}[\permShk_{t+1}\mNrm_{t+1}/\mNrm_{t}]  & =   
@@ -209,11 +230,13 @@ Since by assumption $ 0 < \Min{\permShk} \leq \permShk_{t+1} \leq \bar{\permShk}
   \\  & < 1, \notag
 \end{align}
 
-where the last two lines are merely a restatement of \hyperlink{GIC}{growth impatience}. 
+where the last two lines are merely a restatement of \hyperlink{GIC}{growth impatience}.
+
 
 To conclude Part (i) of the proof, the Intermediate Value Theorem says that if $\Ex[\permShk_{t+1}\mNrm_{t+1}/\mNrm_t]$ is continuous, and takes on values above and below 1, there must be at least one point at which it is equal to one.
 
-\statement{Part (ii). \texorpdfstring{$\Ex_{t}[\permShk_{t+1}\mNrm_{t+1}] -\mNrm_t$}{PermShk m{t+1} --- m{t}} is monotonically decreasing.}
+\statement{Part (ii).
+\texorpdfstring{$\Ex_{t}[\permShk_{t+1}\mNrm_{t+1}] -\mNrm_t$}{PermShk m{t+1} --- m{t}} is monotonically decreasing.}
 
 Define \providecommand{\difFunc}{\pmb{\zeta}} $\difFunc(\mNrm_t) \colon = 
 \Ex_t[\permShk_{t+1}\mNrm_{t+1}] - \mNrm_t$ and note that:
@@ -226,7 +249,8 @@ Define \providecommand{\difFunc}{\pmb{\zeta}} $\difFunc(\mNrm_t) \colon =
 \end{align}
 so that $\difFunc(\mTrgNrm)=0$.
 Our goal is to prove that $\difFunc(\bullet)$ is strictly 
-decreasing on $(0,\infty)$. Letting $\Delta_{\epsilon}$ be the forward difference operator, we have:
+decreasing on $(0,\infty)$.
+Letting $\Delta_{\epsilon}$ be the forward difference operator, we have:
 %
 \begin{align}
   \Delta_{\epsilon}\difFunc(\mNrm_{t}) & 			= \Ex\left[
@@ -238,20 +262,28 @@ decreasing on $(0,\infty)$. Letting $\Delta_{\epsilon}$ be the forward differenc
                                                        \frac{\Delta_{\epsilon}\cFunc({\mNrm}_t)}{\epsilon}\right]- 1\right). \labelsafe{eq:finiteDiff}
 \end{align}
 %
-for any given $\epsilon>0$. Notice  that $\frac{\Delta_{\epsilon}\cFunc^{\prime}({\mNrm}_t)}{\epsilon} \leq \frac{\cFunc(\mNrm_{t})}{\mNrm_{t}}<1$ since $\frac{\cFunc(\mNrm_{t})}{\mNrm_{t}}$ is decreasing in $\mNrm_{t}$ by Claim \ref{claim:rationondec} in Appendix. Now, we show that $\difFunc(\mNrm)$ is decreasing when \hyperlink{RIC}{return impatience} holds and when \hyperlink{RIC}{return impatience} fails.  When \hyperlink{RIC}{return impatience} holds,  Equation~\eqref{eq:MPCminDef} and Lemma \ref{lemma:MPCBoundsConvg} indicate that $\MPCmin >0$ and $0 < \MPCmin \leq \frac{\cFunc(\mNrm_{t})}{\mNrm_{t}} < 1$. It follows that:
+for any given $\epsilon>0$.
+Notice  that $\frac{\Delta_{\epsilon}\cFunc^{\prime}({\mNrm}_t)}{\epsilon} \leq \frac{\cFunc(\mNrm_{t})}{\mNrm_{t}}<1$ since $\frac{\cFunc(\mNrm_{t})}{\mNrm_{t}}$ is decreasing in $\mNrm_{t}$ by Claim \ref{claim:rationondec} in Appendix.
+Now, we show that $\difFunc(\mNrm)$ is decreasing when \hyperlink{RIC}{return impatience} holds and when \hyperlink{RIC}{return impatience} fails.
+When \hyperlink{RIC}{return impatience} holds,  Equation~\eqref{eq:MPCminDef} and Lemma \ref{lemma:MPCBoundsConvg} indicate that $\MPCmin >0$ and $0 < \MPCmin \leq \frac{\cFunc(\mNrm_{t})}{\mNrm_{t}} < 1$.
+It follows that:
 %
 \begin{align*}
    \frac{\Rfree}{\PermGroFac}\left(1-\cFunc^{\prime}({\mNrm}_t)\right) - 1 & <   \frac{\Rfree}{\PermGroFac}(1-\underbrace{(1-\RPFac)}_{\MPCmin}) - 1  \\
                                                       & = (\Rfree/\PermGroFac)\RPFac - 1, 
 \end{align*}
 %
-which is negative because \hyperlink{GIC}{growth impatience} says $\GPFacRaw < 1$. Conversely, when \hyperlink{RIC}{return impatience} holds fails, recall $\lim\limits_{\mNrm_{t} \rightarrow \infty} \frac{\cFunc(\mNrm_{t})}{\mNrm_{t}} = 0$. In turn, this means $\Delta_{\epsilon}\difFunc(\mNrm_{t})$ from~\eqref{eq:finiteDiff} is guaranteed to be negative if:
+which is negative because \hyperlink{GIC}{growth impatience} says $\GPFacRaw < 1$.
+Conversely, when \hyperlink{RIC}{return impatience} holds fails, recall $\lim\limits_{\mNrm_{t} \rightarrow \infty} \frac{\cFunc(\mNrm_{t})}{\mNrm_{t}} = 0$.
+In turn, this means $\Delta_{\epsilon}\difFunc(\mNrm_{t})$ from~\eqref{eq:finiteDiff} is guaranteed to be negative if:
 %
 \begin{align}
   (\Rfree/\PermGroFac) & < 1  \labelsafe{eq:FHWCFails}.
 \end{align}
 
-But we showed in Section~\ref{subsubsec:PFUncon}, Equation \eqref{eq:RICimplies}, that the only circumstances under which the problem has a non-degenerate solution while \hyperlink{RIC}{return impatience} fails were ones where the \hyperlink{FHWC}{finite limiting human wealth} also fails. Thus, $(\Rfree/\PermGroFac) < 1$, completing the proof. 
+But we showed in Section~\ref{subsubsec:PFUncon}, Equation \eqref{eq:RICimplies}, that the only circumstances under which the problem has a non-degenerate solution while \hyperlink{RIC}{return impatience} fails were ones where the \hyperlink{FHWC}{finite limiting human wealth} also fails.
+Thus, $(\Rfree/\PermGroFac) < 1$, completing the proof.
+
 
 \end{proof}
 

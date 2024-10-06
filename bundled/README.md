@@ -1,4 +1,8 @@
-TODO: Fix mhat in figure 
+TODO:
+
+- [ ] Fix mhat in figure 
+- [ ] Update to HARK 15
+
 
 # Theoretical Foundations of Buffer Stock Theory - REMARK
 
@@ -14,7 +18,7 @@ Figures can be produced either:
 
 #### Locally
 
-If you want to reproduce the results locally, you will need python and pip.
+
 
 ##### In a local interactive [jupyter notebook](https://jupyter.org)
    1. Install the jupyter notebook tool per [Installation.md](https://github.com/econ-ark/REMARK)
