@@ -64,10 +64,17 @@
 % Materials we need that are NOT in econark.sty follow
 
 % -------------- Packages --------------
-\usepackage{enumitem}    % roman lists in theorems  
+\usepackage{enumitem}    % roman lists in theorems 
+
+\newcommand{\statement}[1]{%
+  \vspace{1em} % Add some vertical space before the part
+  \textit{#1} % Make the part name bold (e.g., "Step 1", "Claim", "Case A")
+  \enspace % Add a little horizontal space
+  \ignorespaces % Ignore spaces at the beginning of the text
+}
 
 % --------------- Parameters ---------------
-\renewcommand{\CRRA}{\gamma}                           % CRRA is usually gamma in the literature.
+%\renewcommand{\CRRA}{\gamma}                           % CRRA is usually gamma in the literature.
 \newcommand{\DiscGro}{\DiscFac\PermGroFac^{1-\CRRA}}               % For PF-FVAC
 \renewcommand{\GPFacMod}{\GPFacRaw \Ex[\permShk^{-1}]} % Stochastically modified growth impatience factor
 
@@ -94,7 +101,7 @@
 \renewcommand{\GPFacRaw}{\frac{\APFac}{\PermGroFac}}
 
 % showlabels puts ref names on left, numbers on right
-\provideboolean{draftmode}\setboolean{draftmode}{true}
+\provideboolean{draftmode}\setboolean{draftmode}{false}
 \newcommand{\Draft}{\ifthenelse{\boolean{draftmode}}}
 \Draft{\usepackage{showlabels}
   \renewcommand{\showlabelsetlabel}[1]{\tiny #1}
@@ -107,7 +114,7 @@
 % Redefine \notinsubfile command defined in \texname.sty:
 % Lets any subfile called from here know that it is a subdoc
 % (eg: if it is NOT called from here and IS standalone, knows it can make bib)
-\renewcommand{\notinsubfile}[1]{}\renewcommand{\notinsubfile}[1]{#1}
+%\renewcommand{\notinsubfile}[1]{}\renewcommand{\notinsubfile}[1]{#1}
 \bibliographystyle{plainnat}
 \begin{document}
 \subfile{Introduction} % Abstract, contents title and introduction

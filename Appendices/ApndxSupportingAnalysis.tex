@@ -2,7 +2,7 @@
 \input{@resources/tex-add-search-paths}  % allow latex to find custom stuff
 \input{./.econtexRoot}\documentclass[\econtexRoot/BufferStockTheory]{subfiles}
 
-\newcommand{\subname}{ApndxSupportingAnalysis}
+\newcommand{\subname}{ApndxConcaveCFunc}
 %\input{\econtexRoot/@local/dir-paths} % get directory macros
 \usepackage{econark-ifsubfile}        % allow conditional execution of code
 \usepackage{econark-xrsetup}          % Xternal crossReferences (from main document)
@@ -12,11 +12,11 @@
 }
 \begin{document}
 
-\section{Supporting Standard Results in Real Analysis}\label{sec:realanalysis}
+\section{Additional Standard Results}\label{sec:realanalysis}
 
 %\notinsubfile{\pagebreak\bibliographystyle{plainnat}\econarkmultibib{\texname}}
 
-\begin{proposition}\label{prop:xnconvgf}
+\begin{proposition}\labelsafe{fact:xnconvgf}
 Let $\fFunc: \Reals_{++} \to \Reals_{+}$ be a continuous function. Consider sequences $x^{n}$ in $\Reals_{++}$ and $\fFunc^n(x^{n})$ in $\Reals_{+}$. If $\fFunc^{n}(x^{n}) \to \fFunc(x)$ as $n \to \infty$, then $x^{n} \to x$ as $n \to \infty$.
 \end{proposition}
 
@@ -33,7 +33,7 @@ By the continuity of $\fFunc$ at $x$, if $\vert x^{n} - x\vert  \geq \delta$ for
 Therefore, our assumption for contradiction is false, and it follows that $x^{n} \to x$ as $n \to \infty$.
 \end{proof}
 
-\begin{fact}
+\begin{fact}\label{fact:normimpliescompact}
 Let $\gFunc: X \to \Reals_{+}$ be a continuous function, where $X \subseteq \Reals^{n}$ is an open convex set. Define the weighted supremum norm $\Vert\cdot \Vert_{\gFunc}$ of a real-valued function $\fFunc: X \to \Reals$ by
 \begin{equation}
 \Vert \fFunc \Vert_\gFunc := \sup_{x \in X} \frac{\vert \fFunc(x)\vert }{\gFunc(x)}.
@@ -62,7 +62,7 @@ It's also worth noting that the convexity and openness of $X$ aren't strictly ne
 \end{proof}
 
 \begin{fact}\label{fact:compactnt}
-Let $\{\fFunc_n\}$ be a sequence of continuous functions defined on a subset of the real line and converging uniformly to a function $\fFunc$ on compact sets. If $\{x_n\}$ is a convergent sequence of real numbers with limit $x$, then $\fFunc_n(x_n)$ converges to $\fFunc(x)$.
+Let $\{\fFunc_n\}$ be a sequence of continuous functions defined on a subset of the real line and converging uniformly to a function$\fFunc$ on compact sets. If$\{x_n\}$ is a convergent sequence of real numbers with limit $x$, then $\fFunc_n(x_n)$ converges to $\fFunc(x)$.
 \end{fact}
 
 \begin{proof}
@@ -84,26 +84,40 @@ Thus, $\lim_{n \to \infty} \Vert \fFunc_n - \fFunc \Vert_  = 0$ implies that $\f
 It's also worth noting that the convexity and openness of $X$ aren't strictly necessary for this argument.
 \end{proof}
 
-\begin{fact}\label{fact:compactnts}
-Let $\{\fFunc_n\}$ be a sequence of continuous functions defined on a subset of the real line and converging uniformly to a function $\fFunc$ on compact sets. If $\{x_n\}$ is a convergent sequence of real numbers with limit $x$, then $\fFunc_n(x_n)$ converges to $\fFunc(x)$.
-\end{fact}
+
+\begin{claim}\label{claim:rationondec}
+If $\fFunc$ is convex and $\fFunc < 0$ on $(0, \lambda)$, then $\frac{\fFunc(s)}{s}$ is increasing on $(0, \lambda)$.
+\end{claim}
 
 \begin{proof}
-Since $x_n$ converges to $x$, the sequence $\{x_n\}$ is bounded.
-Therefore, there exists a compact set $K$ (specifically, a closed interval in the real line) that contains all the $x_n$ as well as $x$.
+Let $\fFunc$ be convex on $(0, \lambda)$ and $\fFunc < 0$ on $(0, \lambda)$. Let $x_1$ and $x_2$ be two points in $(0, \lambda)$. Choose $0 < \alpha < x_1$. Then, any point (in particular, $x_1$) in $(\alpha, x_2)$ can be written as $x_1 = t \alpha + (1 - t) x_2$ for some $0 < t < 1$.
 
-Given the uniform convergence of $\fFunc_n$ to $\fFunc$ on $K$, for every $\epsilon > 0$, there exists an $N$ such that for all $n \geq N$ and for all $y \in K$, we have
-\[ \vert \fFunc_n(y) - \fFunc(y)\vert  < \epsilon.
+Now, define a new function $F$ on $[\alpha, x_2]$ as:
+\[
+F(x) = \fFunc(x) - \fFunc(\alpha).
 \]
-In particular, for $y = x_n$, we have
-\[ \vert \fFunc_n(x_n) - \fFunc(x_n)\vert  < \epsilon \]
-for all $n \geq N$.
+Since $\fFunc$ is convex, $F(x)$ is also convex on $[\alpha, x_2]$. To see this, observe that:
+\[
+F(t\alpha + (1-t)x_2) = \fFunc(t\alpha + (1-t)x_2) - \fFunc(\alpha) \leq t \fFunc(\alpha) + (1-t) \fFunc(x_2) - \fFunc(\alpha) = t F(\alpha) + (1-t) F(x_2).
+\]
+Since $F(\alpha) = 0$, the inequality simplifies to $F(x_1) \leq (1-t) F(x_2)$. This implies that $\frac{F(s)}{s}$ is increasing. And thus, if $y_1 \leq y_2$, then:
+\[
+\frac{F(y_1)}{y_1} \leq \frac{F(y_2)}{y_2}.
+\]
+Now, using the definition of $F(x)$, we have:
+\[
+\frac{\fFunc(y_1)}{y_1} = \frac{F(y_1)}{y_1} + \frac{\fFunc(\alpha)}{y_1}.
+\]
+Similarly, for $y_2$:
+\[
+\frac{\fFunc(y_2)}{y_2} = \frac{F(y_2)}{y_2} + \frac{\fFunc(\alpha)}{y_2}.
+\]
+Since $\frac{F(y_1)}{y_1} \leq \frac{F(y_2)}{y_2}$ and $\fFunc(\alpha) < 0$, we conclude that:
+\[
+\frac{\fFunc(y_1)}{y_1} \leq  \frac{\fFunc(y_2)}{y_2}.
+\]
 
-Now, each $\fFunc_n$ being continuous and $x_n$ converging to $x$ implies that $\fFunc(x_n)$ converges to $\fFunc(x)$.
-Thus, for sufficiently large $n$, $\fFunc(x_n)$ can be made arbitrarily close to $\fFunc(x)$.
-
-Combining the two inequalities and taking $n$ large enough, we deduce that $\vert \fFunc_n(x_n) - \fFunc(x)\vert$ can be made smaller than any given $\epsilon$.
-Hence, $\fFunc_n(x_n)$ converges to $\fFunc(x)$.
+Thus, $\frac{\fFunc(s)}{s}$ is increasing on $(0, \lambda)$, completing the proof.
 \end{proof}
 
 
