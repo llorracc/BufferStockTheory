@@ -1,7 +1,6 @@
 \RequireVersions{
   *{application}{pdfTeX}  {0000/00/00 v1.40.25}
   *{format} {LaTeX2e}     {2023-11-01 v2.e}
-  *{file}   {BufferStockTheory.tex}{0000/00/00 v0.0}
   *{file}   {@resources/tex-add-search-paths.tex}{0000/00/00 v0.0}
   *{file}   {./.econtexRoot}{0000/00/00 v0.0}
   *{class}  {@resources/texlive/texmf-local/tex/latex/econark}{2024/06/04 v0.0}
@@ -74,7 +73,6 @@
   *{package}{subfiles}    {2020/11/14 v2.2}
   *{package}{import}      {2020/04/01 v6.2}
   *{package}{@resources/texlive/texmf-local/tex/latex/econark-ifsubfile}{2023/06/14 v0.0}
-  *{file}   {@local/dir-paths.tex}{0000/00/00 v0.0}
   *{package}{@local/owner}{0000/00/00 v0.0}
   *{package}{@resources/texlive/texmf-local/tex/latex/econark}{0000/00/00 v0.0}
   *{package}{@resources/texlive/texmf-local/tex/latex/econark-ark-required}{0000/00/00 v0.0}
@@ -134,6 +132,8 @@
   *{file}   {supp-pdf.mkii}{0000/00/00 v0.0}
   *{package}{epstopdf-base}{2020-01-24 v2.11}
   *{file}   {epstopdf-sys.cfg}{2010/07/13 v1.3}
+  *{file}   {BufferStockTheory.out}{0000/00/00 v0.0}
+  *{file}   {BufferStockTheory.out}{0000/00/00 v0.0}
   *{package}{bookmark}    {2023-12-10 v1.31}
   *{file}   {bkm-pdftex.def}{2023-12-10 v1.31}
   *{file}   {Introduction}{0000/00/00 v0.0}
@@ -143,54 +143,55 @@
   *{file}   {BufferStockTheory-NoAppendix}{0000/00/00 v0.0}
   *{file}   {@resources/tex-add-search-paths}{0000/00/00 v0.0}
   *{file}   {./.econtexRoot}{0000/00/00 v0.0}
-  *{file}   {./Equations/supfn}{0000/00/00 v0.0}
-  *{file}   {./Equations/DBCParts}{0000/00/00 v0.0}
-  *{file}   {./Equations/TranShkDef}{0000/00/00 v0.0}
-  *{file}   {./Equations/boundFunc}{0000/00/00 v0.0}
-  *{file}   {./Figures/cNrmTargetFig}{0000/00/00 v0.0}
-  *{file}   {./Figures/cNrmTargetFig.pdf}{0000/00/00 v0.0}
-  *{file}   {./Equations/TheoremMTargetIsStable}{0000/00/00 v0.0}
-  *{file}   {./Equations/TheoremMSSBalExists}{0000/00/00 v0.0}
-  *{file}   {./Figures/GICModFailsButGICRawHolds}{0000/00/00 v0.0}
-  *{file}   {./Figures/GICModFailsButGICRawHolds.pdf}{0000/00/00 v0.0}
-  *{file}   {./Figures/cFuncsConverge}{0000/00/00 v0.0}
-  *{file}   {./Figures/cFuncsConverge.pdf}{0000/00/00 v0.0}
-  *{file}   {./Figures/MPCLimits}{0000/00/00 v0.0}
-  *{file}   {./Figures/MPCLimits.pdf}{0000/00/00 v0.0}
-  *{file}   {./Figures/cFuncBounds}{0000/00/00 v0.0}
-  *{file}   {./Figures/cFuncBounds.pdf}{0000/00/00 v0.0}
-  *{file}   {./Figures/RelatePFGICFHWCRICPFFVAC}{0000/00/00 v0.0}
-  *{file}   {./Figures/RelatePFGICFHWCRICPFFVAC.pdf}{0000/00/00 v0.0}
-  *{file}   {./Tables/Parameters}{0000/00/00 v0.0}
-  *{file}   {./Tables/Calibration}{0000/00/00 v0.0}
-  *{file}   {./Figures/Inequalities}{0000/00/00 v0.0}
-  *{file}   {./Figures/Inequalities.pdf}{0000/00/00 v0.0}
-  *{file}   {./Tables/Comparison}{0000/00/00 v0.0}
-  *{file}   {./Tables/Required}{0000/00/00 v0.0}
-  *{file}   {./Appendices/ApndxConcaveCFunc}{0000/00/00 v0.0}
-  *{file}   {./Appendices/@resources/tex-add-search-paths}{0000/00/00 v0.0}
+  *{file}   {Equations/supfn}{0000/00/00 v0.0}
+  *{file}   {Equations/DBCParts}{0000/00/00 v0.0}
+  *{file}   {Equations/TranShkDef}{0000/00/00 v0.0}
+  *{file}   {Equations/boundFunc}{0000/00/00 v0.0}
+  *{file}   {Figures/cNrmTargetFig}{0000/00/00 v0.0}
+  *{file}   {Figures/cNrmTargetFig.pdf}{0000/00/00 v0.0}
+  *{file}   {Equations/TheoremMTargetIsStable}{0000/00/00 v0.0}
+  *{file}   {Equations/TheoremMSSBalExists}{0000/00/00 v0.0}
+  *{file}   {Figures/GICModFailsButGICRawHolds}{0000/00/00 v0.0}
+  *{file}   {Figures/GICModFailsButGICRawHolds.pdf}{0000/00/00 v0.0}
+  *{file}   {Figures/cFuncsConverge}{0000/00/00 v0.0}
+  *{file}   {Figures/cFuncsConverge.pdf}{0000/00/00 v0.0}
+  *{file}   {Figures/MPCLimits}{0000/00/00 v0.0}
+  *{file}   {Figures/MPCLimits.pdf}{0000/00/00 v0.0}
+  *{file}   {Figures/cFuncBounds}{0000/00/00 v0.0}
+  *{file}   {Figures/cFuncBounds.pdf}{0000/00/00 v0.0}
+  *{file}   {Figures/RelatePFGICFHWCRICPFFVAC}{0000/00/00 v0.0}
+  *{file}   {Figures/RelatePFGICFHWCRICPFFVAC.pdf}{0000/00/00 v0.0}
+  *{file}   {Tables/Parameters}{0000/00/00 v0.0}
+  *{file}   {Tables/Calibration}{0000/00/00 v0.0}
+  *{file}   {Figures/Inequalities}{0000/00/00 v0.0}
+  *{file}   {Figures/Inequalities.pdf}{0000/00/00 v0.0}
+  *{file}   {Tables/Comparison}{0000/00/00 v0.0}
+  *{file}   {Tables/Required}{0000/00/00 v0.0}
+  *{file}   {Appendices/ApndxConcaveCFunc}{0000/00/00 v0.0}
+  *{file}   {Appendices/@resources/tex-add-search-paths}{0000/00/00 v0.0}
   *{file}   {./.econtexRoot}{0000/00/00 v0.0}
-  *{file}   {./Equations/boundFunc}{0000/00/00 v0.0}
-  *{file}   {./Appendices/ApndxMTargetIsStable}{0000/00/00 v0.0}
-  *{file}   {./Appendices/./.econtexRoot}{0000/00/00 v0.0}
-  *{file}   {./Appendices/ApndxBalancedGrowthcNrmAndCov}{0000/00/00 v0.0}
-  *{file}   {./Appendices/@resources/tex-add-search-paths}{0000/00/00 v0.0}
+  *{file}   {Equations/boundFunc}{0000/00/00 v0.0}
+  *{file}   {Appendices/ApndxMTargetIsStable}{0000/00/00 v0.0}
+  *{file}   {Appendices/./.econtexRoot}{0000/00/00 v0.0}
+  *{file}   {Appendices/ApndxBalancedGrowthcNrmAndCov}{0000/00/00 v0.0}
+  *{file}   {Appendices/@resources/tex-add-search-paths}{0000/00/00 v0.0}
   *{file}   {./.econtexRoot}{0000/00/00 v0.0}
-  *{file}   {./Figures/logcNrm.pdf}{0000/00/00 v0.0}
-  *{file}   {./Figures/logcov.pdf}{0000/00/00 v0.0}
-  *{file}   {./Appendices/ApndxLiqConstr}{0000/00/00 v0.0}
-  *{file}   {./Appendices/@resources/tex-add-search-paths}{0000/00/00 v0.0}
+  *{file}   {Figures/logcNrm.pdf}{0000/00/00 v0.0}
+  *{file}   {Figures/logcov.pdf}{0000/00/00 v0.0}
+  *{file}   {Appendices/ApndxLiqConstr}{0000/00/00 v0.0}
+  *{file}   {Appendices/@resources/tex-add-search-paths}{0000/00/00 v0.0}
   *{file}   {./.econtexRoot}{0000/00/00 v0.0}
-  *{file}   {./Tables/LiqConstrScenarios}{0000/00/00 v0.0}
-  *{file}   {./Figures/PFGICHoldsFHWCFailsRICFails}{0000/00/00 v0.0}
-  *{file}   {./Figures/PFGICHoldsFHWCFailsRICFails.pdf}{0000/00/00 v0.0}
-  *{file}   {./Appendices/ApndxConditionDiagrams}{0000/00/00 v0.0}
-  *{file}   {./Appendices/@resources/tex-add-search-paths}{0000/00/00 v0.0}
+  *{file}   {Tables/LiqConstrScenarios}{0000/00/00 v0.0}
+  *{file}   {Figures/PFGICHoldsFHWCFailsRICFails}{0000/00/00 v0.0}
+  *{file}   {Figures/PFGICHoldsFHWCFailsRICFails.pdf}{0000/00/00 v0.0}
+  *{file}   {Appendices/ApndxConditionDiagrams}{0000/00/00 v0.0}
+  *{file}   {Appendices/@resources/tex-add-search-paths}{0000/00/00 v0.0}
   *{file}   {./.econtexRoot}{0000/00/00 v0.0}
-  *{file}   {./Figures/InequalityPFGICFHWCRIC.pdf}{0000/00/00 v0.0}
-  *{file}   {./Figures/Inequalities.pdf}{0000/00/00 v0.0}
-  *{file}   {./Figures/Inequalities-numer.pdf}{0000/00/00 v0.0}
-  *{file}   {./Appendices/ApndxSupportingAnalysis}{0000/00/00 v0.0}
-  *{file}   {./Appendices/@resources/tex-add-search-paths}{0000/00/00 v0.0}
+  *{file}   {Figures/InequalityPFGICFHWCRIC.pdf}{0000/00/00 v0.0}
+  *{file}   {Figures/Inequalities.pdf}{0000/00/00 v0.0}
+  *{file}   {Figures/Inequalities-numer.pdf}{0000/00/00 v0.0}
+  *{file}   {Appendices/ApndxSupportingAnalysis}{0000/00/00 v0.0}
+  *{file}   {Appendices/@resources/tex-add-search-paths}{0000/00/00 v0.0}
   *{file}   {./.econtexRoot}{0000/00/00 v0.0}
+  *{file}   {BufferStockTheory.bbl}{0000/00/00 v0.0}
 }
