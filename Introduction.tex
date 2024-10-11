@@ -9,9 +9,7 @@
 \usepackage{econark-xrsetup}
 
 % if it's being compiled standalone, set up identity of the external
-\compilingasstandalone{
-  \xrsetup{\econtexRoot/\texname}
-}
+\xrsetup{\econtexRoot/\texname}
 
 % \begin{document}
 
@@ -21,11 +19,6 @@
 % Together the {\PFFVAC} and the {\FHWC} imply the {\RIC}.
 
 % \cite{carroll:death}
-
-% \compilingasstandalone{
-%   \bibliography{Introduction}
-%   }
-% \end{document}\endinput
 
 \newcommand{\thankstext}{
   The paper's results \href{https://\owner.github.io/nbreproduce}{can be automatically reproduced} using the {\ARKurl} toolkit, which can be cited per our references (\cite{carroll_et_al-proc-scipy-2018}); for reference to the toolkit itself see \href{https://econ-ark.org/acknowledging}{Acknowledging Econ-ARK}.
@@ -266,11 +259,14 @@ Finally, our discussion on aggregate growth rates builds on \cite{szeidlInvarian
 While conditions for stationarity resemble \hyperlink{GIC}{growth impatience} and \hyperlink{GICMod}{strong growth impatience,} our objective is to establish existence of stable buffer stock targets, which has empirical relevance, rather than prove stochastic stability.
 
 
-\compilingasstandalone{
-  \econarkmultibib{Introduction}
-}
+% documentclass is {article} or something else when main is compiling 
+\ifSubfilesClassLoaded{ 
+    % Content you want to compile only when standalone.
+    \econarkmultibib{system}
+}{}
 
-\end{document}
+\end{document}\endinput
+
 
 % TeX-master-file: t
 % eval: (setq TeX-command-list  (assq-delete-all (car (assoc "BibTeX" TeX-command-list)) TeX-command-list))

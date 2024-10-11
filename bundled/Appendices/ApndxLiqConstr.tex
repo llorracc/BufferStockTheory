@@ -4,12 +4,11 @@
 
 \newcommand{\subname}{ApndxLiqConstr}
 %\input{\econtexRoot/@local/dir-paths} % get directory macros
-\usepackage{econark-ifsubfile}        % allow conditional execution of code
 \usepackage{econark-xrsetup}          % Xternal crossReferences (from main document)
 
-\compilingasstandalone{
-  \xrsetup{\econtexRoot/\texname}
-}
+\usepackage{econark-ifsubfile}        % allow conditional execution of code
+
+\xrsetup{\econtexRoot/\texname}
 
 \begin{document}
 \let\TableWidth\relax
@@ -445,8 +444,7 @@ If the upper bound of the MPC in the perfect foresight case is zero, it is not p
 
 \cite{maTodaRich} characterize the limits of the MPC in a more general framework that allows for capital and labor income risks in a Markovian setting with liquidity constraints, and find that in that much more general framework the limiting MPC is also zero.% chktex 2
 
-% \compilingasstandalone{\pagebreak\bibliographystyle{plainnat}\econarkmultibib{\texname}}
-\compilingasstandalone{\bibstandalone{\subname}}
+\ifSubfilesClassLoaded{\econarkmultibib{system}}{}
 
 \end{document}\endinput
 

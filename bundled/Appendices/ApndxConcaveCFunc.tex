@@ -7,9 +7,7 @@
 \usepackage{econark-ifsubfile}        % allow conditional execution of code
 \usepackage{econark-xrsetup}          % Xternal crossReferences (from main document)
 
-\compilingasstandalone{
-  \xrsetup{\econtexRoot/\texname}
-}
+\xrsetup{\econtexRoot/\texname}
 
 % \begin{document}
 % The first panel of Table~\ref{table:Required} summarizes: The PF-Unconstrained model has a non-degenerate limiting solution if we impose the {\RIC} and {\FHWC} (these conditions are necessary as well as sufficient).
@@ -21,7 +19,7 @@
 
 % \end{document}
 
-%  \externaldocument{\LaTeXGenerated/BufferStockTheory}\providecommand{\texname}{}\renewcommand{\texname}{Introduction}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
+%  \externaldocument{BufferStockTheory}\providecommand{\texname}{}\renewcommand{\texname}{Introduction}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
 \begin{document}
 
 \section{Appendix for Section \ref{sec:Theory}}\label{sec:ApndxConcaveCFunc}
@@ -796,10 +794,7 @@ Note finally that another intuitive confirmation of the equivalence between the 
 \end{eqnarray*}
 which makes sense because the marginal propensity to consume for a constrained restrained consumer is 1 by our definitions of `constrained' and `restrained.'
 
-
-% \compilingasstandalone{\bibstandalone{\econtexRoot/\texname}}
-\compilingasstandalone{\bibstandalone{ApndxConcaveCFunc}}
-
+\ifSubfilesClassLoaded{\econarkmultibib{system}}{}
 
 \end{document}
 \endinput

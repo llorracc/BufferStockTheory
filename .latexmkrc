@@ -6,14 +6,14 @@
 system("[[ -e economics.bib         ]] && rm -f economics.bib"        );
 system("[[ -e BufferStockTheory.bib ]] && rm -f BufferStockTheory.bib");
 #$bibtex = 'bibtool -x %B.aux -o %B.bbl ';
+$bibtex = 'bibtex %O %S > /dev/null 2>&1';
 $do_cd = 1;
 $clean_ext = "bbl nav out snm dvi idv mk4 css cfg tmp xref 4tc out aux log fls fdb_latexmk synctex.gz toc svg png html 4ct ps out.ps upa upb lg yml css out snm bib\-save*";
 $bibtex_use=2;
-$pdf_mode = 1;
+$pdf_mode = 1;  # Use pdflatex to generate PDF
 $rc_report = 1;
 #@default_files = ('BufferStockTheory','BufferStockTheory-NoAppendix','BufferStockTheory-Slides','Introduction','Tables-All');
-@default_files = ('BufferStockTheory','BufferStockTheory-NoAppendix','Appendices-All-Referenced','BufferStockTheory-Slides','Introduction','Tables-All');
-#@default_files = ('BufferStockTheory');
+@default_files = ('BufferStockTheory');
 $ENV{'BIBINPUTS'} = './@resources/texlive/texmf-local/bibtex/bst:' . ($ENV{'BIBINPUTS'} || '');
 $pdflatex="pdflatex -interaction=nonstopmode %O %S";
 $aux_out_dir_report = 1;
@@ -21,7 +21,7 @@ $silent  = 0;
 $bibtex_use_original_exit_codes = 0;
 system("\@resources/shell/bibtool_extract-used-refs-from-system-bib-and-add-refs.sh . BufferStockTheory");
 system("find . -name '*.dep' ! -name 'BufferStockTheory.dep' -delete");
-$postscript = 'pdftotext %O';
+
 # Create a wrapper shell script
 $wrapper_script = '.latexmk_wrapper.sh';
 open(my $fh, '>', $wrapper_script) or die "Could not open file '$wrapper_script' $!";
