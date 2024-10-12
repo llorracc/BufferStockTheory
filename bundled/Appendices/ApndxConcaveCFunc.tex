@@ -15,8 +15,6 @@
 
 % \cite{carroll:death}
 
-% \bibstandalone{\subname}
-
 % \end{document}
 
 %  \externaldocument{BufferStockTheory}\providecommand{\texname}{}\renewcommand{\texname}{Introduction}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
@@ -794,7 +792,7 @@ Note finally that another intuitive confirmation of the equivalence between the 
 \end{eqnarray*}
 which makes sense because the marginal propensity to consume for a constrained restrained consumer is 1 by our definitions of `constrained' and `restrained.'
 
-\ifSubfilesClassLoaded{\econarkmultibib{system}}{}
+\ifSubfilesClassLoaded{\bibliography{\econtexRoot/\texname}}{}
 
 \end{document}
 \endinput

@@ -1,6 +1,7 @@
 \input{@resources/tex-add-search-paths}  % allow latex to find custom stuff
 \input{./.econtexRoot}                   % Set path to root dir
 
+%\documentclass[titlepage,headings=normal,toc=listof]{scrartcl}
 \documentclass[titlepage, headings=optiontocandhead]{econark}
 
 \usepackage{econark-ifsubfile}           % Set conditionals that think it is in main file
@@ -14,8 +15,9 @@
 
 \usepackage{econark}                     % custom packages and macros
 \usepackage{econark-theorems}            % theorems, corollarys, remarks, propositions, ...
-\usepackage{econark-multibib}            % Only use bib files that exist
-\usepackage{econark-bibstandalone}       % Allow compilation of subfiles with bib
+\usepackage{econark-collectbibs}         % Find valid bibfiles
+%\usepackage{econark-multibib}            % Only use bib files that exist
+%\usepackage{econark-bibstandalone}       % Allow compilation of subfiles with bib
 \usepackage{hyperref}                    % allow hyperlinks 
 \usepackage{econark-xrsetup}
 
@@ -87,7 +89,6 @@
 
 \subfile{Introduction} % Abstract, contents, title, and introduction
 \subfile{BufferStockTheory-NoAppendix} % Main body of paper
-%\econarkmultibib{\texname}\sloppy\endinput\end{document}
 
 \pagebreak
 \appendix                                  % Declare beginning of appendices
@@ -108,7 +109,8 @@
 \subfile{Appendices/ApndxSupportingAnalysis}
 
 \pagebreak
-\econarkmultibib{\econtexRoot/\texname}\sloppy\endinput\end{document}
+\providecommand{\bibfiles}{}\renewcommand{\bibfiles}{}\econarkcollectbibs{\econtexRoot/\texname}
+\bibliography{\bibfiles}\sloppy\end{document}\endinput
 
 
 % Local Variables:
