@@ -3,7 +3,7 @@
 \input{./.econtexRoot}\documentclass[\econtexRoot/BufferStockTheory]{subfiles}
 
 \newcommand{\subname}{ApndxSolnMethEndogGpts}
-%\input{\econtexRoot/@local/dir-paths} % get directory macros
+\input{\econtexRoot/@local/dir-paths} % get directory macros
 \usepackage{econark-xrsetup}          % Xternal crossReferences (from main document)
 
 \usepackage{econark-ifsubfile}        % allow conditional execution of code
@@ -11,7 +11,7 @@
 \xrsetup{\econtexRoot/\texname}
 
 \begin{document}
-%\begin{verbatimwrite}{ApndxSolnMethEndogGpts.tex}
+%\begin{verbatimwrite}{\LaTeXGenerated/ApndxSolnMethEndogGpts.tex}
 \section{Endogenous Gridpoints Solution Method}\label{sec:ApndxSolnMethEndogGpts}
 
 The model is solved using an extension of the method of endogenous gridpoints (\cite{carroll_EGM}): A grid of possible values of end-of-period assets $\vec{\aNrm}$ is defined, and at these points, marginal end-of-period-$t$ value is computed as the discounted next-period expected marginal utility of consumption (which the Envelope theorem says matches expected marginal value).  The results are then used to identify the corresponding levels of consumption at the beginning of the period:\footnote{The software can also solve a version of the model with explicit liquidity constraints, where the Envelope condition does not hold.}
@@ -98,7 +98,7 @@ evaluate the function is $\mNrm=0$ but $\log 0 = -\infty$ which is difficult for
 \end{comment}
 
 
-\ifSubfilesClassLoaded{\bibliography{\econtexRoot/\texname}}{}
+\ifSubfilesClassLoaded{\providecommand{\bibfiles}{}\renewcommand{\bibfiles}{\econarkcollectbibs{\econtexRoot/\texname}}\bibliography{\bibfiles}}{}
 \end{document}\endinput
 
 % Local Variables:

@@ -10,7 +10,7 @@
 \usepackage{subfiles}                    % Allow appendices, tables, etc as standalone subfiles
 
 \newcommand{\texname}{BufferStockTheory} % Keyname for the paper
-%\input{@local/dir-paths}                 % macros for various subdirs
+\input{@local/dir-paths}                 % macros for various subdirs
 \usepackage{@local/owner}                % for urls that are constructed
 
 \usepackage{econark}                     % custom packages and macros
@@ -74,7 +74,7 @@
 
 
 % showlabels puts ref names on left, numbers on right
-\provideboolean{draftmode}\setboolean{draftmode}{false}
+\provideboolean{draftmode}\setboolean{draftmode}{true}
 \newcommand{\Draft}{\ifthenelse{\boolean{draftmode}}}
 \Draft{\usepackage{showlabels}
   \renewcommand{\showlabelsetlabel}[1]{\tiny #1}
@@ -101,15 +101,17 @@
   \appendixpage                            % Reset formatting for appendices on Web
 } % Web
 
-\subfile{Appendices/ApndxConcaveCFunc}
-\subfile{Appendices/ApndxMTargetIsStable}
-\subfile{Appendices/ApndxBalancedGrowthcNrmAndCov}
-\subfile{Appendices/ApndxLiqConstr}
-\subfile{Appendices/ApndxConditionDiagrams}
-\subfile{Appendices/ApndxSupportingAnalysis}
+\subfile{\ApndxDir/ApndxConcaveCFunc}
+\subfile{\ApndxDir/ApndxMTargetIsStable}
+\subfile{\ApndxDir/ApndxBalancedGrowthcNrmAndCov}
+\subfile{\ApndxDir/ApndxLiqConstr}
+\subfile{\ApndxDir/ApndxConditionDiagrams}
+\subfile{\ApndxDir/ApndxSupportingAnalysis}
 
 \pagebreak
-\providecommand{\bibfiles}{}\renewcommand{\bibfiles}{}\econarkcollectbibs{\econtexRoot/\texname}
+\providecommand{\bibfiles}{}\renewcommand{\bibfiles}{}
+
+\econarkcollectbibs{\econtexRoot/\texname}
 \bibliography{\bibfiles}\sloppy\end{document}\endinput
 
 

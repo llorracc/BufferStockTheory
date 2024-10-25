@@ -4,7 +4,7 @@
 \input{./.econtexRoot}\input{\LaTeXInputs/econtex_onlyinsubfile}
 \providecommand{\TblBox}{}\providecommand{\TblName}{}
 \renewcommand{\TblName}{Calibration}
-\onlyinsubfile{\externaldocument{BufferStockTheory}}
+\onlyinsubfile{\externaldocument{\LaTeXGenerated/BufferStockTheory}}
 
 \begin{document}
 % This needed to be a subfile to tweak the use of the makecell \thead commands
@@ -12,13 +12,13 @@
 
 \renewcommand\theadalign{tl}
 
-\notinsubfile{\renewcommand{Tables}{./Tables}} % Not sure why this needs to be redefined here; if not, tries to write to ../../Tables
+\notinsubfile{\renewcommand{\TableDir}{./Tables}} % Not sure why this needs to be redefined here; if not, tries to write to ../../Tables
 
 \let\TableWidth\relax % Necessary to allow redefinition of tablewidth, which might already be defined
 
 \let\TableWidth\relax
 \newlength\TableWidth
-\begin{verbatimwrite}{Tables/\TblName}
+\begin{verbatimwrite}{\TableDir/\TblName}
 
   \begin{table}
     \centering
@@ -61,7 +61,7 @@
   \end{table}
 \end{verbatimwrite}
 \clearpage
-\input{Tables/\TblName}
+\input{\TableDir/\TblName}
 
 \end{document}
 % Delete up to four existing variants of BibTeX 

@@ -3,9 +3,10 @@
 \input{./.econtexRoot}\documentclass[\econtexRoot/BufferStockTheory]{subfiles}
 
 \newcommand{\subname}{ApndxConcaveCFunc}
-%\input{\econtexRoot/@local/dir-paths} % get directory macros
+\input{\econtexRoot/@local/dir-paths} % get directory macros
 \usepackage{econark-ifsubfile}        % allow conditional execution of code
 \usepackage{econark-xrsetup}          % Xternal crossReferences (from main document)
+\externaldocument{\LaTeXGenerated/BufferStockTheory}
 
 \xrsetup{\econtexRoot/\texname}
 
@@ -17,7 +18,7 @@
 
 % \end{document}
 
-%  \externaldocument{BufferStockTheory}\providecommand{\texname}{}\renewcommand{\texname}{Introduction}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
+%  \externaldocument{\LaTeXGenerated/BufferStockTheory}\providecommand{\texname}{}\renewcommand{\texname}{Introduction}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
 \begin{document}
 
 \section{Appendix for Section \ref{sec:Theory}}\label{sec:ApndxConcaveCFunc}
@@ -498,7 +499,7 @@ $\TMap^{\MPCminInf, \MPCmaxInf} \mathbf{0}(\mNrm_{t}) = \uFunc(\MPCmaxInf \mNrm_
 Thus, Condition (2)
 will hold if ${(\MPCmaxInf \mNrm_{t})}^{1-\CRRA}$ is $\boundFunc$-bounded, which it is if we use the
 bounding function
-\input{Equations/boundFunc}
+\input{\EqDir/boundFunc}
 defined in Remark \ref{rem:shnkrdef}.
 
 
@@ -792,9 +793,13 @@ Note finally that another intuitive confirmation of the equivalence between the 
 \end{eqnarray*}
 which makes sense because the marginal propensity to consume for a constrained restrained consumer is 1 by our definitions of `constrained' and `restrained.'
 
-\ifSubfilesClassLoaded{\bibliography{\econtexRoot/\texname}}{}
+\ifSubfilesClassLoaded{\providecommand{\bibfiles}{}\renewcommand{\bibfiles}{}\econarkcollectbibs{\econtexRoot/\texname}\bibliography{\bibfiles}}{}
+
+\sloppy\end{document}\endinput
 
 \end{document}
+
+
 \endinput
 
 % Local Variables:

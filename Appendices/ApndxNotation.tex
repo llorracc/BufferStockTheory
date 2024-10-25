@@ -3,7 +3,7 @@
 \input{./.econtexRoot}\documentclass[\econtexRoot/BufferStockTheory]{subfiles}
 
 \newcommand{\subname}{ApndxConcaveCFunc}
-%\input{\econtexRoot/@local/dir-paths} % get directory macros
+\input{\econtexRoot/@local/dir-paths} % get directory macros
 \usepackage{econark-xrsetup}          % Xternal crossReferences (from main document)
 
 \usepackage{econark-ifsubfile}        % allow conditional execution of code
@@ -116,7 +116,7 @@ We want a notation that will allow us to break up
 Consider a consumer who has arrived at the beginning of a terminal {\stge} of life $T$, with a stock of capital $\KLvl_{T} \in \mathcal{K} \subset \mathcal{R}_{++}$.
 That is, $\KLvl_{T}$ is a real number.
 
-\ifSubfilesClassLoaded{\bibliography{\econtexRoot/\texname}}{}
+\ifSubfilesClassLoaded{\providecommand{\bibfiles}{}\renewcommand{\bibfiles}{\econarkcollectbibs{\econtexRoot/\texname}}\bibliography{\bibfiles}}{}
 
 \end{document}
 \endinput
