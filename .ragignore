@@ -1,0 +1,103 @@
+# .ragignore for BufferStockTheory-Latest — YAML format.
+# The `ignore_patterns` block is the ONLY thing keeping sensitive content
+# (@local/, *_private*, Private/, plans_private/, paperpile_private.bib, etc.)
+# out of the RAG index. Grep chunks_final.jsonl for 'private' / '@local' /
+# 'Private/' after every rebuild.
+
+source_priority:
+  - .tex
+  - .md
+  - .txt
+  - .bib
+  - .ipynb
+  - .py
+
+ignore_patterns:
+  # ── Privacy (critical) ─────────────────────────────────────────
+  - "@local/"
+  - "@resources/"
+  - "@todo_private.md"
+  - "@*_private*"
+  - "*_private*"      # files with _private anywhere
+  - "*_private*/"     # dirs ending with _private
+  - "private_*"       # files/dirs starting with private_
+  - "*private_*"      # catches e.g. foo-private_bar.ext
+  - "plans_private/"
+  - "Private/"
+  - "private/"
+  - "paperpile_private.bib"
+  - "*/@local/*"
+  - "*/Private/*"
+  - "*/private/*"
+  - "*/plans_private/*"
+
+  # ── Redundant LaTeX variants (canonical paper is BufferStockTheory.tex) ──
+  # Match both the .tex sources AND their pdftotext .txt mirrors.
+  - "BufferStockTheory-NoAppendix.*"
+  - "BufferStockTheory-Slides.*"
+
+  # ── Build artifacts ────────────────────────────────────────────
+  - "_build/"           # tools/build-myst intermediate outputs
+  - "_build/**"
+  - "tools/build-myst/_build/"
+  - "tools/build-myst/_build/**"
+  - "tools/build-myst/tests/"      # fixtures + golden files (developer-only)
+  - "*.pdf"
+  - "*.svg"
+  - "*.png"
+  - "*.jpg"
+  - "*.jpeg"
+  - "*.gif"
+  - "*.xbb"
+  - "*.html"
+  - "*.sty"
+  - "*.bst"
+  - "*.aux"
+  - "*.log"
+  - "*.bbl"
+  - "*.blg"
+  - "*.out"
+  - "*.toc"
+  - "*.fdb_latexmk"
+  - "*.fls"
+  - "*.synctex.gz"
+
+  # ── Generic junk ───────────────────────────────────────────────
+  - "*.pyc"
+  - "__pycache__/"
+  - ".DS_Store"
+  - ".git/"
+  - ".gitignore"
+  - ".gitmodules"
+  - "*.swp"
+  - "*~"
+
+master_files:
+  - "BufferStockTheory.tex"
+  - "BufferStockTheory.md"
+  - "BufferStockTheory.txt"
+  - "Appendices*.tex"
+  - "README.md"
+  - "*.md"
+  - "*.ipynb"
+  - "*.py"
+
+source_relationships:
+  - source: "*.tex"
+    generates:
+      - "*.pdf"
+      - "*.aux"
+      - "*.log"
+      - "*.bbl"
+      - "*.blg"
+      - "*.out"
+      - "*.toc"
+  - source: "*.ipynb"
+    generates:
+      - "*.html"
+      - "*.pdf"
+      - "*.py"
+  - source: "*.md"
+    generates:
+      - "*.pdf"
+      - "*.html"

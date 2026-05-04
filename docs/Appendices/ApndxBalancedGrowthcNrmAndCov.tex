@@ -1,0 +1,115 @@
+% -*- mode: LaTeX; TeX-PDF-mode: t; -*-
+\input{@resources/tex-add-search-paths}  % allow latex to find custom stuff
+\input{./.econtexRoot}\documentclass[\econtexRoot/BufferStockTheory]{subfiles}
+
+\newcommand{\subname}{ApndxBalancedGrowthcNrmAndCov}
+\input{\econtexRoot/@local/dir-paths} % get directory macros
+\usepackage{econark-ifsubfile}        % allow conditional execution of code
+\usepackage{econark-xrsetup}          % Xternal crossReferences (from main document)
+\usepackage{pdforhtml}
+\xrsetup{\econtexRoot/\texname}
+
+%\renewcommand{\LtxDir}{}
+\notinsubfile{\renewcommand{\LtxDir}{}}
+
+\newcommand{\headmath}[1]{%
+  \settowidth{\dimen0}{$#1$}%
+  \mbox{}\hspace{1.2\dimen0}$#1$\hspace{1.2\dimen0}\mbox{}%
+}
+\provideboolean{Web}
+\setboolean{Web}{false} % reset to true if running via dvi; search for \ifdvi below
+
+% html version of document must be constructed by running pdflatex in
+% dvi output mode; code below creates an ifdvi construct that detects
+% whether running in dvi mode and sets the options necessary to generate
+% html version of document using tex4ht
+
+\makeatletter
+\newif\ifdvi\dvitrue
+\@ifundefined{pdfoutput}{}{\ifnum\pdfoutput>0 \dvifalse\fi}
+\makeatother
+
+% dvi compilation only occurs if making the html version
+\ifdvi
+  \setboolean{Web}{true}   
+\fi
+\begin{document}
+
+\hypertarget{ApndxBalancedGrowthcNrmAndCov}{}
+
+\section{Appendix for Section 4}
+
+\ifthenelse{\boolean{Web}}{
+    \subsection{Apparent Balanced Growth in \headmath{\cNrmAvg} and \headmath{\cov(\cNrm,\permLvl)}}
+  }{
+    \subsection{Apparent Balanced Growth in \texorpdfstring{$\cNrmAvg$}{c} and \texorpdfstring{$\cov(\cNrm,\permLvl)$}{cov(c,p)}}
+}    
+
+%\subsection{Apparent Balanced Growth in \texorpdfstring{$\cNrmAvg$}{c} and \texorpdfstring{$\cov(\cNrm,\permLvl)$}{cov(c,p)}}
+%\subsection{Apparent Balanced Growth in \headmath{\log \cNrmAvg} and \headmath{\log \cov(c,p)}}
+\label{sec:ApndxBalancedGrowthcNrmAndCov}
+
+%\providecommand{\GroFac}{\Omega}\renewcommand{\GroFac}{\Omega}
+Section~\ref{subsec:Covariances} demonstrates some propositions under the assumption that, when an economy satisfies the {\GICRaw}, there will be constant growth factors $\GroFac_{\cNrmAvg}$ and $\GroFac_{\cov}$ respectively for $\cNrmAvg$ (the average value of the consumption ratio) and $\cov(\cNrm,\permLvl)$.  In the case of a Szeidl-invariant economy, the main text shows that these are $\GroFac_{\cNrmAvg}=1$ and $\GroFac_{\cov}=\PermGroFac$.  If the economy is Harmenberg- but not Szeidl-invariant, no proof is offered that these growth factors will be constant.
+
+\ifthenelse{\boolean{Web}}{
+    \subsection{\headmath{\log \cNrm} and \headmath{\log \cov(\cNrm,\permLvl)} Grow Linearly}
+  }{
+\subsection{\texorpdfstring{$\log \cNrm$}{log c} and \texorpdfstring{$\log \cov(\cNrm,\permLvl)$}{log cov(c,p)} Grow Linearly}
+}    
+
+%\subsection{\headmath{\log \cNrm} and \headmath{\log \cov(\cNrm,\permLvl)} Grow Linearly}
+Figures~\ref{fig:logcNrm} and~\ref{fig:logcov} plot the results of simulations of an economy that satisfies Harmenberg- but not Szeidl-invariance with a population of 4 million agents over the last 1000 periods (of a 2000 period simulation).\footnote{For an exposition of our implementation of Harmenberg's method, see \href{https://github.com/econ-ark/BufferStockTheory/blob/master/Appendices/ApndxHarKmenberg.pdf}{this supplemental appendix.}}  The first figure shows that $\log \cNrmAvg$ increases apparently linearly.  The second figure shows that $\log (-\cov(\cNrm,\permLvl))$ also increases apparently linearly.  (These results are produced by the notebook \href{https://github.com/econ-ark/BufferStockTheory/blob/master/Code/Python/ApndxBalancedGrowthcNrmAndCov.ipynb}{\texttt{ApndxBalancedGrowthcNrmAndCov.ipynb}}).
+
+\pagebreak
+\begin{figure}[ht]
+  \centerline{
+    \includegraphics[width=0.9\textwidth]{\FigDir/logcNrm}
+  }
+  \caption{Appendix: $\log ~\mathfrak{c}$ Appears to Grow Linearly}
+  \label{fig:logcNrm}
+\end{figure}
+\begin{figure}[ht]
+  \centerline{
+    \includegraphics[width=0.9\textwidth]{\FigDir/logcov}
+  }
+  \caption{Appendix: $\log ~(-\cov(\cNrm,\permLvl))$ Appears to Grow Linearly}
+  \label{fig:logcov}
+\end{figure}
+
+(see \eqref{eq:DBCparts})
+  % \begin{equation}\label{eq:DBCparts} % Don't define it if already defined
+  %   \begin{aligned}
+  %     \aLvl_{t}     & = \mLvl_{t}-\cLvl_{t}  \\
+  %     \kLvl_{t+1}   & = \aLvl_{t} \notag \\
+  %     \permLvl_{t+1}  & = \permLvl_{t} \underbrace{\PermGroFac\permShk_{t+1}}_{:= \Rnd{\PermGroFac}_{t+1}} \notag \\
+  %     \mLvl_{t+1}  & =   \underbrace{\Rfree \kLvl_{t+1}}_{:= \bLvl_{t+1}}  +\underbrace{\permLvl_{t+1}\tranShkAll_{t+1}}_{:= \yLvl_{t+1}}. \notag
+  %   \end{aligned}
+  % \end{equation}
+
+
+
+\end{document}
+\endinput
+
+% Local Variables:
+% eval: (setq TeX-command-list  (assq-delete-all (car (assoc "BibTeX" TeX-command-list)) TeX-command-list))
+% eval: (setq TeX-command-list  (assq-delete-all (car (assoc "BibTeX" TeX-command-list)) TeX-command-list))
+% eval: (setq TeX-command-list  (assq-delete-all (car (assoc "BibTeX" TeX-command-list)) TeX-command-list))
+% eval: (setq TeX-command-list  (assq-delete-all (car (assoc "BibTeX" TeX-command-list)) TeX-command-list))
+% eval: (setq TeX-command-list  (assq-delete-all (car (assoc "Biber"  TeX-command-list)) TeX-command-list))
+% eval: (add-to-list 'TeX-command-list '("BibTeX" "bibtex.%s" TeX-run-BibTeX nil t                                                                              :help "Run BibTeX") t)
+% eval: (add-to-list 'TeX-command-list '("BibTeX" "bibtex.%s" TeX-run-BibTeX nil (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode context-mode) :help "Run BibTeX") t)
+% TeX-PDF-mode: t
+% TeX-file-line-error: t
+% TeX-debug-warnings: t
+% LaTeX-command-style: (("" "%(PDF)%(latex) %(file-line-error) %(extraopts) -output-directory=. %S%(PDFout)"))
+% TeX-source-correlate-mode: t
+% TeX-parse-self: t
+% eval: (cond ((string-equal system-type "darwin") (progn (setq TeX-view-program-list '(("Skim" "/Applications/Skim.app/Contents/SharedSupport/displayline -b %n %o %b"))))))
+% eval: (cond ((string-equal system-type "gnu/linux") (progn (setq TeX-view-program-list '(("Evince" "evince --page-index=%(outpage).%o"))))))
+% eval: (cond ((string-equal system-type "gnu/linux") (progn (setq TeX-view-program-selection '((output-pdf "Evince"))))))
+% TeX-parse-all-errors: t
+% End:
+
+

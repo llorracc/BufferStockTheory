@@ -1,0 +1,494 @@
+# evaluation/benchmark.yml
+#
+# 20 hand-authored questions for measuring matsya retrieval against
+# BufferStockTheory. Five categories × 4 questions. See
+# benchmark_schema.yml for the entry shape and README.md for usage.
+#
+# All anchors in expected_sources[*].anchor must dereference in
+# BufferStockTheory.md (validator in score.py checks).
+# expected_chunks lists .tex / .md basenames matsya should pull from
+# (used directly for source_recall/source_precision).
+
+# === DEFINITIONS (4) ==================================================
+
+- id: q01-defn-permgrofacadj
+  category: definitions
+  question: 'What does \PermGroFacAdj mean in the paper, and how does it relate to \PermGroFac?'
+  expected_answer: |
+    \PermGroFacAdj is the uncertainty-adjusted permanent-income
+    growth factor, defined as \PermGroFacAdj := \PermGroFac /
+    \Ex[1/\permShk] (equivalently, \PermGroFac \cdot \InvEPermShkInv).
+    By Jensen's inequality applied to 1/x, \Ex[1/\permShk] \geq 1,
+    with strict inequality whenever \permShk has positive variance,
+    so \PermGroFacAdj \leq \PermGroFac. It is the denominator of
+    the modified growth patience factor in the closed form
+    \GPFacMod \equiv \APFac / \PermGroFacAdj, which makes GIC-Mod
+    strictly stronger than the ordinary GIC whenever permanent-shock
+    variance is positive.
+  expected_sources:
+    - file: BufferStockTheory.md
+      anchor: PermGroFacAdj
+    - file: BufferStockTheory.md
+      anchor: eq-GPFacMod
+  expected_chunks:
+    - BufferStockTheory-NoAppendix.tex
+    - Comparison.tex
+  notes: 'Tests whether matsya recovers the harmonic-mean adjustment that distinguishes GIC from GIC-Mod.'
+  difficulty: 3
+
+- id: q02-defn-buffer-stock-target
+  category: definitions
+  question: 'What is the buffer-stock target in this paper?'
+  expected_answer: |
+    The buffer-stock target \mTrgNrm is a level of normalised
+    market resources at which expected normalised resources are
+    unchanged from one period to the next: \Ex_t[\mNrm_{t+1}/\mNrm_t]
+    = 1 when \mNrm_t = \mTrgNrm. Below the target, expected
+    normalised resources rise; above it, they fall — \mTrgNrm is a
+    stable point of the dynamics of \mNrm. Existence of the
+    individual buffer-stock target (Theorem thm-target) requires
+    weak return impatience (WRIC), finite value of autarky (FVAC),
+    and the strong growth-impatience condition (GIC-Mod).
+  expected_sources:
+    - file: BufferStockTheory.md
+      anchor: thm-target
+    - file: BufferStockTheory.md
+      anchor: eq-mTarget
+    - file: BufferStockTheory.md
+      anchor: onetarget
+  expected_chunks:
+    - BufferStockTheory-NoAppendix.tex
+  difficulty: 2
+
+- id: q03-defn-Ex-operator
+  category: definitions
+  question: 'What does the symbol \Ex_t represent in this paper, and what does it take expectation over?'
+  expected_answer: |
+    \Ex_t is the time-t conditional expectation operator, taken
+    over next period's permanent and transitory income shocks
+    (\permShk_{t+1} and \tranShkAll_{t+1}). It first appears in
+    the level-form Bellman equation in the Setup section and is
+    used throughout the recursive normalised problem
+    eq-veqnNrmRecBellman to express expected continuation value.
+  expected_sources:
+    - file: BufferStockTheory.md
+      anchor: eq-veqnNrmRecBellman
+    - file: BufferStockTheory.md
+      anchor: ass-shocks
+  expected_chunks:
+    - BufferStockTheory-NoAppendix.tex
+  notes: 'Basic-notation question — sanity check that matsya gets simple definitions right.'
+  difficulty: 1
+
+- id: q04-defn-APFac
+  category: definitions
+  question: 'What is the Absolute Patience Factor \APFac?'
+  expected_answer: |
+    The absolute patience factor \APFac (typeset with the archaic
+    letter "thorn", Þ) is defined as \APFac := (\Rfree \DiscFac)^{1/\CRRA}.
+    It is the consumption-growth factor implied by the Euler equation
+    of a perfect-foresight model: \cLvl_{t+1}/\cLvl_t = (\Rfree \DiscFac)^{1/\CRRA}
+    = \APFac. \APFac is the common numerator of every named patience
+    factor in the paper, with the four patience conditions (AIC, RIC,
+    GIC, GIC-Mod) comparing \APFac to the four denominators 1, \Rfree,
+    \PermGroFac, and \PermGroFacAdj respectively.
+  expected_sources:
+    - file: BufferStockTheory.md
+      anchor: APFac
+    - file: BufferStockTheory.md
+      anchor: eq-APFac
+  expected_chunks:
+    - BufferStockTheory-NoAppendix.tex
+    - Comparison.tex
+  difficulty: 1
+
+# === THEOREMS (4) =====================================================
+
+- id: q05-thms-thm-convgtobellman-requires
+  category: theorems
+  question: 'What conditions does Theorem thm-convgtobellman (Existence of Non-degenerate Solution) require?'
+  expected_answer: |
+    Theorem thm-convgtobellman requires two assumptions: weak
+    return impatience (WRIC, ass-WRIC) and finite value of
+    autarky (FVAC, ass-FVAC). Under these, the sequence of value
+    functions generated by the finite-horizon problem converges
+    point-wise to a fixed point of the stationary Bellman operator
+    \TMap, the policy function converges to a measurable \cFunc,
+    and the pair (\vFunc, \cFunc) is a limiting non-degenerate
+    solution. The same two conditions are also what Theorem
+    thm-cmap (Contraction Mapping Under Consumption Bounds)
+    needs.
+  expected_sources:
+    - file: BufferStockTheory.md
+      anchor: thm-convgtobellman
+    - file: BufferStockTheory.md
+      anchor: thm-cmap
+  expected_chunks:
+    - BufferStockTheory-NoAppendix.tex
+    - ApndxConcaveCFunc.tex
+  notes: 'expected_chunks pairs the main-body statement with the proof appendix (ApndxConcaveCFunc contains proof of thm:convgtobellman per its label sec:Tcontractionmapping). This breaks the labelling artefact where every theorem question trivially passes by pulling BufferStockTheory-NoAppendix.tex.'
+  difficulty: 2
+
+- id: q06-thms-mpc-bounds-lemma
+  category: theorems
+  question: 'Which lemma in the paper proves bounds on the Marginal Propensity to Consume, and what does it require?'
+  expected_answer: |
+    Lemma lemm-MPC ("Limiting MPCs") proves the recursion for the
+    minimum and maximum MPCs and shows that, under weak return
+    impatience (WRIC), the maximal limiting MPC \MPCmax is
+    strictly positive; under the stronger return-impatience
+    condition (RIC), the minimal limiting MPC \MPCmin equals
+    1 - \RPFac > 0. The companion lemma lemma-MPCBoundsConvg
+    establishes convergence properties of these MPC bounds and
+    is used in the existence proofs that follow.
+  expected_sources:
+    - file: BufferStockTheory.md
+      anchor: lemm-MPC
+    - file: BufferStockTheory.md
+      anchor: lemma-MPCBoundsConvg
+  expected_chunks:
+    - BufferStockTheory-NoAppendix.tex
+    - ApndxConcaveCFunc.tex
+  notes: 'expected_chunks pairs the main-body lemma statement with the proof appendix (ApndxConcaveCFunc subsection sec:MPCiterproofs contains the proof of lemm:MPC).'
+  difficulty: 3
+
+- id: q07-thms-thm-target-assumptions
+  category: theorems
+  question: 'What three conditions does Theorem thm-target (existence of an individual buffer-stock target) assume?'
+  expected_answer: |
+    Theorem thm-target assumes (i) the weak return-impatience
+    condition (WRIC, ass-WRIC), (ii) finite value of autarky
+    (FVAC, ass-FVAC), and (iii) the strong growth-impatience
+    condition GIC-Mod (ass-GICMod). The third — GIC-Mod, which
+    uses the harmonic-mean uncertainty-adjusted growth factor
+    \PermGroFacAdj — is what distinguishes thm-target from the
+    pseudo-target existence theorem thm-MSSBalExists, which
+    requires only the ordinary GIC.
+  expected_sources:
+    - file: BufferStockTheory.md
+      anchor: thm-target
+    - file: BufferStockTheory.md
+      anchor: ass-GICMod
+    - file: BufferStockTheory.md
+      anchor: ass-WRIC
+    - file: BufferStockTheory.md
+      anchor: ass-FVAC
+  expected_chunks:
+    - BufferStockTheory-NoAppendix.tex
+    - ApndxMTargetIsStable.tex
+  notes: 'expected_chunks pairs the main-body theorem statement with the proof appendix (ApndxMTargetIsStable contains the proof of thm:target).'
+  difficulty: 2
+
+- id: q08-thms-implication-chain-location
+  category: theorems
+  question: 'Where in the paper is the implication chain GIC ⇒ FVAC ⇒ RIC formally stated, and under what extra condition does it hold?'
+  expected_answer: |
+    The implication chain GIC ⇒ FVAC ⇒ RIC is stated as Claim
+    claim-PFConspC (a prf:property), under the extra assumption
+    of finite human wealth (FHWC). The claim states: if FHWC
+    holds then GIC implies FVAC, and FVAC implies RIC. Without
+    FHWC, the chain need not hold — the paper notes that RIC
+    and FHWC can hold while FVAC fails (e.g., the cake-eating
+    case with \PermGroFac = 0). The proof appears in the
+    appendix (subsec-PFBProofs).
+  expected_sources:
+    - file: BufferStockTheory.md
+      anchor: claim-PFConspC
+    - file: BufferStockTheory.md
+      anchor: ass-FHWC
+  expected_chunks:
+    - BufferStockTheory-NoAppendix.tex
+    - ApndxConcaveCFunc.tex
+  notes: 'expected_chunks pairs the main-body claim statement with the proof appendix (ApndxConcaveCFunc subsection subsec:PFBProofs contains the proof of claim:PFConspC).'
+  difficulty: 3
+
+# === CONDITION RELATIONSHIPS (4) ======================================
+
+- id: q09-cond-gic-implies-fvac
+  category: conditions
+  question: 'Does the Growth Impatience Condition (GIC) imply Finite Value of Autarky (FVAC)? Under what additional assumption?'
+  expected_answer: |
+    GIC implies FVAC under the additional assumption of finite
+    human wealth (FHWC, i.e. \PermGroFac/\Rfree < 1). This is
+    one half of Claim claim-PFConspC, which under FHWC
+    establishes the chain GIC ⇒ FVAC ⇒ RIC. Without FHWC the
+    implication does not hold in general — the paper gives the
+    cake-eating limit (\PermGroFac = 0) as a counterexample
+    where RIC is sufficient for a non-degenerate solution
+    despite FVAC failing.
+  expected_sources:
+    - file: BufferStockTheory.md
+      anchor: claim-PFConspC
+    - file: BufferStockTheory.md
+      anchor: ass-FHWC
+  expected_chunks:
+    - BufferStockTheory-NoAppendix.tex
+  difficulty: 2
+
+- id: q10-cond-gic-vs-gicmod-denominators
+  category: conditions
+  question: 'What is the difference between GIC and GIC-Mod, and what is the denominator of the patience factor in each?'
+  expected_answer: |
+    Both conditions take the form (numerator)/(denominator) < 1
+    with the common numerator \APFac := (\Rfree\DiscFac)^{1/\CRRA}.
+    Their denominators differ: GIC uses \PermGroFac (the
+    deterministic permanent-income growth factor), giving
+    \GPFacRaw := \APFac/\PermGroFac < 1. GIC-Mod uses
+    \PermGroFacAdj := \PermGroFac/\Ex[1/\permShk] (the
+    harmonic-mean uncertainty-adjusted growth factor), giving
+    \GPFacMod \equiv \APFac/\PermGroFacAdj < 1. By Jensen,
+    \PermGroFacAdj \leq \PermGroFac, hence \GPFacMod \geq
+    \GPFacRaw, with the inequalities strict whenever \permShk
+    has positive variance. So GIC-Mod is strictly stronger than
+    GIC under any genuine permanent-shock uncertainty.
+  expected_sources:
+    - file: BufferStockTheory.md
+      anchor: ass-GICRaw
+    - file: BufferStockTheory.md
+      anchor: ass-GICMod
+    - file: BufferStockTheory.md
+      anchor: eq-GPFacMod
+    - file: BufferStockTheory.md
+      anchor: PermGroFacAdj
+  expected_chunks:
+    - BufferStockTheory-NoAppendix.tex
+  difficulty: 3
+
+- id: q11-cond-target-without-pseudo-target
+  category: conditions
+  question: 'Can the individual buffer-stock target \mTrgNrm exist while the pseudo-target \mBalLvl does not?'
+  expected_answer: |
+    No. The individual buffer-stock target requires the strong
+    growth-impatience condition GIC-Mod (Theorem thm-target),
+    while the pseudo-target requires only the ordinary GIC
+    (Theorem thm-MSSBalExists). Because GIC-Mod implies GIC,
+    whenever the conditions for the individual target hold,
+    the conditions for the pseudo-target also hold. The reverse
+    can fail: when permanent-shock variance is large enough that
+    GIC-Mod fails but GIC still holds, the pseudo-target exists
+    while the individual target does not — illustrated in
+    Figure GICModFailsButGICRawHolds.
+  expected_sources:
+    - file: BufferStockTheory.md
+      anchor: thm-target
+    - file: BufferStockTheory.md
+      anchor: thm-MSSBalExists
+    - file: BufferStockTheory.md
+      anchor: GICModFailsButGICRawHolds
+  expected_chunks:
+    - BufferStockTheory-NoAppendix.tex
+  notes: 'Trick question: tests whether matsya recognises the asymmetric strength of the two conditions.'
+  difficulty: 4
+
+- id: q12-cond-four-denominators
+  category: conditions
+  question: 'What four denominators underlie the four named patience conditions in the paper, and which condition uses which denominator?'
+  expected_answer: |
+    All four named patience conditions take the form
+    \APFac/(denominator) < 1 with \APFac := (\Rfree\DiscFac)^{1/\CRRA}
+    as the common numerator. The four denominators are:
+    (1) 1 — Absolute Impatience Condition (AIC), \APFac < 1;
+    (2) \Rfree — Return Impatience Condition (RIC), \RPFac =
+    \APFac/\Rfree < 1; (3) \PermGroFac — Growth Impatience
+    Condition (GIC), \GPFacRaw = \APFac/\PermGroFac < 1; and
+    (4) \PermGroFacAdj := \PermGroFac/\Ex[1/\permShk] — Modified
+    Growth Impatience Condition (GIC-Mod), \GPFacMod =
+    \APFac/\PermGroFacAdj < 1. The four denominators ascend (when
+    they don't tie) by impatience-strictness: GIC-Mod is the
+    strongest growth condition, GIC the weaker sibling.
+  expected_sources:
+    - file: BufferStockTheory.md
+      anchor: ass-AIC
+    - file: BufferStockTheory.md
+      anchor: ass-RIC
+    - file: BufferStockTheory.md
+      anchor: ass-GICRaw
+    - file: BufferStockTheory.md
+      anchor: ass-GICMod
+  expected_chunks:
+    - BufferStockTheory-NoAppendix.tex
+    - Comparison.tex
+  difficulty: 4
+
+# === CALIBRATION / NUMERICS (4) =======================================
+
+- id: q13-calib-CRRA-value
+  category: calibration
+  question: 'What value of the coefficient of relative risk aversion \CRRA does the paper use in its baseline calibration?'
+  expected_answer: |
+    The baseline calibration uses \CRRA = 2 (labelled "Conventional"
+    in the Microeconomic Model Calibration table). Combined with
+    the calibrated \DiscFac = 0.96 and \Rfree = 1.04, this yields
+    an absolute patience factor \APFac = (\Rfree\DiscFac)^{1/\CRRA}
+    \approx 0.999.
+  expected_sources:
+    - file: BufferStockTheory.md
+      anchor: PermGroFacAdj
+  expected_chunks:
+    - BufferStockTheory-NoAppendix.tex
+    - Comparison.tex
+    - Comparison-subfile.tex
+  notes: 'Calibration table is in BufferStockTheory.md around line 1399 — anchored only loosely. PermGroFacAdj is the closest named anchor.'
+  difficulty: 1
+
+- id: q14-calib-APFac-value
+  category: calibration
+  question: 'What is the calibrated numerical value of the Absolute Patience Factor \APFac under the paper''s baseline parameters?'
+  expected_answer: |
+    \APFac = (\Rfree \DiscFac)^{1/\CRRA} = (1.04 \cdot 0.96)^{1/2}
+    \approx 0.999. The calibration table reports it as 0.999. With
+    this value, \APFac is just barely below 1, and the related
+    patience factors come out to \RPFac \approx 0.961, \GPFacRaw
+    \approx 0.970, \GPFacMod \approx 0.980 — all below 1, so AIC,
+    RIC, GIC, and GIC-Mod all hold under the baseline calibration.
+  expected_sources:
+    - file: BufferStockTheory.md
+      anchor: APFac
+    - file: BufferStockTheory.md
+      anchor: eq-APFac
+  expected_chunks:
+    - BufferStockTheory-NoAppendix.tex
+    - Comparison.tex
+    - Comparison-subfile.tex
+  difficulty: 2
+
+- id: q15-calib-permshk-stddev
+  category: calibration
+  question: 'What is the calibrated standard deviation of the log permanent shock?'
+  expected_answer: |
+    The calibrated standard deviation of the log permanent shock
+    \sigma_{\permShk} is 0.1, sourced from PSID estimates by
+    Carroll (1992). The transitory shock has the same calibrated
+    log standard deviation \sigma_{\theta} = 0.1, also from the
+    same source.
+  expected_sources:
+    - file: BufferStockTheory.md
+      anchor: ass-shocks
+  expected_chunks:
+    - BufferStockTheory-NoAppendix.tex
+    - Comparison.tex
+    - Comparison-subfile.tex
+  difficulty: 1
+
+- id: q16-calib-Rfree-value
+  category: calibration
+  question: 'What value of the gross interest factor \Rfree does the paper use in its baseline calibration, and what does the corresponding finite-human-wealth factor evaluate to?'
+  expected_answer: |
+    The baseline calibration uses \Rfree = 1.04 (labelled
+    "Conventional"), together with \PermGroFac = 1.03. Hence the
+    finite-human-wealth factor \RNrmByGRnd^{-1} = \PermGroFac/\Rfree
+    = 1.03/1.04 \approx 0.990, comfortably below 1, so FHWC holds
+    under the baseline calibration.
+  expected_sources:
+    - file: BufferStockTheory.md
+      anchor: ass-FHWC
+    - file: BufferStockTheory.md
+      anchor: eq-FHWC2
+  expected_chunks:
+    - BufferStockTheory-NoAppendix.tex
+    - Comparison.tex
+    - Comparison-subfile.tex
+  difficulty: 2
+
+# === CROSS-PAPER / DDSL BRIDGE (4) ====================================
+
+- id: q17-xref-bellman-ddsl-perches
+  category: cross-paper
+  question: 'How would the consumer''s decision problem in this paper be expressed in bellman-ddsl perches and stages?'
+  expected_answer: |
+    In the bellman-ddsl framework, a consumer's single-period
+    consumption-saving problem corresponds to a stage with
+    perches representing the agent's state, choice, and
+    continuation. The paper's normalised recursive Bellman
+    eq-veqnNrmRecBellman has \mNrm_t as the incoming state
+    perch, \cNrm_t as the choice perch, and post-decision
+    end-of-period assets \aNrm_t = \mNrm_t - \cNrm_t feeding
+    into the next period's state via the transition
+    \mNrm_{t+1} = \RNrmByGRnd \aNrm_t + \tranShkAll_{t+1}. The
+    repository's HARK example ConsPerfForesight_mdp.md is the
+    nearest perfect-foresight analogue.
+  expected_sources:
+    - file: BufferStockTheory.md
+      anchor: eq-veqnNrmRecBellman
+  expected_chunks:
+    - BufferStockTheory-NoAppendix.tex
+    - ConsPerfForesight_mdp.md
+  notes: 'Cross-repo question — should pull both BST and bellman-ddsl chunks.'
+  difficulty: 4
+
+- id: q18-xref-szeidl-contrast
+  category: cross-paper
+  question: 'How does this paper''s approach contrast with Szeidl (2013)?'
+  expected_answer: |
+    Szeidl (2013) (cite-szeidlInvariant) showed that the standard
+    impatience condition \DiscFac \Rfree < 1 commonly imposed in
+    Bewley models is in general neither necessary nor sufficient
+    for existence of a non-degenerate limiting solution. This
+    paper builds on that observation by articulating the more
+    nuanced family of patience conditions (AIC, RIC, GIC,
+    GIC-Mod, FVAC) that *are* the right conditions in the
+    presence of nonstationary permanent income, and uses Szeidl's
+    log-GIC condition (eq-GICSdl) to characterise existence of
+    invariant cross-sectional distributions in Section
+    subsec-cGroEqPermGroFacQ.
+  expected_sources:
+    - file: BufferStockTheory.md
+      anchor: GICSdl
+    - file: BufferStockTheory.md
+      anchor: eq-GICSdl
+  expected_chunks:
+    - BufferStockTheory-NoAppendix.tex
+    - Introduction.tex
+  difficulty: 3
+
+- id: q19-xref-income-fluctuation-literature
+  category: cross-paper
+  question: 'Where does the paper discuss the income-fluctuation problem literature, and which key papers does it cite?'
+  expected_answer: |
+    The paper discusses the income-fluctuation literature in the
+    Introduction, treating "Bewley model" and "income fluctuation
+    problem" as synonyms. Key cited works include Bewley (1977,
+    cite-bewleyPIH) — the original framework; Schectman (1976,
+    cite-schectman-fluctuation) — the original income-fluctuation
+    formulation; Aiyagari (1994, cite-aiyagari-ge) — natural
+    borrowing constraint; and Ma, Stachurski and Toda (2020,
+    2022a, cite-mstIncFluct, cite-maUnboundedDP) — the most
+    general recent results, which the paper notes are
+    inapplicable here because they require an artificial
+    constraint and a positive minimum income, whereas this
+    paper handles unbounded permanent income with no artificial
+    constraint.
+  expected_sources:
+    - file: BufferStockTheory.md
+      anchor: cite-bewleyPIH
+    - file: BufferStockTheory.md
+      anchor: cite-schectman-fluctuation
+    - file: BufferStockTheory.md
+      anchor: cite-mstIncFluct
+  expected_chunks:
+    - BufferStockTheory-NoAppendix.tex
+    - Introduction.tex
+  difficulty: 2
+
+- id: q20-xref-mst-comparison
+  category: cross-paper
+  question: 'How does this paper''s strong growth-impatience condition (GIC-Mod) compare to the impatience condition Ma, Stachurski, and Toda (2020) use to guarantee stability?'
+  expected_answer: |
+    The paper notes that since \CRRA > 1, the strong
+    growth-impatience condition GIC-Mod is *weaker* than the
+    Ma, Stachurski, and Toda (2020) impatience condition
+    \DiscFac \Ex[\Rnd{\PermGroFac}_{t+1}^{1-\CRRA}] \RNrmByGRnd
+    < 1 used in their stability proof. So GIC-Mod is the milder
+    condition: any model satisfying the MST stability condition
+    also satisfies GIC-Mod, but not vice versa. The paper relies
+    on GIC-Mod (together with WRIC and FVAC) for individual
+    buffer-stock target existence rather than the stronger MST
+    condition.
+  expected_sources:
+    - file: BufferStockTheory.md
+      anchor: ass-GICMod
+    - file: BufferStockTheory.md
+      anchor: cite-mstIncFluct
+  expected_chunks:
+    - BufferStockTheory-NoAppendix.tex
+  difficulty: 4

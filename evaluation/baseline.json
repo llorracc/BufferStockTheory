@@ -1,0 +1,487 @@
+{
+  "n_questions": 20,
+  "n_scored": 20,
+  "n_missing": 0,
+  "missing_ids": [],
+  "per_question": {
+    "q01-defn-permgrofacadj": {
+      "source_recall": 0.5,
+      "source_precision": 0.09090909090909091,
+      "answer_agreement": 0.597619412343913,
+      "matsya_basenames": [
+        "ApndxConcaveCFunc.tex",
+        "ApndxConditionDiagrams.tex",
+        "ApndxHarKmenberg.tex",
+        "BufferStockTheory-NoAppendix.tex",
+        "InequalityPFGICFHWCRIC.tex",
+        "RelatePFGICFHWCRICPFFVAC.tex",
+        "econark-shortcuts.md",
+        "endOfPrd.py",
+        "endOfPrdMC.py",
+        "example-myst.md",
+        "stage-cons-with-shocks.md"
+      ],
+      "expected_chunks": [
+        "BufferStockTheory-NoAppendix.tex",
+        "Comparison.tex"
+      ],
+      "intersection": [
+        "BufferStockTheory-NoAppendix.tex"
+      ]
+    },
+    "q02-defn-buffer-stock-target": {
+      "source_recall": 1.0,
+      "source_precision": 0.1111111111111111,
+      "answer_agreement": 0.6465918077812576,
+      "matsya_basenames": [
+        "05-bellman-theory.md",
+        "05_suggestion_functional_args.md",
+        "BufferStockTheory-NoAppendix.tex",
+        "Introduction.tex",
+        "SolvingMicroDSOPs-clean.tex",
+        "_sectn-titlepage.tex",
+        "buffer-stock-calibration.yml",
+        "dolo-plus.md",
+        "foundations-combined.md"
+      ],
+      "expected_chunks": [
+        "BufferStockTheory-NoAppendix.tex"
+      ],
+      "intersection": [
+        "BufferStockTheory-NoAppendix.tex"
+      ]
+    },
+    "q03-defn-Ex-operator": {
+      "source_recall": 1.0,
+      "source_precision": 0.125,
+      "answer_agreement": 0.7105343107970039,
+      "matsya_basenames": [
+        "ApndxNotation.tex",
+        "BufferStockTheory-NoAppendix.tex",
+        "CDC Prompt.md",
+        "REPORT.md",
+        "consumption_savings_iid_mbdp_aux_k_reward_u.yaml",
+        "example-dolo-plus-consumption-savings-iid-egm-adc.yaml",
+        "model_specification.md",
+        "research_v1.md"
+      ],
+      "expected_chunks": [
+        "BufferStockTheory-NoAppendix.tex"
+      ],
+      "intersection": [
+        "BufferStockTheory-NoAppendix.tex"
+      ]
+    },
+    "q04-defn-APFac": {
+      "source_recall": 0.5,
+      "source_precision": 0.14285714285714285,
+      "answer_agreement": 0.7947774101086572,
+      "matsya_basenames": [
+        "ApndxConditionDiagrams.tex",
+        "BufferStockTheory-NoAppendix.tex",
+        "BufferStockTheory-Slides.tex",
+        "Calibration-subfile.tex",
+        "Calibration.tex",
+        "Introduction.tex",
+        "RelatePFGICFHWCRICPFFVAC.tex"
+      ],
+      "expected_chunks": [
+        "BufferStockTheory-NoAppendix.tex",
+        "Comparison.tex"
+      ],
+      "intersection": [
+        "BufferStockTheory-NoAppendix.tex"
+      ]
+    },
+    "q05-thms-thm-convgtobellman-requires": {
+      "source_recall": 1.0,
+      "source_precision": 0.2222222222222222,
+      "answer_agreement": 0.5635179534443399,
+      "matsya_basenames": [
+        "12122025.md",
+        "ApndxConcaveCFunc.tex",
+        "BufferStockTheory-NoAppendix.tex",
+        "Introduction.tex",
+        "ch_adps.tex",
+        "ch_math_foundations.tex",
+        "ch_mdps.tex",
+        "ch_other.tex",
+        "diagramv4-math-review-2026-04-02.md"
+      ],
+      "expected_chunks": [
+        "ApndxConcaveCFunc.tex",
+        "BufferStockTheory-NoAppendix.tex"
+      ],
+      "intersection": [
+        "ApndxConcaveCFunc.tex",
+        "BufferStockTheory-NoAppendix.tex"
+      ]
+    },
+    "q06-thms-mpc-bounds-lemma": {
+      "source_recall": 0.5,
+      "source_precision": 0.14285714285714285,
+      "answer_agreement": 0.5570848752682739,
+      "matsya_basenames": [
+        "ApndxLiqConstrAsLimit.tex",
+        "BufferStockTheory-NoAppendix.tex",
+        "Introduction.tex",
+        "_sectn-method-of-moderation-brief.tex",
+        "_sectn-method-of-moderation-input.tex",
+        "_sectn-method-of-moderation.tex",
+        "modular-examples-cons_port-with-shocks.md"
+      ],
+      "expected_chunks": [
+        "ApndxConcaveCFunc.tex",
+        "BufferStockTheory-NoAppendix.tex"
+      ],
+      "intersection": [
+        "BufferStockTheory-NoAppendix.tex"
+      ]
+    },
+    "q07-thms-thm-target-assumptions": {
+      "source_recall": 1.0,
+      "source_precision": 0.2222222222222222,
+      "answer_agreement": 0.62453981075852,
+      "matsya_basenames": [
+        "05_suggestion_functional_args.md",
+        "ApndxMTargetIsStable.tex",
+        "BufferStockTheory-NoAppendix.tex",
+        "Introduction.tex",
+        "Required-subfile.tex",
+        "Required.tex",
+        "TheoremMTargetIsStable.tex",
+        "explanation_for_economists.tex",
+        "lecture2.tex"
+      ],
+      "expected_chunks": [
+        "ApndxMTargetIsStable.tex",
+        "BufferStockTheory-NoAppendix.tex"
+      ],
+      "intersection": [
+        "ApndxMTargetIsStable.tex",
+        "BufferStockTheory-NoAppendix.tex"
+      ]
+    },
+    "q08-thms-implication-chain-location": {
+      "source_recall": 1.0,
+      "source_precision": 0.3333333333333333,
+      "answer_agreement": 0.7092922161156543,
+      "matsya_basenames": [
+        "ApndxConcaveCFunc.tex",
+        "ApndxConditionDiagrams.tex",
+        "ApndxLiqConstr.tex",
+        "BufferStockTheory-NoAppendix.tex",
+        "Required-subfile.tex",
+        "Required.tex"
+      ],
+      "expected_chunks": [
+        "ApndxConcaveCFunc.tex",
+        "BufferStockTheory-NoAppendix.tex"
+      ],
+      "intersection": [
+        "ApndxConcaveCFunc.tex",
+        "BufferStockTheory-NoAppendix.tex"
+      ]
+    },
+    "q09-cond-gic-implies-fvac": {
+      "source_recall": 1.0,
+      "source_precision": 0.2,
+      "answer_agreement": 0.6750142970144405,
+      "matsya_basenames": [
+        "BufferStockTheory-NoAppendix.tex",
+        "BufferStockTheory-Slides.tex",
+        "Introduction.tex",
+        "TheoremMSSBalExists.tex",
+        "TheoremMTargetIsStable.tex"
+      ],
+      "expected_chunks": [
+        "BufferStockTheory-NoAppendix.tex"
+      ],
+      "intersection": [
+        "BufferStockTheory-NoAppendix.tex"
+      ]
+    },
+    "q10-cond-gic-vs-gicmod-denominators": {
+      "source_recall": 1.0,
+      "source_precision": 0.125,
+      "answer_agreement": 0.754582930622928,
+      "matsya_basenames": [
+        "ApndxConditionDiagrams.tex",
+        "ApndxMTargetIsStable.tex",
+        "BufferStockTheory-NoAppendix.tex",
+        "BufferStockTheory-Slides.tex",
+        "Calibration.tex",
+        "RelatePFGICFHWCRICPFFVAC.tex",
+        "dolo-sym-to-ddsl-core-mapping.md",
+        "haskell-tutorial-modules.md"
+      ],
+      "expected_chunks": [
+        "BufferStockTheory-NoAppendix.tex"
+      ],
+      "intersection": [
+        "BufferStockTheory-NoAppendix.tex"
+      ]
+    },
+    "q11-cond-target-without-pseudo-target": {
+      "source_recall": 1.0,
+      "source_precision": 0.125,
+      "answer_agreement": 0.5702218958747909,
+      "matsya_basenames": [
+        "05-bellman-theory.md",
+        "05_suggestion_functional_args.md",
+        "BufferStockTheory-NoAppendix.tex",
+        "Introduction.tex",
+        "Required-subfile.tex",
+        "Required.tex",
+        "buffer-stock-calibration.yml",
+        "foundations-combined.md"
+      ],
+      "expected_chunks": [
+        "BufferStockTheory-NoAppendix.tex"
+      ],
+      "intersection": [
+        "BufferStockTheory-NoAppendix.tex"
+      ]
+    },
+    "q12-cond-four-denominators": {
+      "source_recall": 0.5,
+      "source_precision": 0.2,
+      "answer_agreement": 0.6789426894057995,
+      "matsya_basenames": [
+        "ApndxConditionDiagrams.tex",
+        "BufferStockTheory-NoAppendix.tex",
+        "BufferStockTheory-Slides.tex",
+        "Introduction.tex",
+        "RelatePFGICFHWCRICPFFVAC.tex"
+      ],
+      "expected_chunks": [
+        "BufferStockTheory-NoAppendix.tex",
+        "Comparison.tex"
+      ],
+      "intersection": [
+        "BufferStockTheory-NoAppendix.tex"
+      ]
+    },
+    "q13-calib-CRRA-value": {
+      "source_recall": 0.0,
+      "source_precision": 0.0,
+      "answer_agreement": 0.6099178352896059,
+      "matsya_basenames": [
+        "27012026.md",
+        "Parameters.tex",
+        "StructEstimation.py",
+        "cons_params.yaml",
+        "cons_stage_mdp.md",
+        "dashboard_widget.py",
+        "example-myst.md"
+      ],
+      "expected_chunks": [
+        "BufferStockTheory-NoAppendix.tex",
+        "Comparison-subfile.tex",
+        "Comparison.tex"
+      ],
+      "intersection": []
+    },
+    "q14-calib-APFac-value": {
+      "source_recall": 0.3333333333333333,
+      "source_precision": 0.14285714285714285,
+      "answer_agreement": 0.6502443980616205,
+      "matsya_basenames": [
+        "BufferStockTheory-NoAppendix.tex",
+        "Calibration-subfile.tex",
+        "Calibration.tex",
+        "Introduction.tex",
+        "RelatePFGICFHWCRICPFFVAC.tex",
+        "cons_params.yaml",
+        "dashboard_widget.py"
+      ],
+      "expected_chunks": [
+        "BufferStockTheory-NoAppendix.tex",
+        "Comparison-subfile.tex",
+        "Comparison.tex"
+      ],
+      "intersection": [
+        "BufferStockTheory-NoAppendix.tex"
+      ]
+    },
+    "q15-calib-permshk-stddev": {
+      "source_recall": 0.0,
+      "source_precision": 0.0,
+      "answer_agreement": 0.7667151432297639,
+      "matsya_basenames": [
+        "Calibration-subfile.tex",
+        "Calibration.tex",
+        "Parameters.tex",
+        "arb_state_space.md",
+        "cons_params.yaml",
+        "dashboard_widget.py",
+        "modeling_language.md",
+        "modular-examples-port-nochoice_port-with-shocks.md",
+        "multi-dim_funcs.md",
+        "port_params.yaml",
+        "processes.md",
+        "stage-cons-with-shocks.md",
+        "unified_modular-examples-using-port-with-shocks.md"
+      ],
+      "expected_chunks": [
+        "BufferStockTheory-NoAppendix.tex",
+        "Comparison-subfile.tex",
+        "Comparison.tex"
+      ],
+      "intersection": []
+    },
+    "q16-calib-Rfree-value": {
+      "source_recall": 0.3333333333333333,
+      "source_precision": 0.1111111111111111,
+      "answer_agreement": 0.5727572904425068,
+      "matsya_basenames": [
+        "BufferStockTheory-NoAppendix.tex",
+        "Parameters.tex",
+        "SolvingMicroDSOPs-clean-clean.tex",
+        "SolvingMicroDSOPs-clean.tex",
+        "_apndx-scf-data-input.tex",
+        "_apndx-scf-data.tex",
+        "_sectn-structural-estimation-input.tex",
+        "_sectn-structural-estimation.tex",
+        "dashboard_widget.py"
+      ],
+      "expected_chunks": [
+        "BufferStockTheory-NoAppendix.tex",
+        "Comparison-subfile.tex",
+        "Comparison.tex"
+      ],
+      "intersection": [
+        "BufferStockTheory-NoAppendix.tex"
+      ]
+    },
+    "q17-xref-bellman-ddsl-perches": {
+      "source_recall": 0.0,
+      "source_precision": 0.0,
+      "answer_agreement": 0.5866007905231414,
+      "matsya_basenames": [
+        "05-bellman-theory.md",
+        "05012026.md",
+        "13012026-convene1.md",
+        "14012025-convene.DIGEST.md",
+        "ApndxNotation.tex",
+        "ApndxSolutionSteps.tex",
+        "CDC Prompt.md",
+        "ConsPerfForesight_simple_mdp.md",
+        "goals.md",
+        "period-cons-noshocks-only.md"
+      ],
+      "expected_chunks": [
+        "BufferStockTheory-NoAppendix.tex",
+        "ConsPerfForesight_mdp.md"
+      ],
+      "intersection": []
+    },
+    "q18-xref-szeidl-contrast": {
+      "source_recall": 0.5,
+      "source_precision": 0.09090909090909091,
+      "answer_agreement": 0.5442295579850592,
+      "matsya_basenames": [
+        "AGENTS.md",
+        "ApndxBalancedGrowthcNrmAndCov-plus-table-plus-aligned.tex",
+        "ApndxBalancedGrowthcNrmAndCov.tex",
+        "BufferStockTheory-NoAppendix.tex",
+        "SolvingMicroDSOPs-clean-clean.tex",
+        "adc-stage-from-dp-report.md",
+        "ch_transforms.tex",
+        "chap1.tex",
+        "explanation_for_economists.tex",
+        "preface.tex",
+        "review1-marketing.md"
+      ],
+      "expected_chunks": [
+        "BufferStockTheory-NoAppendix.tex",
+        "Introduction.tex"
+      ],
+      "intersection": [
+        "BufferStockTheory-NoAppendix.tex"
+      ]
+    },
+    "q19-xref-income-fluctuation-literature": {
+      "source_recall": 1.0,
+      "source_precision": 0.2,
+      "answer_agreement": 0.5695390725153496,
+      "matsya_basenames": [
+        "20260122-1326h_deep-dive-report.md",
+        "AAS_notes.md",
+        "AAS_notes_prompt_for_51pro.md",
+        "BufferStockTheory-NoAppendix.tex",
+        "ConsIndShock_mdp.md",
+        "Introduction.tex",
+        "README.md",
+        "ch_egs.tex",
+        "chap3.tex",
+        "review2-marketing.md"
+      ],
+      "expected_chunks": [
+        "BufferStockTheory-NoAppendix.tex",
+        "Introduction.tex"
+      ],
+      "intersection": [
+        "BufferStockTheory-NoAppendix.tex",
+        "Introduction.tex"
+      ]
+    },
+    "q20-xref-mst-comparison": {
+      "source_recall": 1.0,
+      "source_precision": 0.3333333333333333,
+      "answer_agreement": 0.6945552342092299,
+      "matsya_basenames": [
+        "BufferStockTheory-NoAppendix.tex",
+        "BufferStockTheory-Slides.tex",
+        "Introduction.tex"
+      ],
+      "expected_chunks": [
+        "BufferStockTheory-NoAppendix.tex"
+      ],
+      "intersection": [
+        "BufferStockTheory-NoAppendix.tex"
+      ]
+    }
+  },
+  "aggregates": {
+    "per_category": {
+      "definitions": {
+        "n": 4,
+        "source_recall": 0.75,
+        "source_precision": 0.11746933621933622,
+        "answer_agreement": 0.6873807352577079
+      },
+      "theorems": {
+        "n": 4,
+        "source_recall": 0.875,
+        "source_precision": 0.23015873015873015,
+        "answer_agreement": 0.613608713896697
+      },
+      "conditions": {
+        "n": 4,
+        "source_recall": 0.875,
+        "source_precision": 0.1625,
+        "answer_agreement": 0.6696904532294897
+      },
+      "calibration": {
+        "n": 4,
+        "source_recall": 0.16666666666666666,
+        "source_precision": 0.06349206349206349,
+        "answer_agreement": 0.6499086667558742
+      },
+      "cross-paper": {
+        "n": 4,
+        "source_recall": 0.625,
+        "source_precision": 0.15606060606060607,
+        "answer_agreement": 0.598731163808195
+      }
+    },
+    "overall": {
+      "n": 20,
+      "source_recall": 0.6583333333333333,
+      "source_precision": 0.14593614718614717,
+      "answer_agreement": 0.6438639465895928
+    }
+  },
+  "embedder": "sentence-transformers/all-MiniLM-L6-v2"
+}

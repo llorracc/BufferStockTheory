@@ -1,0 +1,40 @@
+# glossary/aliases.yml — manual overrides for synonym grouping in
+# tools/glossary_build.py.
+#
+# Macros in `do-not-merge:` are kept as their own canonical entry,
+# overriding the body-hash equality the grouper otherwise uses. Use
+# this for cases where two paper macros happen to share a KaTeX body
+# but refer to semantically distinct concepts.
+#
+# (Pure typographic-decorator bodies — \tilde, \check, \hat, etc. —
+# are auto-skipped by the grouper without needing an entry here, since
+# decorator pass-through macros are by construction not synonyms.)
+
+do-not-merge:
+
+  # \Theta — aggregate vs. employment-conditional transitory shocks
+  - \TranShkAgg
+  - \TranShkEmp
+
+  # \phi — equity premium vs. persistent shock vs. individual persistent shock
+  - \eprem
+  - \prstShk
+  - \prstShkInd
+
+  # \xi — population growth rate (capital), population growth rate
+  # (lowercase variant), individual transitory shock
+  - \PopnGroRte
+  - \popGroRte
+  - \tranShkInd
+
+  # \ell — labor input vs. survival probability
+  - \labor
+  - \livPrb
+
+  # \zeta — leisure share vs. unemployment-insurance variable
+  - \leiShare
+  - \unins
+
+  # \mathrm{g} — wage growth rate vs. generic g-function
+  - \WGroRte
+  - \gFunc

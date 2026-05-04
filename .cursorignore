@@ -1,0 +1,97 @@
+# ==================================================
+# Cursor Ignore File - Speed up indexing
+# ==================================================
+
+# Large Code directories (452MB!)
+Code/
+src/
+
+# Documentation duplicates
+docs/
+docs_mathjax-fail_many-characters/
+
+# Generated LaTeX outputs
+*.pdf
+*.dvi
+*.ps
+
+# Images and figures
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.xbb
+*.eps
+
+# LaTeX temporary/generated files
+*.aux
+*.log
+*.out
+*.toc
+*.lot
+*.lof
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+*.idx
+*.ind
+*.ilg
+*.thm
+*.nav
+*.snm
+*.vrb
+*.figlist
+*.makefile
+*.end
+*.upa
+*.upb
+
+# Auto-generated directories
+auto/
+LaTeX/
+Old/
+
+# System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Git (comment out if you need AI to access git history)
+.git/
+
+# Archives and backups
+*.zip
+*.tar.gz
+*.rar
+*.7z
+*-old-*
+*backup*
+*_old.*
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Editor temporary files
+*~
+*.swp
+*.swo
+\#*\#
+.#*
+
+# Node modules (if any)
+node_modules/
+
+# Large reference files that don't need indexing
+*.bib 

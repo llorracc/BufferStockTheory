@@ -7,4 +7,4 @@ pip install -r ./binder/requirements.txt
 
 # Regenerate computed results (figs) needed for compiling paper
 ./reproduce/computed.sh MIN # Replace with MAX to execute ApndxBalancedGrowthcNrmAndCov.ipynb
-./reproduce/document.sh # Make latex document, figures, tables, etc
+./reproduce/document.sh --quiet # Make latex document, figures, tables, etc

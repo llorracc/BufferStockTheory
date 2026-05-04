@@ -12,7 +12,7 @@ for tex in *.tex; do
 	echo "$pdf does not exist; processing with latex command $cmd"
 	eval "$cmd"
     fi
-    pdftotext "$pdf" "$filename.pdftotext" 
+    pdftotext -nopgbrk "$pdf" "$filename.pdftotext"
     grep -I -ns '??' --include=$filename.pdftotext * >> reproduce_text_appendices.log
 done
 

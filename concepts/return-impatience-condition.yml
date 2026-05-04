@@ -1,0 +1,40 @@
+id: return-impatience-condition
+name: Return Impatience Condition (RIC)
+short: RIC
+defining_equation:
+  anchor: ass-RIC
+  latex: \RPFac < 1
+  english: 'The absolute patience factor falls short of the gross interest factor.'
+gloss: |
+  RIC says the return patience factor $\RPFac := \APFac/\Rfree$ is below 1, i.e. the absolute patience factor $\APFac := (\Rfree\DiscFac)^{1/\CRRA}$ is smaller than the gross interest factor $\Rfree$.
+
+  Return impatience captures the tension between the income effect of capital income and the substitution effect: the marginal propensity to consume out of total (human plus nonhuman) wealth that would just maintain next-period wealth equals $\MPC = 1 - \APFac/\Rfree$, so RIC is exactly the condition that this MPC is positive. Without RIC, the consumer effectively wants to hold more wealth tomorrow than today, which together with infinite human wealth produces a degenerate limiting solution where consumption goes to zero.
+
+  In the perfect-foresight unconstrained problem, RIC together with finite human wealth (FHWC) is necessary and sufficient for a non-degenerate limiting solution (proposition `prop-pfUCFHWC`). RIC has a weaker form, WRIC, that adjusts for the probability of zero-income events; WRIC is the condition actually required by the stochastic-problem existence theorems.
+relations:
+  - kind: requires
+    target: return-patience-factor
+    note: 'RIC is exactly the inequality $\RPFac < 1$.'
+  - kind: requires
+    target: absolute-patience-factor
+    note: 'Transitively: $\RPFac = \APFac/\Rfree$ is built from $\APFac$.'
+  - kind: contrasts-with
+    target: growth-impatience-condition
+    note: 'RIC is about return (ratio to interest factor); GIC is about growth (ratio to permanent income growth factor).'
+  - kind: implied-by
+    target: finite-value-of-autarky
+    note: 'Under FHWC, FVAC implies RIC (claim-PFConspC).'
+  - kind: assumed-by
+    target: prop-pfUCFHWC
+    note: 'Non-degenerate limiting solution exists iff FHWC and RIC both hold.'
+  - kind: generalises
+    target: weak-return-impatience-condition
+    note: 'WRIC is a weaker form that adjusts the patience factor for zero-income probability.'
+sources:
+  - file: BufferStockTheory.md
+    anchor: RIC
+  - file: BufferStockTheory.md
+    anchor: ass-RIC
+bellman_ddsl:
+  perch: '(deferred)'
+  stage: '(deferred)'

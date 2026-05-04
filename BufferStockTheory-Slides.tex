@@ -2,6 +2,8 @@
 \input{@resources/tex-add-search-paths} % allow latex to find custom stuff
 %\input{./.econtexRoot}\input{@local/owner}
 \documentclass[pdflatex]{beamer}
+\usepackage{pdfsuppressruntime}
+\usepackage[T1]{fontenc} % \TH (used in \Thorn / \APFac) is unavailable in OT1
 \usepackage{econark-shortcuts}
 %\begin{document} hi \end{document} \endinput
 \usepackage{ifthen}
@@ -18,8 +20,9 @@
 
 %\usepackage{natbib,amsmath,amssymb,rotating,subfigure}
 \usepackage{verbatim,moreverb,graphicx}
-
-
+\usepackage{amsmath,amssymb}
+% Match BufferStockTheory.tex: \APFac in econark-shortcuts expands via \Thorn
+\providecommand{\Thorn}{\pmb{\TH}}
 
 %\usepackage{natbib}\newcommand*{\newblock}{}
 
@@ -69,6 +72,7 @@
 \begin{itemize}
 \item Calibration
 \item Structure
+\item $\APFac$
 \end{itemize}
 \item {\it Very} Hard To Teach!
 \end{itemize}

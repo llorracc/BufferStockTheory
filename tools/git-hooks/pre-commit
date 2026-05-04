@@ -1,0 +1,78 @@
+#!/bin/bash
+
+# Pre-commit hook - only runs on non-macOS systems (Linux, etc.)
+# Runs document reproduction in foreground with debugging
+#
+# Canonical source: tools/git-hooks/pre-commit
+# Activate via: bash tools/git-hooks/install.sh
+
+# Cross-platform lint: reject NEW inline macro defs in body files.
+# Runs everywhere (macOS + Linux). Existing inline defs are tolerated;
+# this only fires when the staged diff adds a new offending line.
+# See tools/git-hooks/lint-no-inline-defs.sh for the rules.
+if [ -x "$(git rev-parse --show-toplevel)/tools/git-hooks/lint-no-inline-defs.sh" ]; then
+    if ! "$(git rev-parse --show-toplevel)/tools/git-hooks/lint-no-inline-defs.sh" --staged; then
+        echo ""
+        echo "Pre-commit lint failed: see message above. Use --no-verify to bypass." >&2
+        exit 1
+    fi
+fi
+
+# Only run on non-macOS systems
+if [[ "$(uname)" == "Darwin" ]]; then
+    exit 0
+fi
+
+echo ""
+echo "========================================"
+echo "Running document reproduction before commit (Linux)..."
+echo "========================================"
+echo ""
+
+# Store the current staged changes info
+STAGED_FILES=$(git diff --cached --name-only | wc -l | tr -d ' ')
+
+echo "Staged files: $STAGED_FILES"
+echo ""
+
+# Run the reproduction script in foreground with full debugging
+echo "Executing reproduce/document.sh --quiet --debug --noninteractive..."
+echo ""
+
+# Run the script and capture the exit code
+if ./reproduce/document.sh --quiet --debug --noninteractive; then
+    echo ""
+    echo "========================================"
+    echo "✅ Document reproduction completed successfully!"
+    echo "Proceeding with commit..."
+    echo "========================================"
+    echo ""
+    exit 0
+else
+    # Reproduction failed - prevent commit
+    REPRODUCTION_EXIT_CODE=$?
+    echo ""
+    echo "========================================"
+    echo "❌ REPRODUCTION FAILED - COMMIT BLOCKED"
+    echo "========================================"
+    echo ""
+    echo "The commit has been blocked because document reproduction failed."
+    echo ""
+    echo "To proceed anyway (not recommended):"
+    echo "    git commit --no-verify"
+    echo ""
+    echo "To check what's staged and potentially unstage changes:"
+    echo "    git status"
+    echo "    git reset HEAD <filename>  # to unstage specific files"
+    echo "    git reset                  # to unstage all changes"
+    echo ""
+    echo "To see the full diff of staged changes:"
+    echo "    git diff --cached"
+    echo ""
+    echo "Reproduction script exited with code: $REPRODUCTION_EXIT_CODE"
+    echo "========================================"
+    echo ""
+
+    # Exit with failure code to block the commit
+    exit $REPRODUCTION_EXIT_CODE
+fi

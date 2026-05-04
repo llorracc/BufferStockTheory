@@ -1,0 +1,34 @@
+id: finite-value-of-autarky
+name: Finite Value of Autarky (FVAC)
+short: FVAC
+defining_equation:
+  anchor: ass-FVAC
+  latex: 0 < \DiscFac \PermGroFac^{1-\CRRA}\Ex(\permShk^{1-\CRRA}) < 1
+  english: 'The discounted, growth-adjusted, shock-adjusted utility weight is in (0, 1).'
+gloss: |
+  FVAC generalises the standard $\DiscFac < 1$ time-preference assumption to a setting with permanent income growth and uncertainty. It states that the discount factor times the permanent-growth factor (raised to $1-\CRRA$) times the expectation of the permanent shock (raised to $1-\CRRA$) lies strictly between 0 and 1.
+
+  The condition has the operational meaning that the expected net discounted utility a consumer gets from "autarky" — consuming exactly permanent income every period — is finite and positive. A finite value of autarky guarantees that as the horizon extends, the discounted value of utility remains finite along *any* consumption path the consumer might choose, which is the central technical requirement for the contraction-mapping arguments underlying existence of an infinite-horizon solution.
+
+  Under finite human wealth (FHWC), the implication chain `claim-PFConspC` shows GIC ⇒ FVAC ⇒ RIC. So FVAC sits between the two patience conditions and is the condition that all three of the stochastic-problem existence theorems (`thm-MSSBalExists`, `thm-target`, and the contraction-mapping theorem) require.
+relations:
+  - kind: implied-by
+    target: growth-impatience-condition
+    note: 'Under FHWC, GIC implies FVAC (claim-PFConspC).'
+  - kind: implies
+    target: return-impatience-condition
+    note: 'Under FHWC, FVAC implies RIC (claim-PFConspC).'
+  - kind: assumed-by
+    target: pseudo-target
+    note: 'Pseudo-target existence theorem requires FVAC (with WRIC and GIC).'
+  - kind: assumed-by
+    target: buffer-stock-target
+    note: 'Buffer-stock target existence theorem requires FVAC (with WRIC and GIC-Mod).'
+sources:
+  - file: BufferStockTheory.md
+    anchor: FVAC
+  - file: BufferStockTheory.md
+    anchor: ass-FVAC
+bellman_ddsl:
+  perch: '(deferred)'
+  stage: '(deferred)'

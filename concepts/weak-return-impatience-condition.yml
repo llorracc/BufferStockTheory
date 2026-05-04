@@ -1,0 +1,37 @@
+id: weak-return-impatience-condition
+name: Weak Return Impatience Condition (WRIC)
+short: WRIC
+defining_equation:
+  anchor: ass-WRIC
+  latex: \frac{\pZero^{1/\CRRA} \APFac}{\Rfree} < 1
+  english: 'The zero-income-probability-adjusted return patience factor is less than one.'
+gloss: |
+  WRIC adjusts the return patience factor by the probability $\pZero$ of a zero-income realisation: $(\pZero^{1/\CRRA} \APFac)/\Rfree < 1$. Because $\pZero \leq 1$ implies $\pZero^{1/\CRRA} \leq 1$, WRIC is strictly weaker than RIC ($\APFac/\Rfree < 1$) — RIC implies WRIC, but not the reverse, whenever $\pZero > 0$.
+
+  The role of $\pZero$ is technical: a consumer with zero end-of-period assets has probability $\pZero$ of receiving zero income next period, in which case $\mNrm_{t+1} = 0$ would yield $u(0) = -\infty$ under CRRA utility. WRIC is the precise weakening of RIC that handles this corner correctly. Crucially, WRIC does NOT approach irrelevance as $\pZero \to 0$: the limit of the natural-borrowing-constraint problem coincides with the artificial-constraint problem, not with the unconstrained one.
+
+  WRIC is the patience condition actually required by the stochastic existence theorems — both pseudo-target existence (`thm-MSSBalExists`) and individual-target existence (`thm-target`) take WRIC rather than the stronger RIC. It cannot be relaxed further without imposing an artificial liquidity constraint.
+relations:
+  - kind: requires
+    target: return-patience-factor
+    note: 'WRIC is the probability-adjusted inequality $\pZero^{1/\CRRA} \RPFac < 1$.'
+  - kind: requires
+    target: absolute-patience-factor
+    note: 'Transitively: $\RPFac = \APFac/\Rfree$ is built from $\APFac$.'
+  - kind: implied-by
+    target: return-impatience-condition
+    note: 'RIC implies WRIC whenever $\pZero \in [0, 1]$. WRIC is the weaker form.'
+  - kind: assumed-by
+    target: pseudo-target
+    note: 'Pseudo-target existence theorem requires WRIC (with FVAC and GIC).'
+  - kind: assumed-by
+    target: buffer-stock-target
+    note: 'Buffer-stock target existence theorem requires WRIC (with FVAC and GIC-Mod).'
+sources:
+  - file: BufferStockTheory.md
+    anchor: WRIC
+  - file: BufferStockTheory.md
+    anchor: ass-WRIC
+bellman_ddsl:
+  perch: '(deferred)'
+  stage: '(deferred)'
