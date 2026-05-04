@@ -6,7 +6,7 @@
 \input{./.econtexRoot}\documentclass[\econtexRoot/BufferStockTheory]{subfiles}
 
 \newcommand{\subname}{ApndxBalancedGrowthcNrmAndCov}
-\input{\econtexRoot/@local/dir-paths} % get directory macros
+%\input{\econtexRoot/@local/dir-paths} % get directory macros
 \usepackage{econark-ifsubfile}        % allow conditional execution of code
 \usepackage{econark-xrsetup}          % Xternal crossReferences (from main document)
 \usepackage{pdforhtml}
@@ -41,7 +41,6 @@
 
 \subsection{Growth Impatience Implies Harmenberg Impatience}\label{sec:AppxHarmImpGIC}
 
-%% AS TO AS: TRIPLE CHECK THIS CLAIM IN FINAL PASS 
 
 We show here that \hyperlink{GICRaw}{growth impatience} implies the condition imposed by \cite{harmenbergAggregating} to guarantee 
 the existence of a permanent income weighted distribution of normalized market resources.
@@ -98,7 +97,7 @@ Figures~\ref{fig:logcNrm} and~\ref{fig:logcov} plot the results of simulations o
 \pagebreak
 \begin{figure}[!htb]
   \centerline{
-    \includegraphics[width=0.9\textwidth]{\FigDir/logcNrm}
+    \includegraphics[width=0.9\textwidth]{Figures/logcNrm}
   }
   \caption{Appendix: $\log ~\mathfrak{c}$ Appears to Grow Linearly}
   \label{fig:logcNrm}
@@ -106,7 +105,7 @@ Figures~\ref{fig:logcNrm} and~\ref{fig:logcov} plot the results of simulations o
 
 \begin{figure}[!htb]
   \centerline{
-    \includegraphics[width=0.9\textwidth]{\FigDir/logcov}
+    \includegraphics[width=0.9\textwidth]{Figures/logcov}
   }
   \caption{Appendix: $\log ~(-\cov(\cNrm,\permLvl))$ Appears to Grow Linearly}
   \label{fig:logcov}

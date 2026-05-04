@@ -7,11 +7,11 @@
 
 \begin{document}
 
-\notinsubfile{\renewcommand{\TableDir}{./Tables}} % Not sure why this needs to be redefined here; if not, tries to write to ../../Tables
+\notinsubfile{\renewcommand{Tables}{./Tables}} % Not sure why this needs to be redefined here; if not, tries to write to ../../Tables
 
 {\let\TableWidth\relax}
 \newlength\TableWidth
-\begin{verbatimwrite}{\TableDir/LiqConstrScenarios}
+\begin{verbatimwrite}{Tables/LiqConstrScenarios}
   \newsavebox{\LiqConstrScenarios}
   \begin{table}[b]
     \centering
@@ -48,7 +48,7 @@
 
   \end{verbatimwrite}
   \clearpage
-  \input{\TableDir/LiqConstrScenarios}
+  \input{Tables/LiqConstrScenarios}
 
 \end{document}
 % Delete up to four existing variants of BibTeX 

@@ -4,7 +4,7 @@
 \input{./.econtexRoot}\input{econtex_onlyinsubfile}
 \providecommand{\TblBox}{}\providecommand{\TblName}{}
 \renewcommand{\TblName}{Comparison}
-\onlyinsubfile{\externaldocument{\LaTeXGenerated/BufferStockTheory}}
+\onlyinsubfile{\externaldocument{BufferStockTheory}}
 
 \begin{document}
 % This needed to be a subfile to tweak the use of the makecell \thead commands
@@ -12,13 +12,13 @@
 
 \renewcommand\theadalign{tl}
 
-\notinsubfile{\renewcommand{\TableDir}{./Tables}} % Not sure why this needs to be redefined here; if not, tries to write to ../../Tables
+\notinsubfile{\renewcommand{Tables}{./Tables}} % Not sure why this needs to be redefined here; if not, tries to write to ../../Tables
 
 \let\TableWidth\relax % Necessary to allow redefinition of tablewidth, which might already be defined
 
 \newlength\TableWidth
 
-\begin{verbatimwrite}{\TableDir/\TblName}
+\begin{verbatimwrite}{Tables/\TblName}
   \begin{table}[!th]
     \centering
 \caption{Definitions and Comparisons of Conditions}
@@ -88,7 +88,7 @@ equivalently $\APFac  < \Rfree^{1/\CRRA}\PermGroFac^{1-1/\CRRA}$ & \\
 
 \end{table}
 \end{verbatimwrite}
-\input{\TableDir/\TblName}
+\input{Tables/\TblName}
 
 \end{document}
 

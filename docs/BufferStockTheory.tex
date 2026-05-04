@@ -16,7 +16,7 @@
 \usepackage{econark-bibfilesfind}        % Package to find valid bibfiles
 \bibfilesfind{\texname}                  % find them
 
-\input{@local/dir-paths}                 % macros for various subdirs
+%\input{@local/dir-paths}                 % macros for various subdirs
 \usepackage{@local/owner}                % for urls that are constructed
 
 \usepackage{econark}                     % custom packages and macros
@@ -55,19 +55,10 @@
 }
 
 % --------------- Parameters ---------------
-%% CDC-to-AS: With great regret I will accept that the profession has settled on $\gamma$
-%% this is an error in taste and decency
-%% because $\rho$ is the Greek R and satisfying choice for Relative Risk aveRsion
 \renewcommand{\CRRA}{\gamma}                                % CRRA is usually gamma in the literature.
 \newcommand{\DiscGro}{\DiscFac\PermGroFac^{1-\CRRA}}   % For PF-FVAC
 \renewcommand{\GPFacMod}{\GPFacRaw \Ex[\permShk^{-1}]} % Stochastically modified growth impatience factor
 
-%% CDC-to-AS: You did not like \digamma for the bounding function, huh?
-%%% But in [econark.sty](https://github.com/llorracc/SolvingMicroDSOPs-Latest/blob/master/.resources/texmf-local/tex/latex/local-econark.sty,
-%%% \phi is used for a persistent shock (if it exists)
-%%% and generally we have used up all the Greek letters for one thing or another there
-%%% That's why I used a Greek character that's \emph{off the menu}
-%%% Let's discuss
 \newcommand{\boundFunc}{\varphi}                % bounding function
 
 % Define custom counters for assumptions 
@@ -86,22 +77,10 @@
 \renewcommand{\theassumptionI}{I.\arabic{assumptionI}}
 
 % -------------- Growth and Impatience Factors --------------
-%%% AS: I hate the way this version cannot fit on a line
-%%% and thus requires the entire line containing it to
-%%% have a big whitespace gap above and below to make
-%%% room for it.
-%%% I guess you have a reason for renewing the command,
-%%% probably that you want people to be reminded of the
-%%% divisor, but that could also be accomplished by
-%%% \Thorn/\Rfree inline or R^{-1}\Thorn, neither of which
-%%% causes typographical mayhem
-%%% Let's discuss
 
-%%\renewcommand{\RPFac}{\frac{\APFac}{\Rfree}}
-%%\renewcommand{\GPFacRaw}{\frac{\APFac}{\PermGroFac}}
 
 % showlabels puts ref names on left, numbers on right
-\provideboolean{draftmode}\setboolean{draftmode}{true}
+\provideboolean{draftmode}\setboolean{draftmode}{false}
 \newcommand{\Draft}{\ifthenelse{\boolean{draftmode}}}
 \Draft{\usepackage{showlabels}
   \renewcommand{\showlabelsetlabel}[1]{\tiny #1}
@@ -128,12 +107,12 @@
   \appendixpage                            % Reset formatting for appendices on Web
 } % Web
 
-\subfile{\ApndxDir/ApndxConcaveCFunc}
-\subfile{\ApndxDir/ApndxMTargetIsStable}
-\subfile{\ApndxDir/ApndxBalancedGrowthcNrmAndCov}
-\subfile{\ApndxDir/ApndxLiqConstr}
-\subfile{\ApndxDir/ApndxConditionDiagrams}
-\subfile{\ApndxDir/ApndxSupportingAnalysis}
+\subfile{Appendices/ApndxConcaveCFunc}
+\subfile{Appendices/ApndxMTargetIsStable}
+\subfile{Appendices/ApndxBalancedGrowthcNrmAndCov}
+\subfile{Appendices/ApndxLiqConstr}
+\subfile{Appendices/ApndxConditionDiagrams}
+\subfile{Appendices/ApndxSupportingAnalysis}
 
 \pagebreak
 %\providecommand{\bibfiles}{}\renewcommand{\bibfiles}{}\econarkcollectbibs{\econtexRoot/\texname}\bibliography{\bibfiles}\sloppy\end{document}\endinput

@@ -1,8 +1,8 @@
 \input{@resources/tex-add-search-paths}  % allow latex to find custom stuff
 % -*- mode: LaTeX; TeX-PDF-mode: t; -*-
 \input{./.econtexRoot}\documentclass[\econtexRoot/BufferStockTheory]{subfiles}
-\input{\econtexRoot/@local/dir-paths}\usepackage{econark-ifsubfile}\usepackage{econark-xrsetup}
-\compilingasstandalone{\externaldocument{\LaTeXGenerated/BufferStockTheory}\providecommand{\texname}{}\renewcommand{\texname}{Introduction}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
+%\input{\econtexRoot/@local/dir-paths}\usepackage{econark-ifsubfile}\usepackage{econark-xrsetup}
+\compilingasstandalone{\externaldocument{BufferStockTheory}\providecommand{\texname}{}\renewcommand{\texname}{Introduction}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
 
 %\renewcommand{\LtxDir}{}
 \notinsubfile{\renewcommand{\LtxDir}{}}
@@ -84,8 +84,8 @@ This appendix proves Theorems~\ref{thm:target}-\ref{thm:MSSBalExists} and:
 
 \subsection{Existence of Buffer Stock Target}
 
-\subsubsection{Existence of Individual Buffer Stock Target}\label{subsubsec:AppxIndividTarget} %%% \label{subsubsec:AppxIndividTarget}
-%\input{\EqDir/TheoremMTargetIsStable}
+\subsubsection{Existence of Individual Buffer Stock Target}\label{subsubsec:AppxIndividTarget} %
+%\input{Equations/TheoremMTargetIsStable}
   
 \begin{proof}[\textbf{Proof of Theorem~\ref{thm:target}}]
 
@@ -95,7 +95,6 @@ Thus for any convergent sequence $\left\{\mNrm_t^{j}\right\}_{j=0}^{\infty}$, wi
 It follows that, using the Dominated Convergence Theorem, $\Ex_{t}[{\mNrm}_{t+1}/\mNrm_t]$ will be continuous in $\mNrm_t$.
 
 
-%% AS to AS: Should we explicitly define \grave{\mNrm}_{t+1}? Non-critical. 
 
 The remainder of the proof proceeds as follows.
 To establish Equation \eqref{eq:mTarget}, we will show (i) that there exists a point $\breve{\mNrm}_{t}$ where $\Ex_t [\breve{\mNrm}_{t+1}^{\star}/\breve{\mNrm}_{t}^{\star}] < 1$ and (ii) a point $\grave{\mNrm}$ where $\Ex_t [\grave{\mNrm}_{t+1}/\grave{\mNrm}_{t}] > 1$.
@@ -122,7 +121,6 @@ where the inequality follows from \hyperlink{GICMod}{strong growth impatience}.
 By continuity of  $\Ex_{t}[{\mNrm}_{t+1}/\mNrm_t]$ in $\mNrm_t$, there exists $\breve{\mNrm}_{t}$ large enough such that $\Ex_t [\breve{\mNrm}_{t+1}/\breve{\mNrm}_t] < 1$.
 
 
-%% AS TO AS: Triple check the eq. refs below. Non-critical. 
 
 Next, suppose \hyperlink{RIC}{return impatience} fails.
 The fact that $\lim\limits_{\mNrm_{t} \rightarrow \infty} \frac{\cFunc(\mNrm_{t})}{\mNrm_{t}} = 0$ (Lemma \ref{lemma:MPCBoundsConvg}) means the limit of the RHS of~\eqref{eq:emgro} as $\mNrm_{t} \rightarrow \infty$ is $\bar{\RNrmByGRnd}=\Ex_{t}[\RNrmByGRnd_{t+1}]$.
@@ -135,7 +133,6 @@ Thus, we have $\lim\limits_{\mNrm \rightarrow \infty} \Ex[\mNrm_{t+1}/\mNrm_{t}]
 \statement{Part (ii).
 Existence of \texorpdfstring{$\grave{\mNrm}_{t}$}{m} > 1 where \texorpdfstring{$\Ex_t [\grave{\mNrm}_{t+1}/\grave{\mNrm}_t] > 1$}{E[m{t+1}/m{t}] > 1}.}
 
-%% AS to AS: Show this next point explicitly using algebra and limits. It may be useful. Non-critical. 
 Analogous to Equation \eqref{eq:consGrowth},  the ratio of $\Ex_{t}[\mNrm_{t+1}]$ to $\mNrm_{t}$ is unbounded above as $\mNrm_{t} \rightarrow 0$ because $\lim\limits_{\mNrm_{t}\rightarrow 0} \Ex[\mNrm_{t+1}] > 0$.
 Thus, if $\Ex_t [{\mNrm}_{t+1}/\mNrm_t]$ is continuous in $\mNrm_t$, and takes on values above and below one at $\grave{\mNrm}_{t}$ and $\breve{\mNrm}_{t}$, by the Intermediate Value Theorem, there must be at least one point at which it is equal to one.
 
@@ -202,7 +199,6 @@ and multiplying all three elements by $\Rfree/\APFac$ gives:
 which satisfies our requirement in~\eqref{eq:RbarBelowOne}, thus completing the proof.
 \
 
-%% AS TO AS: terms like {\frac{\APFac}{\Rfree}}^{{\RPFac}} do not have a t+1 subscript on the permshock. This is a slight inconsistency (but technically fine). Non critical. 
 
 \end{proof}
   
@@ -215,7 +211,6 @@ Since by assumption $ 0 < \Min{\permShk} \leq \permShk_{t+1} \leq \bar{\permShk}
 \statement{Part (i).
 Existence of a stable point}
 
-%% AS TO AS: The below is correct, but maybe include steps later. Non-crtical. The steps below are not symmetric to the steps in the proof above. 
 
 Since by assumption $ 0 < \Min{\permShk} \leq \permShk_{t+1} \leq \bar{\permShk} < \infty$, our proof in Subsection~\ref{subsubsec:AppxIndividTarget} that the ratio of $\Ex[\mNrm_{t+1}]$ to $\mNrm_{t}$ is unbounded as $\mNrm_{t} \rightarrow 0$ implies that the ratio $\Ex[\permShk_{t+1}\mNrm_{t+1}]$ to $\mNrm_{t}$ is unbounded as $\mNrm_{t} \rightarrow 0$.
 The limit of the expected ratio as $\mNrm_{t}\rightarrow \infty$ goes to infinity is can be found as follows:

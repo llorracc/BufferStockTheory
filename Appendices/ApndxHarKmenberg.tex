@@ -3,14 +3,14 @@
 \input{./.econtexRoot}\documentclass[\econtexRoot/BufferStockTheory]{subfiles}
 
 \newcommand{\subname}{ApndxHarKmenberg}
-\input{\econtexRoot/@local/dir-paths} % get directory macros
+%\input{\econtexRoot/@local/dir-paths} % get directory macros
 \usepackage{econark-ifsubfile}        % allow conditional execution of code
 \usepackage{econark-xrsetup}          % Xternal crossReferences (from main document)
 
 \providecommand{\koppa}{k}
 \xrsetup{\econtexRoot/\texname}
 
-  %\externaldocument{\LaTeXGenerated/BufferStockTheory}\providecommand{\texname}{}\renewcommand{\texname}{Introduction}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
+  %\externaldocument{BufferStockTheory}\providecommand{\texname}{}\renewcommand{\texname}{Introduction}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
 \begin{document}
 
 \begin{comment}
@@ -205,10 +205,6 @@ where he second line follows because the summation of $\mpMat_{t}(\nmNrmVecNow,\
 
 The steps for the permanent-income-weighted version of the proposition are identical, with the substitution of weighted for unweighted versions of the various probability objects.
 
-%% ====================================================================
-%% New subsections added from HAFiscal Harmenberg implementation
-%% Source: HAFiscal-Latest history/20260331-mathematical-derivations-harmenberg.md §§13–14
-%% ====================================================================
 
 \subsection{When the Joint Distribution Is Required}\label{sec:JointDistRequired}
 

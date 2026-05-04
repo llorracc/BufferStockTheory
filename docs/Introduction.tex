@@ -1,23 +1,13 @@
 \input{@resources/tex-add-search-paths}  % allow latex to find custom stuff
 % -*- mode: LaTeX; TeX-PDF-mode: t; -*-
 \input{./.econtexRoot}\documentclass[BufferStockTheory]{subfiles}
-%%% WARNING: AuCTeX local variables only get reset when emacs loads 
-%%% file, and differ between this file and BufferStockTheory.tex
-%%% so must re-load whichever file you want to compile with C-x C-v
 
-%%% WARNING: Different AucTeX execution depending on whether
-%%% 0. Being compiled as standalone document
-%%% * Compile main to completion
-%%% * Then compile this one
-%%% * Keep compiling until nothing changes
-%%% 0. Being compiled as subfile of main document
-%%% * Just compile main document repeatedly
 
 \newcommand{\subname}{Introduction}   % Needed for generic bib to work
-\input{\econtexRoot/@local/dir-paths} % get directory macros
+%\input{\econtexRoot/@local/dir-paths} % get directory macros
 \usepackage{econark-ifsubfile}
 \usepackage{econark-xrsetup}
-\externaldocument{\LaTeXGenerated/BufferStockTheory}
+\externaldocument{BufferStockTheory}
 
 % set up identity of the external source of refs and bibs
 \xrsetup{\econtexRoot/\texname}
@@ -136,7 +126,7 @@ For example, it can explain why, during the Great Recession, middle-class consum
 Buffer stock saving also can explain why consumption growth tracks income growth over much of the life cycle,\footnote{\cite{carrollBSLCPIH}, \cite{gpLifeCycle}} rather than being determined solely by preferences and interest rates as Irving~\cite{fisherInterestTheory} proposed.
 
 Buffer stock saving models are neither a subset nor a superset of the closely-related class of \cite{bewleyPIH} models (or, more generically, \cite{schectman:fluctuation} `income fluctuation' problems; we will use the terms `Bewley model' and `income fluctuation problem' interchangeably).
-That is, not all Bewley models with fluctuating income exhibit buffer stock saving, and not all models that exhibit buffer stock saving satisfy the mathematical assumptions that guarantee boundedness of marginal marginal utility imposed by Schectman or Bewley (and inherited by almost all of the subsequent literature through to the recent contributions of \cite{mstIncFluct,maUnboundedDP}). %%% AS TO AS make sure there is an implicit link made explicity via a hyperlink to the theoery section.
+That is, not all Bewley models with fluctuating income exhibit buffer stock saving, and not all models that exhibit buffer stock saving satisfy the mathematical assumptions that guarantee boundedness of marginal marginal utility imposed by Schectman or Bewley (and inherited by almost all of the subsequent literature through to the recent contributions of \cite{mstIncFluct,maUnboundedDP}). %
 
 The purpose of this paper is to provide a comprehensive statement and explanation of the conditions under which buffer stock saving arises in a class of problems broader in important respects than Bewley models. Specifically, we consider the problem of an agent who is subject to a Friedman-Muth(-Zeldes) income process incorporating permanent shocks to noncapital income~\citep{friedmanATheory, muthOptimal, zeldesStochastic} in addition to the transitory shocks traditionally examined in the income fluctuation literature,\footnote{It is our view that the principal reason much of the literature has incorporated extremely `persistent' but not completely permanent shocks is that the theoretical foundations for the case with permanent shocks have not previously been available.}
 and who does not face an `artificial' borrowing constraint (a constraint that prohibits borrowing even when the loan could certainly be repaid).
@@ -148,7 +138,6 @@ In the course of proving our main theoretical results, we define a variety of al
 We will define the `limiting' consumption function as the limit of the sequence of consumption rules constructed by iterating backward from a terminal period $T$, and we will say that this limiting function is `nondegenerate' if it exists, is real-valued, and is strictly positive for every reachable circumstance the consumer could be in.
 
 
-%%% Note to selves: maybe think about restoring this somewhere
 %For example, we will define a perfect foresight consumer as exhibiting `growth impatience' if they would always like to spend more than their current income.
 %This can occur even if their time preference factor is $\DiscFac=1$.
 %The key insight is that the existence of non-degenerate limiting solutions and buffer stock targets depends on the relation between the consumer's preferences (both time preference and risk aversion) and the exogenous features of their environment (the income process and the interest factor $\Rfree$).
@@ -177,7 +166,7 @@ In the unconstrained perfect foresight version of our problem, one type of degen
 % - 
 Intuition would suggest that, by activating the precautionary saving motive, introduction of the Friedman-Muth stochastic income process might necessitate a stronger degree of impatience to avoid degeneracy. In fact, we show that the required impatience condition is \textit{weaker}, for reasons that follow from the lack of an artificial borrowing constraint and the presence of a `natural' borrowing constraint,\footnote{The `natural' constraint arises as a consequence of the budget constraint and the CRRA utility function which implies that the utility of consuming zero is negative infinity.  Its implications were first explored by \cite{zeldesStochastic} in a life cycle context. \cite{carroll:brookings} analyzed the infinite horizon case, and \cite{aiyagari:ge} coined the term `natural borrowing constraint.'} (which has the additional effect of eliminating the need to impose the Finite Human Wealth condition). We further demonstrate that the artificial constraint emerges as the limit, as a certain parameter goes to zero, of the natural constraint. This provides an intuitive conceptual bridge between the two.
 
-In the existing literature going all the way back to \cite{fisherInterestTheory},\footnote{\cite{fisherInterestTheory} in Ch. IV, Section 3 states "I shall treat the two terms (impatience and time preference) as synonymous".}, time preference `$\DiscFac$' and patience have often been treated as synonymous. %%% Note to selves: Krusell and Smith (1998) is one such other sinner; uses 'patience' to refer to the level of \DiscFac? I have not seen anyone use the term impatience condition. \beta is refereed to as "impatience" and sometimes \beta =1/(1+p) and p is the "rate of impatience". `Exotic preferences for macroeconomists' by Backus et al (2004) says \beta<1 is 'impatience'.
+In the existing literature going all the way back to \cite{fisherInterestTheory},\footnote{\cite{fisherInterestTheory} in Ch. IV, Section 3 states "I shall treat the two terms (impatience and time preference) as synonymous".}, time preference `$\DiscFac$' and patience have often been treated as synonymous. %
 
 We show that, in the presence of nonstationary permanent income, the corresponding generalized mathematical steps yield a \hyperlink{FVAC}{`finite value of autarky'} condition that incorporates characteristics of the growth process. The fact that the generalized condition involves terms other than $\DiscFac$ undermines the temptation to identify `patience' solely with the pure time preference factor.  We therefore propose that henceforth the literature should deprecate use of the term `patience' unadorned with any adjective identifying precisely which \textit{kind} of patience is under consideration. 
 
@@ -199,13 +188,10 @@ This turns out to guarantee that normalized market resources eventually revert b
 A weaker requirement, \hyperlink{GIC}{`growth impatience,'} ensures the existence of an aggregate buffer stock target even when individual target ratios are unbounded.
 Growth impatience requires the ratio of \hyperlink{APFacDefn}{absolute patience} to the \textit{expected} growth factor of permanent income to be less than one: $\APFacRaw/\PermGroFac < 1$.
 
-%% As \cite{harmenbergInvariant} points out, a stationary distribution of market resources, weighted by permanent income still exists under growth impatience. %% CDC to AS: Is this true? %%% %%% AS to CDC: I have not proved this myself. This was a statement in the BST original? AS to do this as part of category diagram. 
 
 The trick to understanding how there can be an aggregate target even when there is no individual target is to realize that one reason that $\mLvl/\pLvl$ can grow is that individuals can have negative shocks to $\pLvl$.  But the people whose ratio grows because their $\pLvl$ shrinks by definition account for a smaller portion of the \textit{level} of aggregate permanent income. That is, even as their $\mNrm$ rises they become smaller contributors to the aggregate economy.  
 
 
-%% AS TO CDC: can we move the following footnote? Or place it in the abstract?
-%% \footnote{The paper's insights are instantiated in the {\ARKurl} toolkit, whose \href{https://hark.readthedocs.io/en/stable/reference/ConsumptionSaving/ConsIndShockModel.html}{buffer stock saving module} flags parametric choices under which a problem is degenerate or under which stable ratios of wealth to income may not exist.} %% AS TO AS: make sure exact about parameteric choices is made in the title or abstract. 
 Thus in the aggregate, even with a fixed interest rate that differs from the time preference rate, a small open economy populated by buffer stock consumers has a balanced growth path in which growth rates of consumption, income, and market resources match the exogenous growth rate of aggregate permanent income (equivalent, here, to productivity growth).
 In the terms of~\cite{schmitt2003closing}, buffer stock saving is an appealing method of `closing' a small open economy model, because it requires no \textit{ad-hoc} assumptions.
 Not even borrowing constraints.
@@ -221,15 +207,15 @@ Not even borrowing constraints.
 Although the elements of buffer stock saving behavior were informally articulated by \cite{friedmanATheory}, the term was introduced to the literature by \cite{deatonLiqConstr} to describe the behavior of liquidity-constrained impatient consumers with transitory income shocks.\footnote{\cite{deatonLiqConstr} also showed that impatient consumers facing only permanent shocks would end up remaining on the borrowing constraint forever, an insight that informs the work of \cite{kvwWealthyH2m}.} \cite{carroll:brookings} showed (numerically) that buffer stock saving could arise even in the absence of borrowing constraints, and defined the individual buffer stock `target' as the point where a measure of normalized resources is expected to stay the same.
 
 
-Traditional Bellman approaches to showing existence rely on assumptions that guarantee the boundedness of utility and marginal utility~\citep{slpMethods}.\footnote{Our CRRA utility function does not satisfy Bewley's assumption that $\uFunc(0)$ is well-defined, or that $\uP(0)$ is bounded above. %%% Note to selves: Bewley says $\uFunc(0)=0$ and $\uP(0)$<1 See Ass. 2.5 in Bewley.
+Traditional Bellman approaches to showing existence rely on assumptions that guarantee the boundedness of utility and marginal utility~\citep{slpMethods}.\footnote{Our CRRA utility function does not satisfy Bewley's assumption that $\uFunc(0)$ is well-defined, or that $\uP(0)$ is bounded above. %
   Our approach differs from that of Schectman and Escudero~\citeyearpar{seIncFluct} because they impose an artificial borrowing constraint and positive minimum income.
   It differs from Deaton~\citeyearpar{deatonLiqConstr} because he imposes liquidity constraints; we accommodate separate transitory and permanent shocks; and our transitory shocks occasionally cause income to reach zero.
   Papers by Scheinkman and Weiss~\citeyearpar{scheinkman&weiss:borrowing}, Clarida~\citep{claridaErgodic}, and others~\cite{cwcUnderUncert} all differ from ours for reasons resembling those articulated above.
 %  For a related continuous-$t$ model, see~\cite{tocheUrisk}.
   \cite{asHomogeneous} relaxed boundedness of the utility function, but they address only the deterministic case; \cite{mvExistence}'s correction to~\cite{rrExistence} only addresses the deterministic case.
-  \cite{mnUnique} assume a framework with compact action sets and real-valued utility which cannot handle relative risk aversion greater than 1. %%% AS to check this
+  \cite{mnUnique} assume a framework with compact action sets and real-valued utility which cannot handle relative risk aversion greater than 1. %
   
-  Two approaches do allow relative risk aversion greater than 1:  A literature employing time iteration operators defined by Euler equations~\citep{deatonLiqConstr, lsIncFluct, mstIncFluct}, and one that employs transformations of the Bellman equation \citep{rinconZapatero2024}, but in all of these cases an artificial borrowing constraint is present (or its moral equivalent, as in Bewley). %%% AS to double check mst to confirm
+  Two approaches do allow relative risk aversion greater than 1:  A literature employing time iteration operators defined by Euler equations~\citep{deatonLiqConstr, lsIncFluct, mstIncFluct}, and one that employs transformations of the Bellman equation \citep{rinconZapatero2024}, but in all of these cases an artificial borrowing constraint is present (or its moral equivalent, as in Bewley). %
 }.
 The results by \cite{mstIncFluct,maUnboundedDP} are the most general we are aware of that tackle income fluctuation problems, and can be specialized to show existence in a model one step away from our normalized model with a stochastic rate of return and stochastic effective discount factor. The discrepant step is that they impose an artificial constraint and positive minimum value of income; this bounds utility from below (it can never be lower than the marginal utility of consumption)d thus cannot be applied here.
 

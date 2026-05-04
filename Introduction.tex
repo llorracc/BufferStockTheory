@@ -1,23 +1,13 @@
 \input{@resources/tex-add-search-paths}  % allow latex to find custom stuff
 % -*- mode: LaTeX; TeX-PDF-mode: t; -*-
 \input{./.econtexRoot}\documentclass[BufferStockTheory]{subfiles}
-%%% WARNING: AuCTeX local variables only get reset when emacs loads 
-%%% file, and differ between this file and BufferStockTheory.tex
-%%% so must re-load whichever file you want to compile with C-x C-v
 
-%%% WARNING: Different AucTeX execution depending on whether
-%%% 0. Being compiled as standalone document
-%%% * Compile main to completion
-%%% * Then compile this one
-%%% * Keep compiling until nothing changes
-%%% 0. Being compiled as subfile of main document
-%%% * Just compile main document repeatedly
 
 \newcommand{\subname}{Introduction}   % Needed for generic bib to work
-\input{\econtexRoot/@local/dir-paths} % get directory macros
+%\input{\econtexRoot/@local/dir-paths} % get directory macros
 \usepackage{econark-ifsubfile}
 \usepackage{econark-xrsetup}
-\externaldocument{\LaTeXGenerated/BufferStockTheory}
+\externaldocument{BufferStockTheory}
 
 % set up identity of the external source of refs and bibs
 \xrsetup{\econtexRoot/\texname}
@@ -175,14 +165,12 @@ For instance, in the unconstrained perfect foresight version of our problem, one
 
 Intuition would suggest that, by activating the precautionary saving motive, introduction of the Friedman-Muth stochastic income process might necessitate a stronger degree of impatience to avoid degeneracy. In fact, we show that the required impatience condition is \textit{weaker}, for reasons that follow from the lack of an artificial borrowing constraint and the presence of a `natural' borrowing constraint,\footnote{The `natural' constraint arises as a consequence of the budget constraint and the CRRA utility function which implies that the utility of consuming zero is negative infinity.  Its implications were first explored by \cite{zeldesStochastic} in a life cycle context. \cite{carroll:brookings} analyzed the infinite horizon case, and \cite{aiyagari:ge} coined the term `natural borrowing constraint.'} (which has the additional effect of eliminating the need to impose the Finite Human Wealth condition). We further demonstrate that the artificial constraint emerges as the limit, as a certain parameter goes to zero, of the natural constraint. This provides an intuitive conceptual bridge between the two.
 
-In the existing literature going all the way back to \cite{fisherInterestTheory},\footnote{\cite{fisherInterestTheory} in Ch. IV, Section 3 states "I shall treat the two terms (impatience and time preference) as synonymous".} time preference `$\DiscFac$' and patience have often been treated as synonymous. %%% 
+In the existing literature going all the way back to \cite{fisherInterestTheory},\footnote{\cite{fisherInterestTheory} in Ch. IV, Section 3 states "I shall treat the two terms (impatience and time preference) as synonymous".} time preference `$\DiscFac$' and patience have often been treated as synonymous. %
 
 
-%%% Note to selves: Krusell and Smith (1998) is one such other sinner; uses 'patience' to refer to the level of \DiscFac? I have not seen anyone use the term impatience condition. \beta is refereed to as "impatience" and sometimes \beta =1/(1+p) and p is the "rate of impatience". `Exotic preferences for macroeconomists' by Backus et al (2004) says \beta<1 is 'impatience'.
 
 However, we show that, in the presence of nonstationary permanent income, the corresponding generalized mathematical steps yield a \hyperlink{FVAC}{`finite value of autarky'} condition that incorporates both $\DiscFac$ and characteristics of the income growth process. The fact that the generalized condition involves terms other than $\DiscFac$ undermines the temptation to identify `patience' solely with the pure time preference factor.  We therefore propose that henceforth the literature should deprecate use of the term `patience' unadorned with any adjective identifying precisely which \textit{kind} of patience is under consideration.
 
-%%% AS TO AS: add something about MRTS? No, OK. Keep MRTS idea as note. 
 
 One such kind of patience is \hyperlink{APFac}{absolute patience}, $\APFacRaw$, which is the rate at which the consumer is willing to move consumption forward without any precautionary saving motive (under perfect foresight). Importantly, we show that for a consumer to have a non-degenerate value function in the limit as the planning horizon recedes, \hyperlink{APFac}{absolute patience} cannot exceed \textit{both} the market return factor $\Rfree$ and the expected income growth factor $\PermGroFac.$
 (Growth impatience must hold if return impatience fails and vice-versa.)
@@ -222,15 +210,15 @@ Not even borrowing constraints.
 Although the elements of buffer stock saving behavior were informally articulated by \cite{friedmanATheory}, the term was introduced to the literature by \cite{deatonLiqConstr} to describe the behavior of liquidity-constrained impatient consumers with transitory income shocks.\footnote{\cite{deatonLiqConstr} also showed that impatient consumers facing only permanent shocks would end up remaining on the borrowing constraint forever, an insight that informs the work of \cite{kvwWealthyH2m}.} \cite{carroll:brookings} showed (numerically) that buffer stock saving could arise even in the absence of borrowing constraints, and defined the individual buffer stock `target' as the point where a measure of normalized resources is expected to stay the same.
 
 
-Traditional Bellman approaches to showing existence rely on assumptions that guarantee the boundedness of utility and marginal utility~\citep{slpMethods}.\footnote{Our CRRA utility function does not satisfy Bewley's assumption that $\uFunc(0)$ is well-defined, or that $\uP(0)$ is bounded above. %%% Note to selves: Bewley says $\uFunc(0)=0$ and $\uP(0)$<1 See Ass. 2.5 in Bewley.
+Traditional Bellman approaches to showing existence rely on assumptions that guarantee the boundedness of utility and marginal utility~\citep{slpMethods}.\footnote{Our CRRA utility function does not satisfy Bewley's assumption that $\uFunc(0)$ is well-defined, or that $\uP(0)$ is bounded above. %
   Our approach differs from that of Schechtman and Escudero~\citeyearpar{seIncFluct} because they impose an artificial borrowing constraint and positive minimum income.
   It differs from Deaton~\citeyearpar{deatonLiqConstr} because he imposes liquidity constraints; we accommodate separate transitory and permanent shocks; and our transitory shocks occasionally cause income to reach zero.
   Papers by Scheinkman and Weiss~\citeyearpar{scheinkman&weiss:borrowing}, Clarida~\citep{claridaErgodic}, and others~\cite{cwcUnderUncert} all differ from ours for reasons resembling those articulated above.
 %  For a related continuous-$t$ model, see~\cite{tocheUrisk}.
   \cite{asHomogeneous} relaxed boundedness of the utility function, but they address only the deterministic case; \cite{mvExistence}'s correction to~\cite{rrExistence} only addresses the deterministic case.
-  \cite{mnUnique} assume a framework with compact action sets and real-valued utility which cannot handle relative risk aversion greater than 1. %%% AS to check this
+  \cite{mnUnique} assume a framework with compact action sets and real-valued utility which cannot handle relative risk aversion greater than 1. %
   
-  Two approaches do allow relative risk aversion greater than 1:  A literature employing time iteration operators defined by Euler equations~\citep{deatonLiqConstr, lsIncFluct, mstIncFluct}, and one that employs transformations of the Bellman equation \citep{rinconZapatero2024}, but in all of these cases an artificial borrowing constraint is present (or its moral equivalent, as in Bewley). %%% AS to double check mst to confirm
+  Two approaches do allow relative risk aversion greater than 1:  A literature employing time iteration operators defined by Euler equations~\citep{deatonLiqConstr, lsIncFluct, mstIncFluct}, and one that employs transformations of the Bellman equation \citep{rinconZapatero2024}, but in all of these cases an artificial borrowing constraint is present (or its moral equivalent, as in Bewley). %
 }
 The results by \cite{mstIncFluct,maUnboundedDP} are the most general we are aware of that tackle income fluctuation problems, and can be specialized to show existence in a model one step away from our normalized model with a stochastic rate of return and stochastic effective discount factor. The discrepant step is that they impose an artificial constraint and positive minimum value of income; this bounds utility from below (it can never be lower than the marginal utility of consumption) and thus cannot be applied here.
 

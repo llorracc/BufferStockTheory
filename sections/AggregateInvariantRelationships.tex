@@ -3,10 +3,10 @@
 \input{./.econtexRoot}\documentclass[\econtexRoot/BufferStockTheory]{subfiles}
 
 \newcommand{\subname}{AggregateInvariantRelationships}
-\input{\econtexRoot/@local/dir-paths}
+%\input{\econtexRoot/@local/dir-paths}
 \usepackage{econark-ifsubfile}
 \usepackage{econark-xrsetup}
-\externaldocument{\LaTeXGenerated/BufferStockTheory}
+\externaldocument{BufferStockTheory}
 
 \xrsetup{\econtexRoot/\texname}
 
@@ -42,31 +42,17 @@ Simply put, the permanent-income-weighted CDF shows how the total `mass' of perm
 Confirming the computational advantage of Harmenberg's method, \href{https://econ-ark.org/materials/harmenberg-aggregation}{this notebook} finds that the Harmenberg method reduces the simulation size required for a given degree of accuracy by two orders of magnitude under the baseline parameter values defined above.} The remainder of this section draws out the implications of these points for aggregate balanced growth factors.
 
 
-%% AS to CDC: can we delete the below? 
-
-%% Commented out text from the first part of this section is all collected below. 
-
-%% A large (infinite) collection of small (infinitesimal) buffer-stock consumers with identical parameter values can be thought of as a subset of the population within a single country (say, members of a given education or occupation group), or as the whole population in a small open economy with an exogenous (constant) interest rate.\footnote{It is also possible, and only slightly more difficult, to solve for the steady-state of a closed-economy version of the model where the interest rate is endogenous.}
-
-%% Until now for convenience we have assumed infinite-horizons, with the implicit understanding that white noise mortality could be handled by adjusting the effective discount factor.  On that basis, Section~\ref{subsec:cGroEqPermGroFacIndQ} continues to omit mortality.  But a reason mortality may be useful will appear at the end of Section~\ref{subsec:cGroEqPermGroFacQ}, so alternative mortality treatments are briefly examined in section~\ref{sec:Mortality-And-Redistribution}.
-
-%% Attanasio and Weber~\citeyearpar{aw95} point out that concavity of the consumption function can imply that it is quantitatively important to distinguish between the growth factor of average consumption and the average growth factor of  consumption.\footnote{Since we assume number of the households are   normalized to 1, aggregate and average variables are identical.}  We have just examined the average growth factor; we now examine the growth factor of the average.
-
-%% Microeconomic distributional relationships are increasingly central to macroeconomic research (see, e.g., \cite{violante_marginal_2021}'s recent Laffont lectures on relationship between the marginal propensity to consume and the distribution of assets).  But mapping from micro data to macro models can be subtle.  Hence this final section's aim of carefully describing those relationships in the paper's simple model.
 
 
-%%In a nutshell:\footnote{See \ref{sec:ApndxHarKmenberg} for a less abbreviated treatment in this paper's notation.} If $\permShk$ is described by density function $f_\permShk(\permShk)$, Harmenberg defines the \emph{permanent-income-neutral measure} by $\Harm{f}_\permShk(\permShk) \equiv \permShk f_\permShk(\permShk)$.  Following derivations parallel to those in the previous footnote, the condition for the existence of invariant permanent-income-weighted distributions is\hypertarget{GICHarm}{}
-%% \begin{equation}\begin{gathered}\begin{aligned} 
-%%    \text{\GICHarm:~~} \log \GPFacRaw  & < \Harm{\Ex}[ \log \permShk] \label{eq:GICHarm}
-%% \end{aligned}\end{gathered}\end{equation}
-%% where the {$\sim$} over the expectations operator indicates that the expectation is being taken with respect to $\Harm{f}_{\permShk}(\permShk)$.  Under our baseline assumption that the permanent shocks are lognormally distributed, it is possible to show that $\Harm{\Ex} [\log \permShk] = \permShkStd^{2}/2,$ so exponentiating both sides of this equation turns it into $\GPFacRaw < e^{\permShkVar/2}$ which is \textit{weaker} than the {\GICRaw} because $1 < e^{\permShkVar/2}$.\footnote{{\GICHarm} is always weaker than the {\GICRaw} because $x \log x$ is a convex function, so the expectation of the permanent-income-weighted distribution is always greater when there is risk than in the absence of risk (thanks again to the invaluable Mr Jensen).}$^{,}$\footnote{The fact that }
 
 
-%% Given the terminology developed earlier, the natural designation for the stable ratio of aggregate market resources to noncapital income is the `aggregate steady state' ratio, $\BalGroFac{M}$.  This is not numerically the same as the individual \hyperlink{pseudo-steady-state}{pseudo-steady-state} ratio $\mBalLvl$ because the nonlinearities involved in simulation and aggregation will have consequences.\footnote{Still, the pseudo-steady-state can be calculated immediately from the policy function without any simulation, and therefore would likely serve as an excellent and low-cost starting point for the numerical simulation process.}
 
-%% The idea also appears to be promisingly generalizable: For any statistic $\mathcal{S}$ that is the key focus of an analysis, it should be possible to improve the efficiency of simulations aimed at calculating that statistic by constructing an $\mathcal{S}$-weighted distribution rather than a neutral distribution.
 
-%%Such an economy will exhibit an \textit{aggregate} `steady-state' ratio of market resources to income $\MBalLvl$ (different from the individual `pseudo-steady-state' $\mBalLvl$).  Corresponding ratios for $\CLvl$ and other also exist even if the {\GICRaw} fails (so that the idiosyncratic pseudo-steady-state does not exist).
+
+
+
+
+
 
 
 \hypertarget{Growth-Rates-of-Individual-Income-and-Consumption}{}

@@ -3,10 +3,10 @@
 \input{./.econtexRoot}\documentclass[\econtexRoot/BufferStockTheory]{subfiles}
 
 \newcommand{\subname}{ApndxConcaveCFunc}
-\input{\econtexRoot/@local/dir-paths} % get directory macros
+%\input{\econtexRoot/@local/dir-paths} % get directory macros
 \usepackage{econark-ifsubfile}        % allow conditional execution of code
 \usepackage{econark-xrsetup}          % Xternal crossReferences (from main document)
-\externaldocument{\LaTeXGenerated/BufferStockTheory}
+\externaldocument{BufferStockTheory}
 
 \xrsetup{\econtexRoot/\texname}
 
@@ -18,7 +18,7 @@
 
 % \end{document}
 
-%  \externaldocument{\LaTeXGenerated/BufferStockTheory}\providecommand{\texname}{}\renewcommand{\texname}{Introduction}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
+%  \externaldocument{BufferStockTheory}\providecommand{\texname}{}\renewcommand{\texname}{Introduction}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
 \begin{document}
 
 \section{Appendix for Section \ref{sec:Theory}}\label{sec:ApndxConcaveCFunc}
@@ -94,7 +94,6 @@ Let $t<T$.
 If $\vFunc_{t}$ is strictly negative, strictly increasing, strictly concave, $\mathbf{C}^{3}$ and satisfies $\lim\limits_{\mNrm\rightarrow 0}~\vFunc_{t}(\mNrm) =-\infty $, then $\cFunc_{t}$ is $\mathbf{C}^{2}$.
 \end{lemma}
 
-%% AS to AS: The domain of the argument of the functions below is only stated the first three equations. This should be fine since the domains are the same in the later equations, but may cause confusion. 
 
 \begin{proof}
 
@@ -434,7 +433,7 @@ By definition, we have
                                             [\MPCminInf \mNrm_{t}, \MPCmaxInf \mNrm_{t}]
                                             }\max \left\{
                                             \uFunc(c_{t})+\DiscFac \Ex\left[ {\PermGroFacRnd}^{1-\CRRA }{\mathfrak{\xFunc}}
-                                            \left( {\mNrm}_{t+1}\right) \right] \right\}, \qquad \mNrm_{t}\in \Reals_{++}  %%% \label{eq:condition1}
+                                            \left( {\mNrm}_{t+1}\right) \right] \right\}, \qquad \mNrm_{t}\in \Reals_{++}  %
 \end{aligned}\end{gathered}\end{equation}
 %
 where ${\mNrm}_{t+1} = \RNrmByGRnd\left(\mNrm_{t} - \cNrm_{t}\right) + \tranShkAll$.
@@ -500,7 +499,7 @@ $\TMap^{\MPCminInf, \MPCmaxInf} \mathbf{0}(\mNrm_{t}) = \uFunc(\MPCmaxInf \mNrm_
 Thus, Condition (2)
 will hold if ${(\MPCmaxInf \mNrm_{t})}^{1-\CRRA}$ is $\boundFunc$-bounded, which it is if we use the
 bounding function
-\input{\EqDir/boundFunc}
+\input{Equations/boundFunc}
 defined in Remark \ref{rem:shnkrdef}.
 
 
@@ -697,7 +696,7 @@ Turning to the second term inside the marginal utility on the RHS, we can write
 since ${\PermGroFacRnd}{\tranShkAll}$ is bounded.
 Thus, as $\mNrm$ tends to $\infty$, we have
 %
-\begin{equation}\begin{gathered}\begin{aligned} %%% \label{eq:eFuncEulerStat}
+\begin{equation}\begin{gathered}\begin{aligned} %
  \lim\limits_{\mNrm\rightarrow \infty}\eFunc{(\mNrm)}^{-\CRRA}  & =  \MPCminmin^{-\CRRA} = \beta\Rfree\MPCminmin^{-\CRRA}\Rfree^{-\CRRA} (1- \MPCminmin) ^{-\CRRA}. 
 \end{aligned}\end{gathered}\end{equation}
 %
@@ -822,7 +821,6 @@ which makes sense because the marginal propensity to consume for a constrained r
 % End:
 
 
-%%% Commented out stuff
 
 \begin{comment}
 First we show that $\cFunc_{t}$ is $\mathbf{C}^{1}$.

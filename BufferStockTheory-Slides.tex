@@ -11,7 +11,7 @@
 \providecommand{\texname}{BufferStockTheory-Slides}%
 \usepackage{econark-multibib}
 \usepackage{econark-shortcuts}
-\input{@local/dir-paths}
+%\input{@local/dir-paths}
 %\usepackage{\texname}
 
 % Can't read in BufferStockTheory.sty because some packages conflict with Beamer
@@ -124,10 +124,10 @@ Restrictions On Parameter Values Such That \pause
 \begin{frame}
 
 Limit as horizon $T$ goes to infinity of 
-\input{\EqDir/supfn}
+\input{Equations/supfn}
 
-\input{\EqDir/DBCparts}
-\input{\EqDir/TranShkDef}
+\input{Equations/DBCparts}
+\input{Equations/TranShkDef}
 
 \begin{itemize}
 \item $\util(\bullet)=\bullet^{1-\CRRA}/(1-\CRRA)$; $\Ex_{t}[\permShk_{t+n}]=\Ex_{t}[\tranShk_{t+n}]=1~\forall~n>0$; $\beta < 1, \CRRA > 1$
@@ -220,7 +220,7 @@ Return Impatience Condition:
 \begin{itemize}
 \item Introduce permanent shocks to income
 \item Finite Value of Autarky Condition Becomes
-\input \EqDir/FVAC
+\input Equations/FVAC
 \end{itemize}
 
 \end{frame}
@@ -232,7 +232,7 @@ Return Impatience Condition:
 \frametitle{Contraction Mapping Requirements}
 
 Finite Value of Autarky Condition: Same As In Liq Constr Problem!
-\input{\EqDir/FVAC}
+\input{Equations/FVAC}
 
 `Weak Return Impatience Condition' ($\WRIC$)
 
@@ -246,13 +246,13 @@ Finite Value of Autarky Condition: Same As In Liq Constr Problem!
 \frametitle{Requirement For Existence Of A Target}
 
 Definitions: `Uncertainty-Adjusted' Growth:
-\input{\EqDir/PermGroFacAdj}
+\input{Equations/PermGroFacAdj}
 
 Adjusted Growth Patience Factor:
-\input{\EqDir/GPFacMod}
+\input{Equations/GPFacMod}
 
 Growth Impatience Condition:
-\input{\EqDir/GICMod}
+\input{Equations/GICMod}
 
 
 
@@ -281,24 +281,24 @@ Why?  Because it can be shown that
 \subsection{The Target Saving Figure}
 \begin{frame}
 \frametitle{The Target Saving Figure}
-\centerline{\includegraphics[width=4in]{\FigDir/cNrmTargetFig.pdf}}
+\centerline{\includegraphics[width=4in]{Figures/cNrmTargetFig.pdf}}
 \end{frame}
 
 \subsection{Bounds On The Consumption Function}
 \begin{frame}
 \frametitle{Bounds On the Consumption Function}
-\centerline{\includegraphics[width=4in]{\FigDir/cFuncBounds.pdf}}
+\centerline{\includegraphics[width=4in]{Figures/cFuncBounds.pdf}}
 \end{frame}
 
 \begin{frame}
 \frametitle{The Marginal Propensity to Consume}
-\centerline{\includegraphics[width=4in]{\FigDir/MPCLimits.pdf}}
+\centerline{\includegraphics[width=4in]{Figures/MPCLimits.pdf}}
 \end{frame}
 
 \subsection{The Consumption Function and Target Wealth}
 \begin{frame}
 \frametitle{The Consumption Function and Target Wealth}
-\centerline{\includegraphics[width=4in]{\FigDir/cNrmTargetFig.pdf}}
+\centerline{\includegraphics[width=4in]{Figures/cNrmTargetFig.pdf}}
 \end{frame}
 
 
@@ -312,7 +312,7 @@ Why?  Because it can be shown that
 \cite{szeidlInvariant} Proves Existence of an Invariant Distribution of 
 $\mNrm, \cNrm, \aNrm,$ etc.
 
-\centerline{\includegraphics[height=2.5in]{\FigDir/SimCDFsConverge.pdf}}
+\centerline{\includegraphics[height=2.5in]{Figures/SimCDFsConverge.pdf}}
 
 
 

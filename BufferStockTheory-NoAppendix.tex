@@ -2,17 +2,7 @@
 \input{@resources/tex-add-search-paths}  % allow latex to find custom stuff
 \input{./.econtexRoot}
 \documentclass[BufferStockTheory]{subfiles}
-%%% WARNING: AuCTeX local variables only get reset when emacs loads 
-%%% file, and differ between this file and BufferStockTheory.tex
-%%% so must re-load whichever file you want to compile with C-x C-v
    
-%%% WARNING: Different AucTeX execution depending on whether
-%%% 0. Being compiled as standalone document
-%%% * Compile main to completion
-%%% * Then compile this one
-%%% * Keep compiling until nothing changes
-%%% 0. Being compiled as subfile of main document
-%%% * Just compile main document repeatedly
 
 \input{./.econtexRoot}
 
@@ -25,8 +15,8 @@
 %\usepackage{econark-ifsubfile}
 
 % Get xrefs -- esp to apndx -- from main file; only works if main file has already been compiled
-\xrsetup{\LaTeXGenerated/BufferStockTheory}
-\externaldocument{\LaTeXGenerated/BufferStockTheory}
+\xrsetup{BufferStockTheory}
+\externaldocument{BufferStockTheory}
   
 \begin{document}
 

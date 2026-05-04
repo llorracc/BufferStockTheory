@@ -16,7 +16,7 @@
 \usepackage{econark-bibfilesfind}        % Package to find valid bibfiles
 \bibfilesfind{\texname}                  % find them
 
-\input{@local/dir-paths}                 % macros for various subdirs
+%\input{@local/dir-paths}                 % macros for various subdirs
 \usepackage{@local/owner}                % for urls that are constructed
 
 \usepackage{econark}                     % custom packages and macros
@@ -73,23 +73,10 @@
 % inline in body files.
 
 % -------------- Growth and Impatience Factors --------------
-%%% AS: I hate the way this version cannot fit on a line
-%%% and thus requires the entire line containing it to
-%%% have a big whitespace gap above and below to make
-%%% room for it.
-%%% I guess you have a reason for renewing the command,
-%%% probably that you want people to be reminded of the
-%%% divisor, but that could also be accomplished by
-%%% \Thorn/\Rfree inline or R^{-1}\Thorn, neither of which
-%%% causes typographical mayhem
-%%% Let's discuss
-%%% AS-to-CDC: I am fine with no renew command below. Resolved. 
 
-%%\renewcommand{\RPFac}{\frac{\APFac}{\Rfree}}
-%%\renewcommand{\GPFacRaw}{\frac{\APFac}{\PermGroFac}}
 
 % showlabels puts ref names on left, numbers on right
-\provideboolean{draftmode}\setboolean{draftmode}{true}
+\provideboolean{draftmode}\setboolean{draftmode}{false}
 \newcommand{\Draft}{\ifthenelse{\boolean{draftmode}}}
 \Draft{\usepackage{showlabels}
   \renewcommand{\showlabelsetlabel}[1]{\tiny #1}
@@ -118,12 +105,12 @@
   \appendixpage                            % Reset formatting for appendices on Web
 } % \PDFOnly
 
-\subfile{\ApndxDir/ApndxConcaveCFunc}
-\subfile{\ApndxDir/ApndxMTargetIsStable}
-\subfile{\ApndxDir/ApndxBalancedGrowthcNrmAndCov}
-\subfile{\ApndxDir/ApndxLiqConstr}
-\subfile{\ApndxDir/ApndxConditionDiagrams}
-\subfile{\ApndxDir/ApndxSupportingAnalysis}
+\subfile{Appendices/ApndxConcaveCFunc}
+\subfile{Appendices/ApndxMTargetIsStable}
+\subfile{Appendices/ApndxBalancedGrowthcNrmAndCov}
+\subfile{Appendices/ApndxLiqConstr}
+\subfile{Appendices/ApndxConditionDiagrams}
+\subfile{Appendices/ApndxSupportingAnalysis}
 
 \pagebreak
 %\providecommand{\bibfiles}{}\renewcommand{\bibfiles}{}\econarkcollectbibs{\econtexRoot/\texname}\bibliography{\bibfiles}\sloppy\end{document}\endinput

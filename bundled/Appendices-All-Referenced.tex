@@ -4,6 +4,7 @@
 \usepackage{econark-ifsubfile}
 
 \xrsetup{\econtexRoot/\texname}
+\externaldocument{BufferStockTheory}
 
 \begin{document}
 \appendix % Declare beginning of appendices
@@ -24,6 +25,7 @@ Below are the paper's appendices referenced in the text.
 \subfile{Appendices/ApndxSupportingAnalysis}
 
 \pagebreak
-\bibliography{\texname}\end{document}
+%\providecommand{\bibfiles}{}\renewcommand{\bibfiles}{}\econarkcollectbibs{\econtexRoot/\texname}\bibliography{\bibfiles}\end{document}
+\ifSubfilesClassLoaded{\bibfilesfind{\texname}\bibliography{\bibfilesfound}}{}
 
 \end{document}
