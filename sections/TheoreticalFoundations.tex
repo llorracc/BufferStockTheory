@@ -38,20 +38,20 @@ Letting $\vFuncLvl_{T+1} = 0$, it follows that the value function for the termin
 For $t<T$, the finite-horizon value functions are recursively defined by:
 
 %
-\begin{verbatimwrite}{Equations/supfn}
+\begin{verbatimwrite}{\econtexRoot/Equations/supfn}
   \begin{equation}\begin{gathered}\begin{aligned}\label{eq:levelRecProblem}
     \vFuncLvl_{t}(\mLvl_{t}, \permLvl_{t})\colon & = \max_{0 < \cLvl_{t} \leq \mLvl_{t}} \uFunc(\cLvl_{t}) + \DiscFac \Ex_{t}\vFuncLvl_{t+1}(\mLvl_{t+1}, \permLvl_{t+1}), \qquad (\mLvl_{t}, \permLvl_{t})\in \Reals_{++}^{2} 
   \end{aligned}\end{gathered}
 \tag{$\mathscr{P}_{L}$}
 \end{equation}
 \end{verbatimwrite} \unskip
-\input{Equations/supfn}
+\input{\econtexRoot/Equations/supfn}
 \noindent{where} i) $\cLvl_{t}$ is the level of consumption at time $t$, ii) $\Ex_{t}$ is the expectation operator over the shocks $\permShk_{t+1}$ and $\tranShkAll_{t+1}$\hypertarget{checkRestrictions}{}\hypertarget{DBCparts}{}, and iii) $\mLvl_{t+1}$ is determined from this period's $\mLvl_{t}$ and choice of $\cLvl_{t}$ as follows:\footnote{For maximal clarity, we have separately described every step in the dynamic budget evolution.
 The steps are broken down also so that the notation of the paper will correspond exactly to the variable names in the \href{https://github.com/econ-ark/HARK} toolkit, because it is required for solving life cycle problems.}%$^{,}$\footnote{Allowing a stochastic interest factor would complicate the notation but not affect the points we want to address; however, see~\cite{benhabibWealth},~\cite{maTodaRich}, and~\cite{mstIncFluct} for the implications of capital income risk for the distribution of wealth and other interesting questions not considered here.}
 %
 %\ifSubfilesClassLoaded{\bibfilesfind{\texname}\bibliography{\bibfilesfound}}{}\end{document}\endinput
 
-\begin{verbatimwrite}{Equations/DBCparts}
+\begin{verbatimwrite}{\econtexRoot/Equations/DBCparts}
   \begin{equation}\label{eq:DBCparts} % Don't define it if already defined
     \begin{aligned}
       \aLvl_{t}     & = \mLvl_{t}-\cLvl_{t}  \\
@@ -61,7 +61,7 @@ The steps are broken down also so that the notation of the paper will correspond
     \end{aligned}
   \end{equation}
 \end{verbatimwrite}\unskip
-\input{Equations/DBCParts}
+\input{\econtexRoot/Equations/DBCParts}
 
 The consumer's assets at the end of $t$, $\aLvl_{t}$, translate one-for-one into capital $\kLvl_{t+1}$ at the beginning of the next period.
 In turn, $\kLvl_{t+1}$ is augmented by a fixed interest factor $\Rfree$ to become the consumer's financial (`bank') balances $\bLvl_{t+1} = \Rfree \kLvl_{t+1}$.  `Market resources,' $\mLvl_{t+1}$,  are the sum of financial wealth $\Rfree \kLvl_{t+1}$ and noncapital income $\yLvl_{t+1}=\permLvl_{t+1}\tranShkAll_{t+1}$ (permanent noncapital income $\permLvl_{t+1}$ multiplied by the transitory shock $\tranShkAll_{t+1}$).
@@ -81,7 +81,7 @@ For each $t$:
 \begin{enumerate}
 \item The permanent shock, $\permShk_{t}$, satisfies $\Ex[{\permShk}_{t}]=1$ and  $\permShk_{t}\in [\permShkIndMin,\permShkIndMax]$ s.t. $0 < \permShkIndMin \leq 1$ and $1 \leq \permShkIndMax < \infty$. 
 \item The transitory shock, $\tranShkAll_{t}$, satisfies: 
-\begin{verbatimwrite}{Equations/TranShkDef}
+\begin{verbatimwrite}{\econtexRoot/Equations/TranShkDef}
   \begin{equation}
     \tranShkAll_{t}=
     \begin{cases}
@@ -90,7 +90,7 @@ For each $t$:
     \end{cases} \label{eq:TranShkDef}
   \end{equation}
 \end{verbatimwrite}\unskip
-\input{Equations/TranShkDef}
+\input{\econtexRoot/Equations/TranShkDef}
 \noindent for iid random variable $\tranShkEmp_{t}$,  with $\Ex[{\tranShkEmp}_{t}]=1$ and $ \tranShkEmp_{t} \in [\Min{\tranShkEmp}, \bar{\tranShkEmp}]$ s.t.
 $\tranShkEmpMin >0$ and $\Min{\tranShkEmp} \leq 1 \leq \Max{\tranShkEmp} < \infty$.
 
@@ -306,22 +306,22 @@ $ \GPFacRaw  < 1$.
 \end{assumS}
 
 \begin{comment}
-\begin{verbatimwrite}{Equations/GICRaw}
+\begin{verbatimwrite}{\econtexRoot/Equations/GICRaw}
   \begin{equation}\begin{gathered}\begin{aligned}
         \text{\GICRaw:~~}  &&  \GPFacRaw  < 1 . \phantom{/\PermGroFac}&  \phantom{\text{\GICRaw:~~}} \label{eq:GICRaw}
       \end{aligned}\end{gathered}\end{equation}
 \end{verbatimwrite}\unskip
-\input{Equations/GICRaw}
+\input{\econtexRoot/Equations/GICRaw}
 \end{assumS}
 \end{comment}
 
 A final useful definition is `strong growth impatience'
-\begin{verbatimwrite}{Equations/GPFacMod}
+\begin{verbatimwrite}{\econtexRoot/Equations/GPFacMod}
   \begin{equation}\label{eq:GPFacMod}
     \Ex[\APFac/\PermGroFacRnd] < 1
   \end{equation}
 \end{verbatimwrite}
-\input{Equations/GPFacMod}
+\input{\econtexRoot/Equations/GPFacMod}
 which holds for a consumer for whom the expectation of the \textit{ratio} of the \hyperlink{APFac}{absolute patience factor} to the (stochastic) growth factor of permanent income is less than one, 
 \hypertarget{GICMod}{}
 \begin{assumS}(\textit{Strong Growth Impatience}). \label{ass:GICMod}
@@ -332,11 +332,11 @@ $ \Ex\left[\frac{\APFac}{\PermGroFac \permShk}\right] = \GPFacMod  < 1.$
 With non-degenerate mean-one stochastic shocks to permanent income, the expectation of the ratio is strictly larger than the ratio of the expectations).
 
 \begin{comment}
-\begin{verbatimwrite}{Equations/GICMod}
+\begin{verbatimwrite}{\econtexRoot/Equations/GICMod}
   \begin{equation}\begin{gathered}\begin{aligned}
     \text{{\GICMod}:~~}    \GPFacMod  & < 1 .  \phantom{\text{{\GICMod}:~~}}\label{eq:GICMod}
   \end{aligned}\end{gathered}\end{equation}\end{verbatimwrite} \unskip
-\input{Equations/GICMod}
+\input{\econtexRoot/Equations/GICMod}
 \end{comment}
 
 
@@ -613,7 +613,7 @@ We define the weighting function as
 \boundFunc(x) = \zeta + x^{1-\gamma},
 \end{equation}
 \end{verbatimwrite} \unskip
-\input{Equations/boundFunc}
+\input{\econtexRoot/Equations/boundFunc}
 where $\zeta \in \Reals_{++}$ is a constant derived from the model primitives and the upper and lower bound on the consumption share (see Claim \ref{rem:shnkrdef} in Appendix \ref{sec:Tcontractionmapping} for the parametrization of $\zeta$).
   
 Next, for any lower bound $\MPCminInf$ and upper-bound $\MPCmaxInf$ on the share of consumption to market resources, define the `MPC bounded Bellman operator' $\TMap^{\MPCminInf, \MPCmaxInf}$, with \textit{$\TMap^{\MPCminInf, \MPCmaxInf}:\mathcal{C}_{\boundFunc }\left( \Reals_{++},\Reals\right) \rightarrow \mathcal{C}_{\boundFunc }\left( \Reals_{++},\Reals\right) $}, as:

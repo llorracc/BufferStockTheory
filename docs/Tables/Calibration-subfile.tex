@@ -17,7 +17,7 @@
 
 \let\TableWidth\relax % Necessary to allow redefinition of tablewidth, which might already be defined
 \newlength\TableWidth
-\begin{verbatimwrite}{Tables/\TblName}
+\begin{verbatimwrite}{\econtexRoot/Tables/\TblName}
 
   \begin{table}
     \centering
@@ -60,7 +60,7 @@
   \end{table}
 \end{verbatimwrite}
 \clearpage
-\input{Tables/\TblName}
+\input{\econtexRoot/Tables/\TblName}
 
 \end{document}
 % Delete up to four existing variants of BibTeX 

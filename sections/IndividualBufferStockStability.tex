@@ -57,7 +57,7 @@ What we require for aggregate stability is the weaker notion of a `pseudo-target
 % \figName allows generic definition of hypertargets based on title of figure
 \renewcommand{\figName}{cNrmTargetFig} 
 \hypertarget{\figFile}{}
-\input{Figures/cNrmTargetFig}
+\input{\econtexRoot/Figures/cNrmTargetFig}
 
 
 %\end{document}\endinput
@@ -72,7 +72,7 @@ For both results below, consider the problem defined in Section~\ref{subsec:Setu
 The first stabiltiy result guarantees the existence of a buffer stock target $\mTrgNrm$ such that if $\mNrm_{t}=\mTrgNrm$, then $\Ex_{t}[\mNrm_{t+1}]=\mNrm_{t}$.
 Existence of such a target requires \hyperlink{GICMod}{strong growth impatience}.
 
-\begin{verbatimwrite}{Equations/TheoremMTargetIsStable}
+\begin{verbatimwrite}{\econtexRoot/Equations/TheoremMTargetIsStable}
   \begin{theorem}\label{thm:target} (Buffer Stock Target).
 % Don't define it if already defined
 If \hyperlink{WRIC}{weak return impatience} (Assumption \ref{ass:WRIC}), \hyperlink{FVAC}{finite value of autarky} (Assumption \ref{ass:FVAC}) and \hyperlink{GICMod}{strong growth impatience} (Assumption \ref{ass:GICMod}) hold, then there exists $\mTrgNrm$, with $\mTrgNrm>0$, such that:
@@ -90,7 +90,7 @@ If \hyperlink{WRIC}{weak return impatience} (Assumption \ref{ass:WRIC}), \hyperl
     \end{equation}
   \end{theorem}
 \end{verbatimwrite} \unskip
-\input{Equations/TheoremMTargetIsStable}
+\input{\econtexRoot/Equations/TheoremMTargetIsStable}
 
 \begin{proof}\let\qed\relax
 See Appendix \ref{subsubsec:AppxIndividTarget} for the proof.
@@ -142,7 +142,7 @@ For our purposes, little would be gained by an analysis of this point parallel t
 
 Under the weaker  \hyperlink{GICRaw}{growth impatience} condition, we can verify the existence of this pseudo-target, $\mBalLvl$.
 
-\begin{verbatimwrite}{Equations/TheoremMSSBalExists}
+\begin{verbatimwrite}{\econtexRoot/Equations/TheoremMSSBalExists}
   \begin{theorem}(`Pseudo-Target').
     \labelsafe{thm:MSSBalExists} % Don't define it if already defined
 If \hyperlink{WRIC}{weak return impatience} (Assumption \ref{ass:WRIC}), \hyperlink{FVAC}{finite value of autarky} (Assumption \ref{ass:FVAC}) and \hyperlink{GICRaw}{growth impatience} (Assumption \ref{ass:GICRaw}) hold, then there exists a unique $\mBalLvl$, with $\mBalLvl>0$ such that:
@@ -160,7 +160,7 @@ If \hyperlink{WRIC}{weak return impatience} (Assumption \ref{ass:WRIC}), \hyperl
     \end{equation}
   \end{theorem}
 \end{verbatimwrite} \unskip
-\input{Equations/TheoremMSSBalExists}
+\input{\econtexRoot/Equations/TheoremMSSBalExists}
 \begin{proof}
 See Appendix \ref{subsubsec:AppxPseudoSS} for the proof.
 
@@ -173,7 +173,7 @@ See Appendix \ref{subsubsec:AppxPseudoSS} for the proof.
 
   A final point of stability will be indicated by a $\sim$ accent; this is the $\mNrm$ at which the expectation of $\log \mLvl$ is unchanging.
 
-  \begin{verbatimwrite}{Equations/TheoremGroIsStable}
+  \begin{verbatimwrite}{\econtexRoot/Equations/TheoremGroIsStable}
     \begin{theorem}\label{thm:TheoremGroIsStable}{}{\label{thm:TheoremGroIsStable}}
       For the non-degenerate solution to Section~\ref{subsec:Setup}'s problem when {\FVAC}, {\WRIC}, and {\GICRaw} all hold, there exists a unique cash-on-hand-to-permanent-income ratio $\mBalLvl>0$ such that
       \begin{equation}
@@ -189,7 +189,7 @@ See Appendix \ref{subsubsec:AppxPseudoSS} for the proof.
       \end{equation}
     \end{theorem}
   \end{verbatimwrite}
-  \input{Equations/TheoremGroIsStable}
+  \input{\econtexRoot/Equations/TheoremGroIsStable}
 
   with two associated Lemmas demonstrating that $\mBalLvl < \mBalLog$ and $\mBalLvl < \$\mTrgNrm$.
 \end{comment}
@@ -201,7 +201,7 @@ For many parameterizations (e.g., under the baseline parameter values used for c
 
 \renewcommand{\figFile}{GICModFailsButGICRawHolds}
 \hypertarget{\figFile}{}
-\input{Figures/GICModFailsButGICRawHolds}
+\input{\econtexRoot/Figures/GICModFailsButGICRawHolds}
 
 An illuminating exception is exhibited in Figure~\ref{fig:GICModFailsButGICRawHolds}, which modifies the baseline parameter values by quadrupling the variance of the permanent shocks, enough to cause failure of \hyperlink{GICMod}{strong growth impatience}; now there is no target level of market resources $\mTrgNrm$.
 Nonetheless, the pseudo-target still exists because it turns off realizations of the permanent shock.

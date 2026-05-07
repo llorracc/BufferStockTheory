@@ -16,7 +16,7 @@
 \section{Consumer Patience and Limiting Consumption}\label{sec:GICdiscussion}
 
 \renewcommand{\figName}{cFuncsConverge} 
-\input{Figures/cFuncsConverge} 
+\input{\econtexRoot/Figures/cFuncsConverge} 
 
 Having established our formal results, we are ready to describe how the various patience conditions determine the characteristics of the limiting consumption function.
 To fix ideas, we start with a quantitative example using the familiar benchmark case where \hyperlink{RIC}{return impatience}, \hyperlink{GICRaw}{growth impatience} and \hyperlink{FHWC}{finite human wealth} all hold, shown by Figure~\ref{fig:cFuncsConverge}.
@@ -30,10 +30,10 @@ Moreover, as $\mNrm$ approaches zero, the MPC approaches $\MPCmax=(1-\pZero^{1/\
 
 \renewcommand{\figFile}{mpclimits}
 \hypertarget{\figFile}{}
-\input{Figures/MPCLimits}
+\input{\econtexRoot/Figures/MPCLimits}
 \renewcommand{\figFile}{cFuncBounds}
 \hypertarget{\figFile}{}
-\input{Figures/cFuncBounds}
+\input{\econtexRoot/Figures/cFuncBounds}
 
 While in the presence of a constraint neither \hyperlink{RIC}{return impatience} nor \hyperlink{GICRaw}{growth impatience} is individually necessary for nondegeneracy of $\cFunc(m)$, a key conclusion of this section is that if \emph{both} \hyperlink{RIC}{return impatience} and \hyperlink{GICRaw}{growth impatience} fail, the consumption function \emph{will} be degenerate (limiting either to $\cFunc(m)=0$ or $c(\mNrm)=\infty$ as the horizon recedes).
 So, for a useful solution, at least one of these conditions must hold.\footnote{Recall Claim \ref{claim:noRICGIC} showing that a double-impatience failure implies autarky value is not finite; and see } The case with \hyperlink{GICRaw}{growth impatience} but \hyperlink{RIC}{return \emph{patience}} is particularly surprising, because it is not immediately clear what prevents our earlier conclusion (in other circumstances) that return patience leads $\cFunc(m)$ to asymptote to zero.
@@ -66,7 +66,7 @@ This would allow us to traverse the diagram clockwise from $\APFac$  through $\P
 % \figName allows generic definition of hypertargets based on title of figure
 \renewcommand{\figName}{RelatePFGICFHWCRICPFFVAC} 
 \hypertarget{\figName}{}
-\input{Figures/\figName} % Read in the tex to generate the figure
+\input{\econtexRoot/Figures/\figName} % Read in the tex to generate the figure
 
 In the unconstrained case, \hyperlink{FHWC}{finite human wealth} was necessary since, without constraints, only  this condition could prevent infinite borrowing in the limit (Proposition \ref{prop:pfUCFHWC}).
 Looking at Figure~\ref{fig:RelatePFGICFHWCRICPFFVAC}, following the diagonal from $\APFac$ to the bottom-right corner corresponds to the direct of imposition of the \hyperlink{PFFVAC}{finite value of autarky}, which implies that the existence of a non-degenerate solution \textit{requires} \hyperlink{RIC}{return impatience} to hold.
@@ -146,10 +146,10 @@ This result reconciles the conflicting intuitions from the unconstrained case, w
 
 We now examine the case with uncertainty but without constraints, which we argued was a close parallel to the model with constraints but without uncertainty (recall Section \ref{subsubsec:deatonIsLimit}).
 \hypertarget{Calibration}{}
-\input{Tables/Parameters}
+\input{\econtexRoot/Tables/Parameters}
 
 \hypertarget{Symbols}{}
-\input{Tables/Calibration}
+\input{\econtexRoot/Tables/Calibration}
 
 %\hypertarget{Relations-Between-Parametric-Restrictions}{}
 %\subsubsection{Relations Between Parametric Restrictions}
@@ -162,7 +162,7 @@ Though the diagram looks complex, it is merely a modified version of the earlier
 \renewcommand{\figName}{Inequalities} 
 \renewcommand{\figFile}{\figName} 
 \hypertarget{\figFile}{}
-\input{Figures/\figName} % Read in the tex to generate the figure
+\input{\econtexRoot/Figures/\figName} % Read in the tex to generate the figure
 
 Beyond \hyperlink{FVAC}{finite value of autarky},
 the additional condition sufficient for contraction, \hyperlink{WRIC}{weak return impatience}, can be seen to be weak by asking `under what circumstances would the \hyperlink{FVAC}{finite value of autarky} hold but the \hyperlink{WRIC}{weak return impatience} fail?'  Algebraically, the requirement becomes:
@@ -263,10 +263,10 @@ So, \{\RIC, \cncl{\FHWC}\} implies the {\GICRaw} holds.
 We have now established the principal points of comparison between the perfect foresight solutions and the solutions under uncertainty; these are codified in the remaining parts of Tables~\ref{table:Comparison} and~\ref{table:Required}.
 
 \hypertarget{Factors-Defined-And-Compared}{}
-\input{Tables/Comparison}
+\input{\econtexRoot/Tables/Comparison}
 
 \hypertarget{Required}{}
-\input{Tables/Required}
+\input{\econtexRoot/Tables/Required}
 
 
 \end{document}\endinput
