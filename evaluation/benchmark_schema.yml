@@ -1,0 +1,78 @@
+# evaluation/benchmark_schema.yml — schema for benchmark.yml entries.
+#
+# benchmark.yml is a list of question entries. Each entry must conform
+# to the shape below. The validator inside `score.py` checks structure
+# and dereferences `expected_sources[*].anchor` against
+# BufferStockTheory.md.
+#
+# Fields are listed in canonical order. (required) / (optional) is
+# marked at the top of each.
+
+# -- required fields ---------------------------------------------------
+
+# id (required, string, slug form)
+#   Stable identifier; used as the response-file stem in
+#   evaluation/responses/<id>.json. Lowercase, hyphen-separated.
+#   Convention: 'q01-<category-prefix>-<short-name>'.
+id: q01-defn-permgrofacadj
+
+# category (required, string, enum)
+#   One of: definitions, theorems, conditions, calibration, cross-paper.
+#   Used by score.py to compute per-category aggregates.
+category: definitions
+
+# question (required, string)
+#   The exact prompt issued to matsya. Single sentence preferred.
+#   May contain LaTeX macros (e.g. \PermGroFacAdj) — passed verbatim.
+question: 'What does \PermGroFacAdj mean in the paper?'
+
+# expected_answer (required, multi-line string)
+#   One paragraph gold-standard answer authored by a domain expert.
+#   Used by score.py as the "right" answer for the answer_agreement
+#   embedding-cosine metric, and shown to human reviewers.
+expected_answer: |
+  \PermGroFacAdj := \PermGroFac / \Ex[1/\permShk] is the
+  uncertainty-adjusted permanent-income growth factor. By Jensen's
+  inequality on 1/x, \Ex[1/\permShk] >= 1, so \PermGroFacAdj <=
+  \PermGroFac, with strict inequality when \permShk has positive
+  variance. It is the denominator of GPF-Mod in the closed form
+  \GPFacMod = \APFac / \PermGroFacAdj.
+
+# expected_sources (required, non-empty list of {file, anchor})
+#   Where in the paper the gold-standard answer is grounded. Anchors
+#   must dereference in BufferStockTheory.md (validator checks).
+#   Used for human review and for catching typos in anchor names;
+#   NOT directly used in source_recall/precision (see expected_chunks).
+expected_sources:
+  - file: BufferStockTheory.md
+    anchor: PermGroFacAdj
+
+# expected_chunks (required, non-empty list of strings)
+#   The .tex file basenames matsya should pull from when answering
+#   this question. score.py computes source_recall/source_precision
+#   as set-intersection of expected_chunks against the file basenames
+#   appearing in matsya's "Sources:" block.
+#
+#   Common values for BST questions:
+#     - BufferStockTheory-NoAppendix.tex   (main paper body)
+#     - BufferStockTheory.tex               (bundled top-level)
+#     - BufferStockTheory-Slides.tex        (slide deck companion)
+#     - Introduction.tex                    (intro framing)
+#     - Appendices/<name>.tex               (specific appendix)
+#     - Tables/<name>.tex                   (calibration tables)
+#   Cross-paper questions may include bellman-ddsl chunks:
+#     - bellman-ddsl/docs/...
+expected_chunks:
+  - BufferStockTheory-NoAppendix.tex
+  - BufferStockTheory.tex
+
+# -- optional fields ---------------------------------------------------
+
+# notes (optional, string)
+#   Author's notes about the question — why it's interesting, what
+#   it's meant to test, known matsya weaknesses to watch for.
+notes: 'Tests whether matsya recovers the harmonic-mean adjustment that distinguishes GIC from GIC-Mod.'
+
+# difficulty (optional, integer 1-5)
+#   1 = trivial lookup; 5 = requires synthesis across multiple sections.
+difficulty: 2

@@ -1,0 +1,484 @@
+{
+  "n_questions": 20,
+  "n_scored": 20,
+  "n_missing": 0,
+  "missing_ids": [],
+  "per_question": {
+    "q01-defn-permgrofacadj": {
+      "source_recall": 0.5,
+      "source_precision": 0.08333333333333333,
+      "answer_agreement": null,
+      "matsya_basenames": [
+        "20260219-0939h_harmonize-mover-connector-contract-terminology-DRAFT3.md",
+        "ApndxConcaveCFunc.tex",
+        "ApndxConditionDiagrams.tex",
+        "BufferStockTheory-NoAppendix.tex",
+        "InequalityPFGICFHWCRIC.tex",
+        "RelatePFGICFHWCRICPFFVAC.tex",
+        "backus-1977-turing-award-lecture.md",
+        "econark-shortcuts.md",
+        "endOfPrd.py",
+        "endOfPrdMC.py",
+        "example-latex.tex",
+        "example-myst.md"
+      ],
+      "expected_chunks": [
+        "BufferStockTheory-NoAppendix.tex",
+        "Comparison.tex"
+      ],
+      "intersection": [
+        "BufferStockTheory-NoAppendix.tex"
+      ]
+    },
+    "q02-defn-buffer-stock-target": {
+      "source_recall": 1.0,
+      "source_precision": 0.125,
+      "answer_agreement": null,
+      "matsya_basenames": [
+        "05-bellman-theory.md",
+        "BufferStockTheory-NoAppendix.tex",
+        "Introduction.tex",
+        "README.md",
+        "SolvingMicroDSOPs-clean.tex",
+        "buffer-stock-calibration.yml",
+        "buffer_stock.md",
+        "foundations-combined.md"
+      ],
+      "expected_chunks": [
+        "BufferStockTheory-NoAppendix.tex"
+      ],
+      "intersection": [
+        "BufferStockTheory-NoAppendix.tex"
+      ]
+    },
+    "q03-defn-Ex-operator": {
+      "source_recall": 1.0,
+      "source_precision": 0.125,
+      "answer_agreement": null,
+      "matsya_basenames": [
+        "ApndxMTargetIsStable.tex",
+        "BufferStockTheory-NoAppendix.tex",
+        "CDC Prompt.md",
+        "REPORT.md",
+        "SolvingMicroDSOPs-clean.tex",
+        "consumption_savings_iid_mbdp_aux_k_reward_u.yaml",
+        "research_v1.md",
+        "sed2e.pdf"
+      ],
+      "expected_chunks": [
+        "BufferStockTheory-NoAppendix.tex"
+      ],
+      "intersection": [
+        "BufferStockTheory-NoAppendix.tex"
+      ]
+    },
+    "q04-defn-APFac": {
+      "source_recall": 0.5,
+      "source_precision": 0.14285714285714285,
+      "answer_agreement": null,
+      "matsya_basenames": [
+        "ApndxConditionDiagrams.tex",
+        "BufferStockTheory-NoAppendix.tex",
+        "BufferStockTheory-Slides.tex",
+        "Calibration-subfile.tex",
+        "Calibration.tex",
+        "Introduction.tex",
+        "RelatePFGICFHWCRICPFFVAC.tex"
+      ],
+      "expected_chunks": [
+        "BufferStockTheory-NoAppendix.tex",
+        "Comparison.tex"
+      ],
+      "intersection": [
+        "BufferStockTheory-NoAppendix.tex"
+      ]
+    },
+    "q05-thms-thm-convgtobellman-requires": {
+      "source_recall": 1.0,
+      "source_precision": 0.2857142857142857,
+      "answer_agreement": null,
+      "matsya_basenames": [
+        "ApndxConcaveCFunc.tex",
+        "Arapostathis-survey-MDP.pdf",
+        "BufferStockTheory-NoAppendix.tex",
+        "Housing_and_Pensions_v31_ST_AS.tex",
+        "Kallenberg-1997-foundations-probability.pdf",
+        "Optimization-control-stochastic-systems.pdf",
+        "Rockafellar-stochastic-VI-single-to-multistage.pdf"
+      ],
+      "expected_chunks": [
+        "ApndxConcaveCFunc.tex",
+        "BufferStockTheory-NoAppendix.tex"
+      ],
+      "intersection": [
+        "ApndxConcaveCFunc.tex",
+        "BufferStockTheory-NoAppendix.tex"
+      ]
+    },
+    "q06-thms-mpc-bounds-lemma": {
+      "source_recall": 0.5,
+      "source_precision": 0.16666666666666666,
+      "answer_agreement": null,
+      "matsya_basenames": [
+        "All-Appendices.pdf",
+        "ApndxLiqConstrAsLimit.pdf",
+        "Appendices-All-Referenced.pdf",
+        "BufferStockTheory-NoAppendix.tex",
+        "Macroeconomics-Consistent-2024.pdf",
+        "Stokey-Lucas-1989-recursive-methods.pdf"
+      ],
+      "expected_chunks": [
+        "ApndxConcaveCFunc.tex",
+        "BufferStockTheory-NoAppendix.tex"
+      ],
+      "intersection": [
+        "BufferStockTheory-NoAppendix.tex"
+      ]
+    },
+    "q07-thms-thm-target-assumptions": {
+      "source_recall": 1.0,
+      "source_precision": 0.2222222222222222,
+      "answer_agreement": null,
+      "matsya_basenames": [
+        "ApndxMTargetIsStable.tex",
+        "Appendices-All-Referenced.pdf",
+        "BufferStockTheory-NoAppendix.tex",
+        "Introduction.tex",
+        "Required-subfile.tex",
+        "Required.tex",
+        "Stokey-Lucas-1989-recursive-methods.pdf",
+        "TheoremMTargetIsStable.tex",
+        "explanation_for_economists.pdf"
+      ],
+      "expected_chunks": [
+        "ApndxMTargetIsStable.tex",
+        "BufferStockTheory-NoAppendix.tex"
+      ],
+      "intersection": [
+        "ApndxMTargetIsStable.tex",
+        "BufferStockTheory-NoAppendix.tex"
+      ]
+    },
+    "q08-thms-implication-chain-location": {
+      "source_recall": 0.5,
+      "source_precision": 0.2,
+      "answer_agreement": null,
+      "matsya_basenames": [
+        "All-Appendices.pdf",
+        "ApndxConcaveCFunc.tex",
+        "ApndxConditionDiagrams.tex",
+        "ApndxLiqConstr.pdf",
+        "Appendices-All-Referenced.pdf"
+      ],
+      "expected_chunks": [
+        "ApndxConcaveCFunc.tex",
+        "BufferStockTheory-NoAppendix.tex"
+      ],
+      "intersection": [
+        "ApndxConcaveCFunc.tex"
+      ]
+    },
+    "q09-cond-gic-implies-fvac": {
+      "source_recall": 1.0,
+      "source_precision": 0.16666666666666666,
+      "answer_agreement": null,
+      "matsya_basenames": [
+        "All-Appendices.pdf",
+        "BufferStockTheory-NoAppendix.tex",
+        "BufferStockTheory-Slides.tex",
+        "Introduction.tex",
+        "TheoremMSSBalExists.tex",
+        "TheoremMTargetIsStable.tex"
+      ],
+      "expected_chunks": [
+        "BufferStockTheory-NoAppendix.tex"
+      ],
+      "intersection": [
+        "BufferStockTheory-NoAppendix.tex"
+      ]
+    },
+    "q10-cond-gic-vs-gicmod-denominators": {
+      "source_recall": 1.0,
+      "source_precision": 0.1111111111111111,
+      "answer_agreement": null,
+      "matsya_basenames": [
+        "All-Appendices.pdf",
+        "ApndxConditionDiagrams.tex",
+        "ApndxLiqConstr.pdf",
+        "ApndxMTargetIsStable.tex",
+        "Appendices-All-Referenced.pdf",
+        "BufferStockTheory-NoAppendix.tex",
+        "Calibration.tex",
+        "RelatePFGICFHWCRICPFFVAC.tex",
+        "dolo-sym-to-ddsl-core-mapping.md"
+      ],
+      "expected_chunks": [
+        "BufferStockTheory-NoAppendix.tex"
+      ],
+      "intersection": [
+        "BufferStockTheory-NoAppendix.tex"
+      ]
+    },
+    "q11-cond-target-without-pseudo-target": {
+      "source_recall": 1.0,
+      "source_precision": 0.16666666666666666,
+      "answer_agreement": null,
+      "matsya_basenames": [
+        "BufferStockTheory-NoAppendix.tex",
+        "Introduction.tex",
+        "Required-subfile.tex",
+        "Required.tex",
+        "buffer-stock-calibration.yml",
+        "carpenter-stan.md"
+      ],
+      "expected_chunks": [
+        "BufferStockTheory-NoAppendix.tex"
+      ],
+      "intersection": [
+        "BufferStockTheory-NoAppendix.tex"
+      ]
+    },
+    "q12-cond-four-denominators": {
+      "source_recall": 0.5,
+      "source_precision": 0.14285714285714285,
+      "answer_agreement": null,
+      "matsya_basenames": [
+        "All-Appendices.pdf",
+        "ApndxLiqConstrAsLimit.pdf",
+        "Appendices-All-Referenced.pdf",
+        "BufferStockTheory-NoAppendix.tex",
+        "BufferStockTheory-Slides.tex",
+        "Introduction.tex",
+        "RelatePFGICFHWCRICPFFVAC.tex"
+      ],
+      "expected_chunks": [
+        "BufferStockTheory-NoAppendix.tex",
+        "Comparison.tex"
+      ],
+      "intersection": [
+        "BufferStockTheory-NoAppendix.tex"
+      ]
+    },
+    "q13-calib-CRRA-value": {
+      "source_recall": 0.0,
+      "source_precision": 0.0,
+      "answer_agreement": null,
+      "matsya_basenames": [
+        "20260122-1326h_deep-dive-report.md",
+        "Macroeconomics-Consistent-2024.pdf",
+        "Parameters.tex",
+        "StructEstimation.py",
+        "cons_stage_formal_mdp.md",
+        "dashboard_widget.py",
+        "endOfPrd.py",
+        "example-latex.tex",
+        "example-myst.md",
+        "resources.py"
+      ],
+      "expected_chunks": [
+        "BufferStockTheory-NoAppendix.tex",
+        "Comparison-subfile.tex",
+        "Comparison.tex"
+      ],
+      "intersection": []
+    },
+    "q14-calib-APFac-value": {
+      "source_recall": 0.3333333333333333,
+      "source_precision": 0.125,
+      "answer_agreement": null,
+      "matsya_basenames": [
+        "ApndxConditionDiagrams.tex",
+        "BufferStockTheory-NoAppendix.tex",
+        "Calibration-subfile.tex",
+        "Calibration.tex",
+        "Introduction.tex",
+        "RelatePFGICFHWCRICPFFVAC.tex",
+        "SolvingMicroDSOPs-clean.tex",
+        "dashboard_widget.py"
+      ],
+      "expected_chunks": [
+        "BufferStockTheory-NoAppendix.tex",
+        "Comparison-subfile.tex",
+        "Comparison.tex"
+      ],
+      "intersection": [
+        "BufferStockTheory-NoAppendix.tex"
+      ]
+    },
+    "q15-calib-permshk-stddev": {
+      "source_recall": 0.0,
+      "source_precision": 0.0,
+      "answer_agreement": null,
+      "matsya_basenames": [
+        "20260122-1521h_port-with-shocks-model-report.md",
+        "Calibration-subfile.tex",
+        "Calibration.tex",
+        "Macroeconomics-Consistent-2024.pdf",
+        "Parameters.tex",
+        "arb_state_space.md",
+        "buffer_stock.md",
+        "dashboard_widget.py",
+        "multi-dim_funcs.md",
+        "processes.md",
+        "prompt_v1.4.9.2.md",
+        "solution.py",
+        "unified.md",
+        "unified_make-sonnet3p5-works.md"
+      ],
+      "expected_chunks": [
+        "BufferStockTheory-NoAppendix.tex",
+        "Comparison-subfile.tex",
+        "Comparison.tex"
+      ],
+      "intersection": []
+    },
+    "q16-calib-Rfree-value": {
+      "source_recall": 0.3333333333333333,
+      "source_precision": 0.125,
+      "answer_agreement": null,
+      "matsya_basenames": [
+        "BufferStockTheory-NoAppendix.tex",
+        "Kumhof-Ranciere-Winant-2013-Inequality-Leverage-Crises-LSE.pdf",
+        "Macroeconomics-Consistent-2024.pdf",
+        "Parameters.tex",
+        "_sectn-structural-estimation-input.tex",
+        "_sectn-structural-estimation.tex",
+        "bellman-excerpt.md",
+        "dashboard_widget.py"
+      ],
+      "expected_chunks": [
+        "BufferStockTheory-NoAppendix.tex",
+        "Comparison-subfile.tex",
+        "Comparison.tex"
+      ],
+      "intersection": [
+        "BufferStockTheory-NoAppendix.tex"
+      ]
+    },
+    "q17-xref-bellman-ddsl-perches": {
+      "source_recall": 0.0,
+      "source_precision": 0.0,
+      "answer_agreement": null,
+      "matsya_basenames": [
+        "05-bellman-theory.md",
+        "05012026.md",
+        "ApndxLiqConstrAsLimit.pdf",
+        "ApndxNotation.pdf",
+        "CDC Prompt.md",
+        "ConsPerfForesight_simple_mdp.md",
+        "EconARK-DML-ToR.pdf",
+        "Macroeconomics-Consistent-2024.pdf",
+        "goals.md"
+      ],
+      "expected_chunks": [
+        "BufferStockTheory-NoAppendix.tex",
+        "ConsPerfForesight_mdp.md"
+      ],
+      "intersection": []
+    },
+    "q18-xref-szeidl-contrast": {
+      "source_recall": 0.5,
+      "source_precision": 0.14285714285714285,
+      "answer_agreement": null,
+      "matsya_basenames": [
+        "06-response.md",
+        "All-Appendices.pdf",
+        "ApndxBalancedGrowthcNrmAndCov.pdf",
+        "Appendices-All-Referenced.pdf",
+        "BufferStockTheory-NoAppendix.tex",
+        "Cegielski-2012-iterative-methods-fixed-point.pdf",
+        "backus-1977-turing-award-lecture.md"
+      ],
+      "expected_chunks": [
+        "BufferStockTheory-NoAppendix.tex",
+        "Introduction.tex"
+      ],
+      "intersection": [
+        "BufferStockTheory-NoAppendix.tex"
+      ]
+    },
+    "q19-xref-income-fluctuation-literature": {
+      "source_recall": 0.5,
+      "source_precision": 0.1,
+      "answer_agreement": null,
+      "matsya_basenames": [
+        "20260122-1326h_deep-dive-report.md",
+        "Housing_and_Pensions_V46.tex",
+        "Housing_and_Pensions_v42(post-RFS)ST.tex",
+        "Housing_and_Pensions_v44(JPE)edits.tex",
+        "Housing_and_Pensions_v44(JPEMacro).tex",
+        "Housing_and_Pensions_v45_AS.tex",
+        "Housing_and_pensions_V47.tex",
+        "Introduction.tex",
+        "Kumhof-Ranciere-Winant-2013-Inequality-Leverage-Crises-LSE.pdf",
+        "Macroeconomics-Consistent-2024.pdf"
+      ],
+      "expected_chunks": [
+        "BufferStockTheory-NoAppendix.tex",
+        "Introduction.tex"
+      ],
+      "intersection": [
+        "Introduction.tex"
+      ]
+    },
+    "q20-xref-mst-comparison": {
+      "source_recall": 1.0,
+      "source_precision": 0.2,
+      "answer_agreement": null,
+      "matsya_basenames": [
+        "All-Appendices.pdf",
+        "Appendices-All-Referenced.pdf",
+        "BufferStockTheory-NoAppendix.tex",
+        "BufferStockTheory-Slides.tex",
+        "Introduction.tex"
+      ],
+      "expected_chunks": [
+        "BufferStockTheory-NoAppendix.tex"
+      ],
+      "intersection": [
+        "BufferStockTheory-NoAppendix.tex"
+      ]
+    }
+  },
+  "aggregates": {
+    "per_category": {
+      "definitions": {
+        "n": 4,
+        "source_recall": 0.75,
+        "source_precision": 0.11904761904761904,
+        "answer_agreement": null
+      },
+      "theorems": {
+        "n": 4,
+        "source_recall": 0.75,
+        "source_precision": 0.21865079365079365,
+        "answer_agreement": null
+      },
+      "conditions": {
+        "n": 4,
+        "source_recall": 0.875,
+        "source_precision": 0.1468253968253968,
+        "answer_agreement": null
+      },
+      "calibration": {
+        "n": 4,
+        "source_recall": 0.16666666666666666,
+        "source_precision": 0.0625,
+        "answer_agreement": null
+      },
+      "cross-paper": {
+        "n": 4,
+        "source_recall": 0.5,
+        "source_precision": 0.11071428571428571,
+        "answer_agreement": null
+      }
+    },
+    "overall": {
+      "n": 20,
+      "source_recall": 0.6083333333333333,
+      "source_precision": 0.13154761904761905,
+      "answer_agreement": null
+    }
+  },
+  "embedder": null
+}

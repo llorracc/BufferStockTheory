@@ -1,0 +1,710 @@
+{
+  "_meta": {
+    "generated_by": "evaluation/atlas_review.py (matsya+Opus-4.8 primary) + bst-atlas-review-synthesis workflow (independent Opus-4.8 paper cross-check)",
+    "date": "2026-06-23",
+    "advisory": "Machine pre-review only — NOT domain-expert sign-off. concepts/_review-status.yml remains pending. External-literature claims unverified (cited sources unavailable to the machine judges).",
+    "count": 42,
+    "tally_overall": {
+      "minor-issues": 16,
+      "faithful": 26
+    },
+    "tally_priority": {
+      "normal": 24,
+      "low": 18
+    },
+    "tally_matsya_agreement": {
+      "partial": 35,
+      "disagree": 7
+    },
+    "tally_external_lit": {
+      "flagged-for-expert": 16,
+      "none": 26
+    },
+    "rejudged_2026-06-23": [
+      "boundfunc-weighted-space",
+      "finite-value-of-autarky",
+      "growth-impatience-condition",
+      "no-ric-no-gic-implies-no-fvac",
+      "pf-consumption-function-properties"
+    ],
+    "note": "5 concepts re-judged 2026-06-23 after author fixes (boundfunc-weighted-space, finite-value-of-autarky, no-ric-no-gic-implies-no-fvac, growth-impatience-condition, pf-consumption-function-properties); the 3 prior \"overstated\" entries cleared.",
+    "rejudged_postA_2026-06-23": [
+      "boundfunc-weighted-space",
+      "finite-value-of-autarky",
+      "growth-impatience-condition",
+      "no-ric-no-gic-implies-no-fvac",
+      "pf-consumption-function-properties",
+      "stochastic-discount-factor-mst"
+    ]
+  },
+  "verdicts": [
+    {
+      "id": "absolute-impatience-condition",
+      "gloss_status": "minor-issues",
+      "relations_status": "minor-issues",
+      "external_lit_status": "flagged-for-expert",
+      "overall": "minor-issues",
+      "matsya_agreement": "partial",
+      "priority_for_human": "normal",
+      "issues": [
+        "CITATION MISATTRIBUTION (confirmed; the real defect). Gloss attaches '(Szeidl 2013; Ma-Stachurski-Toda 2022)' to the clause that DiscFac*Rfree<1 'guarantees the existence of a stable asset distribution.' In the paper that guarantees-stability sentence is UNCITED (BufferStockTheory.md line 372); the two citations are attached to the OPPOSITE clause one line later: 'However, as pointed out by Szeidl 2013 and Ma-Stachurski-Toda 2022a, DiscFac*Rfree<1 is NOT NECESSARY for an infinite-horizon solution' (line 373). The references support non-necessity, not stability. matsya is correct on this point.",
+        "EXTERNAL-LIT METADATA INCONSISTENCY. The entry's sources[] / metadata imply no external citations, but the gloss carries two (Szeidl 2013; Ma-Stachurski-Toda 2022). Hence external_lit_status is flagged-for-expert, not 'none'. The years (2013, 2022) and the Ma-Stachurski-Toda author identity for #cite-maUnboundedDP cannot be verified by me from the paper text alone (paper cites it as 'Ma, Stachurski, and Toda, 2022a') and should be checked against the .bib by a human.",
+        "RELATION OVERSTATEMENT (minor). The note on contrasts-with -> return-impatience-condition says 'RIC is the binding condition in the paper.' This overstates: paper's existence results use WRIC + FVAC (line 409), and 'neither growth impatience nor return impatience will by themselves be required for the existence of a limiting solution' (line 459). RIC is necessary-for-nondegeneracy via FVAC=>RIC (lines 607, 1336) but not singularly 'the binding condition'; this also contradicts the gloss's own sentence two lines earlier. Recommend qualifying to e.g. 'RIC is necessary for non-degeneracy (it follows from FVAC).'",
+        "CORRECTION TO MATSYA (false skepticism, minor). matsya called the 'neither necessary nor sufficient' claim's not-sufficient half 'not explicitly stated.' It IS supported by the paper: line 58 states Szeidl's condition 'is in general not necessary nor sufficient for ensuring the existence of a non-degenerate limiting solution.' So the gloss's 'neither necessary nor sufficient' framing is paper-faithful and need not be downgraded to mere inference.",
+        "VERIFIED FAITHFUL (no action): defining eq APFac<1 (ass-AIC, line 368); symbol APFac := (Rfree*DiscFac)^{1/CRRA} (eq-APFac, line 358 — correct non-stochastic PF symbol, not APFacRaw); Euler link cLvl_{t+1}/cLvl_{t}=APFac (line 351); RPFac=APFac/Rfree and GPFacRaw=APFac/PermGroFac comparison framings (lines 1449, 423). No raw-vs-Mod or FVAC-vs-PFFVAC conflation present."
+      ]
+    },
+    {
+      "id": "absolute-patience-factor",
+      "gloss_status": "minor-issues",
+      "relations_status": "faithful",
+      "external_lit_status": "none",
+      "overall": "minor-issues",
+      "matsya_agreement": "partial",
+      "priority_for_human": "normal",
+      "issues": [
+        "GLOSS (minor overstatement): 'The various patience conditions are all comparisons of APFac to one of *four* fundamental rates (1, Rfree, PermGroFac, PermGroFacAdj)' undercounts. The paper also expresses the (perfect-foresight) Finite Value of Autarky as an APFac comparison: $\\APFac < \\Rfree^{1/\\CRRA}\\PermGroFac^{1-1/\\CRRA}$ (BufferStockTheory.md:1307, also :1609), and the WRIC as $\\pZero^{1/\\CRRA}\\APFac/\\Rfree<1$ (:403). So 'all ... four' is an oversimplification (the four it lists are each individually correct, but FVAC/PFFVAC and WRIC are additional APFac-based comparisons). Recommend softening to 'the four core deterministic/uncertainty growth-and-return comparisons' or noting FVAC as a fifth.",
+        "GLOSS (minor typographic inaccuracy, verified against macro source): The claim 'The macro file aliases APFac, APRte, Pat, and Thorn together, all rendering as Þ' is not strictly true. In econark-shortcuts.sty:185 / econark_demacro_demacro.sty:252, \\APFac = \\text{\\pmb{\\Thorn}} (BOLD UPPERCASE Þ), whereas \\APRte = \\text{\\thorn} (econark-shortcuts.sty:195) renders as LOWERCASE þ — not the same glyph. \\Pat is labelled the *former* name in the macro comment ('% Former \\Pat') and is NOT currently defined anywhere; it is a retired alias, not a live co-alias. \\Thorn is the underlying uppercase glyph primitive used inside \\APFac, not a semantic alias of the factor. So 'all rendering as Þ' conflates the upper/lowercase thorn and overstates the live aliasing.",
+        "MATSYA RECONCILIATION (false skepticism corrected): matsya's flag #2 (PermGroFacAdj := PermGroFac/Ex[1/permShk], the harmonic-mean characterization, and PermGroFacAdj<PermGroFac under positive variance are 'UNVERIFIABLE from retrieval') is WRONG — all are in the paper. PermGroFacAdj is defined in the Symbols table (BufferStockTheory.md:1440: PermGroFacAdj = PermGroFac*InvEPermShkInv, with InvEPermShkInv = (Ex[permShk^-1])^-1 at :1439); GICMod = APFac/PermGroFacAdj at :1451; the uncertainty-modified GIC is written APFac*Ex[permShk^-1]/PermGroFac<1 at :1599; and PermGroFacAdj<PermGroFac is asserted at :1056 (mean-one shocks at :186, strict ordering at :457). matsya's stale RAG missed sections ~1055-1056 and the Symbols table. The gloss's GIC-Mod claim is FAITHFUL.",
+        "MATSYA RECONCILIATION (false skepticism corrected): matsya's flag #5 ('APFacRaw ... different typographic intent is an inference, not retrievable') is rebutted by source: \\newcommand{\\APFacRaw}{(\\Rfree\\DiscFac)^{1/\\CRRA}} (Introduction.tex:159) — APFacRaw literally expands to the formula written verbatim, while the body uses \\APFac (the thorn). 'Same quantity, different typographic intent' is exactly correct. (matsya could not see the .sty/.tex macro source.)",
+        "MATSYA RECONCILIATION (naming + edge-type objections do not hold at atlas level): matsya flag #1 (the condition APFac/PermGroFac<1 should be called 'GICRaw' not 'GIC') and the section-2 objection that 'assumed-by' is the wrong edge type are naming preferences, not faithfulness errors. The atlas concept growth-impatience-condition.yml is itself named 'Growth Impatience Condition (GIC)' / short 'GIC' (anchor ass-GICRaw), so the gloss's 'GIC' usage is internally consistent; 'Raw' is the paper's macro suffix distinguishing it from the 'Mod' sibling. 'assumed-by' is the atlas's established reciprocal of 'requires' (cf. absolute-impatience-condition.yml:15 'requires -> absolute-patience-factor'; 'assumed-by' is used 46x across the atlas). All three relation targets (absolute-impatience-condition, return-impatience-condition, growth-impatience-condition) resolve and carry correct inequalities."
+      ]
+    },
+    {
+      "id": "asymptotic-consumption-growth-factors",
+      "gloss_status": "faithful",
+      "relations_status": "faithful",
+      "external_lit_status": "none",
+      "overall": "faithful",
+      "matsya_agreement": "partial",
+      "priority_for_human": "low",
+      "issues": [
+        "COSMETIC (relation note, not a correctness issue): the requires->return-patience-factor note writes '$\\Rfree\\RPFac\\DiscFac^{0}=\\APFac$'; the dangling $\\DiscFac^{0}$ is meaningless and could be dropped. Arithmetic is correct ($\\Rfree\\RPFac=\\Rfree\\cdot\\APFac/\\Rfree=\\APFac$). matsya flagged this (its ISSUE 2) and I agree it is harmless.",
+        "STYLE (optional): matsya suggests the implies->absolute-patience-factor edge would be more precisely typed as 'evaluates-to'/'references' since the proposition shows the high-wealth limit EQUALS $\\APFac$ rather than logically implying the defined object. Defensible but not an error; 'implies' is acceptable within the atlas edge vocabulary. No change required."
+      ]
+    },
+    {
+      "id": "boundfunc-weighted-space",
+      "gloss_status": "faithful",
+      "relations_status": "faithful",
+      "external_lit_status": "flagged-for-expert",
+      "overall": "faithful",
+      "matsya_agreement": "disagree",
+      "priority_for_human": "low",
+      "issues": []
+    },
+    {
+      "id": "boyd-weighted-contraction",
+      "gloss_status": "faithful",
+      "relations_status": "faithful",
+      "external_lit_status": "flagged-for-expert",
+      "overall": "faithful",
+      "matsya_agreement": "partial",
+      "priority_for_human": "normal",
+      "issues": [
+        "NONE that are errors. The gloss is paper-faithful throughout; logging the items below as notes and as explicit corrections to matsya's verdict.",
+        "matsya FALSE-SKEPTICISM (main correction): matsya flagged the gloss's '...fix k large enough that \\pZero\\DiscFac(\\Rfree(1-\\MPCmaxInf))^{1-\\CRRA} < \\Shrinker' as an overstatement of Claim claim-MPCMAXKleq1 (which states '<1'). But the paper PROVES exactly '<\\Shrinker' in the proof of thm-cmap: line 2212 underbraces the quantity with '<\\Shrinker ~by Claim claim-MPCMAXKleq1', and line 2216 states verbatim 'we have that \\pZero \\DiscFac (\\Rfree(1-\\MPCmaxInf))^{1-\\CRRA} < \\Shrinker since \\Shrinker = max{...}'. matsya's RAG saw only the standalone Claim (eq-MPCMAXKleq1, '<1', line 2032) and missed the appendix proof passage (lines 2188-2216). The gloss and the 'requires -> maximal-mpc-at-most-one' edge are faithful, not loose.",
+        "matsya FALSE-SKEPTICISM: matsya said the cite-stachurski2022 contrast premise ('standard contraction needs a bounded operator on a Banach space') is only 'loosely consistent' / unverifiable from retrieval. It is verbatim in the paper at line 292: 'Standard dynamic programming [(Stachurski, 2022)](#cite-stachurski2022) works by showing that \\TMap is a well-defined contraction map on a Banach space'. The contrasts-with -> cite-stachurski2022 edge note matches this exactly; cite-stachurski2022 is a real paper anchor.",
+        "matsya FALSE-SKEPTICISM: matsya said the MST claim (artificial constraint + positive minimum income, bounding utility below) 'must be flagged for domain-expert verification' and is unverifiable. This is the PAPER'S OWN characterization, stated at line 100 ('they impose an artificial constraint and positive minimum value of income; this bounds utility from below ... and thus cannot be applied here'), line 308 (Ma-Stachurski-Toda 2022b 'impose an artificial liquidity constraint ... forces the value function to be bounded below'), and lines 313/887. The gloss prose is faithful to the paper. external_lit_status='flagged-for-expert' only because the external MST/Stachurski sources themselves are off-limits for me to independently audit beyond what the paper asserts.",
+        "matsya FAIR (minor): the contrasts-with -> hiraguchi-continuity edge is typed 'contrasts-with' on both sides (mirror-consistent: hiraguchi-continuity.yml line 24-26 reciprocates), yet the boyd gloss/note prose says bounding the share 'restores the self-map property that this Boyd-style contraction REQUIRES', which reads enabling. Defensible as a contrast (unrestricted \\TMap has no self-map (line 745, 295) vs restricted \\TMap^{\\MPCminInf,\\MPCmaxInf} does), so not an error and bidirectionally consistent; flagged only as a possible edge-kind refinement, not a downgrade.",
+        "NOTE (not an error): the boyd gloss attaches '<\\Shrinker' to maximal-mpc-at-most-one, whose own bare defining_equation is '<1' (eq-MPCMAXKleq1). The '<\\Shrinker' form is the thm-cmap proof's combination of that claim with the definition \\Shrinker=max{that quantity, \\beta\\Ex\\PermGroFacRnd^{1-\\CRRA}}; faithful to paper line 2216 but a cross-referencer landing on the maximal-mpc entry's defining equation alone sees '<1'.",
+        "VERIFIED faithful: Boyd's 3 conditions verbatim (lines 2008-2020); condition (2) \\TMap^{\\MPCminInf,\\MPCmaxInf}\\mathbf{0}=\\uFunc(\\MPCmaxInf\\mNrm) (line 2151) discharged by \\boundFunc(x)=\\zeta+x^{1-\\CRRA} (lines 763, 2073, 2153-2156); FVAC (Assumption ass-FVAC, line 345 = \\beta\\Ex\\PermGroFacRnd^{1-\\CRRA} term, the 2nd arg of \\Shrinker at line 2059) makes \\Shrinker<1; thm-cmap requires WRIC+FVAC (line 782); unbounded-state-space / Banach-failure framing (lines 744-746). Correct use of FVAC (not PFFVAC) and \\MPCmaxInf/\\Shrinker symbols throughout."
+      ]
+    },
+    {
+      "id": "buffer-stock-target",
+      "gloss_status": "faithful",
+      "relations_status": "faithful",
+      "external_lit_status": "none",
+      "overall": "faithful",
+      "matsya_agreement": "disagree",
+      "priority_for_human": "normal",
+      "issues": [
+        "NO correctness problems found in the gloss or relations; every claim verifies against the authoritative BufferStockTheory.md.",
+        "DISAGREE with matsya's central 'source conflict' flag (its primary reason for 'minor-issues'). matsya claims Tables/Required.tex maps thm-target<->mBalLvl<->GIC-Raw and thm-MSSBalExists<->mTrgNrm<->GIC-Mod, i.e. the OPPOSITE of the gloss. The authoritative paper contradicts matsya: thm-target (BufferStockTheory.md:950-963) is the individual target mTrgNrm under strong growth impatience GICMod, and thm-MSSBalExists (lines 1010-1024) is the pseudo-target mBalLvl under ordinary GICRaw. The summary table at lines 1642-1643 confirms exactly this ('Theorem thm-MSSBalExists ... => exists mBalLvl'; 'Theorem thm-target: GIC-Mod => exists mTrgNrm'). The gloss's label mapping is CORRECT; matsya's flag is false-skepticism from a stale RAG index reading an older Required.tex with swapped labels.",
+        "DISAGREE with matsya marking the implicit equation 'unverifiable'. The gloss's form (mTrgNrm - cFunc(mTrgNrm)) * barRNrmByGRnd + 1 = mTrgNrm with barRNrmByGRnd = RNrmByG * Ex[permShk^-1] is an EXACT match to eq-mTargImplicit at BufferStockTheory.md:981 (the underbrace defines := barRNrmByGRnd as RNrmByG*Ex_t[permShk^-1]), and is restated at line 1036. The '+1' intercept and the Ex[permShk^-1] adjustment are both present.",
+        "DISAGREE with matsya marking the 'level dynamics Ex_t[mLvl_{t+1}/mLvl_t]=PermGroFac' claim unverifiable: it is supported at BufferStockTheory.md:988-992 and eq-balgrostable line 998 (the pseudo-target is defined via Ex_t[mLvl_{t+1}/mLvl_t] vs PermGroFac).",
+        "DISAGREE with matsya marking the permanent-shock-variance comparative statics unverifiable: BufferStockTheory.md:1050-1051 (Figure fig-GICModFailsButGICRawHolds) states quadrupling the variance of permanent shocks causes failure of strong growth impatience GICMod while the pseudo-target still exists; line 1036 confirms coincidence when permShk == 1.",
+        "MINOR (stylistic, not a correctness error): the contrasts-with edge to nondegenerate-limiting-solution could arguably be a directed builds-on/strengthens edge, since non-degeneracy is the prior/weaker result the target presupposes (BufferStockTheory.md:74 'Once we have established the existence of a non-degenerate solution, the second ... result ... targets'). However the edge note correctly states the weaker-prior vs stronger-subsequent asymmetry and is mirrored consistently in nondegenerate-limiting-solution.yml, so no change is required.",
+        "Verified all five relation targets resolve to existing files in concepts/: finite-value-of-autarky.yml, weak-return-impatience-condition.yml, strong-growth-impatience-condition.yml, pseudo-target.yml, pseudo-target-existence.yml, nondegenerate-limiting-solution.yml. The three 'requires' edges match thm-target's hypotheses (WRIC+FVAC+GICMod) at BufferStockTheory.md:954 exactly."
+      ]
+    },
+    {
+      "id": "buffer-stock-target-existence",
+      "gloss_status": "faithful",
+      "relations_status": "minor-issues",
+      "external_lit_status": "none",
+      "overall": "faithful",
+      "matsya_agreement": "partial",
+      "priority_for_human": "low",
+      "issues": [
+        "RELATIONS (minor, low priority): the `implies -> eq-stability` edge targets a raw paper equation anchor (BufferStockTheory.md line 959, `(eq-stability)=`), not an atlas concept node — there is no concepts/eq-stability.yml, whereas the sibling `implies -> buffer-stock-target` edge resolves to a concept file. Edge CONTENT is faithful (sign pattern matches eq-stability at lines 960-964); only the target kind is inconsistent. Consider repointing to a concept node or marking it as a paper-anchor edge.",
+        "MATSYA FALSE POSITIVE #1 (rejected): matsya flagged a `\\APFac` vs `\\APFacRaw` 'symbol slip' in the GIC-Mod rendering. This is incorrect. `\\APFac` is the glyph (Thorn) denoting the absolute patience factor and `\\APFacRaw`=`(\\Rfree\\DiscFac)^{1/\\CRRA}` is its closed form — same object. The gloss's `\\Ex[\\APFac/(\\PermGroFac\\permShk)]<1` matches the FORMAL Assumption GICMod verbatim (BufferStockTheory.md line 452) and the appendix proof (line 2601). matsya only saw the prose-intro form (`\\APFacRaw`, line 77) in its stale RAG. No symbol error.",
+        "MATSYA FALSE POSITIVE #2 (rejected): matsya claimed several proof-mechanism / implicit-equation claims are 'not verifiable from retrieval' and 'must be checked against the full appendix.' All are in fact fully supported in the live paper: DCT continuity (line 2534), strict-monotonicity of E_t[m_{t+1}]-m_t (lines 2539, 2565, 2578), implicit equation (m_trg - c(m_trg)) Rbar + 1 = m_trg (line 981), and Rbar = RNrmByG E[permShk^{-1}] (line 981 underbrace, restated line 1036). matsya's skepticism is a stale-index artifact, not a real gap.",
+        "MATSYA FALSE POSITIVE #3 (rejected): matsya called the two `contrasts-with` edges (to `pseudo-target` and `pseudo-target-existence`) 'redundant / should be merged.' They are distinct atlas nodes — `pseudo-target` is the object (anchor eq-mBalLvl) and `pseudo-target-existence` is the theorem (anchor thm-MSSBalExists) — mirroring this entry's own object/theorem split (buffer-stock-target vs this existence theorem). Both files exist and resolve. Not redundant; do not merge.",
+        "MATSYA FALSE POSITIVE #4 (rejected): matsya flagged a 'swapped-label conflict in Tables/Required.tex' (thm:target paired with GICRaw/mBalLvl). The CURRENT paper table is internally consistent and correctly pairs thm-MSSBalExists -> mBalLvl and thm-target/GIC-Mod -> mTrgNrm (BufferStockTheory.md lines 1642-1643). matsya retrieved an outdated Tables/Required.tex; no live conflict.",
+        "NOTE (not an error): the theorem head (line 954) asserts only existence of m_trg, not uniqueness, while thm-MSSBalExists (line 1014) explicitly says 'unique'. The gloss's uniqueness/stability claim is nonetheless paper-faithful because it is derived from the proof's strict-monotonicity of the gap function (lines 2578-2604) plus the IVT crossing (line 2563), not asserted from the head. matsya noted this asymmetry and correctly did not treat it as an error."
+      ]
+    },
+    {
+      "id": "compactness-preserved",
+      "gloss_status": "faithful",
+      "relations_status": "minor-issues",
+      "external_lit_status": "none",
+      "overall": "faithful",
+      "matsya_agreement": "partial",
+      "priority_for_human": "low",
+      "issues": [
+        "RELATION KIND (minor, semantic): 'requires -> norm-implies-compactness'. fact-compactnt (BufferStockTheory.md:3291-3298) is a self-standing real-analysis fact whose hypothesis is uniform-on-compacts convergence; it does not LOGICALLY require norm-implies-compactness (fact-normimpliescompact, lines 3264-3273) - that companion merely SUPPLIES the hypothesis in this paper's usage (lines 2269-2270). The note is accurate ('applied together') and the dependency in-context is real, but a kind like 'used-with'/'complemented-by' would be more precise than 'requires'. matsya raised the same point; I agree it is minor, not a correctness error.",
+        "RELATION KIND (minor, semantic): 'assumed-by -> nondegenerate-solution-existence'. The existence proof (thm-convgtobellman, line 798; target title 'Existence of Non-degenerate Solution') INVOKES this fact as a cited lemma (line 2270: 'by Fact fact-compactnt ... converges almost surely') rather than ASSUMING it; 'used-by' would read more cleanly. Direction, target, and content are all correct and fully confirmed in the paper.",
+        "CONTEXT NOTE (not an atlas error): the paper's printed proof block under fact-compactnt (lines 3300-3312) is a verbatim copy-paste of the fact-normimpliescompact proof (it argues with the weighted norm, gbar, and M_K rather than the triangle-split for a moving evaluation point). The atlas gloss is NOT affected - it presents the triangle-inequality split as its own standard explanation and does not claim to quote the paper's proof, and the FACT STATEMENT (lines 3295-3296) is correct and faithfully reproduced. Flagging only so a human is aware of the source-side proof-duplication bug."
+      ]
+    },
+    {
+      "id": "consumption-c2-properties",
+      "gloss_status": "faithful",
+      "relations_status": "minor-issues",
+      "external_lit_status": "none",
+      "overall": "minor-issues",
+      "matsya_agreement": "partial",
+      "priority_for_human": "normal",
+      "issues": [
+        "RELATIONS (real defect, agree with matsya): the edge 'implies -> value-function-c3' is mistyped. The reciprocal concept value-function-c3.yml correctly carries 'requires -> lemm-consC2' (its line 17-19: the inductive step invokes the lemma); the correct inverse of 'X requires Y' is 'Y assumed-by/required-by X', not 'Y implies X'. Per BufferStockTheory.md lines 1843-1854, prop-vfc3's proof USES the lemma as one ingredient among several (it also needs the base case v_T=u at line 1846-1847 and the composition argument), so the lemma does not 'imply' the whole proposition. The atlas already uses 'assumed-by' for exactly this kind of step-used-by-a-proof relation (cf. this entry's own 'assumed-by -> consumption-function-c2-concave'). Recommend retyping to 'assumed-by' (or 'required-by') and rewriting the self-contradictory note (\"reciprocal of value-function-c3 requiring this lemma\" describes an assumed-by/required-by relation, not implies).",
+        "DISAGREE with matsya (false-skepticism): matsya flagged 'v-frak_t is C3' as an unstated inference the paper delegates to Hiraguchi. This is WRONG -- BufferStockTheory.md line 1766 states it explicitly: 'As such, by Leibniz Rule, $\\mathfrak{v}_{t}$ will be $\\mathbf{C}^{3}$.' The gloss's downstream 'v-frak_t'' is C1' (line 1814 of the paper) follows directly. No issue here.",
+        "DISAGREE with matsya (false-skepticism): matsya said the CK 'Theorem 1' attribution and 'proved concavity but not continuous differentiability' are unverifiable-from-retrieval and must be flagged for an expert against the CK 1996 paper. Both are in fact BufferStockTheory's OWN text: 'Theorem 1 in (Carroll and Kimball, 1996)' at line 1865-1866, and footnote 21 (line 3407): '(Carroll and Kimball, 1996) proved concavity but not continuous differentiability.' The entry uses cite-ckConcavity exactly as the paper does; no CK-paper access is needed and no expert flag is warranted (external_lit_status=none). The downstream concept consumption-function-c2-concave.yml line 10 independently repeats the same paper-sourced framing.",
+        "GLOSS minor (not an error): 'the value function $\\vFunc_t$ inherited from the next period' is slightly loose -- the lemma's hypothesis is on $\\vFunc_t$, while the proof's end-of-period $\\mathfrak{v}_t$ is built from $\\vFunc_{t+1}$ (eq-vfFrackdefn, line 1760). The phrasing is consistent with the backward-induction reading the paper itself uses (line 1843-1848) and is not a misstatement, but blurs the t / t+1 distinction. 'no impatience inequality is used' is an editorial-but-correct inference (neither the lemma statement nor its proof invokes GIC/RIC/WRIC)."
+      ]
+    },
+    {
+      "id": "consumption-function-c2-concave",
+      "gloss_status": "faithful",
+      "relations_status": "minor-issues",
+      "external_lit_status": "flagged-for-expert",
+      "overall": "minor-issues",
+      "matsya_agreement": "partial",
+      "priority_for_human": "normal",
+      "issues": [
+        "SCOPE NUANCE (inherited from paper, not a concept fault): defining_equation and gloss say properties hold 'for each t'/'for every t', matching the paper proposition verbatim (BufferStockTheory.md:672). But the auxiliary Lemma lemm-consC2 (line 1747) restricts to 't<T', and the terminal consumption function is linear (line 1260: 'The 45 degree line is cFunc_T(m)=m'), hence cFunc_T is NOT strictly concave and the C2/strict-concavity claim is vacuous/false at t=T. matsya raised this. Verdict: the CONCEPT is faithful because it transcribes the paper's own 'for each t' proposition (line 672); any imprecision is the paper's. Worth a human-facing footnote that the strict-concavity claim is meaningful only for t<T.",
+        "MINOR (gloss): gloss/english upgrade 'increasing' (paper proposition wording, line 672) to 'strictly increasing'. This is supported by the proof (lines 1850-1851, 1864: cFunc_t 'strictly increasing' via FOC eq-derivativeConsFunc), so the upgrade is defensible, not an error — noted for transparency.",
+        "MINOR (relations): edge 'contrasts-with -> return-impatience-condition' is a defensible but loose typing. The proposition (unconditional shape) and RIC (which signs the limiting minimal MPC) are not opposed; they are sequential (RIC enters downstream at limiting-mpcs-lemma). matsya suggested 'complements/related-to'. The accompanying note is accurate; this is a typing quibble, not a correctness error.",
+        "matsya FALSE-SKEPTICISM (corrected): matsya flagged the 'Theorem 1' label and 'not continuously differentiable' attribution to Carroll-Kimball as 'not verifiable from retrieved chunks'. Both are VERBATIM in the paper: proof says 'To see that cFunc_t is strictly concave, see Theorem 1. in (Carroll and Kimball, 1996)' (lines 1865-1866) and footnote 21 (line 3407): 'Carroll and Kimball, 1996 proved concavity but not continuous differentiability.' matsya's RAG missed these main-paper lines.",
+        "matsya FALSE-SKEPTICISM (corrected): matsya said the WRIC role ('WRIC for the recursions') was 'not in the retrieved chunks'. It is explicit in Lemma lemm-MPC: 'If weak return impatience (Assumption WRIC) holds, then [recursions] ...' (line 709), and RIC for MPCmin>0 at line 718. The gloss's WRIC/RIC division of labor is paper-faithful.",
+        "matsya FALSE-SKEPTICISM (corrected): matsya said the eq-cBounds inequality form 'cannot fully confirm'. It is explicit at lines 687-690: MPCmin_t * m_t <= cFunc_t(m_t) <= MPCmax_t * m_t, and line 685 confirms 'Proposition prop-cfuncprop will imply' it.",
+        "EXTERNAL-LIT: cite-ckConcavity (Carroll & Kimball 1996, 'On the Concavity of the Consumption Function', Econometrica 64(4)) resolves in the paper bibliography (line 3570) and the paper's USE of it (Theorem 1 = strict concavity; CK did not prove differentiability) is verified against paper text. The underlying CK source itself is not available to me — the specific content of CK's Theorem 1 should be confirmed by a domain expert; flagged."
+      ]
+    },
+    {
+      "id": "consumption-ratio-nondecreasing",
+      "gloss_status": "faithful",
+      "relations_status": "minor-issues",
+      "external_lit_status": "none",
+      "overall": "faithful",
+      "matsya_agreement": "partial",
+      "priority_for_human": "low",
+      "issues": [
+        "GLOSS is faithful on independent full-text check. The abstract lemma statement in defining_equation.latex ('f convex and f<0 on (0,lambda) => f(s)/s increasing') is VERBATIM the paper's Claim claim-rationondec (BufferStockTheory.md L3320). The proof reconstruction in the gloss (F(x)=f(x)-f(alpha), F(alpha)=0, F(x_1)<=(1-t)F(x_2), then add back f(alpha)/s using f(alpha)<0) faithfully mirrors the paper's own proof at L3324-3349. The negated-application chain (apply to f=-cFunc, get cFunc/mNrm non-increasing; with feasibility cFunc<=mNrm pin ratio to [0,1]) matches L2316-2317 exactly. Symbols correct; no APFac/APFacRaw or GIC/GIC-Mod conflation present.",
+        "MATSYA FALSE-SKEPTICISM #1 (refuted): matsya flagged the proof paragraph as 'UNVERIFIABLE and internally suspect ... do not present it as paper-sourced.' The proof IS in the paper (real-analysis appendix, L3324-3349) and the gloss reproduces it accurately. matsya's RAG index lacked the appendix proof chunk (its sources show only the application file ApndxConcaveCFunc.tex), so its 'looks shaky' speculation is unfounded.",
+        "MATSYA FALSE-SKEPTICISM #2 (refuted): matsya called the average->marginal MPC identification ('MPCmaxmax,MPCminmin identified with MPCmax,MPCmin') 'a non-trivial extra step ... asserted, not shown.' The paper EXPLICITLY proves it at L2320-2347: 'We fist show MPCmaxmax = MPCmax and then show MPCminmin = MPCmin', deriving MPCminmin = 1 - APFac/Rfree = MPCmin (L2344) and MPCmaxmax = 1 - pZero^(1/CRRA) APFac/Rfree = MPCmax (L2347). Lemma lemma-MPCBoundsConvg (L867-871) states this as its conclusion. The gloss claim is paper-faithful.",
+        "MATSYA FALSE-SKEPTICISM #3 (refuted): matsya called 'increasing' (abstract statement) vs 'non-increasing' (application) a 'minor overstatement of strictness.' Not an atlas fault: the atlas's 'increasing' is verbatim the paper's Claim wording (L3320), and the paper itself uses 'increasing' for the abstract lemma and 'non-increasing' for the -cFunc application (L2317) -- both atlas and paper are internally consistent. No overstatement introduced by the atlas.",
+        "MATSYA VALID NUANCE (partly agree): the relation 'requires -> eq-statCbellman' is slightly imprecise in type. The lemma (claim-rationondec) is self-contained real analysis and does not itself require feasibility; feasibility is a co-premise used AFTER the claim to pin the upper bound at 1 (paper L2317). A 'used-with'/'combines-with' kind would be more precise than 'requires'. This is minor: the relation note is carefully worded ('combines with the claim's monotonicity to confine the ratio to [0,1]') and does not misstate the mathematics. eq-statCbellman resolves at L2255 (arg-max over (0, MPCmax*mNrm], giving cFunc<=MPCmax*mNrm<=mNrm). Not a correctness problem.",
+        "RELATIONS otherwise correct: requires->limiting-consumption-strictly-positive (target file exists; matches Remark remark-cStatStrctPos L857-861, cFunc>0 on R_++); requires->consumption-function-c2-concave (target exists; cited L2312-2314 = Rockafellar Thm 10.8 concavity, accurate); assumed-by->mpc-bounds-convergence (target exists; cited L2317-2318 accurate); assumed-by->consumption-c2-properties (target exists; cited L2591 and L2690, both confirmed as the Delta_epsilon cFunc/epsilon <= cFunc/mNrm < 1 step invoking claim-rationondec). All four named-concept targets resolve and all line citations in the notes are accurate."
+      ]
+    },
+    {
+      "id": "contraction-mapping-consumption-bounds",
+      "gloss_status": "faithful",
+      "relations_status": "faithful",
+      "external_lit_status": "flagged-for-expert",
+      "overall": "faithful",
+      "matsya_agreement": "partial",
+      "priority_for_human": "normal",
+      "issues": [
+        "NO correctness problems found; every gloss claim is supported by the full paper text. Listing items below only to document my disagreement with matsya, whose three flags are all false-skepticism artifacts of its stale RAG index (it indexed only the .tex; the .md ground truth confirms each).",
+        "matsya Flag 1 REJECTED (its sole substantive downgrade). matsya claims the gloss reverses direction by saying WRIC 'stops the upper consumption bound from approaching zero'. The paper states this almost verbatim at BufferStockTheory.md:844: 'Due to weak return impatience, the upper bound on the per-period consumption converges to a strictly positive share of market resources, preventing consumption from converging to zero.' The gloss is faithful; matsya simply missed line 844. (Both effects of WRIC are real and the gloss states them in separate sentences: line 844 = upper bound stays positive; claim-MPCMAXKleq1 at lines 2028-2032 = maximal MPC bounded away from 1. No conflation.)",
+        "matsya Flag 2 REJECTED. matsya calls the Condition-(3) reduction $\\DiscFac\\Ex\\PermGroFacRnd^{1-\\CRRA}\\boundFunc\\circ\\hat{\\mFunc}^{\\nxt}\\le\\Shrinker\\boundFunc$ 'plausible but not verifiable'. It is verbatim the final line of eq-reqCondWeak at BufferStockTheory.md:2185. Gloss faithful.",
+        "matsya Flag 3 REJECTED. The RIC-contrast paragraph ($\\MPCmin>0$ => stationary contraction; $\\MPCmin=0$ => $\\TMap^{0,\\MPCmax_{T-k}}$ not a well-defined operator) is supported by remark-ricstationary at BufferStockTheory.md:850; the non-compactness/Berge motivation is at BufferStockTheory.md:296 and remark-notCompact:302. Both 'contrasts-with' edges and the 'implied-by -> feasible-correspondence-not-compact' edge are faithful and correctly typed.",
+        "Verified-faithful, no action: modulus $\\Shrinker=\\max\\{\\pZero\\DiscFac(\\Rfree(1-\\MPCmax_{k}))^{1-\\CRRA},\\beta\\Ex\\PermGroFacRnd^{1-\\CRRA}\\}<1$ exact-matches eq-shnkrdef (line 2059); FVAC forcing the 2nd term <1 matches FVAC def $\\DiscFac\\PermGroFac^{1-\\CRRA}\\Ex(\\permShk^{1-\\CRRA})<1$ (line 345) + rem-shnkrdef opening (line 2055); theorem statement, $\\cNrm\\in[\\MPCminInf\\mNrm,\\MPCmaxInf\\mNrm]$, space $\\mathcal{C}_{\\boundFunc}(\\Reals_{++},\\Reals)$, narrowness $\\MPCmaxInf\\le\\MPCmax_{T-k}$ all match lines 767-782; Boyd 3-condition proof matches lines 2130-2226; 'Item (i)(a)' dependency on thm-convgtobellman matches line 817. All 8 relation targets resolve to existing concept files.",
+        "external_lit: cite-jboydWeighted (Boyd 1990 weighted contraction theorem, thm-Boyd at line 2004) — the paper's RELIANCE on Boyd is fully confirmed in-paper, but the external Boyd source itself is outside my access, so flagged-for-expert per protocol. Edge 'requires -> boyd-weighted-contraction' is correct.",
+        "Trivial, no fix needed: gloss writes $\\TMap^{0,\\MPCmax_{T-k}}$ where the paper (line 850) has an apparent source typo $\\TMap^{0,\\MPC_{T-k}}$; the gloss uses the evidently-intended symbol, so this is a faithful (arguably corrected) rendering, not an error."
+      ]
+    },
+    {
+      "id": "feasible-correspondence-not-compact",
+      "gloss_status": "faithful",
+      "relations_status": "minor-issues",
+      "external_lit_status": "flagged-for-expert",
+      "overall": "faithful",
+      "matsya_agreement": "partial",
+      "priority_for_human": "low",
+      "issues": [
+        "MINOR / relation typing (matsya's one valid point): the edge `contrasts-with -> Stationary-Bellman-Operator` is loosely typed. The remark is a PROPERTY OF the stationary operator $\\TMap$ (defined at the paper anchor `Stationary-Bellman-Operator`, BufferStockTheory.md:272), not a contrast WITH a sibling concept. Note also that `Stationary-Bellman-Operator` is a PAPER anchor, not a concept file (no concepts/Stationary-Bellman-Operator.yml exists), unlike the other relation targets. The intended open-interval-$(0,\\mNrm)$ vs reintroduced-closed-interval-$[0,\\mNrm]$ contrast is real (lines 306-309), so the edge is defensible, but a type like 'requires'/'about'/'property-of' would be cleaner. Low priority.",
+        "MINOR / relation typing: `contrasts-with -> boundfunc-weighted-space` and the two `implies` edges are framed loosely. The paper supports the linkage explicitly at line 745 ('while the stationary operator $\\TMap$ may be undefined on a suitable Banach space (recall Remark [](#remark-notCompact)), operators defining each period's problem ... will be contractions on a space ... with a finite weighted norm'), so the edges are paper-grounded; 'contrasts-with' vs 'motivates/complements' is a labeling nuance only. Targets resolve to existing concept files. Not a correctness problem.",
+        "NOTE / matsya FALSE-SKEPTICISM corrected (no entry defect): matsya called the gloss's attribution of 'a compact interval' to Ma2022 a 'mild overstatement.' This is WRONG — BufferStockTheory.md:309 states verbatim that Ma2022 'define a functional operator ... within which the feasibiltiy correspondence is the compact interval $[0, \\mNrm]$.' matsya's RAG retrieved only NoAppendix.tex and missed this sentence. The gloss is faithful here.",
+        "NOTE / matsya FALSE-SKEPTICISM corrected: matsya flagged a possible 'MST 2020 vs 2022 conflation.' There is NO conflation. The gloss correctly uses Ma2022 (=2022b, cite-Ma2022) for the artificial-constraint/compact-interval device (lines 308-309) and the `stochastic-discount-factor-mst` note correctly attributes the $\\pZero=0$ embedding to MST 2020 (cite-mstIncFluct, line 319 'If $\\pZero=0$, ... becomes a special case of (Ma, Stachurski, and Toda, 2020)'). Both citations verified distinct in BufferStockTheory.bib.",
+        "NOTE / matsya FALSE-SKEPTICISM corrected: matsya could not confirm the `stachurski2022` key. It is real — defined as @Book in BufferStockTheory.bib (and BufferStockTheory-Add-Refs.bib:265) and used verbatim at BufferStockTheory.md:292 in exactly the context the gloss cites ('Standard dynamic programming [(Stachurski, 2022)] works by showing that $\\TMap$ is a well-defined contraction map on a Banach space'). Keys cite-Jaskiewicz2011 and cite-Ma2022 likewise confirmed in the bib and used at lines 302/306/308-309.",
+        "EXTERNAL-LIT (flagged-for-expert, not a defect): the SUBSTANTIVE external claims — what Berge's Maximum Theorem actually requires, what Lemma 1 of Jaskiewicz-Nowak (2011) actually establishes (usc->usc on the closed-interval correspondence), and the Ma-Stachurski-Toda (2022b/2020) constructions — are not available to me or matsya and should be confirmed by a domain expert. The paper's own attributions (lines 302, 306, 308-313) are reproduced faithfully by the entry."
+      ]
+    },
+    {
+      "id": "finite-human-wealth-condition",
+      "gloss_status": "minor-issues",
+      "relations_status": "faithful",
+      "external_lit_status": "none",
+      "overall": "minor-issues",
+      "matsya_agreement": "partial",
+      "priority_for_human": "normal",
+      "issues": [
+        "GLOSS (minor overstatement, line 11): 'FHWC is the natural counterpart to the consumer's no-Ponzi condition' is an AI interpretive label not grounded in the paper's own language. grep 'Ponzi' over BufferStockTheory.md returns zero hits. The paper's actual analog is the 'can't-die-in-debt condition' (eq-NoDebtAtDeath, line 2817) / 'no upper bound to limiting consumption' (line 60). Suggest rewording to the paper's framing (FHWC prevents infinite borrowing against unbounded human wealth, line 585) rather than 'no-Ponzi counterpart'. matsya correctly flagged this.",
+        "defining_equation.english (minor wording, line 7): 'The expected permanent income growth factor is smaller than the gross interest factor.' FHWC as defined (eq-FHWC2, line 547) is a perfect-foresight object with no expectation operator; PermGroFac here is the deterministic PF growth factor. The paper reserves '*expected* growth factor of permanent income' for the stochastic growth-impatience context (lines 82, 444, 921), not FHWC. Drop 'expected' or add the mean-preserving-spread caveat. The gloss body itself avoids this slip; only the one-line english summary has it. matsya also noted this.",
+        "CORRECTION TO matsya (false skepticism): matsya marked the gloss's stochastic-case claim ('FHWC no longer a stated assumption of the existence theorems... rely on FVAC, GIC/GIC-Mod, (W)RIC') as 'unverifiable from retrieval'. It IS in the paper and is faithful: thm-convgtobellman (Existence of Non-degenerate Solution, line 802) requires WRIC+FVAC; thm-target (Buffer Stock Target, line 954) requires WRIC+FVAC+GICMod; line 409 confirms WRIC+FVAC suffice for non-degeneracy. Neither stochastic theorem lists FHWC. matsya's RAG index missed these theorem statements.",
+        "CORRECTION TO matsya (false skepticism): matsya marked the gloss claim 'under FHWC, GIC implies FVAC' and the pf-consumption-function-properties edge chain 'GICRaw=>FVAC and FVAC=>RIC' as unverifiable. Both ARE in the paper: claim-PFConspC (line 607) states exactly this under FHWC; its proof (lines 1714-1724) shows the chain, and line 1721 contains the exact exponent expression (PermGroFac/Rfree)^{1-1/CRRA}<1 cited in the edge note. Verified faithful.",
+        "CORRECTION TO matsya (incorrect critique): matsya suggested softening the 'iff' in the pf-unconstrained-requires-fhwc edge note to 'fails if either fails'. The full 'if and only if' is VERBATIM in prop-pfUCFHWC (line 593): 'A non-degenerate limiting solution exists if and only if finite limiting human wealth (RNrmByG^{-1}<1) and return impatience hold.' The edge note is correct as written; do not soften.",
+        "EXTERNAL-LIT (Szeidl 2013, Ma-Stachurski-Toda 2020, Bertsekas, Stachurski) appear in the surrounding existence-theorem prose but are NOT cited within this concept entry; entry correctly lists none. No expert flag needed for this entry."
+      ]
+    },
+    {
+      "id": "finite-value-of-autarky",
+      "gloss_status": "faithful",
+      "relations_status": "faithful",
+      "external_lit_status": "flagged-for-expert",
+      "overall": "faithful",
+      "matsya_agreement": "partial",
+      "priority_for_human": "low",
+      "issues": [
+        "Prior lone symbol slip RESOLVED this pass: the autarky value now uses the level value $\\vFuncLvl_{t}$ (was the normalized $\\vFunc(\\mNrm)$).",
+        "External-lit (flagged-for-expert, not penalized): the content of MST (2020) Assumption 2.1 beyond the paper's footnote 19 is unavailable to the machine judges.",
+        "Human spot-check (not a defect): confirm the pseudo-target / buffer-stock-target id-to-theorem mapping is the intended one."
+      ]
+    },
+    {
+      "id": "gic-implies-harmenberg-impatience",
+      "gloss_status": "faithful",
+      "relations_status": "faithful",
+      "external_lit_status": "flagged-for-expert",
+      "overall": "faithful",
+      "matsya_agreement": "disagree",
+      "priority_for_human": "low",
+      "issues": [
+        "NO CORRECTNESS PROBLEM FOUND - concept is paper-faithful. The defining equation, claim, and proof match the paper VERBATIM in appendix section 'Growth Impatience Implies Harmenberg Impatience' (BufferStockTheory.md lines 2718-2748, anchor sec-AppxHarmImpGIC). claim-gicimpliesharmimp (line 2730-2734): 'If growth impatience holds, then eq-HarmImp holds.' eq-HarmImp (line 2728) = '\\log(\\APFac) < \\int \\log(\\PermGroFac\\permShk)\\permShk f(\\permShk)\\,d\\permShk' exactly as in the concept. The Jensen proof (lines 2740-2746) matches the concept's expanded version, including eq-Jensen's '\\log(\\PermGroFac\\Ex[\\permShk])\\Ex[\\permShk]=\\log(\\PermGroFac)' step. Unit-mean normalization \\Ex[\\permShk]=1 is confirmed at line 186. Symbols are correct (\\GPFacRaw=\\APFac/\\PermGroFac per line 423/434; no \\APFac-vs-\\APFacRaw issue).",
+        "MINOR (interpretive, not an error): gloss sentence 'any calibration the paper already uses for its growth-impatience results automatically supports the permanent-income-weighted change of measure exploited in the covariance/balanced-growth material of Section 4' is an editorial extrapolation the paper does not state as such. It is a logically valid corollary of the proven implication (GIC=>eq-HarmImp, so any GIC-satisfying calibration satisfies eq-HarmImp), and the appendix IS titled 'Appendix for Section 4' (line 2716) with subsec-Covariances referenced (line 2754), so the framing is defensible. No correction strictly required; could be softened.",
+        "DISAGREE WITH MATSYA (false-skepticism from missed passage): matsya returned VERDICT unverifiable-here, asserting 'the paper neither states the claimed Harmenberg-impatience inequality nor proves the GIC=>it implication' and 'flag the whole object as unverifiable from this paper.' This is WRONG - the paper states AND proves it in appendix sec-AppxHarmImpGIC (lines 2718-2748). matsya's own sources list shows it retrieved only Introduction.tex, BufferStockTheory-NoAppendix.tex, and Slides chunks and NEVER hit the relevant appendix section; its RAG index is stale/incomplete. matsya correctly noted the Jensen algebra is internally valid but mis-concluded on provenance.",
+        "DISAGREE WITH MATSYA on the GIC-variant worry: matsya speculated the hypothesis is 'closer in spirit to GIC-Mod than to raw GIC' and that 'the gloss's insistence that the hypothesis is specifically raw GIC deserves scrutiny.' The paper EXPLICITLY uses raw growth impatience (#GICRaw, \\GPFacRaw<1) as the hypothesis at lines 2722 and 2734. The concept's hypothesis and its 'contrasts-with strong-growth-impatience-condition' edge are paper-faithful; matsya's doubt is refuted by the source.",
+        "DISAGREE WITH MATSYA on bibkey: matsya flagged a 'likely bibkey mismatch' (paper cites harmenbergInvariant=2021a vs entry's cite-harmenbergAggregating=2021b). The appendix specifically cites (Harmenberg, 2021b) = cite-harmenbergAggregating for THIS condition (lines 2722, 2724; bib entry line 3621-3622). matsya only saw the Introduction's 2021a citation. The entry's citation is correct - no mismatch.",
+        "external_lit_status=flagged-for-expert: whether eq-HarmImp is genuinely the impatience condition Harmenberg (2021b) imposes cannot be verified from this paper alone (paper asserts it); the Harmenberg source is not available to me or matsya. Route to domain expert to confirm the attributed condition."
+      ]
+    },
+    {
+      "id": "growth-impatience-condition",
+      "gloss_status": "faithful",
+      "relations_status": "faithful",
+      "external_lit_status": "none",
+      "overall": "faithful",
+      "matsya_agreement": "partial",
+      "priority_for_human": "low",
+      "issues": []
+    },
+    {
+      "id": "growth-patience-factor",
+      "gloss_status": "minor-issues",
+      "relations_status": "faithful",
+      "external_lit_status": "none",
+      "overall": "minor-issues",
+      "matsya_agreement": "partial",
+      "priority_for_human": "normal",
+      "issues": [
+        "GLOSS (minor imprecision, gloss line 9): 'When the ratio is below 1 ... the wealth-to-permanent-income ratio drifts down' is stated UNCONDITIONALLY for raw GIC. This is only rigorously true (i) in the perfect-foresight case (BufferStockTheory.md:916 consumption grows at APFac<PermGroFac; prehistory construction BufferStockTheory.md:2976-2979) or (ii) for the PERMANENT-INCOME-WEIGHTED / aggregate ratio under uncertainty (main-text proof BufferStockTheory.md:2645-2656 gives lim_{m->inf} E[permShk*m_{t+1}/m_t]=GPFacRaw<1; TheoreticalFoundations.tex:361). For the INDIVIDUAL UNWEIGHTED ratio under uncertainty, raw GIC does NOT bound m -- BufferStockTheory.md:1064 states every consumer's 'market resources ratio is expected to rise' under raw GIC while the aggregate is balanced; the bounded individual ratio requires strong GIC / GIC-Mod (Intro line 77; BufferStockTheory.md:948,954). Raw GIC yields only a 'pseudo-target' (BufferStockTheory.md:988,1008-1014). Recommend scoping the sentence (the sibling concept growth-impatience-condition.yml correctly prefixes the identical wording with 'In a perfect-foresight setting'), or saying 'consumption-to-permanent-income ratio / permanent-income-weighted market-resources ratio drifts down'.",
+        "MATSYA REASONING IS PARTLY WRONG (false-skepticism from missing files), though its 'minor-issues' verdict coincidentally matches. matsya flagged 'GPFac and GPFacRaw are macro aliases' as UNVERIFIABLE -- it IS verifiable and CORRECT: bst-macros.sty has \\providecommand{\\GPFac}{\\APFac/{\\PermGroFac}} and \\providecommand{\\GPFacRaw}{\\APFac/{\\PermGroFac}} (identical bodies). matsya flagged the PermGroFacAdj harmonic-mean definition as 'does not appear in retrieval' -- it IS in the paper: BufferStockTheory.md:1439-1440 and Tables/Calibration.tex:15-16 give PermGroFacAdj = PermGroFac * InvEPermShkInv with InvEPermShkInv = (E[permShk^-1])^-1 = 1/E[1/permShk], i.e. PermGroFacAdj = PermGroFac/E[1/permShk], exactly the YAML edge note. matsya's GPF-Mod>=GPF inequality concern is resolved numerically (calibration: GPFacMod=0.980 > GPFacRaw=0.970; PermGroFacAdj=1.020 < PermGroFac).",
+        "MATSYA OVERSTATED its headline 'misattribution' claim. matsya asserted wealth/market-resources-to-permanent-income boundedness is exclusively a GIC-Mod consequence and that raw GIC's implication is ONLY declining cLvl/permLvl. This is too strong: the main-text proof (BufferStockTheory.md:2645-2656) and TheoreticalFoundations.tex:361 show the PERMANENT-INCOME-WEIGHTED market-resources-to-permanent-income growth -> GPFacRaw < 1 under raw GIC. So a market-resources/permanent-income ratio DOES drift down under raw GIC in the weighted/aggregate sense. The real (smaller) issue is the missing individual-vs-aggregate scoping, not a clean GIC-vs-GIC-Mod swap.",
+        "NON-ISSUE / matsya flag refuted: numerator APFac (not APFacRaw). matsya questioned whether 'all four share numerator APFac'. The GPFacRaw definitional passage uses \\APFac (BufferStockTheory.md:419-423,452); AIC is APFac<1 (BufferStockTheory.md:368); RPFac=APFac/Rfree (BufferStockTheory.md:1449). The paper uses \\APFacRaw only in the Introduction's prose (lines 60,68,77,82); in the formal body the symbol is \\APFac. The YAML's use of \\APFac throughout is body-consistent and correct -- no error."
+      ]
+    },
+    {
+      "id": "hiraguchi-continuity",
+      "gloss_status": "faithful",
+      "relations_status": "minor-issues",
+      "external_lit_status": "flagged-for-expert",
+      "overall": "faithful",
+      "matsya_agreement": "disagree",
+      "priority_for_human": "normal",
+      "issues": [
+        "GLOSS IS FAITHFUL; matsya's 'overstated' verdict is false-skepticism. The claim's full proof IS in the paper (BufferStockTheory.md lines 2085-2124) but was absent from matsya's stale RAG index (matsya itself wrote 'the actual proof ... is not in retrieval'). Every gloss proof-internal that matsya flagged as unsupported/wrong is in fact verbatim in the paper. Detailed refutations below.",
+        "matsya FALSE-POSITIVE #1 (its headline 'codomain error'): The defining_equation's codomain $\\Reals_{+}$ is NOT an atlas error -- it transcribes the paper's claim header verbatim (line 2081: '$\\TMap^{\\MPCminInf,\\MPCmaxInf}\\xFunc\\in\\mathcal{C}_{\\boundFunc}(\\Reals_{++},\\Reals_{+})$'). matsya quoted a DIFFERENT passage (line 2129 / operator type-sig line 767) that uses $\\Reals$. The atlas faithfully copied the header.",
+        "GENUINE PAPER ISSUE (not an atlas fault), for the human: the paper is internally inconsistent on this codomain -- claim header (line 2081) says $\\Reals_{+}$, but the operator's type signature (line 767) and the application in the proof of thm-cmap (line 2129) say $\\Reals$. Since $\\CRRA>1\\Rightarrow\\uFunc(c)=c^{1-\\CRRA}/(1-\\CRRA)<0$, values are genuinely negative, so $\\Reals$ is correct and the '$\\Reals_{+}$' in the claim header is a paper-side typo. matsya's substantive point (that $\\Reals_{+}$ is mathematically wrong) is right, but its attribution (that the ATLAS introduced the error) is wrong.",
+        "matsya FALSE-POSITIVE #2 (compact shock supports): matsya called the supports $[\\permShkIndMin,\\permShkIndMax]$ and $[0,\\Max{\\tranShkEmp}]$ 'unsupported / possibly wrong' and asserted buffer-stock models use unbounded lognormal shocks. WRONG for this paper: the proof uses exactly these compact supports verbatim (lines 2102, 2104), and Assumption ass-shocks states bounded/compact support explicitly (line 186 '$\\permShk_{t}\\in[\\permShkIndMin,\\permShkIndMax]$'; line 203 'both shocks have bounded support ... supported on the compact interval').",
+        "matsya FALSE-POSITIVE #3 (Berge citation): matsya claimed the gloss 'silently substitutes' Aliprantis-Border for the paper's Jaskiewicz2011 and 'may have imported the wrong authority'. WRONG: the claim's proof genuinely cites 'Berge's Maximum Theorem (Theorem 17.31 in (Aliprantis and Border, 2006))' verbatim at line 2110. The Jaskiewicz2011 Berge citation matsya retrieved is at remark-notCompact (line 302), which concerns the DIFFERENT unbounded operator $\\TMap$ with the non-compact correspondence $\\mNrm\\mapsto(0,\\mNrm)$ -- two distinct citations for two distinct operators; matsya conflated them.",
+        "matsya FALSE-POSITIVE #4 (selector $\\S17.11$ and DCT-reuse): both verified. Footnote 45 (lines 3472-3475) states the maximand is continuous (Claim clm-hiraguchi_cont) + feasible set compact-valued, so a selector $\\breve{\\cFunc}$ exists 'See Section 17.11 in (Aliprantis and Border, 2006).' The DCT-reuse for the Euler expectation is at line 2305 'Making use of the Dominated Converge (see proof of Claim clm-hiraguchi_cont)'. matsya's 'no retrieval support / unverifiable' is wrong.",
+        "matsya FALSE-POSITIVE #5 (bounding function form): $\\boundFunc(x)=\\zeta+x^{1-\\CRRA}$ is verbatim in Remark rem-shnkrdef (line 2073: 'the bounding function, $\\boundFunc$, as follows $\\boundFunc(x)=\\zeta+x^{1-\\CRRA}$'). matsya could only see a truncated chunk and flagged it; it is fully supported.",
+        "RELATIONS (minor typing nits, both targets resolve to existing concept files): (a) 'implies -> thm-Boyd' is a slightly loose edge -- the self-map property does not PROVE Boyd's standalone theorem; it is a hypothesis that LICENSES applying Boyd. The note text is accurate ('the standing hypothesis under which Boyd's ... theorem is then applied'), so this is a typing/direction imprecision, not a content error. matsya's objection here has merit but its 'overstated' weight is excessive. (b) 'contrasts-with -> boyd-weighted-contraction': the note content is paper-faithful (matches line 745 / remark-notCompact: unrestricted $\\TMap$ need not be a self-map on the unbounded domain), but the cleaner contrast target would be the unbounded operator $\\TMap$ itself rather than Boyd's theorem (which is what is ENABLED). No standalone $\\TMap$-operator concept exists as a target, so boyd-weighted-contraction is a defensible-if-imperfect choice. Minor.",
+        "EXTERNAL-LIT: entry cites Aliprantis-Border (2006) -- Berge's Max Theorem 17.31 and measurable-selector Section 17.11. I confirmed the PAPER genuinely makes these citations (lines 2110, 3475), but the external source content itself is unavailable to me; flag for domain-expert to confirm the Aliprantis-Border statements say what is attributed. (Note: Aliprantis-Border is on the approved external list.)",
+        "Minor wording (matsya's last nit, cosmetic): the entry labels the anchor 'Remark rem-shnkrdef'; the paper renders it as a prf:remark with that label, so 'Remark' is fine (matsya's claim it is called 'Claim' is itself imprecise -- line 2052 is ':::{prf:remark}'). No change needed."
+      ]
+    },
+    {
+      "id": "limiting-consumption-strictly-positive",
+      "gloss_status": "minor-issues",
+      "relations_status": "minor-issues",
+      "external_lit_status": "none",
+      "overall": "minor-issues",
+      "matsya_agreement": "partial",
+      "priority_for_human": "normal",
+      "issues": [
+        "RELATION MISTARGETED (real fix): the edge `implies -> limiting-mpcs-lemma` is pointed at the wrong concept. `limiting-mpcs-lemma` has anchor `eq-MPCminInv` (the FINITE-HORIZON lemma `lemm-MPC`, BufferStockTheory.md L705-718, proof in Appendix sec-MPCiterproofs L1870), which does NOT cite this remark. The remark is cited ONLY inside the proof of the CONVERGED lemma `lemma-MPCBoundsConvg` (= concept `mpc-bounds-convergence`): BufferStockTheory.md L2316 'note that $\\cFunc(\\mNrm)>0$ on $\\Reals_{++}$ (recall Remark [](#remark-cStatStrctPos))', used at L2317-2318 to make $\\cFunc(\\mNrm)/\\mNrm$ non-increasing and define $\\MPCmaxmax,\\MPCminmin$. The edge note itself says 'The proof of Lemma lemma-MPCBoundsConvg cites this remark' — describing the converged lemma while targeting the finite-horizon slug. The edge should target `mpc-bounds-convergence` (and is then redundant with the existing `assumed-by -> mpc-bounds-convergence`).",
+        "GLOSS CONFLATION (matches the mistargeted edge): final paragraph (yml L15) says strict positivity 'is invoked directly in the proof of [limiting-mpcs-lemma](#limiting-mpcs-lemma) (Lemma [](#lemma-MPCBoundsConvg))' and is used 'to pin down the limiting MPCs $\\MPCmaxmax=\\MPCmax$ and $\\MPCminmin=\\MPCmin$'. These name two DISTINCT objects as one: the slug `limiting-mpcs-lemma` is `lemm-MPC`/`eq-MPCminInv`, but `lemma-MPCBoundsConvg` and the symbols $\\MPCmaxmax,\\MPCminmin$ belong to `mpc-bounds-convergence` (those symbols appear ONLY at L2318-2347). The prose should refer to `mpc-bounds-convergence`, not `limiting-mpcs-lemma`.",
+        "RELATION typing (minor): with `assumed-by -> mpc-bounds-convergence` already present (correct, L2316), the additional `special-case-of -> mpc-bounds-convergence` points the same direction to the same target. The remark is logically PRIOR to lemma-MPCBoundsConvg (its $\\cFunc>0$ feeds the lemma), so labeling it a 'special-case-of' that lemma is debatable typing and mildly redundant; consider whether the MPC-sandwich half is better related to the finite-horizon bounds (eq-cBounds) than to the converged lemma.",
+        "GLOSS interpretation (mild, not an error): the parenthetical 'zero consumption would drive CRRA marginal utility to infinity and is never optimal' (yml L13) is authored embellishment — the paper's remark (L861) justifies $\\cFunc>0$ only as 'since $\\cFunc$ satisfies Equation eq-stationarybellman and $\\vFunc\\in\\mathcal{C}_{\\boundFunc}$'. The added Inada-style reason is economically standard and consistent but is not stated at remark-cStatStrctPos.",
+        "DISAGREE WITH MATSYA (false-skepticism, both flags wrong): matsya claimed (a) 'the two-sided ray sandwich $\\MPCmax m\\ge\\cFunc(m)\\ge\\MPCmin m$ is NOT evidenced' and (b) the Bellman-plus-$\\boundFunc$-bounded positivity mechanism is 'a reconstruction, not the paper's'. Both are VERBATIM the remark at BufferStockTheory.md L861: '$\\MPCmax m \\geq \\cFunc(\\mNrm)\\geq \\MPCmin m$ ... since $\\cFunc$ satisfies Equation [](#eq-stationarybellman) and $\\vFunc \\in \\mathcal{C}_{\\boundFunc}(\\Reals_{++},\\Reals)$, $\\cFunc(\\mNrm)>0$ for $\\mNrm>0$.' matsya retrieved appendix PDFs and the perfect-foresight/asset argument instead of the main-text remark (stale RAG index); the defining equation and positivity mechanism are exact, not reconstructed.",
+        "PARTIAL AGREE WITH MATSYA (misdiagnosed): matsya's structural concern of 'three conflicting edge types to a single lemma' is partly right but for the wrong reason — it assumed `limiting-mpcs-lemma` and `mpc-bounds-convergence` are 'apparently a single lemma'. They are DISTINCT (anchors eq-MPCminInv vs lemma-MPCBoundsConvg). The genuine defect is the mistargeted `implies -> limiting-mpcs-lemma` edge above, not a three-way cycle on one object.",
+        "CONFIRMED-FAITHFUL (corrects matsya's 'unverifiable' flags): `implied-by -> nondegenerate-solution-existence` and `requires -> eq-stationarybellman` are paper-faithful — the existence theorem outputs (pointwise convergence, Bellman fixed point eq-stationarybellman, $\\vFunc\\in\\mathcal{C}_{\\boundFunc}$) are at L802-811/838 and the remark explicitly invokes both. The WRIC/$\\MPCmin=0$ framing matsya called 'off-key' is correct (RIC ⟹ $\\MPCmin=1-\\RPFac>0$ at L718; without RIC $\\MPCmin=0$ at remark-ricstationary L850)."
+      ]
+    },
+    {
+      "id": "limiting-mpcs-lemma",
+      "gloss_status": "faithful",
+      "relations_status": "minor-issues",
+      "external_lit_status": "flagged-for-expert",
+      "overall": "faithful",
+      "matsya_agreement": "partial",
+      "priority_for_human": "normal",
+      "issues": [
+        "matsya's HEADLINE objection (gloss 'omits the FHWC hypothesis the paper explicitly uses for the minimal-MPC limb') is FALSE SKEPTICISM from a stale RAG index. In BufferStockTheory.md the lemma lemm-MPC states its ONLY hypothesis as WRIC (line 709: 'If weak return impatience (WRIC) ... holds, then:'), plus RIC for the minimal-MPC limit in item (ii) (line 718). The proof Part (1) (lines 1874-1923) derives the minimal-MPC recursion by taking m->infinity and using boundedness of PermGroFacRnd*tranShkAll (line 1891), with NO FHWC invocation anywhere in sec-MPCiterproofs. matsya's FHWC quote traces to ApndxMPCLimits.tex, a chunk that does not match the current paper. The gloss is CORRECT to not list FHWC, and NO 'requires -> finite-human-wealth-condition' edge should be added.",
+        "matsya is also WRONG that eq-cBounds 'cannot be verified here' / 'reads loosely': the exact share inequality MPCmin_t * m <= cFunc_t(m) <= MPCmax_t * m appears verbatim at BufferStockTheory.md lines 687-690 (eq-cBounds), and the 'limits of the MPC as m->infinity and m->0' framing in the gloss matches line 683 verbatim. The 'share vs slope conflation' worry is resolved by the paper using the same framing.",
+        "MINOR relation-typing nit (matsya raised this and it is defensible): 'contrasts-with -> mpc-bounds-convergence' targets lemma-MPCBoundsConvg (lines 867-871), the converged-function counterpart that carries the SAME limiting MPCs to cFunc itself. That is closer to an implies/limit (or special-case-of) relationship than a genuine contrast. Consider retyping to 'implies' or 'special-case-of'. Not a correctness error, low severity.",
+        "MINOR note-precision issue: 'assumed-by -> contraction-mapping-consumption-bounds' note names 'Claim maximal-mpc-at-most-one'. The actual paper claim is claim-MPCMAXKleq1 (lines 2024-2047), which establishes the threshold horizon k via pZero*DiscFac*(Rfree*(1-MPCmax_{T-k}))^{1-CRRA} < 1 and leverages FVAC, not purely 'the convergence of MPCmax_{T-n} to the positive limit MPCmax' as the note asserts. The characterization is directionally right (it does concern MPCmax_{T-k} and the contraction threshold) but loosely worded.",
+        "External citations cite-benhabibWealth (Benhabib-Bisin-Zhu) and cite-maTodaRich (Ma-Toda) are external sources unavailable for verification; flag for domain expert. Note these appear only in a soft 'connects to' aside in the gloss, not as a load-bearing paper result, so risk is low.",
+        "VERIFIED CORRECT and counter to matsya's 'unverifiable' marks: (a) 'invokes this lemma directly (as cFuncBounds), using MPCmax_{T-n} <= MPCmax_{T-k}' is confirmed at line 817 ('MPCmax_{T-n} <= MPCmax_{T-k} by Lemma cFuncBounds') and cFuncBounds is a real alias anchor for lemm-MPC (line 703); (b) the divergence/degeneracy claim matches the proof verbatim (line 1915 'increasing sequence'; lines 1921-1922 'MPCmin_{T-n}^{-1} -> infinity ... MPCmin = 0'); (c) MPSmin == pZero^{1/CRRA}*RPFac is explicit at eq-MPSminDef line 1969; (d) all 7 relation targets resolve to existing concept files."
+      ]
+    },
+    {
+      "id": "maximal-mpc-at-most-one",
+      "gloss_status": "faithful",
+      "relations_status": "minor-issues",
+      "external_lit_status": "flagged-for-expert",
+      "overall": "minor-issues",
+      "matsya_agreement": "partial",
+      "priority_for_human": "normal",
+      "issues": [
+        "RELATIONS (resolution): the `implied-by -> WRIC` edge targets node id `WRIC`, but no atlas node has id `WRIC` (the node file is `weak-return-impatience-condition.yml`, id `weak-return-impatience-condition`). `#WRIC` resolves only as a *paper anchor* (BufferStockTheory.md:397), not as an atlas node id. The sibling `requires -> weak-return-impatience-condition` edge DOES resolve. Recommend retargeting the `implied-by` edge to `weak-return-impatience-condition` (and consider whether two edges to the same node, kinds `requires` + `implied-by`, are both needed — defensible as hypothesis-vs-consequence framing, but redundant; matsya also flagged this).",
+        "EXTERNAL-LIT: entry declares `none`, but the `assumed-by -> boyd-weighted-contraction` edge imports Boyd (1990)'s discounting condition (3). The paper does route the existence proof through Boyd (thm-Boyd restatement at BufferStockTheory.md:2002-2020; verification at :2130 'verify conditions (1)-(3) of Boyd's Theorem'; cite-jboydWeighted at :3556), so the edge is paper-correct and INTERNAL to the paper, but the underlying theorem is external — flag for expert per Boyd being on the external-source list.",
+        "matsya DISAGREEMENT (false-skepticism, missed passages): matsya marked the contraction-modulus / Remark rem-shnkrdef / Boyd machinery 'not verifiable from retrieved chunks.' All of it IS in the paper: $\\Shrinker=\\max\\{\\pZero\\DiscFac(\\Rfree(1-\\MPCmax_{k}))^{1-\\CRRA},\\beta\\Ex\\PermGroFacRnd^{1-\\CRRA}\\}<1$ verbatim at BufferStockTheory.md:2059 (rem-shnkrdef, :2051-2059); 'Fix $k$ such that eq-MPCMAXKleq1 holds' opens thm-cmap proof at :2128; Claim claim-MPCMAXKleq1 feeds Boyd condition (3) at :2188 and :2212. The gloss's reproduction of all three is faithful. matsya's RAG index (BufferStockTheory-NoAppendix.tex) lacked the appendix proof.",
+        "matsya DISAGREEMENT (monotonicity — not an overstatement OF THE GLOSS): matsya marked 'continuous and increasing in $\\MPCmaxInf$' as overstated because it holds only for $\\CRRA>1$. The gloss QUOTES the paper's own proof verbatim (BufferStockTheory.md:2046: 'the expression $\\MPCmaxInf\\mapsto\\pZero\\DiscFac(\\Rfree(1-\\MPCmaxInf))^{1-\\CRRA}$ is continuous and increasing in $\\MPCmaxInf$'). matsya's $\\CRRA>1$ caveat is mathematically valid but is a critique of the PAPER, not an infidelity of the gloss; the paper operates in the $\\CRRA>1$ regime (e.g. :1482 invokes '$\\CRRA>1$'). Against ground truth (the paper), the gloss is faithful. Optional enhancement (not required for faithfulness): the gloss could note the $\\CRRA>1$ regime explicitly.",
+        "MINOR (gloss is cleaner than the paper, no fix needed): the paper's proof line :2047 has an $n$-vs-$k$ subscript slip ('holds for all $\\MPCmaxInf\\leq\\MPCmax_{T-n}$' where $\\MPCmax_{T-k}$ is meant). The gloss correctly uses $\\MPCmax_{T-k}$ throughout. Noted only so a human is not surprised by the source's own typo."
+      ]
+    },
+    {
+      "id": "modified-growth-patience-factor",
+      "gloss_status": "minor-issues",
+      "relations_status": "faithful",
+      "external_lit_status": "none",
+      "overall": "minor-issues",
+      "matsya_agreement": "partial",
+      "priority_for_human": "normal",
+      "issues": [
+        "Gloss (line 9): 'Equivalently (after a Jensen rearrangement), $\\GPFacMod = \\Ex[\\APFac/(\\PermGroFac \\permShk)]$' mis-attributes the step to Jensen. The equivalence $\\APFac/\\PermGroFacAdj = \\APFac\\Ex[\\permShk^{-1}]/\\PermGroFac = \\Ex[\\APFac/(\\PermGroFac\\permShk)]$ is pure LINEARITY OF EXPECTATION (pulling out the constant $\\APFac/\\PermGroFac$), not Jensen. Jensen's inequality is correctly invoked in the NEXT paragraph for $\\Ex[1/\\permShk]\\ge 1$. Recommend: change 'after a Jensen rearrangement' to 'by linearity of expectation' (or 'by pulling out the constant'). Agree with matsya on this.",
+        "Gloss (line 9): 'The calibration table at line 1438 of the paper writes the closed form $\\GPFacMod \\equiv \\APFac/\\PermGroFacAdj$' cites the WRONG line. In BufferStockTheory.md line 1438 is the 'PF Value of Autarky Factor' ($\\beth \\equiv \\DiscFac\\PermGroFac^{1-\\CRRA}$). The row '$\\GPFacMod \\equiv \\APFac/\\PermGroFacAdj$ = 0.980' is at line 1451 (label [Modified Growth Patience Factor]). matsya called this merely 'unverifiable'; it is actively wrong. Fix 1438 -> 1451 (or drop the brittle line number).",
+        "Verified AGAINST matsya's over-skepticism: matsya flagged 'Only $\\GPFacMod<1$ ... yields the individual buffer-stock target' and the 'ratios drift to infinity along paths where bad shocks are rare' narrative as 'overstated / unsupported by retrieval.' These ARE paper-faithful. Line 77: 'The requirement for the existence of an individual target is strong growth impatience ($\\Ex[\\APFacRaw/\\PermGroFacRnd]<1$) which prevents the ratio of a household's market resources to permanent income from growing without bound.' Line 948: 'Existence of such a target requires strong growth impatience.' Theorem thm-target (line 954) gives WRIC+FVAC+GIC-Mod => existence of target $\\mTrgNrm$. matsya missed these (stale RAG index, retrieved only Calibration/Comparison tables). No change needed to the gloss here.",
+        "Cross-check note (no fix needed): matsya raised a 'source collision' worry that the paper defines $\\PermGroFacAdj$ twice. The paper actually uses DISTINCT symbols: $\\PermGroFacAdj$ (Uncertainty-Adjusted Growth, line 1440, $\\equiv\\PermGroFac\\InvEPermShkInv$) vs $\\PermGroFacAdjU$ with a U subscript (Utility Compensated Growth, line 1447). The YAML correctly uses $\\PermGroFacAdj$ (no U), so there is no ambiguity to resolve. matsya's collision concern is overstated.",
+        "Confirmed correct (no fix): the GIC-Mod-stronger-than-GIC claim is directly supported by line 1564 ('$\\APFac<\\PermGroFac$ does not imply $\\APFac<\\InvEPermShkInv\\PermGroFac$ where $\\InvEPermShkInv<1$'), and $\\GPFacMod\\ge\\GPFacRaw$ by line 1057 ('$\\GPFacMod>\\GPFacRaw$') and line 1056 ('$\\PermGroFacAdj<\\PermGroFac$'). Symbol usage $\\APFac$ (not $\\APFacRaw$) matches the paper's own GIC-Mod definition at eq-GPFacMod/ass-GICMod (lines 442-452) and proof line 2601; the two symbols denote the same object. All three relation targets (absolute-patience-factor, strong-growth-impatience-condition, growth-patience-factor) resolve to existing concept files and are correctly typed."
+      ]
+    },
+    {
+      "id": "mpc-bounds-convergence",
+      "gloss_status": "faithful",
+      "relations_status": "minor-issues",
+      "external_lit_status": "flagged-for-expert",
+      "overall": "minor-issues",
+      "matsya_agreement": "partial",
+      "priority_for_human": "normal",
+      "issues": [
+        "GLOSS is paper-faithful on all substantive claims (verified against the FULL proof, which IS in BufferStockTheory.md lines 2310-2349, not just 'See Appendix'). The two limits match the lemma statement (line 871); MPC formulas match: gloss MPCmin=1-APFac/Rfree and MPCmax=1-pZero^{1/CRRA}APFac/Rfree equal the paper's eq-MPCminDefn/eq-MPCmaxDefn (lines 697/699) because RPFac is DEFINED as APFac/Rfree (table line 1449). Symbol APFac (not APFacRaw) is correct. Proof reconstruction matches line-by-line: concavity via Rockafellar Thm 10.8 (line 2314), cFunc>0 from remark (line 2316), non-increasing bounded share in [0,1] (line 2317), MPCmaxmax/MPCminmin defined (line 2318), Euler/eq-EuelrStatC (line 2321), m->inf gives 1-APFac/Rfree (line 2344), m->0 gives 1-pZero^{1/CRRA}APFac/Rfree (line 2347).",
+        "DISAGREE WITH MATSYA (false-skepticism, missed passage): matsya's PRIMARY objection -- that the gloss 'overstates' by treating concavity as one of this lemma's two outputs -- is WRONG. The proof of lemma-MPCBoundsConvg OPENS by proving concavity ('First, we verify cFunc is concave', line 2312), and line 2532 (proof of thm-target) explicitly states 'cFunc is concave on R_{++} BY Lemma [](#lemma-MPCBoundsConvg)'. The paper itself attributes concavity to this lemma, so the gloss's 'two outputs (concavity + limiting share)' framing is exactly the paper's. matsya saw only RAG 'See Appendix' chunks.",
+        "DISAGREE WITH MATSYA (false-skepticism): matsya calls the two-part proof an 'AI-synthesized internal proof ... not present in any retrieved chunk'. It IS fully present in BufferStockTheory.md lines 2310-2349 and the gloss tracks it faithfully. Also matsya flagged the MPC algebraic forms as 'only partially supported / flag for verification' -- they are fully verified via RPFac=APFac/Rfree (line 1449). matsya could not see these lines.",
+        "AGREE WITH MATSYA (minor, relation type): 'contrasts-with -> lemm-MPC' has the wrong edge TYPE. The gloss itself calls this lemma the 'converged-function counterpart' of lemm-MPC; the two AGREE (limit/extends relationship), they do not contrast. Should be extends / limit-of / counterpart. Target and note are correct.",
+        "PARTIALLY AGREE WITH MATSYA (minor, relation type): 'implied-by -> nondegenerate-solution-existence' is imprecise. The existence theorem (thm-convgtobellman) supplies the pointwise limit cFunc_{T-n}->cFunc used by the proof (lines 2302, 2313), but existence ALONE does not logically imply the MPC bounds (the proof also needs concavity + the stationary Euler eq). This is a dependency, so requires/depends-on fits better than implied-by. Direction is fine; only the strength/type is loose. Note text is accurate.",
+        "NEW ISSUE matsya missed (minor, broken link): the gloss prose links 'Remark [limiting-consumption-strictly-positive](#limiting-consumption-strictly-positive)' but that anchor does NOT exist in the paper (grep returns 0). The real anchor is remark-cStatStrctPos (line 857), which the sources[] block uses correctly. The in-gloss cross-reference will not resolve.",
+        "NEW ISSUE matsya missed (minor, target convention): the 'contrasts-with -> lemm-MPC' relation target is a PAPER ANCHOR (lemm-MPC), whereas the corresponding atlas concept is the slug limiting-mpcs-lemma.yml (whose defining anchor is lemm-MPC). The other relations in this entry use concept slugs. Anchor-style targets do occur elsewhere in the atlas, so this is a soft consistency point, not a broken node.",
+        "MINOR (paper-source typo carried verbatim): defining_equation.latex reads '...=\\MPCmin m' and '...=\\MPCmax m' -- the trailing m is a typo in the paper's OWN lemma statement (line 871); the limit of a share is a scalar MPC. The english field and gloss prose both correctly treat it as a scalar. Worth cleaning in the defining_equation; matsya correctly noted this artifact.",
+        "EXTERNAL-LIT: Rockafellar (1972) Convex Analysis 'Theorem 10.8' is faithfully reproduced from the paper's own citation (lines 2314, 3694) -- the gloss adds no claim beyond the paper. The external source is NOT available to me, so the theorem's actual content/number cannot be independently verified; flagged-for-expert. matsya's '1970 vs 1972' edition concern is a paper-bibliography matter, not a gloss-faithfulness defect, since the gloss mirrors the paper."
+      ]
+    },
+    {
+      "id": "no-ric-no-gic-implies-no-fvac",
+      "gloss_status": "faithful",
+      "relations_status": "faithful",
+      "external_lit_status": "flagged-for-expert",
+      "overall": "faithful",
+      "matsya_agreement": "partial",
+      "priority_for_human": "low",
+      "issues": []
+    },
+    {
+      "id": "nondegenerate-limiting-solution",
+      "gloss_status": "faithful",
+      "relations_status": "faithful",
+      "external_lit_status": "flagged-for-expert",
+      "overall": "faithful",
+      "matsya_agreement": "disagree",
+      "priority_for_human": "normal",
+      "issues": [
+        "NO substantive error found in the entry. Recording this primarily to OVERTURN matsya's mistaken 'overstated' verdict (false-skepticism from a missed main-text passage).",
+        "matsya's CENTRAL CHARGE IS WRONG. It claims the gloss 'invents a non-compact-feasibility-correspondence obstruction that replaces the paper's actual stated obstruction (unbounded CRRA utility)' and calls it a 'fabricated mechanism.' In fact the paper states EXACTLY this, verbatim, at the point where it defines the Bellman operator TMap: BufferStockTheory.md line 283 ('The mapping m -> (0, m) defines the feasibility correspondence'), line 286 ('because the feasibility correspondence does not include the boundary of feasible consumption, existing dynamic programming arguments cannot be used to show that such a solution (a fixed point to TMap) exists'), and line 296 ('we cannot assert TMap maps continuous functions to continuous functions since the feasibility correspondence m -> (0, m) is not compact-valued'), reinforced by remark-notCompact (lines 298-304, invoking Berge / Jaskiewicz-Nowak). The paper presents BOTH challenges: unboundedness (line 293, resolved via weighted norm) AND non-compactness, which it explicitly calls 'a more pernicious challenge' (line 295). The gloss faithfully reports the obstruction the paper itself emphasizes; matsya's RAG index simply failed to retrieve lines 272-310.",
+        "matsya falsely flags the phrase 'via the Bellman Principle of Optimality' as 'the gloss's own gloss, not in the retrieved text.' It is VERBATIM in the paper, line 285: 'It is straightforward to show (using the Bellman Principle of Optimality) that a finite valued solution, v, to the functional equation TMap v = v defines a limiting non-degenerate solution.'",
+        "matsya falsely flags the exact theorem wording as 'not in retrieval / unverifiable.' thm-convgtobellman item 3 (line 811) reads verbatim: 'the sequence {cFunc_{T-n}} converges point-wise to cFunc and cFunc and vFunc are a limiting non-degenerate solution,' under WRIC + FVAC (line 802). This fully supports the gloss and the implied-by -> nondegenerate-solution-existence relation.",
+        "VERIFIED FAITHFUL (against matsya's residual doubts): the iff claim is verbatim prop-pfUCFHWC, line 593 ('A non-degenerate limiting solution exists if and only if finite limiting human wealth (RNrmByG^{-1}<1) and return impatience hold'). RIC -> rules-out c==0 confirmed at lines 2856-2857; FHWC -> rules-out c==infinity confirmed at line 2867 (proof of prop-pfUCFHWC, both verbatim). Both 'requires' edges are correctly scoped to the PF-unconstrained benchmark.",
+        "The Szeidl claim is NOT a free-standing external assertion needing manuscript verification; it is the paper's OWN in-text statement, line 58, almost verbatim to the gloss: '(Szeidl, 2013), the impatience condition (R*beta) < 1 ... commonly imposed in Bewley models ... is in general not necessary nor sufficient for ensuring the existence of a non-degenerate limiting solution.' The gloss faithfully echoes the paper. external_lit_status='flagged-for-expert' is set only because the underlying Szeidl (2013) manuscript is not available to me to independently confirm the paper's attribution.",
+        "Codomain / 'every reachable resource level' reading confirmed: defining equation matches def-nondegeneracy verbatim (line 264); the strictly-positive/real-valued-on-reachable reading is supported by line 53 and the footnote at line 1649 (0 < cNrm(m) < infinity paired with -infinity < vFunc(m) < 0). The level-form degenerate-limit language (c==0 / c==infinity) is confirmed at line 175.",
+        "MINOR (not an error, no action needed): matsya's 'interpretive overreach' complaint mischaracterizes the gloss. The gloss does NOT assert 'v-finiteness rules out c==infinity'; it pairs v-finiteness with the c==infinity degeneracy as an economic gloss, consistent with the paper's joint pairing of 0<c<infinity and -infinity<v<0 (line 1649). This is faithful, mild interpretation.",
+        "contrasts-with -> buffer-stock-target resolves; the mirror edge exists in buffer-stock-target.yml (lines 30-32) and is mutually consistent; the 'stable dynamics of m' characterization matches that concept's defining equation E_t[m_{t+1}/m_t]=1 (eq-mTarget). All four relation targets exist as concept files."
+      ]
+    },
+    {
+      "id": "nondegenerate-solution-existence",
+      "gloss_status": "faithful",
+      "relations_status": "minor-issues",
+      "external_lit_status": "flagged-for-expert",
+      "overall": "faithful",
+      "matsya_agreement": "partial",
+      "priority_for_human": "normal",
+      "issues": [
+        "GLOSS is paper-faithful throughout. Defining equation (eq-stationarybellman) matches BufferStockTheory.md lines 807-809 verbatim; the WRIC+FVAC hypotheses match thm-convgtobellman line 802; pointwise convergence + non-degeneracy match item (iii) line 811 / line 2282 and def-nondegeneracy line 264.",
+        "DISAGREE WITH MATSYA (false-skepticism #1): matsya rated the non-compact-feasibility-correspondence rationale 'OVERSTATED / unsupported / likely misdiagnosed... the gloss's weakest point.' This is WRONG. The paper states it explicitly: line 295-296 'the natural liquidity constraint introduces a more pernicious challenge related to continuity: TMap will not be a well defined self-map on a vector space of continuous functions. In particular, we cannot assert TMap maps continuous functions to continuous functions since the feasibility correspondence m->(0,m) is not compact-valued', formalized in remark-notCompact (lines 298-304), with the Stachurski-Banach-space foil at line 292. matsya missed these (stale RAG index). The paper even separates this from unboundedness (line 293-294 resolves unboundedness via weighted norm), refuting matsya's claim that the 'standard reason' is unbounded CRRA utility rather than a compactness failure.",
+        "DISAGREE WITH MATSYA (false-skepticism #2): matsya flagged 'WRIC keeps the upper bound on the consumption share bounded away from zero' as 'the AI's own causal gloss / unsupported wording.' This is WRONG. Line 844 states near-verbatim: 'Due to weak return impatience (WRIC), the upper bound on the per-period consumption converges to a strictly positive share of market resources, preventing consumption from converging to zero.' Faithful.",
+        "DISAGREE WITH MATSYA on the thm-target condition-label worry: matsya wrote 'the appendix says strong growth impatience (Assumption S.2), whereas the edge text says GIC-Mod.' In this paper strong growth impatience IS GIC-Mod/GICMod (label #GICMod, condition E[APFacRaw/PermGroFacRnd]<1); see line 77, thm-target line 954, and line 1643. The edge note 'adds GIC-Mod' is correct, not a discrepancy.",
+        "RELATIONS minor type-looseness (the one genuine, low-severity issue): the 'implied-by -> feasible-correspondence-not-compact' edge labels a *motivational* link as logical implication. Strictly, non-compactness does not imply the existence theorem; it implies the DIRECT TMap route fails, which motivates the MPC-bounded route. The edge note itself correctly says 'motivating the MPC-bounded weighted-norm route', and the mirror edge in feasible-correspondence-not-compact.yml (implies -> nondegenerate-solution-existence) frames it the same way, so misreading is prevented. matsya is half-right (type is loose) but WRONG that it is 'unsupported' — the underlying non-compactness fact is fully supported (lines 295-302). Recommend retyping to a 'motivated-by' relation if the schema allows; not a factual error in the gloss.",
+        "Remaining relations all correct and correctly typed: requires->WRIC and requires->FVAC (hypotheses, thm-convgtobellman line 802 / thm-cmap line 782); assumed-by->buffer-stock-target-existence (thm-target line 954, +GICMod); assumed-by->pseudo-target-existence (thm-MSSBalExists line 1014, +GICRaw=GIC; I confirmed this theorem, which matsya could not retrieve); contrasts-with->return-impatience-condition (remark-ricstationary lines 846-852 confirms RIC would give a single stationary contraction with MPCmin>0; line 1511 confirms RIC necessary in the PF benchmark). All targets resolve to existing concept files.",
+        "EXTERNAL-LIT: cite-jboydWeighted (Boyd 1990, used at paper line 744) and cite-stachurski2022 (Stachurski 2022, used at paper line 292) are cited exactly as the paper uses them; the gloss makes no claim beyond the paper's own attributions, so this is not a fabrication. Per reviewer constraints these external sources are unavailable to me -> external_lit_status=flagged-for-expert (agreeing with matsya on the flag only)."
+      ]
+    },
+    {
+      "id": "norm-implies-compactness",
+      "gloss_status": "faithful",
+      "relations_status": "faithful",
+      "external_lit_status": "none",
+      "overall": "faithful",
+      "matsya_agreement": "disagree",
+      "priority_for_human": "low",
+      "issues": [
+        "NO CORRECTNESS PROBLEMS FOUND. The gloss, defining equation, and all three relations are paper-faithful against the full source text. Recorded issues below are matsya reconciliations and one cosmetic note, none requiring a change.",
+        "matsya FALSE-SKEPTICISM #1 (overturned): matsya flagged 'the paper notes convexity/openness not strictly necessary' as an unsupported attribution 'not in the retrieved source.' It IS in the paper verbatim: BufferStockTheory.md line 3287, end of the proof of Fact fact-normimpliescompact — \"It's also worth noting that the convexity and openness of $X$ aren't strictly necessary for this argument.\" The gloss's phrasing is fully faithful. This is matsya missing an appendix passage (stale RAG), exactly the failure mode warned about.",
+        "matsya FALSE-SKEPTICISM #2 (overturned): matsya marked the entire downstream-application paragraph ($\\boundFunc$-norm weight $\\zeta+x^{1-\\gamma}$, Boyd contraction, passing the limit through $\\Ex\\PermGroFacRnd^{1-\\CRRA}\\vFunc(\\cdot)$, a.s. pointwise convergence) as 'not present in any retrieved chunk / cannot confirm.' All of it is in the MAIN-TEXT proof: line 2269 ('$\\vFunc_{t_{n(i)}+1}$ converges in the $\\boundFunc$-norm, hence converges uniformly over compact sets in $\\mathbb{R}_{++}$ (Fact fact-normimpliescompact, Appendix sec-realanalysis)'), line 2270 (invokes fact-compactnt for a.s. convergence), line 2271 (Dominated Convergence passes the limit through the expectation). Weight $\\boundFunc(x)=\\zeta+x^{1-\\CRRA}$ confirmed at lines 763 and 2073; Boyd contraction at lines 744-776 and thm-Boyd (line 2005).",
+        "matsya FALSE-SKEPTICISM #3 (overturned): matsya said 'assumed-by -> nondegenerate-solution-existence cannot be verified — the convergence half of the existence theorem is not in retrieval.' It is verified: thm-convgtobellman is the 'Existence of Non-degenerate Solution' theorem (line 799-800), and its proof at line 2269 invokes this fact explicitly. The target concept nondegenerate-solution-existence lists anchor thm-convgtobellman, so the edge resolves and is the correct kind.",
+        "Relation 'implies -> compactness-preserved' (fact-compactnt) verified: lines 2269->2270 show uniform-on-compacts (this fact) feeding fact-compactnt to yield a.s./pointwise convergence; correct direction and kind, target resolves (compactness-preserved anchor = fact-compactnt).",
+        "MINOR (advisory, no change required): the 'requires -> boyd-weighted-contraction' edge is the softest of the three. The abstract Fact itself requires only continuity/positivity of the weight $\\gFunc$ (not Boyd); the note correctly scopes it to 'the relevant instance' that uses the $\\boundFunc$-norm, so it is defensible as an application linkage rather than a logical prerequisite of the fact. matsya raised the same nuance. Acceptable as written.",
+        "COSMETIC (no change required): gloss writes the lower-bound view as $\\bar{\\gFunc}=\\min_{K}\\gFunc$ whereas the paper writes $\\bar{\\gFunc}=\\min_{x\\in\\tilde X}\\gFunc$ (line 3279); same construction on an arbitrary compact set, not an error.",
+        "Note for human: the paper's printed proof block for fact-compactnt (lines 3300-3314) appears to duplicate the proof of fact-normimpliescompact rather than proving the continuity-under-uniform-convergence statement. This is a paper-side artifact and is OUTSIDE this concept's scope (it belongs to the compactness-preserved entry); flagged only so it is not lost."
+      ]
+    },
+    {
+      "id": "pf-constrained-solution-exists",
+      "gloss_status": "faithful",
+      "relations_status": "faithful",
+      "external_lit_status": "none",
+      "overall": "faithful",
+      "matsya_agreement": "partial",
+      "priority_for_human": "low",
+      "issues": [
+        "No correctness problems found. Every gloss claim is verbatim-supported by the full paper text: two-regime characterization = prop-PFCExist (BufferStockTheory.md line 641); eq-LiqConstrBinds and 'constraint relevant iff growth impatience' (lines 626-633); unconstrained iff RIC and FHWC = prop-pfUCFHWC (line 593); '\\Rfree<=\\APFac and \\APFac<\\PermGroFac => \\Rfree<=\\PermGroFac' (line 647, verbatim); MPC->0 (line 1400); proof = subsec-PFCon case analysis (line 645). Symbols \\RPFac (ass-RIC, line 385) and \\GPFacRaw (ass-GICRaw, line 432) are both correct.",
+        "DISAGREE with matsya Issue 2 (false-skepticism): matsya calls 'strictly increasing' an unsourced overreach, but BufferStockTheory.md line 1401 states verbatim 'Nevertheless \\cnstr{\\cFunc}(\\mNrm) is finite, strictly positive, and strictly increasing in \\mNrm.' matsya missed this because its RAG retrieved only appendix PDF chunks, not the main-text Case 3 prose (subsec-PFCon, line 1393ff). The qualifier is fully supported.",
+        "DISAGREE with matsya Issue 1 (overstated): the alleged GIC-vs-GICRaw 'mislabel' is at most cosmetic. The gloss links to the correct anchor #GICRaw and uses the correct raw symbol \\GPFacRaw<1; the link text 'growth impatience' mirrors the paper's own usage (the proposition at line 641 itself writes '[growth impatience](#GICRaw)'). Under perfect foresight GIC and GICRaw coincide (no permanent shock). No conflation or wrong-symbol error.",
+        "matsya's note that the relation target 'should be growth-impatience-RAW' is moot: there is no separate raw-GIC concept; concepts/growth-impatience-condition.yml IS GICRaw (anchor ass-GICRaw, latex \\GPFacRaw<1). All four relation targets exist as concept files and resolve correctly; edge directions/kinds are right (the growth-impatience edge note correctly flags it is conditional-on-not-RIC and biconditional)."
+      ]
+    },
+    {
+      "id": "pf-consumption-function-properties",
+      "gloss_status": "faithful",
+      "relations_status": "faithful",
+      "external_lit_status": "none",
+      "overall": "faithful",
+      "matsya_agreement": "partial",
+      "priority_for_human": "low",
+      "issues": []
+    },
+    {
+      "id": "pf-unconstrained-requires-fhwc",
+      "gloss_status": "faithful",
+      "relations_status": "minor-issues",
+      "external_lit_status": "none",
+      "overall": "faithful",
+      "matsya_agreement": "partial",
+      "priority_for_human": "low",
+      "issues": [
+        "MINOR (relation typing): the `requires -> ass-pfincome` edge would be better typed as an `assumes`/`assumed-by`-style edge. Per BufferStockTheory.md L587 ('The following two results consider the normalized problem ... with perfect foresight income (Assumption ass-pfincome)') and L507 ('Assumption ass-pfincome remains in force'), ass-pfincome is a background operating assumption, not one of the two substantive iff hypotheses. Using `requires` for it conflates it with the FHWC/RIC hypotheses (which also use `requires`). The note text is accurate; only the edge kind is slightly imprecise. Same point matsya raised. Not a correctness error.",
+        "matsya DISAGREEMENT (false-skepticism): matsya flagged the contrast note's claim that for prop-PFCExist 'RIC alone (or, failing RIC, growth impatience) suffices' as 'not verifiable from the retrieved chunks.' It IS verifiable and exactly correct: BufferStockTheory.md L641 states 'If return impatience (Assumption ass-RIC) holds, then a non-degenerate solution exists. Moreover, if return impatience does not hold, then a non-degenerate solution exists if and only if growth impatience (Assumption GICRaw) holds.' matsya's RAG index missed this passage; the contrast edge is fully paper-faithful.",
+        "matsya DISAGREEMENT (false-skepticism): matsya noted that the second iff condition RPFac<1 (RIC) and the identity MPCmin=1-RPFac were 'inferred rather than quoted.' Both are stated verbatim in the paper: RIC = 'RPFac < 1' (ass-RIC, L385) and 'MPCmin := 1-RPFac' (eq-MPCminDef, L582). No inference needed."
+      ]
+    },
+    {
+      "id": "pseudo-target",
+      "gloss_status": "faithful",
+      "relations_status": "faithful",
+      "external_lit_status": "none",
+      "overall": "faithful",
+      "matsya_agreement": "partial",
+      "priority_for_human": "low",
+      "issues": [
+        "No correctness defects found. The gloss is paper-faithful on every checked claim: defining equation matches eq-mBalLvl (BufferStockTheory.md:1016) verbatim; level-growth reading confirmed (lines 921, 988, 993); stability inequalities match eq-stabilityStE (lines 1022-1023); conditions WRIC+FVAC+GIC match thm-MSSBalExists (line 1014); coincidence under permShk=1 matches line 1036.",
+        "matsya disagreement #1 (REJECTED, matsya false-skepticism): matsya called 'differ by a factor of Ex[permShk^{-1}]' imprecise. It is correct as stated. The gloss explicitly says 'in their implicit equations', and lines 1006 and 1036 state the two IMPLICIT (fixed-point) equations differ exactly by substituting RNrmByG for bar{RNrmByGRnd}=RNrmByG*Ex[permShk^{-1}] in the saving-term coefficient. matsya conflated the defining equations (eq-mBalLvl vs eq-mTarget, which differ by the inside-expectation permShk weight) with the implicit equations the gloss actually references.",
+        "matsya disagreement #2 (REJECTED): matsya marked Figure 'GICModFailsButGICRawHolds' as unverifiable. It IS verifiable and correct: anchor defined at BufferStockTheory.md:1039/1043 (Figures/GICModFailsButGICRawHolds.png), discussed at line 1050 (quadrupling permanent-shock variance breaks GICMod, no individual target, pseudo-target survives) -- exactly the case the gloss describes.",
+        "matsya disagreement #3 (REJECTED, matsya missed comment markers): matsya alleged Tables/Required.tex 'swaps' the theorem-to-symbol mapping, creating a paper-internal inconsistency the entry relies on. There is NO swap. Active rows Tables/Required.tex:42-43 read 'thm:MSSBalExists ... GICRaw => exists mBalLvl' and 'thm:target ... GICMod => exists mTrgNrm', matching the theorem statements and the rendered markdown table (BufferStockTheory.md:1642-1643). The mapping matsya cites appears only in COMMENTED-OUT lines (Required.tex:32-33,45-46, prefixed with %), which are not rendered. matsya retrieved stale commented text via RAG.",
+        "GIC-vs-GIC-Mod direction verified: GICMod (expectation of ratio) > GICRaw (ratio of expectations) per BufferStockTheory.md:456-457 and the ordering at line 1080, so GIC-Mod is strictly the stronger condition and the gloss's 'GIC instead of the stronger GIC-Mod' is correct.",
+        "Relations all resolve and are correctly typed. The requires edge -> growth-impatience-condition correctly targets the ORDINARY GIC (id growth-impatience-condition, anchor ass-GICRaw, GPFacRaw<1), distinct from strong-growth-impatience-condition. The mirror is reciprocated: buffer-stock-target-existence.yml carries 'contrasts-with -> pseudo-target' with a matching GIC-vs-GIC-Mod note.",
+        "Minor organizational note (NOT a faithfulness error, no action required): the entry conflates the concept with its existence theorem -- it uses thm-MSSBalExists as a source anchor and in the requires-notes -- while a separate pseudo-target-existence concept also exists in the atlas. Purely a structuring choice."
+      ]
+    },
+    {
+      "id": "pseudo-target-existence",
+      "gloss_status": "minor-issues",
+      "relations_status": "faithful",
+      "external_lit_status": "none",
+      "overall": "minor-issues",
+      "matsya_agreement": "partial",
+      "priority_for_human": "normal",
+      "issues": [
+        "Gloss line 11 coins 'level-gap function' for $\\difFunc(\\mNrm_t):=\\Ex_t[\\permShk_{t+1}\\mNrm_{t+1}]-\\mNrm_t$. The paper (BufferStockTheory.md:2663-2664) gives this object no name, and it is a $\\permShk$-weighted NORMALISED resource gap, not a level object. Since the same gloss paragraph discusses the level $\\mLvl$, the word 'level' is mildly misleading. Benign but imprecise. (matsya raised the same point and it is its one valid flag.)",
+        "Minor: defining_equation.english (line 7) describes the condition as 'expected $\\permShk$-weighted normalised resources are unchanged'; strictly the equation is the ratio $\\Ex_t[\\permShk_{t+1}\\mNrm_{t+1}/\\mNrm_t]=1$ (BufferStockTheory.md:1016). Acceptable shorthand, not an error.",
+        "DISAGREE with matsya (false-skepticism from stale RAG index): matsya flagged the uniqueness RIC-failing subcase as a possible symbol slip ($\\Rfree/\\PermGroFac$ vs $\\bar{\\RNrmByGRnd}=(\\Rfree/\\PermGroFac)\\Ex[\\permShk^{-1}]$) needing appendix confirmation. The appendix proof CONFIRMS the gloss is exactly right: BufferStockTheory.md:2705-2710 derives bare $(\\Rfree/\\PermGroFac)<1$ ('Thus, $(\\Rfree/\\PermGroFac)<1$, completing the proof'), with the justification that the only non-degenerate RIC-failing case also fails FHWC (line 2709). The $\\Ex[\\permShk^{-1}]$-weighting matsya expected belongs to the individual-target proof, not here ($\\permShk$ cancels in $\\Ex[\\permShk\\mNrm_{t+1}]$). No correction needed.",
+        "DISAGREE with matsya: matsya could not find figure `fig-GICModFailsButGICRawHolds` and flagged it unverifiable. It IS in the paper (BufferStockTheory.md:1041-1050) and depicts exactly the GIC-Mod-fails-but-GIC-holds case the gloss describes (quadrupled permanent-shock variance, no individual target $\\mTrgNrm$, pseudo-target $\\mBalLvl$ still exists). Gloss is correct.",
+        "DISAGREE with matsya: symbol $\\GPFacRaw$ is the correct, confirmable name (BufferStockTheory.md:421-423 definition $\\GPFacRaw:=\\APFac/\\PermGroFac$; line 1450 'Growth Patience Factor'). matsya could not confirm it; no issue.",
+        "Verified correct (no issue): GIC vs GIC-Mod distinction is exact -- thm-MSSBalExists requires ordinary GIC/GICRaw ($\\GPFacRaw<1$, ratio of expectations, line 1014/434) while thm-target requires GICMod ($\\Ex[\\APFac/(\\PermGroFac\\permShk)]<1$, expectation of ratio, line 954/452); GICMod strictly stronger with non-degenerate shocks (line 456-457). The $\\RNrmByG$-vs-$\\bar{\\RNrmByGRnd}$ substitution claim and the $\\permShk\\equiv1$ coincidence are confirmed (lines 1006, 1036). Defining equation, WRIC/FVAC/GIC hypotheses, level-stability inequalities, and the $\\GPFacRaw<1$ IVT-limit existence argument all match the paper verbatim (lines 1016, 1022-1023, 2654-2661). All six relation edges are correctly typed and their target concept files exist."
+      ]
+    },
+    {
+      "id": "return-impatience-condition",
+      "gloss_status": "minor-issues",
+      "relations_status": "minor-issues",
+      "external_lit_status": "none",
+      "overall": "minor-issues",
+      "matsya_agreement": "partial",
+      "priority_for_human": "normal",
+      "issues": [
+        "RELATION (real, agrees with matsya): the edge `generalises -> weak-return-impatience-condition` has the WRONG kind. WRIC is the weaker/more-general condition: RIC implies WRIC, and RIC coincides with WRIC only when the zero-income probability is 1 (paper line 407: WRIC is 'weak relative to plain return impatience because the probability of the zero income events is strictly less than 1'). Hence RIC is a SPECIAL CASE of WRIC, so the kind should be `special-case-of -> weak-return-impatience-condition` (or be inverted to `WRIC generalises RIC`). The note's own wording ('WRIC is a weaker form') contradicts the `generalises` kind. Both `generalises` and `special-case-of` are valid kinds in concepts/_schema.yml lines 56-57. Note the reciprocal WRIC entry already encodes the correct `implied-by -> return-impatience-condition`, so the strength-ordering is captured there; only this RIC-side edge-kind is mislabeled.",
+        "GLOSS (minor explanatory imprecision): the sentence 'Without RIC, the consumer ... wants to hold more wealth tomorrow than today, which together with infinite human wealth produces a degenerate limiting solution where consumption goes to zero' mis-couples the two degeneracy channels. In the paper, RIC-failure drives c->0 under FINITE human wealth (line 60: 'Without return impatience, the limiting consumption function is zero everywhere'; appendix line 2857: 'the RIC rules out the degenerate limiting solution c(m)=0'). INFINITE human wealth (FHWC failure) is associated with the c->infinity degeneracy (line 584, 2867), and the paper's surprising result is that infinite human wealth coexisting with return PATIENCE yields a NON-degenerate solution, not c->0 (lines 1288-1289). So attaching 'together with infinite human wealth' to the 'consumption goes to zero' outcome inverts the paper's economics. Recommend dropping the 'infinite human wealth' clause from this sentence.",
+        "matsya correction (false skepticism): matsya marked the 'necessary and sufficient' claim and the `assumed-by -> pf-unconstrained-requires-fhwc` iff as 'stronger than retrieval supports'. This IS verbatim in the paper: prop-pfUCFHWC, line 593: 'A non-degenerate limiting solution exists if and only if finite limiting human wealth ... and return impatience ... hold.' The gloss claim is fully faithful; matsya's stale RAG index missed this proposition.",
+        "matsya correction (false skepticism): matsya marked the `implied-by -> finite-value-of-autarky` (FVAC=>RIC under FHWC) chain and the MPCmin>0 contrasts-with edges as 'not in retrieval / unverifiable'. Both are in the full paper: claim-PFConspC line 607 ('If finite value of autarky holds, then return impatience holds') under FHWC line 607; appendix line 1726 proves it (FVAC reduces to PFFVAC under perfect foresight, line 509). MPCmin := 1-RPFac > 0 under RIC at lines 582, 697, 718, 1923. These edges are paper-faithful.",
+        "matsya partial-miss on the degeneracy point: matsya was right to flag the conflation but its stated reason ('the paper does not say RIC-failure alone yields c->0') is itself wrong - line 60 says exactly that for the unconstrained PF problem. The actual defect is the mis-coupling with 'infinite human wealth', not the c->0 claim per se.",
+        "Verified faithful (no change needed): core definition RPFac := APFac/Rfree < 1 with APFac := (R*beta)^(1/CRRA) matches paper lines 358, 385, 1448-1449 and uses the correct non-raw symbol \\APFac (not \\APFacRaw); MPC = 1 - APFac/Rfree and RIC <=> MPC>0 match lines 391, 570, 582; defining_equation English ('absolute patience factor falls short of the gross interest factor') = APFac<Rfree, equivalent to RPFac<1; all relation targets resolve to existing concept files and all five contrasts-with mirror edges have matching reciprocals."
+      ]
+    },
+    {
+      "id": "return-patience-factor",
+      "gloss_status": "minor-issues",
+      "relations_status": "faithful",
+      "external_lit_status": "none",
+      "overall": "minor-issues",
+      "matsya_agreement": "partial",
+      "priority_for_human": "normal",
+      "issues": [
+        "GLOSS line 9 overstatement (agree with matsya): the clause 'the consumer is willing to forgo enough consumption today to let interest accumulate, so wealth is being drawn down rather than building up indefinitely' is not paper-faithful. RIC ($\\RPFac<1$, i.e. $\\MPCmin=1-\\RPFac>0$) means the consumer does NOT save *everything* in the limit (BufferStockTheory.md:585 'return impatience prevents a consumer from saving everything in the limit'; behavioral content at lines 390-393; without RIC the limiting c-function is zero everywhere, lines 2922-2928). It does NOT imply net *decumulation* ('wealth being drawn down'). The atlas's own return-impatience-condition.yml:11 states the correct version ('the consumer effectively wants to hold more wealth tomorrow than today ... consumption goes to zero'), so the RPF gloss is internally inconsistent. Suggest rewording to the 'does not save everything / does not want next-period wealth >= current' framing.",
+        "CORRECTING matsya (false skepticism): matsya flagged the fourth patience factor $\\GPFacMod=\\APFac/\\PermGroFacAdj$ (GIC-Mod, 'uncertainty-adjusted growth factor') as 'NOT in retrieval / unverifiable'. It IS in the paper and is faithful: Symbols table BufferStockTheory.md:1451 gives $\\GPFacMod \\equiv \\APFac/\\PermGroFacAdj$; $\\PermGroFacAdj$ ('Uncertainty-Adjusted Growth' $=\\PermGroFac\\InvEPermShkInv$) at line 1440 and defined at lines 1055-1057; consistent with the assumption-block form $\\Ex[\\APFac/(\\PermGroFac\\permShk)]=\\GPFacMod<1$ at line 452. No issue here.",
+        "CORRECTING matsya (mis-applied qualifier): matsya worried the FVAC mirror-edge needs an FHWC qualifier. It does not. The edge cites claim-noRICGIC (BufferStockTheory.md:463-483), whose proof derives FVAC-failure purely from $\\RPFac\\geq1$ and $\\GPFacRaw\\geq1$ with NO FHWC assumption. The FHWC qualifier is required only for the *forward* implication FVAC=>RIC (claim-PFConspC, line 607 / proof lines 1726-1733), which this edge does NOT assert. The mirror note (contrapositive: 'under FVAC at least one patience factor must be below one') matches line 459 verbatim. Faithful.",
+        "Minor wording: gloss line 9 calls $\\APFac$ 'the consumer's preferred consumption-growth rate' (it is the preferred gross growth *factor* $(\\Rfree\\DiscFac)^{1/\\CRRA}$, not a rate) and frames RPF as the 'preferred-consumption-growth-vs-return comparison'. Acceptable shorthand consistent with paper usage, but factor-vs-rate is loose.",
+        "Minor (matsya over-pedantic, no change needed): the WRIC framing 'weakens RIC by adjusting the patience side (multiplying by $\\pZero^{1/\\CRRA}$) rather than the return side' is structurally accurate -- per BufferStockTheory.md:403, $\\pZero^{1/\\CRRA}$ multiplies the numerator $\\APFac$, leaving the denominator $\\Rfree$ unchanged. matsya's objection conflates 'numerator/patience side of the ratio' with 'preference parameter'; the entry's claim is defensible.",
+        "Very minor: the contrasts-with edge to no-ric-no-gic-implies-no-fvac says the doubly-patient case is 'precisely the configuration FVAC excludes'. claim-noRICGIC is a one-directional implication, so 'precisely' could be read as iff (FVAC can fail for other reasons too). Charitably read as 'a configuration FVAC rules out' it is fine, and the partner concept uses identical language; not a correctness problem."
+      ]
+    },
+    {
+      "id": "ric-gives-stationary-contraction",
+      "gloss_status": "faithful",
+      "relations_status": "minor-issues",
+      "external_lit_status": "none",
+      "overall": "faithful",
+      "matsya_agreement": "partial",
+      "priority_for_human": "normal",
+      "issues": [
+        "GLOSS faithful. The defining_equation is a near-verbatim transcription of the remark (BufferStockTheory.md L850: 'Under return impatience, MPCmin_{T-n} >= MPCmin > 0 for all n, and thus for k large enough, TMap^{MPCmin,MPCmax_{T-k}} will be a stationary contraction map ... v_{T-n}=TMap^{MPCmin,MPCmax_{T-k}} v_{T-n+1} for all n>k. However, without return impatience, MPCmin=0 and TMap^{0,MPC_{T-k}} will not be a well-defined operator ...'). Supporting claims all verified: MPCmin=1-RPFac>0 under RIC (lemm-MPC L718), MPCmin=0 without RIC (proof L921-922; L569-570), WRIC keeps the upper consumption share strictly positive preventing consumption->0 (L844), FVAC is the second required assumption (L854), Cauchy-sequence-with-common-modulus argument (L836: 'alpha holds for all n by Theorem thm-cmap'; thm-cmap L782 gives a single modulus alpha; thm-convgtobellman L804 a common Shrinker<1).",
+        "CORRECTING MATSYA (false skepticism): matsya's 'Flag 2 (most serious)' calls the second-half mechanism -- feasibility correspondence m->(0,m) is not compact-valued, so TMap need not map continuous functions to continuous functions -- 'plausible-but-invented detail' that 'no retrieved chunk contains'. This is WRONG; matsya's stale RAG index simply missed subsubsec-challengesDP. The paper states this mechanism almost verbatim at BufferStockTheory.md L295-296: 'TMap will not a be well defined self-map on a vector space of continuous functions. In particular, we cannot assert TMap maps continuous functions to continuous functions since the feasiblility correspondence m -> (0, m) is not compact-valued.' (reinforced by remark-notCompact L302). The gloss's challengesDP mechanism is paper-faithful, not invented.",
+        "MINOR (agree with matsya Flag 1, but benign): the paper writes the degenerate operator as TMap^{0, \\MPC_{T-k}} (L850, no 'max' subscript), whereas the concept's defining_equation and gloss render it TMap^{0, \\MPCmax_{T-k}}. This is a defensible normalization, not an error: the MPC-bounded operator is defined (L767) as TMap^{\\MPCminInf,\\MPCmaxInf} whose SECOND superscript is the upper share, so \\MPCmax_{T-k} is the type-consistent symbol and the paper's bare \\MPC_{T-k} is the looser abbreviation. No correctness impact; optionally footnote the divergence from the paper's literal glyph.",
+        "RELATIONS: 4 of 5 edges correct. requires->return-impatience-condition (RIC forces MPCmin>0, L718) OK; contrasts-with->weak-return-impatience-condition OK; contrasts-with->contraction-mapping-consumption-bounds OK (thm-cmap common-modulus route vs RIC stationary route); requires->subsubsec-challengesDP OK (remark explicitly says 'recall Section challengesDP'; paper-section-anchor targets are an accepted atlas pattern, also used by stochastic-discount-factor-mst.yml). All targets resolve.",
+        "RELATIONS minor (agree with matsya): the 'implied-by -> nondegenerate-solution-existence' edge is mis-typed. The edge note is accurate ('appended to thm-convgtobellman and qualifies its proof strategy'), but the remark's content (RIC => stationary contraction) is NOT a logical consequence of thm-convgtobellman, which deliberately assumes only WRIC+FVAC and never RIC (L802). A relation like 'annotates'/'remark-on'/'contextualizes' would be more accurate than 'implied-by'. Non-blocking; the prose note is itself faithful."
+      ]
+    },
+    {
+      "id": "sequence-convergence-fact",
+      "gloss_status": "minor-issues",
+      "relations_status": "minor-issues",
+      "external_lit_status": "none",
+      "overall": "minor-issues",
+      "matsya_agreement": "partial",
+      "priority_for_human": "normal",
+      "issues": [
+        "GLOSS (line 13, 'no uniform convergence of the f^n is needed'): interpretive addition not stated in the paper. The Proposition's proof (BufferStockTheory.md:3251-3260) bounds the APPROXIMATING values f^n(x^n) using only continuity of the LIMIT f -- line 3258: 'By the continuity of f at x, if |x^n - x| >= delta for infinitely many n, then |f^n(x^n) - f(x)| >= epsilon'. The gloss is faithfully reporting the paper's own (logically gappy) proof, which indeed never invokes f^n -> f uniformly. matsya flags this as 'dubious on its face' and the underlying mathematical claim is genuinely questionable, but I cannot adjudicate external mathematical truth (directive bars asserting analysis knowledge to overturn the author's proof). Flag as an interpretive over-assertion: the clause states as established a no-hypothesis claim the paper neither writes nor proves cleanly.",
+        "RELATIONS ('implies -> nondegenerate-limiting-solution', lines 18-20): mis-typed/overstated, agreeing with matsya. A standalone real-analysis lemma does not by itself imply the strictly-positive economic limiting consumption function; at BufferStockTheory.md:2281-2282 it is ONE step ('Finally, applying Fact ... we get c_{t_n}(m) -> c(m)') feeding the non-degeneracy conclusion. 'contributes-to'/'used-in' would be more honest than 'implies'.",
+        "GLOSS (line 13) and RELATIONS contrasts-with note (line 23) describe compactness-preserved as 'continuity carries convergent arguments to convergent values' / 'convergent arguments x_n->x plus continuity give convergent values' -- imprecise: fact-compactnt (BufferStockTheory.md:3295) requires the f_n to converge UNIFORMLY ON COMPACT SETS, not mere continuity. Verified; agreeing with matsya. (Note the companion entry's own defining_equation does state the uniform-on-compacts hypothesis, so the imprecision is internal to this entry's prose.)",
+        "MINOR (note line 26, 'requires -> prop-cfuncprop'): the paper does NOT explicitly invoke prop-cfuncprop (BufferStockTheory.md:672, 'c_t is twice continuously differentiable, increasing and strictly concave') at the application site of the Fact (line 2281); the continuity-inheritance linkage is the author's reconstruction. Defensible but interpretive, not a literal paper claim.",
+        "ANCHOR/CITATION NOTE (not an atlas error; a paper-source artifact): at the application site BufferStockTheory.md:2281 the paper cites 'Fact [](#sec-realanalysis)' -- pointing at the whole appendix section rather than the specific anchor fact-xnconvgf. Contextually unambiguous, but the entry's claim that the proof 'applies this Fact' rests on a paper cross-reference that does not name fact-xnconvgf precisely."
+      ]
+    },
+    {
+      "id": "stochastic-discount-factor-mst",
+      "gloss_status": "faithful",
+      "relations_status": "minor-issues",
+      "external_lit_status": "flagged-for-expert",
+      "overall": "faithful",
+      "matsya_agreement": "disagree",
+      "priority_for_human": "low",
+      "issues": [
+        "MINOR (relations, target-precision, optional): The 'special-case-of -> eq-veqnNrmRecBellman' edge has the general/special poles modeled via a proxy node. The paper's claim (BufferStockTheory.md:319) is that eq-veqnNrmRecBellman (at pZero=0) is the SPECIAL case and the MST(2020) framework is the GENERAL object. The ideal target of this concept's 'special-case-of' edge would therefore be an MST-framework node (cite-mstIncFluct), with the Bellman eq as the special case; as written, eq-veqnNrmRecBellman occupies the general-pole slot, which is the reverse of the paper's direction. This is defensible because no in-atlas concept node exists for the external MST framework (it is only an external citation), and the edge note text is unambiguous and paper-faithful. Not a faithfulness defect; flag only if the atlas later adds an MST node.",
+        "MINOR (relations, type-precision, optional): The 'requires -> subsubsec-challengesDP' edge is closer to containment/context ('Sits within the dynamic-programming-challenges discussion', per the note and BufferStockTheory.md:290-313) than to a strict logical 'requires'. A 'context-of'/'part-of' type would be marginally more precise. The note's own wording ('Sits within') makes the intent clear, so this is a vocabulary nicety, not an error.",
+        "NOTE on matsya reconciliation (no action needed): matsya returned VERDICT unverifiable-here and asserted the remark, the SDF/return identities, both quotations, the $\\mNrm\\mapsto(0,\\mNrm)$ notation, and the FVAC/Assumption-2.1 link were 'absent from retrieval'. ALL are present in the authoritative source: remark verbatim at BufferStockTheory.md:319; SDF object $\\DiscFac\\,\\Rnd{\\PermGroFac}_{t+1}^{1-\\CRRA}$ and return $\\RNrmByGRnd_{t+1}=\\Rfree/\\PermGroFacRnd_{t+1}$ in eq-veqnNrmRecBellman at :231-237; 'important economic consequences relating consumer patience to buffer stock saving' at :323; '$\\mNrm\\mapsto (0, \\mNrm)$ is not compact valued' at :302; footnote 19 at :3403 stating 'Ma, Stachurski, and Toda (2020) Assumption 2.1 is a generalization of this discount condition, albeit in a context with artificial liquidity constraints' attached to the FVAC discount-condition paragraph at :335. matsya's verdict is a stale/appendix-blind index artifact, not a real defect.",
+        "NOTE (matsya flag #4 assessed and REJECTED): matsya called 'pZero>0 reinstates the natural liquidity constraint' an overstatement. It is paper-faithful: footnote 4 (BufferStockTheory.md:3357) and :62 derive the natural constraint from the possibility of a zero-income event under CRRA; :892 confirms imposing the artificial constraint with pZero>0 'would not affect behavior'. No change needed."
+      ]
+    },
+    {
+      "id": "strong-growth-impatience-condition",
+      "gloss_status": "minor-issues",
+      "relations_status": "faithful",
+      "external_lit_status": "none",
+      "overall": "minor-issues",
+      "matsya_agreement": "partial",
+      "priority_for_human": "normal",
+      "issues": [
+        "MATSYA IS WRONG on its primary flag (false-skepticism). Matsya claims the gloss's definition $\\PermGroFacAdj := \\PermGroFac/\\Ex[1/\\permShk]$ is a CRRA=2 special case and that the paper's true definition is utility-compensated growth $\\PermGroFac\\,\\uInvEuPermShk$. The ground-truth markdown refutes this: the Symbols table defines TWO DISTINCT symbols — BufferStockTheory.md:1440 $\\PermGroFacAdj$ ('Uncertainty-Adjusted Growth') $\\equiv \\PermGroFac\\,\\InvEPermShkInv$, with BufferStockTheory.md:1439 $\\InvEPermShkInv \\equiv (\\EPermShkInv)^{-1} = (\\Ex[1/\\permShk])^{-1}$, hence $\\PermGroFacAdj = \\PermGroFac/\\Ex[1/\\permShk]$ EXACTLY as the gloss states — and the separate symbol BufferStockTheory.md:1447 $\\PermGroFacAdjU$ ('Utility Compensated Growth') $\\equiv \\PermGroFac\\,\\uInvEuPermShk$. $\\GPFacMod \\equiv \\APFac/\\PermGroFacAdj$ (BufferStockTheory.md:1451) uses the uncertainty-adjusted variant, so the gloss closed form is correct. Matsya conflated the two symbols (both =1.020 at baseline) off a stale RAG index. The gloss has NO symbol error here.",
+        "GENUINE MINOR IMPRECISION (matsya partly right): the gloss labels $\\mBalLvl$ the 'aggregate' pseudo-target. The paper ties the pseudo-target/GIC to aggregate stability throughout (BufferStockTheory.md:81, :927, :987), so the framing is defensible, but BufferStockTheory.md:1064 explicitly calls $\\mBalLvl$ the 'individual pseudo-target ratio' and distinguishes it from the true aggregate steady state $\\BalGroFac{\\MNrm}$ ('not numerically the same'). So $\\mBalLvl$ is technically the INDIVIDUAL pseudo-target that enables aggregate balanced growth; calling it 'aggregate' is loose. Consider 'individual pseudo-target (the object underpinning aggregate balanced growth)'.",
+        "Soft note (not an error): the gloss's 'drift to infinity along sample paths where bad shocks happen to be rare' is interpretive embellishment. The paper's mechanism (BufferStockTheory.md:85, :1051) is population/permanent-income-weighting ('people whose ratio grows because their pLvl shrinks... account for a smaller portion of aggregate permanent income'; pseudo-target 'turns off realizations of the permanent shock'), not literally rare-bad-shock sample paths. Faithful in spirit; phrasing is gloss inference.",
+        "Verification beyond matsya: defining_equation matches Assumption ass-GICMod verbatim (BufferStockTheory.md:452, uses $\\APFac$ not $\\APFacRaw$ — correct for the formal assumption; intro uses $\\APFacRaw$ informally). Jensen ordering $\\GPFacMod \\geq \\GPFacRaw$ strict under variance confirmed (BufferStockTheory.md:456-457, :1057). GIC-Mod requirement for individual target confirmed thm-target (BufferStockTheory.md:954); GIC suffices for pseudo-target confirmed thm-MSSBalExists (BufferStockTheory.md:1014). All 8 relation targets exist as concept files and all anchors resolve, INCLUDING claim-gicimpliesharmimp (BufferStockTheory.md:2730/2734: 'If growth impatience [GICRaw] holds, then eq-HarmImp holds' — validates the mirror edge's 'raw GIC not GIC-Mod' note) and lemma-orderingPartOne (BufferStockTheory.md:2515; ordering $\\mTrgNrm>\\mBalLog>\\mBalLvl$ has content only when $\\mTrgNrm$ exists, BufferStockTheory.md:3421 — validates 'vacuous under only GIC'). Matsya could not verify these from RAG but they ARE in the paper."
+      ]
+    },
+    {
+      "id": "target-ordering-part-one",
+      "gloss_status": "faithful",
+      "relations_status": "minor-issues",
+      "external_lit_status": "none",
+      "overall": "faithful",
+      "matsya_agreement": "partial",
+      "priority_for_human": "low",
+      "issues": [
+        "RELATIONS (minor, shared w/ matsya): the two `implies` edges -> pseudo-target and -> buffer-stock-target describe an ORDERING of two points (mBalLvl weakly below mTrgNrm), not a strict logical implication of a proposition. 'implies' is loose; 'concludes-about'/'orders'/'locates' would be more precise. Substantively correct, not an error.",
+        "MATSYA FALSE-SKEPTICISM (no change needed to entry): matsya flagged three gloss claims as 'not in retrieval / must be flagged for full-paper verification' that are in fact present VERBATIM in the published BufferStockTheory.md. (a) The substitution claim 'the only difference is the substitution of RNrmByG for barRNrmByGRnd' is line 1006 verbatim, with barRNrmByGRnd:=RNrmByG*Ex[permShk^-1] defined in eq-mTargImplicit at line 981. (b) The Jensen direction barRNrmByGRnd>=RNrmByG (coinciding iff permShk==1) is corroborated at line 1036 (permShk==1 => identical) and line 1056 (barRNrmByGRnd>RNrmByG via inverse-expectation), with the ratio-of-expectations vs expectation-of-ratio inequality at line 457. (c) The footnote [^26] ordering chain mTrgNrm>mBalLog>mBalLvl is line 3421 verbatim. These were missed because matsya's RAG index served the .tex source (NoAppendix + Tables) and missed the appendix lemma + the Collective-Stability/individual-stability passages.",
+        "MATSYA 'Required.tex table swaps theorem labels' concern does NOT apply to the published paper: the .md summary table at lines 1642-1643 lists thm-MSSBalExists => exists mBalLvl and thm-target: GIC-Mod => exists mTrgNrm, i.e. the same (correct) condition->object pairing as the theorem statements. The gloss's existence-condition mapping (thm-MSSBalExists = WRIC+FVAC+GICRaw -> mBalLvl; thm-target = WRIC+FVAC+GICMod -> mTrgNrm) matches thm-target (line 954) and thm-MSSBalExists (line 1014) exactly.",
+        "MATSYA 'BalGroFac{mNrm}=mBalLvl is an inference / second object BalGroRte exists' concern is resolved by the published build: mBalLvl is DEFINED as BalGroFac{mNrm} in the .sty (econark_demacro_demacro.sty:48 area; @local/local.sty:245), so the identity is definitional, not inferred. lemma-orderingPartTwo and BalGroRte do NOT appear in BufferStockTheory.md (commented out in source). Line 1064 explicitly distinguishes the aggregate BalGroFac{MNrm} (uppercase) from 'the individual pseudo-target ratio mBalLvl' (lowercase), which is what the lemma uses.",
+        "VERIFIED FAITHFUL (positives): defining eq matches lemma at line 2519 exactly; macro identities BalGroFac=check, TargetNrm=hat, mTrgNrm=TargetNrm{mNrm}=hat{mNrm} confirmed in .sty and rendered at line 2538; both stability definitions correct (pseudo-target level-growth=PermGroFac lines 993/998; target Ex[m_{t+1}/m_t]=1 eq-mTarget line 956); GICMod strictly stronger than GICRaw (line 457); the 'quadruple permanent-shock variance => GICMod fails, GICRaw holds, no mTrgNrm' mechanism is directly stated at line 1050 (NOT merely inferred as matsya supposed); all 5 relation targets resolve to existing concepts/*.yml; lemma stated without separate proof in this build is accurate (lines 2515-2521)."
+      ]
+    },
+    {
+      "id": "value-function-c3",
+      "gloss_status": "faithful",
+      "relations_status": "faithful",
+      "external_lit_status": "none",
+      "overall": "faithful",
+      "matsya_agreement": "partial",
+      "priority_for_human": "low",
+      "issues": []
+    },
+    {
+      "id": "weak-return-impatience-condition",
+      "gloss_status": "minor-issues",
+      "relations_status": "faithful",
+      "external_lit_status": "none",
+      "overall": "minor-issues",
+      "matsya_agreement": "partial",
+      "priority_for_human": "normal",
+      "issues": [
+        "MINOR (gloss, real): The clause 'RIC implies WRIC, but not the reverse, whenever $\\pZero > 0$' uses the wrong threshold for the strict-weakness/non-reverse claim. WRIC is strictly weaker than RIC iff $\\pZero < 1$, not whenever $\\pZero > 0$. At $\\pZero = 1$, WRIC and RIC are IDENTICAL (paper line 1497: 'with $\\pZero=1$ [WRIC] is identical to [RIC]'; Tables/Comparison.tex:29: 'If ... $\\pZero=1$ ... the condition becomes identical to the RIC. Otherwise, weaker.'). So at $\\pZero=1$ 'not the reverse' fails. Suggested fix: change 'whenever $\\pZero > 0$' to 'whenever $\\pZero < 1$'. The implication direction 'RIC implies WRIC' itself does hold for all $\\pZero\\in[0,1]$, so the implied-by edge note '$\\pZero\\in[0,1]$' is acceptable; only the gloss's strict-weakness boundary is off.",
+        "DISAGREE with matsya (false-skepticism): matsya marked the '$\\pZero\\to 0$ does NOT approach irrelevance ... limit coincides with the artificial-constraint problem' claim as 'unsupported and mathematically backwards.' It is paper-faithful and stated VERBATIM at BufferStockTheory.md line 412 ('Even though $\\pZero^{1/\\CRRA}\\RPFac\\rightarrow 0$ as $\\pZero\\rightarrow 0$ the weak return impatience condition *does not* approach irrelevance') and line 413 ('the limiting consumption function with a natural constraint approaches the solution to a model with an artificial constraint'); confirmed by lines 890 and 2369 ($\\lim_{\\pZero\\downarrow 0}\\cFunc_t(\\mNrm;\\pZero)=\\cnstr{\\cFunc}_t$). matsya conflated 'LHS of the inequality $\\to 0$' (true, non-binding numerically) with 'the WRIC restriction is irrelevant to the solution' (false — the limiting consumption FUNCTION coincides with the constrained problem). No correction to the entry needed on this point.",
+        "DISAGREE with matsya (false-skepticism): matsya flagged 'WRIC required by both existence theorems (thm-MSSBalExists, thm-target) rather than RIC' as 'not verifiable / probably conflated,' claiming targets are tied to GIC/GIC-Mod not WRIC. The theorem statements explicitly list WRIC as a hypothesis: thm-target (line 954) = WRIC + FVAC + GICMod; thm-MSSBalExists (line 1014) = WRIC + FVAC + GICRaw. The growth-impatience condition is the ADDITIONAL hypothesis; WRIC+FVAC are still required. The gloss and both 'assumed-by' edges (pseudo-target: FVAC+GIC; buffer-stock-target: FVAC+GIC-Mod) are exactly correct. No correction needed.",
+        "DISAGREE with matsya (false-skepticism): matsya called 'cannot be relaxed further without imposing an artificial liquidity constraint' an 'overstated ... sharp impossibility result not present in retrieval.' It is stated VERBATIM at line 411: 'Weak return impatience cannot be relaxed further without an artificial liquidity constraint.' Faithful; no correction needed.",
+        "Note (not an error): contrasts-with -> ric-gives-stationary-contraction is VERIFIED against remark-ricstationary (line 850: under RIC $\\MPCmin_{T-n}\\geq\\MPCmin>0$ gives a stationary contraction; without RIC $\\MPCmin=0$ and the operator is not well-defined) and lemm-MPC/line 733 (WRIC 'merely prevents the upper bound ... from approaching zero'). matsya marked this 'plausible but unverified' purely due to RAG gaps; the edge and its 'contrasts-with' kind are correct.",
+        "Defining equation (ass-WRIC, line 403) is exact, with correct symbol $\\APFac$ (= $(\\Rfree\\DiscFac)^{1/\\CRRA}$, line 358), not $\\APFacRaw$. All 6 relation targets resolve to existing concept files. Both 'WRIC' and 'ass-WRIC' source anchors resolve (lines 397, 401)."
+      ]
+    }
+  ]
+}

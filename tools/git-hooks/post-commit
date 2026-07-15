@@ -1,0 +1,105 @@
+#!/bin/bash
+
+# Post-commit hook - only runs on macOS (Darwin)
+# Runs document reproduction in background with notifications
+#
+# Canonical source: tools/git-hooks/post-commit
+# Activate via: bash tools/git-hooks/install.sh
+
+# Only run on macOS
+if [[ "$(uname)" != "Darwin" ]]; then
+    exit 0
+fi
+
+echo ""
+echo "========================================"
+echo "Starting document reproduction in background (macOS)..."
+echo "========================================"
+echo ""
+
+# Store the current commit hash for reference
+CURRENT_COMMIT=$(git rev-parse HEAD)
+COMMIT_MESSAGE=$(git log -1 --pretty=format:"%s")
+
+echo "Commit: $CURRENT_COMMIT"
+echo "Message: $COMMIT_MESSAGE"
+echo ""
+echo "The reproduction script is now running in the background."
+echo "You will receive a notification when it completes."
+echo "Log file: .git/hooks/reproduction.log"
+echo ""
+
+# Function to run in background
+run_reproduction() {
+    local commit_hash="$1"
+    local commit_msg="$2"
+    local log_file=".git/hooks/reproduction.log"
+
+    # Supersede any in-flight prior post-commit reproduction so two rapid
+    # commits don't race over shared LaTeX intermediates (BufferStockTheory.aux,
+    # .log, .out, ...). "Latest commit wins": kill the older run, start fresh.
+    pkill -f 'reproduce/document.sh.*--quiet.*--debug.*--noninteractive' 2>/dev/null && sleep 1
+
+    # Clear previous log
+    > "$log_file"
+
+    # Log start time and commit info
+    echo "========================================" >> "$log_file"
+    echo "Reproduction started at: $(date)" >> "$log_file"
+    echo "Commit: $commit_hash" >> "$log_file"
+    echo "Message: $commit_msg" >> "$log_file"
+    echo "========================================" >> "$log_file"
+    echo "" >> "$log_file"
+
+    # Run the reproduction script and capture output
+    if ./reproduce/document.sh --quiet --debug --noninteractive >> "$log_file" 2>&1; then
+        # Success
+        echo "" >> "$log_file"
+        echo "========================================" >> "$log_file"
+        echo "✅ Document reproduction completed successfully!" >> "$log_file"
+        echo "Completed at: $(date)" >> "$log_file"
+        echo "========================================" >> "$log_file"
+
+        # Send success notification
+        osascript -e "display notification \"Document reproduction completed successfully!\" with title \"BufferStockTheory Build\" sound name \"Glass\""
+
+        # Optional: brief audio notification
+        say "commit test succeeded" &
+
+    else
+        # Failure
+        local exit_code=$?
+        echo "" >> "$log_file"
+        echo "========================================" >> "$log_file"
+        echo "❌ REPRODUCTION FAILED" >> "$log_file"
+        echo "========================================" >> "$log_file"
+        echo "Exit code: $exit_code" >> "$log_file"
+        echo "Failed at: $(date)" >> "$log_file"
+        echo "" >> "$log_file"
+        echo "To undo your commit:" >> "$log_file"
+        echo "    git reset --hard HEAD~1" >> "$log_file"
+        echo "" >> "$log_file"
+        echo "Or to keep changes but undo commit:" >> "$log_file"
+        echo "    git reset --soft HEAD~1" >> "$log_file"
+        echo "========================================" >> "$log_file"
+
+        # Send failure notification
+        osascript -e "display notification \"Document reproduction FAILED! Check .git/hooks/reproduction.log for details.\" with title \"BufferStockTheory Build\" sound name \"Basso\""
+
+        # Optional: audio notification
+        say "commit test failed" &
+
+        # Also log to stderr for immediate visibility if user checks
+        echo "❌ REPRODUCTION FAILED - Check .git/hooks/reproduction.log for details" >&2
+    fi
+}
+
+# Run the reproduction function in the background
+run_reproduction "$CURRENT_COMMIT" "$COMMIT_MESSAGE" &
+
+# Disown the background process so it continues even if terminal is closed
+disown
+
+echo "You can continue working while reproduction runs in the background."
+echo "To check progress: tail -f .git/hooks/reproduction.log"
+echo ""

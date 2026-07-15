@@ -1,0 +1,338 @@
+# concepts/_review-status.yml
+#
+# DATA FILE. Underscore-prefixed on purpose: tools/concepts_validate.py and
+# tools/concepts_render.py skip _-prefixed files, so this tracker is NOT treated
+# as a concept (a non-underscore name would BREAK validation). Maintained by hand.
+
+_meta:
+  purpose: >-
+    Per-concept review tracking for the AI concept atlas (concepts/*.yml).
+    One entry per authored concept id; records whether a domain expert has
+    reviewed the gloss, the relations, and any external-literature citations.
+  statuses:
+    pending: not yet reviewed by a domain expert
+    reviewed: checked and approved by a domain expert
+  WARNING: >-
+    NO domain-expert review has occurred for ANY concept yet. Every review field
+    below is 'pending'. Do not interpret any entry as expert-approved.
+  summary:
+    total: 42
+    exemplar: 13
+    new: 29
+    cite_external: 14
+  maintained: by hand
+
+concepts:
+  absolute-impatience-condition:
+    tier: exemplar
+    gloss: pending
+    relations: pending
+    external_literature: none
+    priority: normal
+    cites: []
+  absolute-patience-factor:
+    tier: exemplar
+    gloss: pending
+    relations: pending
+    external_literature: none
+    priority: normal
+    cites: []
+  asymptotic-consumption-growth-factors:
+    tier: new
+    gloss: pending
+    relations: pending
+    external_literature: none
+    priority: high
+    cites: []
+  boundfunc-weighted-space:
+    tier: new
+    gloss: pending
+    relations: pending
+    external_literature: pending
+    priority: high
+    cites:
+      - cite-jboydWeighted
+  boyd-weighted-contraction:
+    tier: new
+    gloss: pending
+    relations: pending
+    external_literature: pending
+    priority: high
+    cites:
+      - cite-stachurski2022
+  buffer-stock-target-existence:
+    tier: new
+    gloss: pending
+    relations: pending
+    external_literature: none
+    priority: high
+    cites: []
+  buffer-stock-target:
+    tier: exemplar
+    gloss: pending
+    relations: pending
+    external_literature: none
+    priority: normal
+    cites: []
+  compactness-preserved:
+    tier: new
+    gloss: pending
+    relations: pending
+    external_literature: none
+    priority: high
+    cites: []
+  consumption-c2-properties:
+    tier: new
+    gloss: pending
+    relations: pending
+    external_literature: pending
+    priority: high
+    cites:
+      - cite-ckConcavity
+  consumption-function-c2-concave:
+    tier: new
+    gloss: pending
+    relations: pending
+    external_literature: pending
+    priority: high
+    cites:
+      - cite-ckConcavity
+  consumption-ratio-nondecreasing:
+    tier: new
+    gloss: pending
+    relations: pending
+    external_literature: none
+    priority: high
+    cites: []
+  contraction-mapping-consumption-bounds:
+    tier: new
+    gloss: pending
+    relations: pending
+    external_literature: pending
+    priority: high
+    cites:
+      - cite-jboydWeighted
+  feasible-correspondence-not-compact:
+    tier: new
+    gloss: pending
+    relations: pending
+    external_literature: pending
+    priority: high
+    cites:
+      - cite-Jaskiewicz2011
+      - cite-Ma2022
+      - cite-stachurski2022
+  finite-human-wealth-condition:
+    tier: exemplar
+    gloss: pending
+    relations: pending
+    external_literature: none
+    priority: normal
+    cites: []
+  finite-value-of-autarky:
+    tier: exemplar
+    gloss: pending
+    relations: pending
+    external_literature: none
+    priority: normal
+    cites: []
+  gic-implies-harmenberg-impatience:
+    tier: new
+    gloss: pending
+    relations: pending
+    external_literature: pending
+    priority: high
+    cites:
+      - cite-harmenbergAggregating
+  growth-impatience-condition:
+    tier: exemplar
+    gloss: pending
+    relations: pending
+    external_literature: none
+    priority: normal
+    cites: []
+  growth-patience-factor:
+    tier: exemplar
+    gloss: pending
+    relations: pending
+    external_literature: none
+    priority: normal
+    cites: []
+  hiraguchi-continuity:
+    tier: new
+    gloss: pending
+    relations: pending
+    external_literature: pending
+    priority: high
+    cites:
+      - cite-Aliprantis2005
+  limiting-consumption-strictly-positive:
+    tier: new
+    gloss: pending
+    relations: pending
+    external_literature: none
+    priority: high
+    cites: []
+  limiting-mpcs-lemma:
+    tier: new
+    gloss: pending
+    relations: pending
+    external_literature: pending
+    priority: high
+    cites:
+      - cite-benhabibWealth
+      - cite-maTodaRich
+  maximal-mpc-at-most-one:
+    tier: new
+    gloss: pending
+    relations: pending
+    external_literature: none
+    priority: high
+    cites: []
+  modified-growth-patience-factor:
+    tier: exemplar
+    gloss: pending
+    relations: pending
+    external_literature: none
+    priority: normal
+    cites: []
+  mpc-bounds-convergence:
+    tier: new
+    gloss: pending
+    relations: pending
+    external_literature: pending
+    priority: high
+    cites:
+      - cite-Rockafellar1972
+  no-ric-no-gic-implies-no-fvac:
+    tier: new
+    gloss: pending
+    relations: pending
+    external_literature: pending
+    priority: high
+    cites:
+      - cite-mstIncFluct
+  nondegenerate-limiting-solution:
+    tier: new
+    gloss: pending
+    relations: pending
+    external_literature: pending
+    priority: high
+    cites:
+      - cite-szeidlInvariant
+  nondegenerate-solution-existence:
+    tier: new
+    gloss: pending
+    relations: pending
+    external_literature: pending
+    priority: high
+    cites:
+      - cite-jboydWeighted
+      - cite-stachurski2022
+  norm-implies-compactness:
+    tier: new
+    gloss: pending
+    relations: pending
+    external_literature: none
+    priority: high
+    cites: []
+  pf-constrained-solution-exists:
+    tier: new
+    gloss: pending
+    relations: pending
+    external_literature: none
+    priority: high
+    cites: []
+  pf-consumption-function-properties:
+    tier: new
+    gloss: pending
+    relations: pending
+    external_literature: none
+    priority: high
+    cites: []
+  pf-unconstrained-requires-fhwc:
+    tier: new
+    gloss: pending
+    relations: pending
+    external_literature: none
+    priority: high
+    cites: []
+  pseudo-target-existence:
+    tier: new
+    gloss: pending
+    relations: pending
+    external_literature: none
+    priority: high
+    cites: []
+  pseudo-target:
+    tier: exemplar
+    gloss: pending
+    relations: pending
+    external_literature: none
+    priority: normal
+    cites: []
+  return-impatience-condition:
+    tier: exemplar
+    gloss: pending
+    relations: pending
+    external_literature: none
+    priority: normal
+    cites: []
+  return-patience-factor:
+    tier: exemplar
+    gloss: pending
+    relations: pending
+    external_literature: none
+    priority: normal
+    cites: []
+  ric-gives-stationary-contraction:
+    tier: new
+    gloss: pending
+    relations: pending
+    external_literature: none
+    priority: high
+    cites: []
+  sequence-convergence-fact:
+    tier: new
+    gloss: pending
+    relations: pending
+    external_literature: none
+    priority: high
+    cites: []
+  stochastic-discount-factor-mst:
+    tier: new
+    gloss: pending
+    relations: pending
+    external_literature: pending
+    priority: high
+    cites:
+      - cite-Ma2022
+      - cite-mstIncFluct
+  strong-growth-impatience-condition:
+    tier: exemplar
+    gloss: pending
+    relations: pending
+    external_literature: none
+    priority: normal
+    cites: []
+  target-ordering-part-one:
+    tier: new
+    gloss: pending
+    relations: pending
+    external_literature: none
+    priority: high
+    cites: []
+  value-function-c3:
+    tier: new
+    gloss: pending
+    relations: pending
+    external_literature: none
+    priority: high
+    cites: []
+  weak-return-impatience-condition:
+    tier: exemplar
+    gloss: pending
+    relations: pending
+    external_literature: none
+    priority: normal
+    cites: []
